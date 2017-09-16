@@ -1,0 +1,8 @@
+[package]
+name = "bulletrs"
+version = "0.1.0"
+
+[dependencies]
+bulletrs-sys = { path = "./bulletrs-sys" }
+mint = "0.4.2"
+
