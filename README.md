@@ -1,4 +1,4 @@
-![Bulelt!](https://i.imgur.com/a98oLXR.png)
+![Bulelt!](https://i.imgur.com/IGOxQ1r.gif)
 
 # bulletrs
 
