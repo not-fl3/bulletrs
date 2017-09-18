@@ -1,5 +1,6 @@
 use physics_client::{PhysicsClient, ShapeType};
 use shape::Shape;
+use multibody::{MultiBody, DynamicsInfo};
 
 use mint::{Vector3, Vector4};
 
@@ -19,6 +20,8 @@ pub enum Command {
         position: Vector3<f64>,
         orientation: Vector4<f64>,
     },
+
+    ChangeDynamicsInfo(MultiBody, DynamicsInfo),
 }
 
 pub enum CommandParam {
@@ -49,9 +52,9 @@ impl Command {
                 CommandHandle { handle: command }
             }
 
-            &Command::CreateCollisionShape(ref shape) => {
+            &Command::CreateCollisionShape(ref body) => {
                 let command = unsafe { ::sys::b3CreateCollisionShapeCommandInit(client.handle) };
-                match shape {
+                match body {
                     &ShapeType::Plane { normal, constant } => {
                         let mut normal: [f64; 3] = normal.into();
                         unsafe {
@@ -71,6 +74,7 @@ impl Command {
 
                 CommandHandle { handle: command }
             }
+
             &Command::StepSimulation => {
                 let command = unsafe { ::sys::b3InitStepSimulationCommand(client.handle) };
                 CommandHandle { handle: command }
@@ -100,7 +104,98 @@ impl Command {
                         &mut base_inertial_frame_orientation[0] as *mut _,
                     );
                 }
-                CommandHandle { handle : command }
+                CommandHandle { handle: command }
+            }
+
+            &Command::ChangeDynamicsInfo(ref body, ref dynamics_info) => {
+                let command = unsafe { ::sys::b3InitChangeDynamicsInfo(client.handle) };
+                if let Some(mass) = dynamics_info.mass {
+                    unsafe {
+                        ::sys::b3ChangeDynamicsInfoSetMass(command, body.unique_id, -1, mass)
+                    };
+                }
+                if let Some(lateral_friction) = dynamics_info.lateral_friction {
+                    unsafe {
+                        ::sys::b3ChangeDynamicsInfoSetLateralFriction(
+                            command,
+                            body.unique_id,
+                            -1,
+                            lateral_friction,
+                        )
+                    };
+                }
+                if let Some(spinning_friction) = dynamics_info.spinning_friction {
+                    unsafe {
+                        ::sys::b3ChangeDynamicsInfoSetLateralFriction(
+                            command,
+                            body.unique_id,
+                            -1,
+                            spinning_friction,
+                        )
+                    };
+                }
+                if let Some(rolling_friction) = dynamics_info.rolling_friction {
+                    unsafe {
+                        ::sys::b3ChangeDynamicsInfoSetRollingFriction(
+                            command,
+                            body.unique_id,
+                            -1,
+                            rolling_friction,
+                        )
+                    };
+                }
+                if let Some(linear_damping) = dynamics_info.linear_damping {
+                    unsafe {
+                        ::sys::b3ChangeDynamicsInfoSetLinearDamping(
+                            command,
+                            body.unique_id,
+                            linear_damping,
+                        )
+                    };
+                }
+                if let Some(angular_damping) = dynamics_info.angular_damping {
+                    unsafe {
+                        ::sys::b3ChangeDynamicsInfoSetAngularDamping(
+                            command,
+                            body.unique_id,
+                            angular_damping,
+                        )
+                    };
+                }
+                if let Some(restitution) = dynamics_info.restitution {
+                    unsafe {
+                        ::sys::b3ChangeDynamicsInfoSetRestitution(
+                            command,
+                            body.unique_id,
+                            -1,
+                            restitution,
+                        )
+                    };
+                }
+                if let Some((contact_stiffness, contact_damping)) =
+                    dynamics_info.contact_stiffness_and_damping
+                {
+                    unsafe {
+                        ::sys::b3ChangeDynamicsInfoSetContactStiffnessAndDamping(
+                            command,
+                            body.unique_id,
+                            -1,
+                            contact_stiffness,
+                            contact_damping
+                        )
+                    };
+                }
+                if let Some(friction_anchor) = dynamics_info.friction_anchor {
+                    unsafe {
+                        ::sys::b3ChangeDynamicsInfoSetFrictionAnchor(
+                            command,
+                            body.unique_id,
+                            -1,
+                            friction_anchor,
+                        )
+                    };
+                }
+                CommandHandle { handle: command }
             }
         }
     }

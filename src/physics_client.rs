@@ -1,5 +1,6 @@
 use command::{Command, CommandParam};
 use shape::Shape;
+use multibody::{MultiBody, DynamicsInfo};
 use status::Status;
 use errors::Error;
 
@@ -89,13 +90,27 @@ impl PhysicsClient {
         mass: f64,
         position: Vector3<f64>,
         orientation: Vector4<f64>,
-    ) {
-        self.submmit_client_command_and_wait_status(&Command::CreateMultiBody {
+    ) -> Result<MultiBody, Error> {
+        let status = self.submmit_client_command_and_wait_status(&Command::CreateMultiBody {
             shape,
             mass,
             position,
             orientation,
         });
+
+        if status.get_status_type() !=
+            ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_MULTI_BODY_COMPLETED
+        {
+            return Err(Error::CommandFailed);
+        }
+
+        return Ok(MultiBody {
+            unique_id: unsafe { ::sys::b3GetStatusBodyIndex(status.handle) },
+        });
+    }
+
+    pub fn change_dynamics_info(&self, body : MultiBody, dynamics_info : DynamicsInfo) {
+        self.submmit_client_command_and_wait_status(&Command::ChangeDynamicsInfo(body, dynamics_info));
     }
 }
 
