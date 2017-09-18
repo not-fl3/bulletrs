@@ -10,6 +10,6 @@ mod shape;
 mod multibody;
 
 pub use bullet::{Bullet, ConnectMethod};
-pub use physics_client::{ShapeType};
+pub use shape::{ShapeType};
 pub use multibody::DynamicsInfo;
 pub use mint::{Vector3, Vector4};
