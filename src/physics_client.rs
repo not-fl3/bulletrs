@@ -1,20 +1,12 @@
 use command::{Command, CommandParam};
-use shape::Shape;
+use shape::{Shape, ShapeType};
 use multibody::{MultiBody, DynamicsInfo};
 use status::Status;
 use errors::Error;
 
 use std::ops::Drop;
-use mint::{Vector3, Vector4};
 
-pub enum ShapeType {
-    Sphere { radius: f64 },
-    Cylinder,
-    Box,
-    Capsule,
-    Plane { normal: Vector3<f64>, constant: f64 },
-    Mesh,
-}
+use mint::{Vector3, Vector4};
 
 pub struct PhysicsClient {
     pub(crate) handle: ::sys::b3PhysicsClientHandle,

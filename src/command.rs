@@ -1,6 +1,6 @@
-use physics_client::{PhysicsClient, ShapeType};
-use shape::Shape;
-use multibody::{MultiBody, DynamicsInfo};
+use physics_client::{PhysicsClient};
+use shape::{Shape, ShapeType};
+use multibody::{DynamicsInfo, MultiBody};
 
 use mint::{Vector3, Vector4};
 
@@ -54,24 +54,7 @@ impl Command {
 
             &Command::CreateCollisionShape(ref body) => {
                 let command = unsafe { ::sys::b3CreateCollisionShapeCommandInit(client.handle) };
-                match body {
-                    &ShapeType::Plane { normal, constant } => {
-                        let mut normal: [f64; 3] = normal.into();
-                        unsafe {
-                            ::sys::b3CreateCollisionShapeAddPlane(
-                                command,
-                                &mut normal[0] as *mut f64,
-                                constant,
-                            )
-                        }
-                    }
-                    &ShapeType::Sphere { radius } => unsafe {
-                        ::sys::b3CreateCollisionShapeAddSphere(command, radius)
-                    },
-
-                    _ => unimplemented!(),
-                };
-
+                body.create_shape(command);
                 CommandHandle { handle: command }
             }
 
@@ -181,7 +164,7 @@ impl Command {
                             body.unique_id,
                             -1,
                             contact_stiffness,
-                            contact_damping
+                            contact_damping,
                         )
                     };
                 }
