@@ -1,6 +1,6 @@
 use command::{Command, CommandParam};
 use shape::{Shape, ShapeType};
-use multibody::{MultiBody, DynamicsInfo};
+use multibody::{DynamicsInfo, MultiBody};
 use status::Status;
 use errors::Error;
 
@@ -24,7 +24,7 @@ impl PhysicsClient {
     }
 
     /// blocking submit command and wait for status
-    pub fn submmit_client_command_and_wait_status(&self, command: &Command) -> Status {
+    pub fn submit_client_command_and_wait_status(&self, command: &Command) -> Status {
         Status {
             handle: unsafe {
                 ::sys::b3SubmitClientCommandAndWaitStatus(
@@ -37,12 +37,12 @@ impl PhysicsClient {
 
     /// Reset the simulation to remove all loaded objects
     pub fn reset_simulation(&self) {
-        self.submmit_client_command_and_wait_status(&Command::SyncBodyInfo);
+        self.submit_client_command_and_wait_status(&Command::SyncBodyInfo);
     }
 
     /// Set the gravity acceleration (x,y,z).
     pub fn set_gravity(&self, gravx: f64, gravy: f64, gravz: f64) {
-        self.submmit_client_command_and_wait_status(
+        self.submit_client_command_and_wait_status(
             &Command::PhysicsParam(CommandParam::SetGravity {
                 gravx,
                 gravy,
@@ -52,14 +52,14 @@ impl PhysicsClient {
     }
 
     pub fn set_realtime_simulation(&self, flag: bool) {
-        self.submmit_client_command_and_wait_status(&Command::PhysicsParam(
+        self.submit_client_command_and_wait_status(&Command::PhysicsParam(
             CommandParam::RealTimeSimulation(flag),
         ));
     }
 
     pub fn create_collision_shape(&self, mesh: ShapeType) -> Result<Shape, Error> {
         let status =
-            self.submmit_client_command_and_wait_status(&Command::CreateCollisionShape(mesh));
+            self.submit_client_command_and_wait_status(&Command::CreateCollisionShape(mesh));
 
         if status.get_status_type() !=
             ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_COLLISION_SHAPE_COMPLETED
@@ -73,7 +73,7 @@ impl PhysicsClient {
     }
 
     pub fn step_simulateion(&self) {
-        self.submmit_client_command_and_wait_status(&Command::StepSimulation);
+        self.submit_client_command_and_wait_status(&Command::StepSimulation);
     }
 
     pub fn create_multi_body(
@@ -83,7 +83,7 @@ impl PhysicsClient {
         position: Vector3<f64>,
         orientation: Vector4<f64>,
     ) -> Result<MultiBody, Error> {
-        let status = self.submmit_client_command_and_wait_status(&Command::CreateMultiBody {
+        let status = self.submit_client_command_and_wait_status(&Command::CreateMultiBody {
             shape,
             mass,
             position,
@@ -101,8 +101,47 @@ impl PhysicsClient {
         });
     }
 
-    pub fn change_dynamics_info(&self, body : MultiBody, dynamics_info : DynamicsInfo) {
-        self.submmit_client_command_and_wait_status(&Command::ChangeDynamicsInfo(body, dynamics_info));
+    /// Get the world position and orientation of the base of the object.
+    /// (x,y,z) position vector and (x,y,z,w) quaternion orientation.
+    pub fn change_dynamics_info(&self, body: MultiBody, dynamics_info: DynamicsInfo) {
+        self.submit_client_command_and_wait_status(
+            &Command::ChangeDynamicsInfo(body, dynamics_info),
+        );
+    }
+
+    /// Get the positions (x,y,z) and orientation (x,y,z,w) in quaternion
+    /// values for the base link of your object
+    /// Object is retrieved based on body index, which is the order
+    /// the object was loaded into the simulation (0-based)
+    pub fn get_base_position_and_orientation(&self, body: MultiBody) -> Result<(Vector3<f64>, Vector4<f64>), Error>{
+        let status = self.submit_client_command_and_wait_status(
+            &Command::GetBasePositionAndOrientation(body),
+        );
+
+        if status.get_status_type() !=
+            ::sys::EnumSharedMemoryServerStatus::CMD_ACTUAL_STATE_UPDATE_COMPLETED
+        {
+            return Err(Error::CommandFailed);
+        }
+
+        #[repr(C)]
+        struct ActualState {
+            position: Vector3<f64>,
+            orientation: Vector4<f64>
+        }
+        let mut actual_state = ActualState {
+            position : Vector3::from([0.0, 0.0, 0.0]),
+            orientation : Vector4::from([0.0, 0.0, 0.0, 0.0]),
+        };
+        let actual_state_ref = &mut actual_state;
+        unsafe {
+            ::sys::b3GetStatusActualState(
+			    status.handle, ::std::ptr::null_mut() /* body_unique_id */,
+				::std::ptr::null_mut() /* num_degree_of_freedom_q */, ::std::ptr::null_mut() /* num_degree_of_freedom_u */,
+				::std::ptr::null_mut() /*root_local_inertial_frame*/, ::std::mem::transmute(&actual_state_ref),
+				::std::ptr::null_mut() /* actual_state_q_dot */, ::std::ptr::null_mut() /* joint_reaction_forces */);
+        }
+        Ok((actual_state_ref.position, actual_state_ref.orientation))
     }
 }
 

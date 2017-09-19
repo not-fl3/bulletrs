@@ -25,7 +25,7 @@ impl Bullet {
         };
 
         if client.can_submit_command() {
-            let status = client.submmit_client_command_and_wait_status(&Command::SyncBodyInfo);
+            let status = client.submit_client_command_and_wait_status(&Command::SyncBodyInfo);
             let status_type = status.get_status_type();
 
             if status_type != EnumSharedMemoryServerStatus::CMD_SYNC_BODY_INFO_COMPLETED {

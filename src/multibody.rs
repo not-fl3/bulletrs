@@ -22,6 +22,7 @@ pub struct DynamicsInfo {
     pub friction_anchor: Option<i32>,
 }
 
+#[derive(Clone)]
 pub struct MultiBody {
     pub(crate) unique_id: i32,
 }
