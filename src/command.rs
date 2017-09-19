@@ -1,4 +1,4 @@
-use physics_client::PhysicsClient;
+use physics_client::PhysicsClientHandle;
 use shape::{Shape, ShapeType};
 use multibody::{DynamicsInfo, MultiBodyHandle};
 
@@ -32,7 +32,7 @@ pub enum CommandParam {
 }
 
 impl Command {
-    pub fn get_handle(&self, client: &PhysicsClient) -> CommandHandle {
+    pub fn get_handle(&self, client: &PhysicsClientHandle) -> CommandHandle {
         match self {
             &Command::SyncBodyInfo => CommandHandle {
                 handle: unsafe { ::sys::b3InitSyncBodyInfoCommand(client.handle) },

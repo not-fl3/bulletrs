@@ -8,11 +8,11 @@ use std::ops::Drop;
 
 use mint::{Vector3, Vector4};
 
-pub struct PhysicsClient {
+pub struct PhysicsClientHandle {
     pub(crate) handle: ::sys::b3PhysicsClientHandle,
 }
 
-impl PhysicsClient {
+impl PhysicsClientHandle {
     /// There can only be 1 outstanding command. Check if a command can be send.
     pub fn can_submit_command(&self) -> bool {
         unsafe { ::sys::b3CanSubmitCommand(self.handle) != 0 }
@@ -145,7 +145,7 @@ impl PhysicsClient {
     }
 }
 
-impl Drop for PhysicsClient {
+impl Drop for PhysicsClientHandle {
     fn drop(&mut self) {
         self.disconnect_shared_memory();
     }
