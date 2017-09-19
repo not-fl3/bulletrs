@@ -1,4 +1,4 @@
-use physics_client::PhysicsClient;
+use physics_client::PhysicsClientHandle;
 use command::Command;
 use status::EnumSharedMemoryServerStatus;
 use errors::Error;
@@ -13,8 +13,8 @@ pub enum ConnectMethod {
 pub struct Bullet;
 
 impl Bullet {
-    pub fn connect(&self, method: ConnectMethod) -> Result<PhysicsClient, Error> {
-        let client = PhysicsClient {
+    pub fn connect(&self, method: ConnectMethod) -> Result<PhysicsClientHandle, Error> {
+        let client = PhysicsClientHandle {
             handle: match method {
                 ConnectMethod::Direct => unsafe { ::sys::b3ConnectPhysicsDirect() },
                 ConnectMethod::Gui => unsafe {
