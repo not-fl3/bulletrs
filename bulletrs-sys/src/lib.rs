@@ -1451,6 +1451,7 @@ pub enum eUrdfGeomTypes {
     GEOM_PLANE = 6,
     GEOM_CAPSULE = 7,
     GEOM_UNKNOWN = 8,
+    GEOM_TRIMESH = 9,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -2707,6 +2708,15 @@ extern "C" {
                                          meshScale: *mut f64)
      -> ::std::os::raw::c_int;
 }
+extern "C" {
+    pub fn b3CreateCollisionShapeAddTriMesh(commandHandle:
+                                                b3SharedMemoryCommandHandle,
+                                            numVertices: ::std::os::raw::c_int,
+                                            data: *mut f64,
+                                            meshScale: *mut f64)
+     -> ::std::os::raw::c_int;
+}
+
 extern "C" {
     pub fn b3CreateCollisionSetFlag(commandHandle:
                                         b3SharedMemoryCommandHandle,

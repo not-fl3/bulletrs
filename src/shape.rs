@@ -6,7 +6,7 @@ pub enum ShapeType {
     Box,
     Capsule,
     Plane { normal: Vector3<f64>, constant: f64 },
-    Mesh,
+    TriMesh { vertices : Vec<Vector3<f64>>, scale : Vector3<f64> },
     Compound(Vec<(ShapeType, Vector3<f64>, Vector4<f64>)>),
 }
 
@@ -33,6 +33,18 @@ impl ShapeType {
                 let shape_id = ::sys::b3CreateCollisionShapeAddSphere(command, radius);
                 Some(shape_id)
             },
+            &ShapeType::TriMesh{ ref vertices, scale } => unsafe {
+                let mut scale : [f64; 3] = scale.into();
+
+                let shape_id = ::sys::b3CreateCollisionShapeAddTriMesh(
+                    command,
+                    vertices.len() as i32,
+                    ::std::mem::transmute(vertices.as_ptr()),
+                    (&mut scale).as_mut_ptr()
+                );
+                Some(shape_id)
+            },
+
             &ShapeType::Compound(ref shapes) => {
                 for &(ref shape, position, orientation) in shapes {
                     let shape_unique_id = shape
