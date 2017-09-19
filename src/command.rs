@@ -1,4 +1,4 @@
-use physics_client::{PhysicsClient};
+use physics_client::PhysicsClient;
 use shape::{Shape, ShapeType};
 use multibody::{DynamicsInfo, MultiBody};
 
@@ -22,6 +22,8 @@ pub enum Command {
     },
 
     ChangeDynamicsInfo(MultiBody, DynamicsInfo),
+
+    GetBasePositionAndOrientation(MultiBody),
 }
 
 pub enum CommandParam {
@@ -178,6 +180,14 @@ impl Command {
                         )
                     };
                 }
+                CommandHandle { handle: command }
+            }
+
+            &Command::GetBasePositionAndOrientation(ref body) => {
+                let command = unsafe {
+                    ::sys::b3RequestActualStateCommandInit(client.handle, body.unique_id)
+                };
+
                 CommandHandle { handle: command }
             }
         }
