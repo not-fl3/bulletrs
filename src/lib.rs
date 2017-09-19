@@ -11,5 +11,5 @@ mod multibody;
 
 pub use bullet::{Bullet, ConnectMethod};
 pub use shape::{ShapeType};
-pub use multibody::DynamicsInfo;
+pub use multibody::{DynamicsInfo, MultiBodyHandle};
 pub use mint::{Vector3, Vector4};
