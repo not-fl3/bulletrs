@@ -1,3 +1,8 @@
+use physics_client::PhysicsClientHandle;
+use errors::Error;
+
+use mint::{Vector3, Vector4};
+
 #[derive(Clone, Default)]
 pub struct DynamicsInfo {
     /// change the mass of the link (or base for linkIndex -1)
@@ -24,5 +29,16 @@ pub struct DynamicsInfo {
 
 #[derive(Clone)]
 pub struct MultiBodyHandle {
+    pub(crate) client_handle: PhysicsClientHandle,
     pub(crate) unique_id: i32,
+}
+
+impl MultiBodyHandle {
+    /// Get the positions (x,y,z) and orientation (x,y,z,w) in quaternion
+    /// values for the base link of your object
+    /// Object is retrieved based on body index, which is the order
+    /// the object was loaded into the simulation (0-based)
+    pub fn get_base_position_and_orientation(&self) -> Result<(Vector3<f64>, Vector4<f64>), Error> {
+        self.client_handle.get_base_position_and_orientation(self.clone())
+    }
 }

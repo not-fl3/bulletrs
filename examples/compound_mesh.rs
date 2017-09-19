@@ -3,8 +3,8 @@ extern crate bulletrs;
 use bulletrs::*;
 
 fn main() {
-    let bullet = Bullet;
-    let client = bullet.connect(ConnectMethod::Gui).unwrap();
+    let bullet = Bullet::connect(ConnectMethod::Gui).unwrap();
+    let client = bullet.physics_client_handle();
     client.reset_simulation();
     client.set_gravity(0.0, 0.0, -10.0);
     client.set_realtime_simulation(true);
