@@ -1,6 +1,6 @@
 use physics_client::PhysicsClient;
 use shape::{Shape, ShapeType};
-use multibody::{DynamicsInfo, MultiBody};
+use multibody::{DynamicsInfo, MultiBodyHandle};
 
 use mint::{Vector3, Vector4};
 
@@ -14,16 +14,16 @@ pub enum Command {
 
     StepSimulation,
 
-    CreateMultiBody {
+    CreateMultiBodyHandle {
         shape: Shape,
         mass: f64,
         position: Vector3<f64>,
         orientation: Vector4<f64>,
     },
 
-    ChangeDynamicsInfo(MultiBody, DynamicsInfo),
+    ChangeDynamicsInfo(MultiBodyHandle, DynamicsInfo),
 
-    GetBasePositionAndOrientation(MultiBody),
+    GetBasePositionAndOrientation(MultiBodyHandle),
 }
 
 pub enum CommandParam {
@@ -65,7 +65,7 @@ impl Command {
                 CommandHandle { handle: command }
             }
 
-            &Command::CreateMultiBody {
+            &Command::CreateMultiBodyHandle {
                 ref shape,
                 mass,
                 position,

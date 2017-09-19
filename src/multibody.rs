@@ -23,6 +23,6 @@ pub struct DynamicsInfo {
 }
 
 #[derive(Clone)]
-pub struct MultiBody {
+pub struct MultiBodyHandle {
     pub(crate) unique_id: i32,
 }
