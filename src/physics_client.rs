@@ -1,6 +1,6 @@
 use command::{Command, CommandParam};
 use shape::{Shape, ShapeType};
-use multibody::{DynamicsInfo, MultiBody};
+use multibody::{DynamicsInfo, MultiBodyHandle};
 use status::Status;
 use errors::Error;
 
@@ -82,8 +82,8 @@ impl PhysicsClient {
         mass: f64,
         position: Vector3<f64>,
         orientation: Vector4<f64>,
-    ) -> Result<MultiBody, Error> {
-        let status = self.submit_client_command_and_wait_status(&Command::CreateMultiBody {
+    ) -> Result<MultiBodyHandle, Error> {
+        let status = self.submit_client_command_and_wait_status(&Command::CreateMultiBodyHandle {
             shape,
             mass,
             position,
@@ -96,14 +96,14 @@ impl PhysicsClient {
             return Err(Error::CommandFailed);
         }
 
-        return Ok(MultiBody {
+        return Ok(MultiBodyHandle {
             unique_id: unsafe { ::sys::b3GetStatusBodyIndex(status.handle) },
         });
     }
 
     /// Get the world position and orientation of the base of the object.
     /// (x,y,z) position vector and (x,y,z,w) quaternion orientation.
-    pub fn change_dynamics_info(&self, body: MultiBody, dynamics_info: DynamicsInfo) {
+    pub fn change_dynamics_info(&self, body: MultiBodyHandle, dynamics_info: DynamicsInfo) {
         self.submit_client_command_and_wait_status(
             &Command::ChangeDynamicsInfo(body, dynamics_info),
         );
@@ -113,7 +113,7 @@ impl PhysicsClient {
     /// values for the base link of your object
     /// Object is retrieved based on body index, which is the order
     /// the object was loaded into the simulation (0-based)
-    pub fn get_base_position_and_orientation(&self, body: MultiBody) -> Result<(Vector3<f64>, Vector4<f64>), Error>{
+    pub fn get_base_position_and_orientation(&self, body: MultiBodyHandle) -> Result<(Vector3<f64>, Vector4<f64>), Error>{
         let status = self.submit_client_command_and_wait_status(
             &Command::GetBasePositionAndOrientation(body),
         );
