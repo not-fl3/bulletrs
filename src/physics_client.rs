@@ -4,10 +4,9 @@ use multibody::{DynamicsInfo, MultiBodyHandle};
 use status::Status;
 use errors::Error;
 
-use std::ops::Drop;
-
 use mint::{Vector3, Vector4};
 
+#[derive(Clone)]
 pub struct PhysicsClientHandle {
     pub(crate) handle: ::sys::b3PhysicsClientHandle,
 }
@@ -16,11 +15,6 @@ impl PhysicsClientHandle {
     /// There can only be 1 outstanding command. Check if a command can be send.
     pub fn can_submit_command(&self) -> bool {
         unsafe { ::sys::b3CanSubmitCommand(self.handle) != 0 }
-    }
-
-    /// b3DisconnectSharedMemory will disconnect the client from the server and cleanup memory.
-    pub fn disconnect_shared_memory(&self) {
-        unsafe { ::sys::b3DisconnectSharedMemory(self.handle) }
     }
 
     /// blocking submit command and wait for status
@@ -97,6 +91,7 @@ impl PhysicsClientHandle {
         }
 
         return Ok(MultiBodyHandle {
+            client_handle: self.clone(),
             unique_id: unsafe { ::sys::b3GetStatusBodyIndex(status.handle) },
         });
     }
@@ -113,10 +108,14 @@ impl PhysicsClientHandle {
     /// values for the base link of your object
     /// Object is retrieved based on body index, which is the order
     /// the object was loaded into the simulation (0-based)
-    pub fn get_base_position_and_orientation(&self, body: MultiBodyHandle) -> Result<(Vector3<f64>, Vector4<f64>), Error>{
-        let status = self.submit_client_command_and_wait_status(
-            &Command::GetBasePositionAndOrientation(body),
-        );
+    pub fn get_base_position_and_orientation(
+        &self,
+        body: MultiBodyHandle,
+    ) -> Result<(Vector3<f64>, Vector4<f64>), Error> {
+        let status =
+            self.submit_client_command_and_wait_status(
+                &Command::GetBasePositionAndOrientation(body),
+            );
 
         if status.get_status_type() !=
             ::sys::EnumSharedMemoryServerStatus::CMD_ACTUAL_STATE_UPDATE_COMPLETED
@@ -127,26 +126,25 @@ impl PhysicsClientHandle {
         #[repr(C)]
         struct ActualState {
             position: Vector3<f64>,
-            orientation: Vector4<f64>
+            orientation: Vector4<f64>,
         }
         let mut actual_state = ActualState {
-            position : Vector3::from([0.0, 0.0, 0.0]),
-            orientation : Vector4::from([0.0, 0.0, 0.0, 0.0]),
+            position: Vector3::from([0.0, 0.0, 0.0]),
+            orientation: Vector4::from([0.0, 0.0, 0.0, 0.0]),
         };
         let actual_state_ref = &mut actual_state;
         unsafe {
             ::sys::b3GetStatusActualState(
-			    status.handle, ::std::ptr::null_mut() /* body_unique_id */,
-				::std::ptr::null_mut() /* num_degree_of_freedom_q */, ::std::ptr::null_mut() /* num_degree_of_freedom_u */,
-				::std::ptr::null_mut() /*root_local_inertial_frame*/, ::std::mem::transmute(&actual_state_ref),
-				::std::ptr::null_mut() /* actual_state_q_dot */, ::std::ptr::null_mut() /* joint_reaction_forces */);
+                status.handle,
+                ::std::ptr::null_mut(), /* body_unique_id */
+                ::std::ptr::null_mut(), /* num_degree_of_freedom_q */
+                ::std::ptr::null_mut(), /* num_degree_of_freedom_u */
+                ::std::ptr::null_mut(), /*root_local_inertial_frame*/
+                ::std::mem::transmute(&actual_state_ref),
+                ::std::ptr::null_mut(), /* actual_state_q_dot */
+                ::std::ptr::null_mut(), /* joint_reaction_forces */
+            );
         }
         Ok((actual_state_ref.position, actual_state_ref.orientation))
-    }
-}
-
-impl Drop for PhysicsClientHandle {
-    fn drop(&mut self) {
-        self.disconnect_shared_memory();
     }
 }
