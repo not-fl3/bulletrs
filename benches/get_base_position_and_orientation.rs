@@ -1,14 +1,22 @@
+#![feature(test)]
+
+extern crate test;
 extern crate bulletrs;
+
+use test::Bencher;
 
 use bulletrs::*;
 
-fn main() {
-    let bullet = Bullet::connect(ConnectMethod::Gui).unwrap();
+#[bench]
+fn get_base_position_and_orientation_bench(b: &mut Bencher) {
+    let bodies_count = 2000;
+
+    let bullet = Bullet::connect(ConnectMethod::Direct).unwrap();
     let client = bullet.physics_client_handle();
 
     client.reset_simulation();
     client.set_gravity(0.0, 0.0, -10.0);
-    client.set_realtime_simulation(true);
+    client.set_realtime_simulation(false);
     let plane_shape = client
         .create_collision_shape(ShapeType::Plane {
             normal: Vector3::from([0.0, 0.0, 1.0]),
@@ -37,10 +45,10 @@ fn main() {
         .create_collision_shape(ShapeType::Sphere { radius: 0.1 })
         .unwrap();
 
-    for i in 0..20 {
+    let bodies = (0..bodies_count).map(|i| {
         let body = client
             .create_multi_body(
-                sphere_shape.clone(),
+                sphere_shape,
                 0.1,
                 Vector3::from([i as f64 / 1000.0, i as f64 / 1000.0, 2.0 + i as f64 / 10.0]),
                 Vector4::from([0.0, 0.0, 0.0, 1.0]),
@@ -48,16 +56,18 @@ fn main() {
             .unwrap();
 
         client.change_dynamics_info(
-            body,
+            body.clone(),
             DynamicsInfo {
                 restitution : Some(0.9),
                 ..Default::default()
             },
         );
-    }
+        body.clone()
+    }).collect::<Vec<_>>();
 
-    loop {
-        client.step_simulateion();
-        ::std::thread::sleep(::std::time::Duration::from_millis(30));
-    }
+    b.iter(move || {
+        for body in bodies.iter() {
+            client.get_base_position_and_orientation(body.clone()).unwrap();
+        }
+    })
 }

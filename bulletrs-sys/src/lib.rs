@@ -3009,6 +3009,22 @@ extern "C" {
                                  flags: ::std::os::raw::c_int);
 }
 extern "C" {
+    pub fn b3InitSetAngularFactorCommand(physClient: b3PhysicsClientHandle,
+                                         bodyUniqueId: ::std::os::raw::c_int,
+                                         factor: *const f64) -> b3SharedMemoryCommandHandle;
+}
+
+extern "C" {
+    pub fn b3CreateRigidBodyCommandInit(
+        physClient : b3PhysicsClientHandle,
+        shapeUniqueId : ::std::os::raw::c_int,
+        is_dynamic : ::std::os::raw::c_int,
+        mass : f64,
+        position : *const f64,
+        orientation : *const f64) -> b3SharedMemoryCommandHandle;
+}
+
+extern "C" {
     /// experiments of robots interacting with non-rigid objects (such as btSoftBody)
     pub fn b3LoadBunnyCommandInit(physClient: b3PhysicsClientHandle)
      -> b3SharedMemoryCommandHandle;

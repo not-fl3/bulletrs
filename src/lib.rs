@@ -8,9 +8,12 @@ mod command;
 mod status;
 mod shape;
 mod multibody;
+mod rigidbody;
 
 pub use bullet::{Bullet, ConnectMethod};
 pub use physics_client::PhysicsClientHandle;
 pub use shape::{Shape, ShapeType};
 pub use multibody::{DynamicsInfo, MultiBodyHandle};
+pub use rigidbody::{RigidBodyHandle};
+
 pub use mint::{Vector3, Vector4};

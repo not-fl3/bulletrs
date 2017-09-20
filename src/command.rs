@@ -1,7 +1,7 @@
 use physics_client::PhysicsClientHandle;
 use shape::{Shape, ShapeType};
 use multibody::{DynamicsInfo, MultiBodyHandle};
-
+use rigidbody::RigidBodyHandle;
 use mint::{Vector3, Vector4};
 
 pub enum Command {
@@ -21,9 +21,18 @@ pub enum Command {
         orientation: Vector4<f64>,
     },
 
+    CreateRigidBodyHandle {
+        shape: Shape,
+        mass: f64,
+        position: Vector3<f64>,
+        orientation: Vector4<f64>,
+    },
+
     ChangeDynamicsInfo(MultiBodyHandle, DynamicsInfo),
 
     GetBasePositionAndOrientation(MultiBodyHandle),
+
+    SetAngularFactor(RigidBodyHandle, Vector3<f64>),
 }
 
 pub enum CommandParam {
@@ -89,6 +98,28 @@ impl Command {
                         &mut base_inertial_frame_orientation[0] as *mut _,
                     );
                 }
+                CommandHandle { handle: command }
+            }
+
+            &Command::CreateRigidBodyHandle {
+                ref shape,
+                mass,
+                position,
+                orientation,
+            } => {
+                let mut position: [f64; 3] = position.into();
+                let mut orientation: [f64; 4] = orientation.into();
+
+                let command = unsafe {
+                    ::sys::b3CreateRigidBodyCommandInit(
+                        client.handle,
+                        shape.unique_id,
+                        if mass > 0.0 { 1 } else { 0 },
+                        mass,
+                        &mut position[0] as *mut _,
+                        &mut orientation[0] as *mut _,
+                    )
+                };
                 CommandHandle { handle: command }
             }
 
@@ -186,6 +217,19 @@ impl Command {
             &Command::GetBasePositionAndOrientation(ref body) => {
                 let command = unsafe {
                     ::sys::b3RequestActualStateCommandInit(client.handle, body.unique_id)
+                };
+
+                CommandHandle { handle: command }
+            }
+
+            &Command::SetAngularFactor(ref body, factor) => {
+                let mut factor: [f64; 3] = factor.into();
+                let command = unsafe {
+                    ::sys::b3InitSetAngularFactorCommand(
+                        client.handle,
+                        body.unique_id,
+                        factor.as_mut_ptr(),
+                    )
                 };
 
                 CommandHandle { handle: command }
