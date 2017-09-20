@@ -6,10 +6,13 @@ pybullet-based bindings to bullet3d.
 
 Compound: 
 
-![Bulelt!](https://i.imgur.com/IGOxQ1r.gif)
+![Compound](https://i.imgur.com/IGOxQ1r.gif)
 
 TriMesh:
 
-![Bulelt!](https://i.imgur.com/np0e5ne.gif)
+![TriMesh](https://i.imgur.com/np0e5ne.gif)
 
+Capsule:
+
+![Capsule](https://i.imgur.com/xHRec9h.gif)
 

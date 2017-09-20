@@ -1,6 +1,7 @@
 use command::{Command, CommandParam};
 use shape::{Shape, ShapeType};
 use multibody::{DynamicsInfo, MultiBodyHandle};
+use rigidbody::RigidBodyHandle;
 use status::Status;
 use errors::Error;
 
@@ -62,6 +63,7 @@ impl PhysicsClientHandle {
         }
 
         return Ok(Shape {
+            client_handle: self.clone(),
             unique_id: unsafe { ::sys::b3GetStatusCollisionShapeUniqueId(status.handle) },
         });
     }
@@ -91,6 +93,32 @@ impl PhysicsClientHandle {
         }
 
         return Ok(MultiBodyHandle {
+            client_handle: self.clone(),
+            unique_id: unsafe { ::sys::b3GetStatusBodyIndex(status.handle) },
+        });
+    }
+
+    pub fn create_rigid_body(
+        &self,
+        shape: Shape,
+        mass: f64,
+        position: Vector3<f64>,
+        orientation: Vector4<f64>,
+    ) -> Result<RigidBodyHandle, Error> {
+        let status = self.submit_client_command_and_wait_status(&Command::CreateRigidBodyHandle {
+            shape,
+            mass,
+            position,
+            orientation,
+        });
+
+        if status.get_status_type() !=
+            ::sys::EnumSharedMemoryServerStatus::CMD_RIGID_BODY_CREATION_COMPLETED
+        {
+            return Err(Error::CommandFailed);
+        }
+
+        return Ok(RigidBodyHandle {
             client_handle: self.clone(),
             unique_id: unsafe { ::sys::b3GetStatusBodyIndex(status.handle) },
         });
