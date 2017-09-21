@@ -67,7 +67,7 @@ fn main() {
 
 
     loop {
-        client.step_simulateion();
+        client.step_simulation();
         ::std::thread::sleep(::std::time::Duration::from_millis(30));
     }
 }
