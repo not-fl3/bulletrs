@@ -68,7 +68,7 @@ impl PhysicsClientHandle {
         });
     }
 
-    pub fn step_simulateion(&self) {
+    pub fn step_simulation(&self) {
         self.submit_client_command_and_wait_status(&Command::StepSimulation);
     }
 
