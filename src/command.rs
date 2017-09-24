@@ -1,6 +1,6 @@
 use physics_client::PhysicsClientHandle;
 use shape::{Shape, ShapeType};
-use multibody::{DynamicsInfo, MultiBodyHandle};
+use dynamicsinfo::DynamicsInfo;
 use rigidbody::RigidBodyHandle;
 use mint::{Vector3, Vector4};
 
@@ -14,23 +14,16 @@ pub enum Command {
 
     StepSimulation,
 
-    CreateMultiBodyHandle {
+    CreateRigidBody {
         shape: Shape,
         mass: f64,
         position: Vector3<f64>,
         orientation: Vector4<f64>,
     },
 
-    CreateRigidBodyHandle {
-        shape: Shape,
-        mass: f64,
-        position: Vector3<f64>,
-        orientation: Vector4<f64>,
-    },
+    ChangeDynamicsInfo(RigidBodyHandle, DynamicsInfo),
 
-    ChangeDynamicsInfo(MultiBodyHandle, DynamicsInfo),
-
-    GetBasePositionAndOrientation(MultiBodyHandle),
+    GetBasePositionAndOrientation(RigidBodyHandle),
 
     SetAngularFactor(RigidBodyHandle, Vector3<f64>),
 }
@@ -74,7 +67,7 @@ impl Command {
                 CommandHandle { handle: command }
             }
 
-            &Command::CreateMultiBodyHandle {
+            &Command::CreateRigidBody {
                 ref shape,
                 mass,
                 position,
@@ -98,28 +91,11 @@ impl Command {
                         &mut base_inertial_frame_orientation[0] as *mut _,
                     );
                 }
-                CommandHandle { handle: command }
-            }
 
-            &Command::CreateRigidBodyHandle {
-                ref shape,
-                mass,
-                position,
-                orientation,
-            } => {
-                let mut position: [f64; 3] = position.into();
-                let mut orientation: [f64; 4] = orientation.into();
-
-                let command = unsafe {
-                    ::sys::b3CreateRigidBodyCommandInit(
-                        client.handle,
-                        shape.unique_id,
-                        if mass > 0.0 { 1 } else { 0 },
-                        mass,
-                        &mut position[0] as *mut _,
-                        &mut orientation[0] as *mut _,
-                    )
-                };
+                // with USE_MAXIMAL_COORDINATES physcs clients creates btRigidBody instead of btMultiBody
+                unsafe {
+                    ::sys::b3CreateMultiBodyUseMaximalCoordinates(command);
+                }
                 CommandHandle { handle: command }
             }
 

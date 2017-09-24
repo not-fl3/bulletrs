@@ -17,7 +17,7 @@ fn main() {
         .unwrap();
 
     let plane = client
-        .create_multi_body(
+        .create_rigid_body(
             plane_shape,
             0.0,
             Vector3::from([0.0, 0.0, 0.0]),
@@ -39,7 +39,7 @@ fn main() {
 
     for i in 0..20 {
         let body = client
-            .create_multi_body(
+            .create_rigid_body(
                 sphere_shape.clone(),
                 0.1,
                 Vector3::from([i as f64 / 1000.0, i as f64 / 1000.0, 2.0 + i as f64 / 10.0]),

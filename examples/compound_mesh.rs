@@ -17,7 +17,7 @@ fn main() {
         .unwrap();
 
     let plane = client
-        .create_multi_body(
+        .create_rigid_body(
             plane_shape,
             0.0,
             Vector3::from([0.0, 0.0, 0.0]),
@@ -49,7 +49,7 @@ fn main() {
         .unwrap();
 
     let compound = client
-        .create_multi_body(
+        .create_rigid_body(
             shape,
             0.1,
             Vector3::from([0.0, 0.0, 2.0]),

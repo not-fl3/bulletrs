@@ -25,7 +25,7 @@ fn get_base_position_and_orientation_bench(b: &mut Bencher) {
         .unwrap();
 
     let plane = client
-        .create_multi_body(
+        .create_rigid_body(
             plane_shape,
             0.0,
             Vector3::from([0.0, 0.0, 0.0]),
@@ -47,7 +47,7 @@ fn get_base_position_and_orientation_bench(b: &mut Bencher) {
 
     let bodies = (0..bodies_count).map(|i| {
         let body = client
-            .create_multi_body(
+            .create_rigid_body(
                 sphere_shape.clone(),
                 0.1,
                 Vector3::from([i as f64 / 1000.0, i as f64 / 1000.0, 2.0 + i as f64 / 10.0]),

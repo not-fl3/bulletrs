@@ -17,7 +17,7 @@ fn main() {
         .unwrap();
 
     let plane = client
-        .create_multi_body(
+        .create_rigid_body(
             plane_shape,
             0.0,
             Vector3::from([0.0, 0.0, 0.0]),
@@ -52,7 +52,7 @@ fn main() {
     capsule.set_angular_factor(Vector3::from([0.0, 0.0, 0.0]));
 
     client
-        .create_multi_body(
+        .create_rigid_body(
             shape.clone(),
             0.1,
             Vector3::from([0.0, 1.0, 4.0]),
