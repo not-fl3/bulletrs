@@ -7,13 +7,13 @@ mod physics_client;
 mod command;
 mod status;
 mod shape;
-mod multibody;
+mod dynamicsinfo;
 mod rigidbody;
 
 pub use bullet::{Bullet, ConnectMethod};
 pub use physics_client::PhysicsClientHandle;
 pub use shape::{Shape, ShapeType};
-pub use multibody::{DynamicsInfo, MultiBodyHandle};
+pub use dynamicsinfo::DynamicsInfo;
 pub use rigidbody::{RigidBodyHandle};
 
 pub use mint::{Vector3, Vector4};

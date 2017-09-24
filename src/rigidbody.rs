@@ -1,7 +1,8 @@
 use physics_client::PhysicsClientHandle;
 use command::Command;
+use errors::Error;
 
-use mint::{Vector3};
+use mint::{Vector3, Vector4};
 
 #[derive(Clone)]
 pub struct RigidBodyHandle {
@@ -10,6 +11,14 @@ pub struct RigidBodyHandle {
 }
 
 impl RigidBodyHandle {
+    /// Get the positions (x,y,z) and orientation (x,y,z,w) in quaternion
+    /// values for the base link of your object
+    /// Object is retrieved based on body index, which is the order
+    /// the object was loaded into the simulation (0-based)
+    pub fn get_base_position_and_orientation(&self) -> Result<(Vector3<f64>, Vector4<f64>), Error> {
+        self.client_handle.get_base_position_and_orientation(self.clone())
+    }
+
     pub fn set_angular_factor(&self, factor : Vector3<f64>) {
         self.client_handle.submit_client_command_and_wait_status(
             &Command::SetAngularFactor(self.clone(), factor),

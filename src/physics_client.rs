@@ -1,6 +1,6 @@
 use command::{Command, CommandParam};
 use shape::{Shape, ShapeType};
-use multibody::{DynamicsInfo, MultiBodyHandle};
+use dynamicsinfo::DynamicsInfo;
 use rigidbody::RigidBodyHandle;
 use status::Status;
 use errors::Error;
@@ -72,14 +72,14 @@ impl PhysicsClientHandle {
         self.submit_client_command_and_wait_status(&Command::StepSimulation);
     }
 
-    pub fn create_multi_body(
+    pub fn create_rigid_body(
         &self,
         shape: Shape,
         mass: f64,
         position: Vector3<f64>,
         orientation: Vector4<f64>,
-    ) -> Result<MultiBodyHandle, Error> {
-        let status = self.submit_client_command_and_wait_status(&Command::CreateMultiBodyHandle {
+    ) -> Result<RigidBodyHandle, Error> {
+        let status = self.submit_client_command_and_wait_status(&Command::CreateRigidBody {
             shape,
             mass,
             position,
@@ -92,32 +92,6 @@ impl PhysicsClientHandle {
             return Err(Error::CommandFailed);
         }
 
-        return Ok(MultiBodyHandle {
-            client_handle: self.clone(),
-            unique_id: unsafe { ::sys::b3GetStatusBodyIndex(status.handle) },
-        });
-    }
-
-    pub fn create_rigid_body(
-        &self,
-        shape: Shape,
-        mass: f64,
-        position: Vector3<f64>,
-        orientation: Vector4<f64>,
-    ) -> Result<RigidBodyHandle, Error> {
-        let status = self.submit_client_command_and_wait_status(&Command::CreateRigidBodyHandle {
-            shape,
-            mass,
-            position,
-            orientation,
-        });
-
-        if status.get_status_type() !=
-            ::sys::EnumSharedMemoryServerStatus::CMD_RIGID_BODY_CREATION_COMPLETED
-        {
-            return Err(Error::CommandFailed);
-        }
-
         return Ok(RigidBodyHandle {
             client_handle: self.clone(),
             unique_id: unsafe { ::sys::b3GetStatusBodyIndex(status.handle) },
@@ -126,7 +100,7 @@ impl PhysicsClientHandle {
 
     /// Get the world position and orientation of the base of the object.
     /// (x,y,z) position vector and (x,y,z,w) quaternion orientation.
-    pub fn change_dynamics_info(&self, body: MultiBodyHandle, dynamics_info: DynamicsInfo) {
+    pub fn change_dynamics_info(&self, body: RigidBodyHandle, dynamics_info: DynamicsInfo) {
         self.submit_client_command_and_wait_status(
             &Command::ChangeDynamicsInfo(body, dynamics_info),
         );
@@ -138,7 +112,7 @@ impl PhysicsClientHandle {
     /// the object was loaded into the simulation (0-based)
     pub fn get_base_position_and_orientation(
         &self,
-        body: MultiBodyHandle,
+        body: RigidBodyHandle,
     ) -> Result<(Vector3<f64>, Vector4<f64>), Error> {
         let status =
             self.submit_client_command_and_wait_status(
