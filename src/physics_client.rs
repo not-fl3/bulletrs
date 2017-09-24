@@ -12,6 +12,14 @@ pub struct PhysicsClientHandle {
     pub(crate) handle: ::sys::b3PhysicsClientHandle,
 }
 
+#[repr(C)]
+pub struct BodyActualState {
+    pub position: Vector3<f64>,
+    pub orientation: Vector4<f64>,
+    pub linear_velocity: Vector3<f64>,
+    pub angular_velocity: Vector3<f64>,
+}
+
 impl PhysicsClientHandle {
     /// There can only be 1 outstanding command. Check if a command can be send.
     pub fn can_submit_command(&self) -> bool {
@@ -43,6 +51,12 @@ impl PhysicsClientHandle {
                 gravy,
                 gravz,
             }),
+        );
+    }
+
+    pub fn set_time_stamp(&self, delta: f64) {
+        self.submit_client_command_and_wait_status(
+            &Command::PhysicsParam(CommandParam::TimeStamp(delta)),
         );
     }
 
@@ -106,14 +120,10 @@ impl PhysicsClientHandle {
         );
     }
 
-    /// Get the positions (x,y,z) and orientation (x,y,z,w) in quaternion
-    /// values for the base link of your object
-    /// Object is retrieved based on body index, which is the order
-    /// the object was loaded into the simulation (0-based)
-    pub fn get_base_position_and_orientation(
+    pub fn get_body_actual_state(
         &self,
         body: RigidBodyHandle,
-    ) -> Result<(Vector3<f64>, Vector4<f64>), Error> {
+    ) -> Result<BodyActualState, Error> {
         let status =
             self.submit_client_command_and_wait_status(
                 &Command::GetBasePositionAndOrientation(body),
@@ -125,16 +135,9 @@ impl PhysicsClientHandle {
             return Err(Error::CommandFailed);
         }
 
-        #[repr(C)]
-        struct ActualState {
-            position: Vector3<f64>,
-            orientation: Vector4<f64>,
-        }
-        let mut actual_state = ActualState {
-            position: Vector3::from([0.0, 0.0, 0.0]),
-            orientation: Vector4::from([0.0, 0.0, 0.0, 0.0]),
-        };
-        let actual_state_ref = &mut actual_state;
+        let mut q_ref : &mut [f64; 7] = unsafe {::std::mem::uninitialized()};
+        let mut qdot_ref : &mut [f64; 6] = unsafe {::std::mem::uninitialized()};
+        //let actual_state_qdot_ref = &mut actual_state.linear_velocity;
         unsafe {
             ::sys::b3GetStatusActualState(
                 status.handle,
@@ -142,11 +145,17 @@ impl PhysicsClientHandle {
                 ::std::ptr::null_mut(), /* num_degree_of_freedom_q */
                 ::std::ptr::null_mut(), /* num_degree_of_freedom_u */
                 ::std::ptr::null_mut(), /*root_local_inertial_frame*/
-                ::std::mem::transmute(&actual_state_ref),
-                ::std::ptr::null_mut(), /* actual_state_q_dot */
-                ::std::ptr::null_mut(), /* joint_reaction_forces */
+                &mut q_ref as *mut _ as *mut _,
+                &mut qdot_ref as *mut _ as *mut _, /* actual_state_q_dot */
+                ::std::ptr::null_mut(),                    /* joint_reaction_forces */
             );
         }
-        Ok((actual_state_ref.position, actual_state_ref.orientation))
+
+        Ok(BodyActualState {
+            position : Vector3::from([q_ref[0], q_ref[1], q_ref[2]]),
+            orientation : Vector4::from([q_ref[3], q_ref[4], q_ref[5], q_ref[6]]),
+            linear_velocity : Vector3::from([qdot_ref[0], qdot_ref[1], qdot_ref[2]]),
+            angular_velocity : Vector3::from([qdot_ref[3], qdot_ref[4], qdot_ref[5]]),
+        })
     }
 }
