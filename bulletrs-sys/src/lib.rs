@@ -3015,6 +3015,12 @@ extern "C" {
 }
 
 extern "C" {
+    pub fn b3InitApplyCentralImpulseCommand(physClient: b3PhysicsClientHandle,
+                                            bodyUniqueId: ::std::os::raw::c_int,
+                                            impulse: *const f64) -> b3SharedMemoryCommandHandle;
+}
+
+extern "C" {
     pub fn b3CreateRigidBodyCommandInit(
         physClient : b3PhysicsClientHandle,
         shapeUniqueId : ::std::os::raw::c_int,

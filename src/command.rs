@@ -26,10 +26,13 @@ pub enum Command {
     GetBasePositionAndOrientation(RigidBodyHandle),
 
     SetAngularFactor(RigidBodyHandle, Vector3<f64>),
+
+    ApplyCentralImpulse(RigidBodyHandle, Vector3<f64>),
 }
 
 pub enum CommandParam {
     SetGravity { gravx: f64, gravy: f64, gravz: f64 },
+    TimeStamp(f64),
     RealTimeSimulation(bool),
 }
 
@@ -55,7 +58,13 @@ impl Command {
                 };
                 CommandHandle { handle: command }
             }
-
+            &Command::PhysicsParam(CommandParam::TimeStamp(delta)) => {
+                let command = unsafe { ::sys::b3InitPhysicsParamCommand(client.handle) };
+                unsafe {
+                    ::sys::b3PhysicsParamSetTimeStep(command, delta)
+                };
+                CommandHandle { handle: command }
+            }
             &Command::CreateCollisionShape(ref body) => {
                 let command = unsafe { ::sys::b3CreateCollisionShapeCommandInit(client.handle) };
                 body.create_shape(command);
@@ -205,6 +214,19 @@ impl Command {
                         client.handle,
                         body.unique_id,
                         factor.as_mut_ptr(),
+                    )
+                };
+
+                CommandHandle { handle: command }
+            }
+
+            &Command::ApplyCentralImpulse(ref body, impulse) => {
+                let mut impulse: [f64; 3] = impulse.into();
+                let command = unsafe {
+                    ::sys::b3InitApplyCentralImpulseCommand(
+                        client.handle,
+                        body.unique_id,
+                        impulse.as_mut_ptr(),
                     )
                 };
 
