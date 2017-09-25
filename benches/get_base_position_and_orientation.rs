@@ -67,7 +67,7 @@ fn get_base_position_and_orientation_bench(b: &mut Bencher) {
 
     b.iter(move || {
         for body in bodies.iter() {
-            client.get_base_position_and_orientation(body.clone()).unwrap();
+            body.get_base_position_and_orientation().unwrap();
         }
     })
 }
