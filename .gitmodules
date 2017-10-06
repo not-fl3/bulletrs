@@ -1,0 +1,3 @@
+[submodule "bulletrs-sys/bullet3"]
+	path = bulletrs-sys/bullet3
+	url = git@github.com:not-fl3/bullet3.git
