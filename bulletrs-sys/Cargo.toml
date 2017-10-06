@@ -2,3 +2,6 @@
 name = "bulletrs-sys"
 version = "0.0.1"
 build = "build.rs"
+
+[build-dependencies]
+cc = "1.0"
