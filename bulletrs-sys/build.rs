@@ -283,12 +283,7 @@ fn build_windows() {
     cc::Build::new()
         .include("bullet3/src")
         .include("bullet3/examples/ThirdPartyLibs")
-        .include("bullet3/examples/ThirdPartyLibs/enet/include")
-        .include("bullet3/examples/ThirdPartyLibs/clsocket/src")
-        .define("BT_ENABLE_CLSOCKET", None)
-        .define("BT_ENABLE_ENET", None)
-        .define("HAS_SOCKLEN_T", None)
-        .define("_WIN32", None)
+        .define("WIN32", None)
         .define("BT_USE_DOUBLE_PRECISION", None)
         .define("libpybullet_EXPORTS", None)
         .define("NDEBUG", None)
@@ -298,6 +293,7 @@ fn build_windows() {
         .warnings(false)
 
         .file("bullet3/examples/Utils/b3Clock.cpp")
+        
         .file("bullet3/examples/Utils/ChromeTraceUtil.cpp")
         .file("bullet3/examples/Utils/b3ResourcePath.cpp")
 
@@ -337,22 +333,6 @@ fn build_windows() {
         .file("bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp")
         .file("bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp")
         .file("bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp")
-        .file("bullet3/examples/SharedMemory/PhysicsClientUDP.cpp")
-        .file("bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.cpp")
-        .file("bullet3/examples/ThirdPartyLibs/enet/win32.c")
-        .file("bullet3/examples/ThirdPartyLibs/enet/unix.c")
-        .file("bullet3/examples/ThirdPartyLibs/enet/callbacks.c")
-        .file("bullet3/examples/ThirdPartyLibs/enet/compress.c")
-        .file("bullet3/examples/ThirdPartyLibs/enet/host.c")
-        .file("bullet3/examples/ThirdPartyLibs/enet/list.c")
-        .file("bullet3/examples/ThirdPartyLibs/enet/packet.c")
-        .file("bullet3/examples/ThirdPartyLibs/enet/peer.c")
-        .file("bullet3/examples/ThirdPartyLibs/enet/protocol.c")
-        .file("bullet3/examples/SharedMemory/PhysicsClientTCP.cpp")
-        .file("bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.cpp")
-        .file("bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.cpp")
-        .file("bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.cpp")
-        .file("bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.cpp")
         .compile("pybullet");
 }
 
