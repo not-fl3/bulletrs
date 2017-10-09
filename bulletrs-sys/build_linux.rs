@@ -1,7 +1,7 @@
 use cc;
 
 pub fn build_linux() {
-        cc::Build::new()
+    cc::Build::new()
         .include("bullet3/src")
         .define("BT_USE_DOUBLE_PRECISION", None)
         .define("LinearMath_EXPORTS", None)
