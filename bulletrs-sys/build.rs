@@ -11,7 +11,7 @@ fn main() {
         build_windows::build_windows();
     } else if env::var("TARGET").unwrap().contains("linux") {
         build_linux::build_linux();
-    } else if env::var("TARGET").unwrap().contains("mac") {
+    } else if env::var("TARGET").unwrap().contains("apple") {
         build_macos::build_macos();
     } else {
         panic!("Unsupported platform!");
