@@ -34,4 +34,12 @@ impl RigidBodyHandle {
             &Command::ApplyCentralImpulse(self.clone(), impulse),
         );
     }
+
+    pub fn set_user_data<T : 'static>(&self, data: Box<T>) {
+        self.client_handle.set_user_data(self.clone(), data);
+    }
+
+    pub fn get_user_data<T : 'static>(&self) -> Box<T> {
+        self.client_handle.get_user_data(self.clone())
+    }
 }

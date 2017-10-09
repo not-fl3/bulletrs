@@ -70,8 +70,8 @@ impl PhysicsClientHandle {
         let status =
             self.submit_client_command_and_wait_status(&Command::CreateCollisionShape(mesh));
 
-        if status.get_status_type() !=
-            ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_COLLISION_SHAPE_COMPLETED
+        if status.get_status_type()
+            != ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_COLLISION_SHAPE_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
@@ -100,8 +100,8 @@ impl PhysicsClientHandle {
             orientation,
         });
 
-        if status.get_status_type() !=
-            ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_MULTI_BODY_COMPLETED
+        if status.get_status_type()
+            != ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_MULTI_BODY_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
@@ -120,23 +120,20 @@ impl PhysicsClientHandle {
         );
     }
 
-    pub fn get_body_actual_state(
-        &self,
-        body: RigidBodyHandle,
-    ) -> Result<BodyActualState, Error> {
+    pub fn get_body_actual_state(&self, body: RigidBodyHandle) -> Result<BodyActualState, Error> {
         let status =
             self.submit_client_command_and_wait_status(
                 &Command::GetBasePositionAndOrientation(body),
             );
 
-        if status.get_status_type() !=
-            ::sys::EnumSharedMemoryServerStatus::CMD_ACTUAL_STATE_UPDATE_COMPLETED
+        if status.get_status_type()
+            != ::sys::EnumSharedMemoryServerStatus::CMD_ACTUAL_STATE_UPDATE_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
 
-        let mut q_ref : &mut [f64; 7] = unsafe {::std::mem::uninitialized()};
-        let mut qdot_ref : &mut [f64; 6] = unsafe {::std::mem::uninitialized()};
+        let mut q_ref: &mut [f64; 7] = unsafe { ::std::mem::uninitialized() };
+        let mut qdot_ref: &mut [f64; 6] = unsafe { ::std::mem::uninitialized() };
         //let actual_state_qdot_ref = &mut actual_state.linear_velocity;
         unsafe {
             ::sys::b3GetStatusActualState(
@@ -147,15 +144,39 @@ impl PhysicsClientHandle {
                 ::std::ptr::null_mut(), /*root_local_inertial_frame*/
                 &mut q_ref as *mut _ as *mut _,
                 &mut qdot_ref as *mut _ as *mut _, /* actual_state_q_dot */
-                ::std::ptr::null_mut(),                    /* joint_reaction_forces */
+                ::std::ptr::null_mut(),            /* joint_reaction_forces */
             );
         }
 
         Ok(BodyActualState {
-            position : Vector3::from([q_ref[0], q_ref[1], q_ref[2]]),
-            orientation : Vector4::from([q_ref[3], q_ref[4], q_ref[5], q_ref[6]]),
-            linear_velocity : Vector3::from([qdot_ref[0], qdot_ref[1], qdot_ref[2]]),
-            angular_velocity : Vector3::from([qdot_ref[3], qdot_ref[4], qdot_ref[5]]),
+            position: Vector3::from([q_ref[0], q_ref[1], q_ref[2]]),
+            orientation: Vector4::from([q_ref[3], q_ref[4], q_ref[5], q_ref[6]]),
+            linear_velocity: Vector3::from([qdot_ref[0], qdot_ref[1], qdot_ref[2]]),
+            angular_velocity: Vector3::from([qdot_ref[3], qdot_ref[4], qdot_ref[5]]),
         })
+    }
+
+    pub fn set_user_data<T : 'static>(&self, body: RigidBodyHandle, data: Box<T>) {
+        let pointer = Box::into_raw(data);
+
+        self.submit_client_command_and_wait_status(
+            &Command::SetUserPointer(body, pointer as *mut _),
+        );
+    }
+
+
+    pub fn get_user_data<T : 'static>(&self, body: RigidBodyHandle) -> Box<T> {
+        let status = self.submit_client_command_and_wait_status(
+            &Command::GetUserPointer(body),
+        );
+
+        let pointer : *mut *mut _ = unsafe {::std::mem::uninitialized() };
+        unsafe {
+            ::sys::b3GetUserPointer(status.handle, pointer as * mut _);
+        }
+
+        unsafe {
+            Box::from_raw((*pointer) as *mut _)
+        }
     }
 }
