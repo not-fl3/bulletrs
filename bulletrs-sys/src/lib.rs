@@ -3031,6 +3031,23 @@ extern "C" {
 }
 
 extern "C" {
+    pub fn b3InitSetUserPointerCommand(physClient: b3PhysicsClientHandle,
+                                       bodyUniqueId : ::std::os::raw::c_int,
+                                       pointer: *mut ::std::os::raw::c_void) -> b3SharedMemoryCommandHandle;
+}
+
+extern "C" {
+    pub fn b3InitGetUserPointerCommand(physClient: b3PhysicsClientHandle,
+                                       bodyUniqueId : ::std::os::raw::c_int) -> b3SharedMemoryCommandHandle;
+}
+
+extern "C" {
+    pub fn b3GetUserPointer(statusHandle: b3SharedMemoryStatusHandle,
+                            pointer : *mut *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
+}
+
+
+extern "C" {
     /// experiments of robots interacting with non-rigid objects (such as btSoftBody)
     pub fn b3LoadBunnyCommandInit(physClient: b3PhysicsClientHandle)
      -> b3SharedMemoryCommandHandle;

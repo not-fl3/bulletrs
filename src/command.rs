@@ -28,6 +28,10 @@ pub enum Command {
     SetAngularFactor(RigidBodyHandle, Vector3<f64>),
 
     ApplyCentralImpulse(RigidBodyHandle, Vector3<f64>),
+
+    SetUserPointer(RigidBodyHandle, *mut ::std::os::raw::c_void),
+
+    GetUserPointer(RigidBodyHandle),
 }
 
 pub enum CommandParam {
@@ -60,9 +64,7 @@ impl Command {
             }
             &Command::PhysicsParam(CommandParam::TimeStamp(delta)) => {
                 let command = unsafe { ::sys::b3InitPhysicsParamCommand(client.handle) };
-                unsafe {
-                    ::sys::b3PhysicsParamSetTimeStep(command, delta)
-                };
+                unsafe { ::sys::b3PhysicsParamSetTimeStep(command, delta) };
                 CommandHandle { handle: command }
             }
             &Command::CreateCollisionShape(ref body) => {
@@ -232,6 +234,28 @@ impl Command {
 
                 CommandHandle { handle: command }
             }
+
+            &Command::SetUserPointer(ref body, ref data) => {
+                let command = unsafe {
+                    ::sys::b3InitSetUserPointerCommand(
+                        client.handle,
+                        body.unique_id,
+                        *data as *mut _,
+                    )
+                };
+                CommandHandle { handle: command }
+            }
+
+            &Command::GetUserPointer(ref body) => {
+                let command = unsafe {
+                    ::sys::b3InitGetUserPointerCommand(
+                        client.handle,
+                        body.unique_id
+                    )
+                };
+                CommandHandle { handle: command }
+            }
+
         }
     }
 }
