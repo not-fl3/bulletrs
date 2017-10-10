@@ -21,6 +21,8 @@ pub enum Command {
         orientation: Vector4<f64>,
     },
 
+    RemoveRigidBody(RigidBodyHandle),
+
     ChangeDynamicsInfo(RigidBodyHandle, DynamicsInfo),
 
     GetBasePositionAndOrientation(RigidBodyHandle),
@@ -107,6 +109,12 @@ impl Command {
                 unsafe {
                     ::sys::b3CreateMultiBodyUseMaximalCoordinates(command);
                 }
+                CommandHandle { handle: command }
+            }
+
+            &Command::RemoveRigidBody(ref shape) => {
+                let command =
+                    unsafe { ::sys::b3InitRemoveBodyCommand(client.handle, shape.unique_id) };
                 CommandHandle { handle: command }
             }
 
@@ -247,15 +255,10 @@ impl Command {
             }
 
             &Command::GetUserPointer(ref body) => {
-                let command = unsafe {
-                    ::sys::b3InitGetUserPointerCommand(
-                        client.handle,
-                        body.unique_id
-                    )
-                };
+                let command =
+                    unsafe { ::sys::b3InitGetUserPointerCommand(client.handle, body.unique_id) };
                 CommandHandle { handle: command }
             }
-
         }
     }
 }

@@ -112,6 +112,10 @@ impl PhysicsClientHandle {
         });
     }
 
+    pub fn remove_rigid_body(&self, body: RigidBodyHandle) {
+        self.submit_client_command_and_wait_status(&Command::RemoveRigidBody(body));
+    }
+
     /// Get the world position and orientation of the base of the object.
     /// (x,y,z) position vector and (x,y,z,w) quaternion orientation.
     pub fn change_dynamics_info(&self, body: RigidBodyHandle, dynamics_info: DynamicsInfo) {
@@ -156,7 +160,7 @@ impl PhysicsClientHandle {
         })
     }
 
-    pub fn set_user_data<T : 'static>(&self, body: RigidBodyHandle, data: Box<T>) {
+    pub fn set_user_data<T: 'static>(&self, body: RigidBodyHandle, data: Box<T>) {
         let pointer = Box::into_raw(data);
 
         self.submit_client_command_and_wait_status(
@@ -165,18 +169,14 @@ impl PhysicsClientHandle {
     }
 
 
-    pub fn get_user_data<T : 'static>(&self, body: RigidBodyHandle) -> Box<T> {
-        let status = self.submit_client_command_and_wait_status(
-            &Command::GetUserPointer(body),
-        );
+    pub fn get_user_data<T: 'static>(&self, body: RigidBodyHandle) -> Box<T> {
+        let status = self.submit_client_command_and_wait_status(&Command::GetUserPointer(body));
 
-        let pointer : *mut *mut _ = unsafe {::std::mem::uninitialized() };
+        let pointer: *mut *mut _ = unsafe { ::std::mem::uninitialized() };
         unsafe {
-            ::sys::b3GetUserPointer(status.handle, pointer as * mut _);
+            ::sys::b3GetUserPointer(status.handle, pointer as *mut _);
         }
 
-        unsafe {
-            Box::from_raw((*pointer) as *mut _)
-        }
+        unsafe { Box::from_raw((*pointer) as *mut _) }
     }
 }

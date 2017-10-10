@@ -4,7 +4,6 @@ use bulletrs::*;
 
 #[test]
 fn body_user_data() {
-
     let bullet = Bullet::connect(ConnectMethod::Direct).unwrap();
     let client = bullet.physics_client_handle();
     client.set_gravity(0.0, 0.0, -10.0);
