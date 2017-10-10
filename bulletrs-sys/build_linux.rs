@@ -469,6 +469,8 @@ pub fn build_linux() {
         .file("bullet3/examples/SharedMemory/InProcessMemory.cpp")
         .file("bullet3/examples/SharedMemory/PhysicsClient.cpp")
         .file("bullet3/examples/SharedMemory/PhysicsServer.cpp")
+        .file("bullet3/examples/SharedMemory/PhysicsServerExample.cpp")
+        .file("bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp")
         .file("bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp")
         .file("bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp")
         .file("bullet3/examples/SharedMemory/PhysicsDirect.cpp")
