@@ -42,4 +42,13 @@ impl RigidBodyHandle {
     pub fn get_user_data<T : 'static>(&self) -> Box<T> {
         self.client_handle.get_user_data(self.clone())
     }
+
+    /// Set gravity to only this specific object
+    /// Be carefull, this will affect only btRigidBody (not btMultiBody).
+    pub fn set_body_gravity(&self, gravity : Vector3<f64>) {
+        self.client_handle.submit_client_command_and_wait_status(
+            &Command::SetBodyGravity(self.clone(), gravity),
+        );
+    }
+
 }

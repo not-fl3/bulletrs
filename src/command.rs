@@ -34,6 +34,8 @@ pub enum Command {
     SetUserPointer(RigidBodyHandle, *mut ::std::os::raw::c_void),
 
     GetUserPointer(RigidBodyHandle),
+
+    SetBodyGravity(RigidBodyHandle, Vector3<f64>),
 }
 
 pub enum CommandParam {
@@ -257,6 +259,14 @@ impl Command {
             &Command::GetUserPointer(ref body) => {
                 let command =
                     unsafe { ::sys::b3InitGetUserPointerCommand(client.handle, body.unique_id) };
+                CommandHandle { handle: command }
+            }
+
+            &Command::SetBodyGravity(ref body, gravity) => {
+                let mut gravity: [f64; 3] = gravity.into();
+
+                let command =
+                    unsafe { ::sys::b3InitSetBodyGravityCommand(client.handle, body.unique_id, gravity.as_mut_ptr()) };
                 CommandHandle { handle: command }
             }
         }

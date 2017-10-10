@@ -3046,6 +3046,12 @@ extern "C" {
                             pointer : *mut *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
 }
 
+extern "C" {
+    pub fn b3InitSetBodyGravityCommand(physClient: b3PhysicsClientHandle,
+                                       bodyUniqueId: ::std::os::raw::c_int,
+                                       gravity : *const f64)
+     -> b3SharedMemoryCommandHandle;
+}
 
 extern "C" {
     /// experiments of robots interacting with non-rigid objects (such as btSoftBody)
