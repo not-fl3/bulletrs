@@ -5,7 +5,7 @@ use rigidbody::RigidBodyHandle;
 use status::Status;
 use errors::Error;
 
-use mint::{Vector3, Vector4};
+use mint::{Point3, Vector3, Vector4};
 
 #[derive(Clone)]
 pub struct PhysicsClientHandle {
@@ -18,6 +18,13 @@ pub struct BodyActualState {
     pub orientation: Vector4<f64>,
     pub linear_velocity: Vector3<f64>,
     pub angular_velocity: Vector3<f64>,
+}
+
+pub struct RayHitInfo {
+    pub fraction: f64,
+    pub body: Option<RigidBodyHandle>,
+    pub position: Point3<f64>,
+    pub normal: Point3<f64>,
 }
 
 impl PhysicsClientHandle {
@@ -168,15 +175,66 @@ impl PhysicsClientHandle {
         );
     }
 
-
-    pub fn get_user_data<T: 'static>(&self, body: RigidBodyHandle) -> Box<T> {
+    pub fn get_user_data<T: 'static>(&self, body: RigidBodyHandle) -> Result<Box<T>, Error> {
         let status = self.submit_client_command_and_wait_status(&Command::GetUserPointer(body));
-
-        let pointer: *mut *mut _ = unsafe { ::std::mem::uninitialized() };
-        unsafe {
-            ::sys::b3GetUserPointer(status.handle, pointer as *mut _);
+        if status.get_status_type()
+            != ::sys::EnumSharedMemoryServerStatus::CMD_GET_USER_POINTER_COMPLETED
+        {
+            return Err(Error::CommandFailed);
         }
 
-        unsafe { Box::from_raw((*pointer) as *mut _) }
+        let mut value: &mut T = unsafe { ::std::mem::uninitialized() };
+        let pointer: *mut _ = &mut value as *mut _ as *mut _;
+        unsafe {
+            ::sys::b3GetUserPointer(status.handle, pointer);
+        }
+
+        Ok(unsafe { Box::from_raw((*pointer) as *mut _) })
+    }
+
+    /// Cast the world with ray, constructed by start and end points.
+    /// Begin and end is bounds of colliding segment.
+    pub fn raycast(&self, start: Point3<f64>, end: Point3<f64>) -> Result<Vec<RayHitInfo>, Error> {
+        let status = self.submit_client_command_and_wait_status(&Command::Raycast(start, end));
+        if status.get_status_type()
+            != ::sys::EnumSharedMemoryServerStatus::CMD_REQUEST_RAY_CAST_INTERSECTIONS_COMPLETED
+        {
+            return Err(Error::CommandFailed);
+        }
+
+        let mut raycast_info: ::sys::b3RaycastInformation = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::sys::b3GetRaycastInformation(self.handle, &mut raycast_info as *mut _);
+        }
+
+        let raycast_rays_info = unsafe {
+            ::std::slice::from_raw_parts(raycast_info.m_rayHits, raycast_info.m_numRayHits as usize)
+        };
+
+        // there was only 1 ray, so there should be only 1 output
+        let ray_info = raycast_rays_info.get(0).ok_or(Error::CommandFailed)?;
+
+        let hits =
+            unsafe { ::std::slice::from_raw_parts(ray_info.hits, ray_info.m_numHits as usize) };
+
+        Ok(
+            hits.iter()
+                .map(|hit| {
+                    RayHitInfo {
+                        fraction: hit.m_hitFraction,
+                        body: if hit.m_hitObjectUniqueId == -1 {
+                            None
+                        } else {
+                            Some(RigidBodyHandle {
+                                client_handle: self.clone(),
+                                unique_id: hit.m_hitObjectUniqueId,
+                            })
+                        },
+                        position: Point3::from(hit.m_hitPositionWorld),
+                        normal: Point3::from(hit.m_hitNormalWorld),
+                    }
+                })
+                .collect(),
+        )
     }
 }

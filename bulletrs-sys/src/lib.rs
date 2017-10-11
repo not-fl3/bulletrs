@@ -159,7 +159,11 @@ pub enum EnumSharedMemoryServerStatus {
     CMD_REQUEST_COLLISION_INFO_FAILED = 83,
     CMD_REQUEST_MOUSE_EVENTS_DATA_COMPLETED = 84,
     CMD_CHANGE_TEXTURE_COMMAND_FAILED = 85,
-    CMD_MAX_SERVER_COMMANDS = 86,
+    CMD_CUSTOM_COMMAND_COMPLETED = 86,
+	CMD_CUSTOM_COMMAND_FAILED = 87,
+    CMD_GET_USER_POINTER_COMPLETED = 88,
+    CMD_GET_USER_POINTER_FAILED = 89,
+    CMD_MAX_SERVER_COMMANDS = 90,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -1173,9 +1177,19 @@ impl Clone for b3RayHitInfo {
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
+pub struct b3RayHitsInfo {
+    pub m_numHits: ::std::os::raw::c_int,
+    pub hits: *mut b3RayHitInfo
+}
+impl Clone for b3RayHitsInfo {
+    fn clone(&self) -> Self { *self }
+}
+
+#[repr(C)]
+#[derive(Debug, Copy)]
 pub struct b3RaycastInformation {
     pub m_numRayHits: ::std::os::raw::c_int,
-    pub m_rayHits: *mut b3RayHitInfo,
+    pub m_rayHits: *mut b3RayHitsInfo,
 }
 #[test]
 fn bindgen_test_layout_b3RaycastInformation() {
