@@ -38,6 +38,6 @@ fn body_user_data() {
         client.step_simulation();
     }
 
-    assert_eq!(1, *body1.get_user_data::<i32>());
-    assert_eq!(2, *body2.get_user_data::<i32>());
+    assert_eq!(1, *body1.get_user_data::<i32>().unwrap());
+    assert_eq!(2, *body2.get_user_data::<i32>().unwrap());
 }

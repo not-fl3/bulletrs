@@ -16,4 +16,4 @@ pub use shape::{Shape, ShapeType};
 pub use dynamicsinfo::DynamicsInfo;
 pub use rigidbody::{RigidBodyHandle};
 
-pub use mint::{Vector3, Vector4};
+pub use mint::{Point3, Vector3, Vector4};

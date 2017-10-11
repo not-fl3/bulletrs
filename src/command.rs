@@ -2,7 +2,7 @@ use physics_client::PhysicsClientHandle;
 use shape::{Shape, ShapeType};
 use dynamicsinfo::DynamicsInfo;
 use rigidbody::RigidBodyHandle;
-use mint::{Vector3, Vector4};
+use mint::{Point3, Vector3, Vector4};
 
 pub enum Command {
     /// If you re-connected to an existing server, or server changed otherwise, sync the body info and user constraints etc.
@@ -36,6 +36,8 @@ pub enum Command {
     GetUserPointer(RigidBodyHandle),
 
     SetBodyGravity(RigidBodyHandle, Vector3<f64>),
+
+    Raycast(Point3<f64>, Point3<f64>),
 }
 
 pub enum CommandParam {
@@ -265,8 +267,28 @@ impl Command {
             &Command::SetBodyGravity(ref body, gravity) => {
                 let mut gravity: [f64; 3] = gravity.into();
 
-                let command =
-                    unsafe { ::sys::b3InitSetBodyGravityCommand(client.handle, body.unique_id, gravity.as_mut_ptr()) };
+                let command = unsafe {
+                    ::sys::b3InitSetBodyGravityCommand(
+                        client.handle,
+                        body.unique_id,
+                        gravity.as_mut_ptr(),
+                    )
+                };
+                CommandHandle { handle: command }
+            }
+
+            &Command::Raycast(start, end) => {
+                let command = unsafe {
+                    ::sys::b3CreateRaycastCommandInit(
+                        client.handle,
+                        start.x,
+                        start.y,
+                        start.z,
+                        end.x,
+                        end.y,
+                        end.z,
+                    )
+                };
                 CommandHandle { handle: command }
             }
         }
