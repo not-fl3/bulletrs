@@ -21,6 +21,8 @@ pub struct BodyActualState {
 }
 
 pub struct RayHitInfo {
+    /// This is a number between 0.0 and 1.0 where 0.0 is origin and 1.0 is destination.
+    /// If the hit fraction is 0.33333, it means position is located 1/3 of the way between ray begin and ray end
     pub fraction: f64,
     pub body: Option<RigidBodyHandle>,
     pub position: Point3<f64>,
@@ -189,11 +191,16 @@ impl PhysicsClientHandle {
             ::sys::b3GetUserPointer(status.handle, pointer);
         }
 
-        Ok(unsafe { Box::from_raw((*pointer) as *mut _) })
+        if unsafe { (*pointer).is_null() } {
+            return Err(Error::NoValue);
+        } else {
+            Ok(unsafe { Box::from_raw((*pointer) as *mut _) })
+        }
     }
 
     /// Cast the world with ray, constructed by start and end points.
     /// Begin and end is bounds of colliding segment.
+    /// Results will be in random order.
     pub fn raycast(&self, start: Point3<f64>, end: Point3<f64>) -> Result<Vec<RayHitInfo>, Error> {
         let status = self.submit_client_command_and_wait_status(&Command::Raycast(start, end));
         if status.get_status_type()

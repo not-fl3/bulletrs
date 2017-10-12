@@ -1,9 +1,10 @@
 use std::fmt;
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub enum Error {
     ConnectionTerminated,
-    CommandFailed
+    CommandFailed,
+    NoValue
 }
 
 impl fmt::Display for Error {
@@ -11,6 +12,7 @@ impl fmt::Display for Error {
         match *self {
             Error::ConnectionTerminated => write!(f, "ConnectionTerminated"),
             Error::CommandFailed => write!(f, "CommandFailed"),
+            Error::NoValue => write!(f, "No such value"),
         }
     }
 }
