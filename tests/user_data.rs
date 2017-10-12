@@ -34,10 +34,21 @@ fn body_user_data() {
         .unwrap();
     body2.set_user_data(Box::new(2));
 
+    let body3 = client
+        .create_rigid_body(
+            sphere_shape.clone(),
+            0.1,
+            Vector3::from([1.0, 2.0, 3.0]),
+            Vector4::from([0.0, 0.0, 0.0, 1.0]),
+        )
+        .unwrap();
+
     for _ in 0 .. 10 {
         client.step_simulation();
     }
 
     assert_eq!(1, *body1.get_user_data::<i32>().unwrap());
     assert_eq!(2, *body2.get_user_data::<i32>().unwrap());
+
+    assert_eq!(body3.get_user_data::<i32>().unwrap_err(), ::bulletrs::Error::NoValue);
 }
