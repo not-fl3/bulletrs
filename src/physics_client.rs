@@ -195,7 +195,7 @@ impl PhysicsClientHandle {
             return Err(Error::NoValue);
         } else {
             let pointer = unsafe { *pointer as *mut _ };
-            Ok(unsafe { &*(pointer as * mut _) })
+            Ok(unsafe { &*(pointer as *mut _) })
         }
     }
 
@@ -233,5 +233,18 @@ impl PhysicsClientHandle {
         }).collect();
 
         return Ok(hits);
+    }
+
+    /// Add debug line for GUI connection type
+    /// Will do nothing in Direct or any other modes
+    pub fn add_user_debug_line(&self, from: Point3<f64>, to: Point3<f64>, color: Vector4<f64>) {
+        self.submit_client_command_and_wait_status(&Command::AddUserDebugLine {
+            from,
+            to,
+            color,
+            line_width: 1.0,
+            life_time: 666.0,
+        });
+
     }
 }

@@ -38,6 +38,14 @@ pub enum Command {
     SetBodyGravity(RigidBodyHandle, Vector3<f64>),
 
     Raycast(Point3<f64>, Point3<f64>),
+
+    AddUserDebugLine {
+        from: Point3<f64>,
+        to: Point3<f64>,
+        color: Vector4<f64>,
+        line_width: f64,
+        life_time: f64,
+    },
 }
 
 pub enum CommandParam {
@@ -53,10 +61,10 @@ impl Command {
                 handle: unsafe { ::sys::b3InitSyncBodyInfoCommand(client.handle) },
             },
             &Command::PhysicsParam(CommandParam::SetGravity {
-                gravx,
-                gravy,
-                gravz,
-            }) => {
+                                       gravx,
+                                       gravy,
+                                       gravz,
+                                   }) => {
                 let command = unsafe { ::sys::b3InitPhysicsParamCommand(client.handle) };
                 unsafe { ::sys::b3PhysicsParamSetGravity(command, gravx, gravy, gravz) };
                 CommandHandle { handle: command }
@@ -287,6 +295,29 @@ impl Command {
                         end.x,
                         end.y,
                         end.z,
+                    )
+                };
+                CommandHandle { handle: command }
+            }
+            &Command::AddUserDebugLine {
+                from,
+                to,
+                color,
+                line_width,
+                life_time,
+            } => {
+                let mut from: [f64; 3] = from.into();
+                let mut to: [f64; 3] = to.into();
+                let mut color: [f64; 4] = color.into();
+
+                let command = unsafe {
+                    ::sys::b3InitUserDebugDrawAddLine3D(
+                        client.handle,
+                        from.as_mut_ptr(),
+                        to.as_mut_ptr(),
+                        color.as_mut_ptr(),
+                        line_width,
+                        life_time,
                     )
                 };
                 CommandHandle { handle: command }
