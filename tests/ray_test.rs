@@ -40,20 +40,24 @@ fn raycast_test() {
         )
         .unwrap();
 
-    let results = client
-        .raycast(
-            Point3::from([-20.0, 0.0, 0.0]),
-            Point3::from([20.0, 0.0, 0.0]),
-        )
-        .unwrap();
+    for _ in 0 .. 1000 {
+        let results = client
+            .raycast(
+                Point3::from([-20.0, 0.0, 0.0]),
+                Point3::from([20.0, 0.0, 0.0]),
+            )
+            .unwrap();
 
-    assert_eq!(results.len(), 3);
-    let mut tois: Vec<f64> = results
-        .iter()
-        .map(|collision| collision.fraction * 40.0)
-        .collect();
-    tois.sort_by(|a, b| a.partial_cmp(b).unwrap());
-    assert_eq!(tois[0], 15.0);
-    assert_eq!(tois[1], 19.0);
-    assert_eq!(tois[2], 23.0);
+        client.step_simulation();
+
+        assert_eq!(results.len(), 3);
+        let mut tois: Vec<f64> = results
+            .iter()
+            .map(|collision| collision.fraction * 40.0)
+            .collect();
+        tois.sort_by(|a, b| a.partial_cmp(b).unwrap());
+        assert_eq!(tois[0], 15.0);
+        assert_eq!(tois[1], 19.0);
+        assert_eq!(tois[2], 23.0);
+    }
 }

@@ -39,7 +39,7 @@ impl RigidBodyHandle {
         self.client_handle.set_user_data(self.clone(), data);
     }
 
-    pub fn get_user_data<T : 'static>(&self) -> Result<Box<T>, Error> {
+    pub fn get_user_data<T : 'static>(&self) -> Result<&T, Error> {
         self.client_handle.get_user_data(self.clone())
     }
 

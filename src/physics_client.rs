@@ -22,7 +22,8 @@ pub struct BodyActualState {
 
 pub struct RayHitInfo {
     /// This is a number between 0.0 and 1.0 where 0.0 is origin and 1.0 is destination.
-    /// If the hit fraction is 0.33333, it means position is located 1/3 of the way between ray begin and ray end
+    /// If the hit fraction is 0.33333, it means position is located 1/3
+    /// of the way between ray begin and ray end
     pub fraction: f64,
     pub body: Option<RigidBodyHandle>,
     pub position: Point3<f64>,
@@ -79,8 +80,8 @@ impl PhysicsClientHandle {
         let status =
             self.submit_client_command_and_wait_status(&Command::CreateCollisionShape(mesh));
 
-        if status.get_status_type()
-            != ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_COLLISION_SHAPE_COMPLETED
+        if status.get_status_type() !=
+            ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_COLLISION_SHAPE_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
@@ -109,8 +110,8 @@ impl PhysicsClientHandle {
             orientation,
         });
 
-        if status.get_status_type()
-            != ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_MULTI_BODY_COMPLETED
+        if status.get_status_type() !=
+            ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_MULTI_BODY_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
@@ -134,19 +135,18 @@ impl PhysicsClientHandle {
     }
 
     pub fn get_body_actual_state(&self, body: RigidBodyHandle) -> Result<BodyActualState, Error> {
-        let status =
-            self.submit_client_command_and_wait_status(
-                &Command::GetBasePositionAndOrientation(body),
-            );
+        let status = self.submit_client_command_and_wait_status(
+            &Command::GetBasePositionAndOrientation(body),
+        );
 
-        if status.get_status_type()
-            != ::sys::EnumSharedMemoryServerStatus::CMD_ACTUAL_STATE_UPDATE_COMPLETED
+        if status.get_status_type() !=
+            ::sys::EnumSharedMemoryServerStatus::CMD_ACTUAL_STATE_UPDATE_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
 
-        let mut q_ref: &mut [f64; 7] = unsafe { ::std::mem::uninitialized() };
-        let mut qdot_ref: &mut [f64; 6] = unsafe { ::std::mem::uninitialized() };
+        let q_ref: &mut [f64; 7] = unsafe { ::std::mem::uninitialized() };
+        let qdot_ref: &mut [f64; 6] = unsafe { ::std::mem::uninitialized() };
         //let actual_state_qdot_ref = &mut actual_state.linear_velocity;
         unsafe {
             ::sys::b3GetStatusActualState(
@@ -155,9 +155,9 @@ impl PhysicsClientHandle {
                 ::std::ptr::null_mut(), /* num_degree_of_freedom_q */
                 ::std::ptr::null_mut(), /* num_degree_of_freedom_u */
                 ::std::ptr::null_mut(), /*root_local_inertial_frame*/
-                &mut q_ref as *mut _ as *mut _,
-                &mut qdot_ref as *mut _ as *mut _, /* actual_state_q_dot */
-                ::std::ptr::null_mut(),            /* joint_reaction_forces */
+                &q_ref as *const _ as *mut _,
+                &qdot_ref as *const _ as *mut _, /* actual_state_q_dot */
+                ::std::ptr::null_mut(), /* joint_reaction_forces */
             );
         }
 
@@ -177,10 +177,10 @@ impl PhysicsClientHandle {
         );
     }
 
-    pub fn get_user_data<T: 'static>(&self, body: RigidBodyHandle) -> Result<Box<T>, Error> {
+    pub fn get_user_data<T: 'static>(&self, body: RigidBodyHandle) -> Result<&T, Error> {
         let status = self.submit_client_command_and_wait_status(&Command::GetUserPointer(body));
-        if status.get_status_type()
-            != ::sys::EnumSharedMemoryServerStatus::CMD_GET_USER_POINTER_COMPLETED
+        if status.get_status_type() !=
+            ::sys::EnumSharedMemoryServerStatus::CMD_GET_USER_POINTER_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
@@ -194,7 +194,8 @@ impl PhysicsClientHandle {
         if unsafe { (*pointer).is_null() } {
             return Err(Error::NoValue);
         } else {
-            Ok(unsafe { Box::from_raw((*pointer) as *mut _) })
+            let pointer = unsafe { *pointer as *mut _ };
+            Ok(unsafe { &*(pointer as * mut _) })
         }
     }
 
@@ -203,45 +204,34 @@ impl PhysicsClientHandle {
     /// Results will be in random order.
     pub fn raycast(&self, start: Point3<f64>, end: Point3<f64>) -> Result<Vec<RayHitInfo>, Error> {
         let status = self.submit_client_command_and_wait_status(&Command::Raycast(start, end));
-        if status.get_status_type()
-            != ::sys::EnumSharedMemoryServerStatus::CMD_REQUEST_RAY_CAST_INTERSECTIONS_COMPLETED
+        if status.get_status_type() !=
+            ::sys::EnumSharedMemoryServerStatus::CMD_REQUEST_RAY_CAST_INTERSECTIONS_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
-
         let mut raycast_info: ::sys::b3RaycastInformation = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::sys::b3GetRaycastInformation(self.handle, &mut raycast_info as *mut _);
         }
 
-        let raycast_rays_info = unsafe {
-            ::std::slice::from_raw_parts(raycast_info.m_rayHits, raycast_info.m_numRayHits as usize)
-        };
+        let ray_info = unsafe { *raycast_info.m_rayHits };
+        let hits = ray_info.hits.iter().take(ray_info.m_numHits as usize);
+        let hits = hits.map(|hit| {
+            RayHitInfo {
+                fraction: hit.m_hitFraction,
+                body: if hit.m_hitObjectUniqueId == -1 {
+                    None
+                } else {
+                    Some(RigidBodyHandle {
+                        client_handle: PhysicsClientHandle { handle: self.handle },
+                        unique_id: hit.m_hitObjectUniqueId,
+                    })
+                },
+                position: Point3::from(hit.m_hitPositionWorld),
+                normal: Point3::from(hit.m_hitNormalWorld),
+            }
+        }).collect();
 
-        // there was only 1 ray, so there should be only 1 output
-        let ray_info = raycast_rays_info.get(0).ok_or(Error::CommandFailed)?;
-
-        let hits =
-            unsafe { ::std::slice::from_raw_parts(ray_info.hits, ray_info.m_numHits as usize) };
-
-        Ok(
-            hits.iter()
-                .map(|hit| {
-                    RayHitInfo {
-                        fraction: hit.m_hitFraction,
-                        body: if hit.m_hitObjectUniqueId == -1 {
-                            None
-                        } else {
-                            Some(RigidBodyHandle {
-                                client_handle: self.clone(),
-                                unique_id: hit.m_hitObjectUniqueId,
-                            })
-                        },
-                        position: Point3::from(hit.m_hitPositionWorld),
-                        normal: Point3::from(hit.m_hitNormalWorld),
-                    }
-                })
-                .collect(),
-        )
+        return Ok(hits);
     }
 }
