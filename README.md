@@ -16,3 +16,5 @@ Capsule:
 
 ![Capsule](https://i.imgur.com/xHRec9h.gif)
 
+DebugLines:
+![DebugLines](https://i.imgur.com/6lpY7B8.png)
