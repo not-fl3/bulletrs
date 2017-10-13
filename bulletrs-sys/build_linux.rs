@@ -482,7 +482,6 @@ pub fn build_linux() {
         .file("bullet3/examples/SharedMemory/PhysicsClientC_API.cpp")
         .file("bullet3/examples/SharedMemory/Win32SharedMemory.cpp")
         .file("bullet3/examples/SharedMemory/PosixSharedMemory.cpp")
-        .file("bullet3/examples/Utils/b3ResourcePath.cpp")
         .file("bullet3/examples/Utils/RobotLoggingUtil.cpp")
         .file("bullet3/examples/ThirdPartyLibs/tinyxml/tinystr.cpp")
         .file("bullet3/examples/ThirdPartyLibs/tinyxml/tinyxml.cpp")

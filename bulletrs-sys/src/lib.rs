@@ -8,7 +8,10 @@ pub const MAX_RAY_INTERSECTION_BATCH_SIZE: ::std::os::raw::c_uint = 256;
 pub const MAX_RAY_HITS: ::std::os::raw::c_uint = 256;
 pub const MAX_KEYBOARD_EVENTS: ::std::os::raw::c_uint = 256;
 pub const MAX_MOUSE_EVENTS: ::std::os::raw::c_uint = 256;
+pub const MAX_HITS_AMOUNT: ::std::os::raw::c_uint = 20;
 pub const VISUAL_SHAPE_MAX_PATH_LEN: ::std::os::raw::c_uint = 1024;
+pub const B3_MAX_PLUGIN_ARG_SIZE: ::std::os::raw::c_uint = 128;
+pub const B3_MAX_PLUGIN_ARG_TEXT_LEN: ::std::os::raw::c_uint = 1024;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum EnumSharedMemoryClientCommand {
@@ -68,7 +71,13 @@ pub enum EnumSharedMemoryClientCommand {
     CMD_REQUEST_MOUSE_EVENTS_DATA = 53,
     CMD_CHANGE_TEXTURE = 54,
     CMD_SET_ADDITIONAL_SEARCH_PATH = 55,
-    CMD_MAX_CLIENT_COMMANDS = 56,
+    CMD_CUSTOM_COMMAND = 56,
+    CMD_SET_ANGULAR_FACTOR = 57,
+    CMD_APPLY_CENTRAL_IMPULSE = 58,
+    CMD_SET_USER_POINTER = 59,
+    CMD_GET_USER_POINTER = 60,
+    CMD_SET_BODY_GRAVITY = 61,
+    CMD_MAX_CLIENT_COMMANDS = 62,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -160,7 +169,7 @@ pub enum EnumSharedMemoryServerStatus {
     CMD_REQUEST_MOUSE_EVENTS_DATA_COMPLETED = 84,
     CMD_CHANGE_TEXTURE_COMMAND_FAILED = 85,
     CMD_CUSTOM_COMMAND_COMPLETED = 86,
-	CMD_CUSTOM_COMMAND_FAILED = 87,
+    CMD_CUSTOM_COMMAND_FAILED = 87,
     CMD_GET_USER_POINTER_COMPLETED = 88,
     CMD_GET_USER_POINTER_FAILED = 89,
     CMD_MAX_SERVER_COMMANDS = 90,
@@ -1179,12 +1188,28 @@ impl Clone for b3RayHitInfo {
 #[derive(Debug, Copy)]
 pub struct b3RayHitsInfo {
     pub m_numHits: ::std::os::raw::c_int,
-    pub hits: *mut b3RayHitInfo
+    pub hits: [b3RayHitInfo; 20usize],
+}
+#[test]
+fn bindgen_test_layout_b3RayHitsInfo() {
+    assert_eq!(::std::mem::size_of::<b3RayHitsInfo>() , 1288usize , concat ! (
+               "Size of: " , stringify ! ( b3RayHitsInfo ) ));
+    assert_eq! (::std::mem::align_of::<b3RayHitsInfo>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( b3RayHitsInfo ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const b3RayHitsInfo ) ) . m_numHits as * const
+                _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( b3RayHitsInfo ) , "::"
+                , stringify ! ( m_numHits ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const b3RayHitsInfo ) ) . hits as * const _ as
+                usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( b3RayHitsInfo ) , "::"
+                , stringify ! ( hits ) ));
 }
 impl Clone for b3RayHitsInfo {
     fn clone(&self) -> Self { *self }
 }
-
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct b3RaycastInformation {
@@ -1478,6 +1503,50 @@ pub enum eStateLoggingFlags {
     STATE_LOG_JOINT_TORQUES = 3,
 }
 #[repr(C)]
+#[derive(Copy)]
+pub struct b3PluginArguments {
+    pub m_text: [::std::os::raw::c_char; 1024usize],
+    pub m_numInts: ::std::os::raw::c_int,
+    pub m_ints: [::std::os::raw::c_int; 128usize],
+    pub m_numFloats: ::std::os::raw::c_int,
+    pub m_floats: [::std::os::raw::c_int; 128usize],
+}
+#[test]
+fn bindgen_test_layout_b3PluginArguments() {
+    assert_eq!(::std::mem::size_of::<b3PluginArguments>() , 2056usize , concat
+               ! ( "Size of: " , stringify ! ( b3PluginArguments ) ));
+    assert_eq! (::std::mem::align_of::<b3PluginArguments>() , 4usize , concat
+                ! ( "Alignment of " , stringify ! ( b3PluginArguments ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const b3PluginArguments ) ) . m_text as * const
+                _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( b3PluginArguments ) ,
+                "::" , stringify ! ( m_text ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const b3PluginArguments ) ) . m_numInts as *
+                const _ as usize } , 1024usize , concat ! (
+                "Alignment of field: " , stringify ! ( b3PluginArguments ) ,
+                "::" , stringify ! ( m_numInts ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const b3PluginArguments ) ) . m_ints as * const
+                _ as usize } , 1028usize , concat ! (
+                "Alignment of field: " , stringify ! ( b3PluginArguments ) ,
+                "::" , stringify ! ( m_ints ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const b3PluginArguments ) ) . m_numFloats as *
+                const _ as usize } , 1540usize , concat ! (
+                "Alignment of field: " , stringify ! ( b3PluginArguments ) ,
+                "::" , stringify ! ( m_numFloats ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const b3PluginArguments ) ) . m_floats as *
+                const _ as usize } , 1544usize , concat ! (
+                "Alignment of field: " , stringify ! ( b3PluginArguments ) ,
+                "::" , stringify ! ( m_floats ) ));
+}
+impl Clone for b3PluginArguments {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(C)]
 #[derive(Debug, Copy)]
 pub struct b3PhysicsClientHandle__ {
     pub unused: ::std::os::raw::c_int,
@@ -1651,6 +1720,50 @@ extern "C" {
     /// Get the physics server return status type. See EnumSharedMemoryServerStatus in SharedMemoryPublic.h for error codes.
     pub fn b3GetStatusType(statusHandle: b3SharedMemoryStatusHandle)
      -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Plugin system, load and unload a plugin, execute a command
+    pub fn b3CreateCustomCommand(physClient: b3PhysicsClientHandle)
+     -> b3SharedMemoryCommandHandle;
+}
+extern "C" {
+    pub fn b3CustomCommandLoadPlugin(commandHandle:
+                                         b3SharedMemoryCommandHandle,
+                                     pluginPath:
+                                         *const ::std::os::raw::c_char);
+}
+extern "C" {
+    pub fn b3GetStatusPluginUniqueId(statusHandle: b3SharedMemoryStatusHandle)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn b3GetStatusPluginCommandResult(statusHandle:
+                                              b3SharedMemoryStatusHandle)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn b3CustomCommandUnloadPlugin(commandHandle:
+                                           b3SharedMemoryCommandHandle,
+                                       pluginUniqueId: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn b3CustomCommandExecutePluginCommand(commandHandle:
+                                                   b3SharedMemoryCommandHandle,
+                                               pluginUniqueId:
+                                                   ::std::os::raw::c_int,
+                                               textArguments:
+                                                   *const ::std::os::raw::c_char);
+}
+extern "C" {
+    pub fn b3CustomCommandExecuteAddIntArgument(commandHandle:
+                                                    b3SharedMemoryCommandHandle,
+                                                intVal:
+                                                    ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn b3CustomCommandExecuteAddFloatArgument(commandHandle:
+                                                      b3SharedMemoryCommandHandle,
+                                                  floatVal: f32);
 }
 extern "C" {
     pub fn b3GetStatusBodyIndices(statusHandle: b3SharedMemoryStatusHandle,
@@ -2511,6 +2624,7 @@ extern "C" {
 }
 extern "C" {
     pub fn b3GetStatusJacobian(statusHandle: b3SharedMemoryStatusHandle,
+                               dofCount: *mut ::std::os::raw::c_int,
                                linearJacobian: *mut f64,
                                angularJacobian: *mut f64)
      -> ::std::os::raw::c_int;
@@ -2725,12 +2839,12 @@ extern "C" {
 extern "C" {
     pub fn b3CreateCollisionShapeAddTriMesh(commandHandle:
                                                 b3SharedMemoryCommandHandle,
-                                            numVertices: ::std::os::raw::c_int,
-                                            data: *mut f64,
+                                            numVertices:
+                                                ::std::os::raw::c_int,
+                                            meshData: *mut f64,
                                             meshScale: *mut f64)
      -> ::std::os::raw::c_int;
 }
-
 extern "C" {
     pub fn b3CreateCollisionSetFlag(commandHandle:
                                         b3SharedMemoryCommandHandle,
@@ -3023,50 +3137,55 @@ extern "C" {
                                  flags: ::std::os::raw::c_int);
 }
 extern "C" {
+    /// Set angular force multiplier
     pub fn b3InitSetAngularFactorCommand(physClient: b3PhysicsClientHandle,
                                          bodyUniqueId: ::std::os::raw::c_int,
-                                         factor: *const f64) -> b3SharedMemoryCommandHandle;
-}
-
-extern "C" {
-    pub fn b3InitApplyCentralImpulseCommand(physClient: b3PhysicsClientHandle,
-                                            bodyUniqueId: ::std::os::raw::c_int,
-                                            impulse: *const f64) -> b3SharedMemoryCommandHandle;
-}
-
-extern "C" {
-    pub fn b3CreateRigidBodyCommandInit(
-        physClient : b3PhysicsClientHandle,
-        shapeUniqueId : ::std::os::raw::c_int,
-        is_dynamic : ::std::os::raw::c_int,
-        mass : f64,
-        position : *const f64,
-        orientation : *const f64) -> b3SharedMemoryCommandHandle;
-}
-
-extern "C" {
-    pub fn b3InitSetUserPointerCommand(physClient: b3PhysicsClientHandle,
-                                       bodyUniqueId : ::std::os::raw::c_int,
-                                       pointer: *mut ::std::os::raw::c_void) -> b3SharedMemoryCommandHandle;
-}
-
-extern "C" {
-    pub fn b3InitGetUserPointerCommand(physClient: b3PhysicsClientHandle,
-                                       bodyUniqueId : ::std::os::raw::c_int) -> b3SharedMemoryCommandHandle;
-}
-
-extern "C" {
-    pub fn b3GetUserPointer(statusHandle: b3SharedMemoryStatusHandle,
-                            pointer : *mut *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
-}
-
-extern "C" {
-    pub fn b3InitSetBodyGravityCommand(physClient: b3PhysicsClientHandle,
-                                       bodyUniqueId: ::std::os::raw::c_int,
-                                       gravity : *const f64)
+                                         factor: *const f64)
      -> b3SharedMemoryCommandHandle;
 }
-
+extern "C" {
+    /// Apply central impulse. Should work only with btRigidBodies
+    pub fn b3InitApplyCentralImpulseCommand(physClient: b3PhysicsClientHandle,
+                                            bodyUniqueId:
+                                                ::std::os::raw::c_int,
+                                            impulse: *const f64)
+     -> b3SharedMemoryCommandHandle;
+}
+extern "C" {
+    /// Create rigid body from shape
+    pub fn b3CreateRigidBodyCommandInit(physClient: b3PhysicsClientHandle,
+                                        shapeUniqueId: ::std::os::raw::c_int,
+                                        is_dynamic: ::std::os::raw::c_int,
+                                        mass: f64, position: *const f64,
+                                        orientation: *const f64)
+     -> b3SharedMemoryCommandHandle;
+}
+extern "C" {
+    /// Init command Set user poiner
+    pub fn b3InitSetUserPointerCommand(physClient: b3PhysicsClientHandle,
+                                       bodyUniqueId: ::std::os::raw::c_int,
+                                       pointer: *mut ::std::os::raw::c_void)
+     -> b3SharedMemoryCommandHandle;
+}
+extern "C" {
+    /// Init command to get user poiner
+    pub fn b3InitGetUserPointerCommand(physClient: b3PhysicsClientHandle,
+                                       bodyUniqueId: ::std::os::raw::c_int)
+     -> b3SharedMemoryCommandHandle;
+}
+extern "C" {
+    /// Actually get user pointer from command output
+    pub fn b3GetUserPointer(statusHandle: b3SharedMemoryStatusHandle,
+                            pointer: *mut *mut ::std::os::raw::c_void)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Set gravity to this specific body
+    pub fn b3InitSetBodyGravityCommand(physClient: b3PhysicsClientHandle,
+                                       bodyUniqueId: ::std::os::raw::c_int,
+                                       gravity: *const f64)
+     -> b3SharedMemoryCommandHandle;
+}
 extern "C" {
     /// experiments of robots interacting with non-rigid objects (such as btSoftBody)
     pub fn b3LoadBunnyCommandInit(physClient: b3PhysicsClientHandle)
