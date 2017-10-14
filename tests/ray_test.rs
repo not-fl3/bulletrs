@@ -22,15 +22,15 @@ fn raycast_test() {
         )
         .unwrap();
 
-    let _ = client
+    let body = client
         .create_rigid_body(
             sphere_shape.clone(),
             0.1,
-            Vector3::from([00.0, 0.0, 10.0]),
+            Vector3::from([0.0, 0.0, -100.0]),
             Vector4::from([0.0, 0.0, 0.0, 1.0]),
         )
         .unwrap();
-
+    body.reset_position_and_orientation(Point3::from([0.0, 0.0, 10.0]), Vector4::from([0.0, 0.0, 0.0, 1.0]));
     let _ = client
         .create_rigid_body(
             sphere_shape.clone(),
@@ -41,14 +41,14 @@ fn raycast_test() {
         .unwrap();
 
     for _ in 0 .. 1000 {
+        client.step_simulation();
+
         let results = client
             .raycast(
                 Point3::from([0.0, 0.0, 0.0]),
                 Point3::from([0.0, 00.0, 20.0]),
             )
             .unwrap();
-
-        client.step_simulation();
 
         assert_eq!(results.len(), 3);
         let mut tois: Vec<f64> = results

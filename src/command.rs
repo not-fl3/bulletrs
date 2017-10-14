@@ -26,6 +26,7 @@ pub enum Command {
     ChangeDynamicsInfo(RigidBodyHandle, DynamicsInfo),
 
     GetBasePositionAndOrientation(RigidBodyHandle),
+    ResetBasePositionAndOrientation(RigidBodyHandle, Point3<f64>, Vector4<f64>),
 
     SetAngularFactor(RigidBodyHandle, Vector3<f64>),
 
@@ -224,6 +225,29 @@ impl Command {
             &Command::GetBasePositionAndOrientation(ref body) => {
                 let command = unsafe {
                     ::sys::b3RequestActualStateCommandInit(client.handle, body.unique_id)
+                };
+
+                CommandHandle { handle: command }
+            }
+            &Command::ResetBasePositionAndOrientation(ref body, position, orientation) => {
+                let command =
+                    unsafe { ::sys::b3CreatePoseCommandInit(client.handle, body.unique_id) };
+                unsafe {
+                    ::sys::b3CreatePoseCommandSetBasePosition(
+                        command,
+                        position.x,
+                        position.y,
+                        position.z,
+                    )
+                };
+                unsafe {
+                    ::sys::b3CreatePoseCommandSetBaseOrientation(
+                        command,
+                        orientation.x,
+                        orientation.y,
+                        orientation.z,
+                        orientation.w,
+                    )
                 };
 
                 CommandHandle { handle: command }
