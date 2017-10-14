@@ -80,8 +80,8 @@ impl PhysicsClientHandle {
         let status =
             self.submit_client_command_and_wait_status(&Command::CreateCollisionShape(mesh));
 
-        if status.get_status_type() !=
-            ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_COLLISION_SHAPE_COMPLETED
+        if status.get_status_type()
+            != ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_COLLISION_SHAPE_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
@@ -110,8 +110,8 @@ impl PhysicsClientHandle {
             orientation,
         });
 
-        if status.get_status_type() !=
-            ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_MULTI_BODY_COMPLETED
+        if status.get_status_type()
+            != ::sys::EnumSharedMemoryServerStatus::CMD_CREATE_MULTI_BODY_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
@@ -135,12 +135,13 @@ impl PhysicsClientHandle {
     }
 
     pub fn get_body_actual_state(&self, body: RigidBodyHandle) -> Result<BodyActualState, Error> {
-        let status = self.submit_client_command_and_wait_status(
-            &Command::GetBasePositionAndOrientation(body),
-        );
+        let status =
+            self.submit_client_command_and_wait_status(
+                &Command::GetBasePositionAndOrientation(body),
+            );
 
-        if status.get_status_type() !=
-            ::sys::EnumSharedMemoryServerStatus::CMD_ACTUAL_STATE_UPDATE_COMPLETED
+        if status.get_status_type()
+            != ::sys::EnumSharedMemoryServerStatus::CMD_ACTUAL_STATE_UPDATE_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
@@ -157,7 +158,7 @@ impl PhysicsClientHandle {
                 ::std::ptr::null_mut(), /*root_local_inertial_frame*/
                 &q_ref as *const _ as *mut _,
                 &qdot_ref as *const _ as *mut _, /* actual_state_q_dot */
-                ::std::ptr::null_mut(), /* joint_reaction_forces */
+                ::std::ptr::null_mut(),          /* joint_reaction_forces */
             );
         }
 
@@ -179,8 +180,8 @@ impl PhysicsClientHandle {
 
     pub fn get_user_data<T: 'static>(&self, body: RigidBodyHandle) -> Result<&T, Error> {
         let status = self.submit_client_command_and_wait_status(&Command::GetUserPointer(body));
-        if status.get_status_type() !=
-            ::sys::EnumSharedMemoryServerStatus::CMD_GET_USER_POINTER_COMPLETED
+        if status.get_status_type()
+            != ::sys::EnumSharedMemoryServerStatus::CMD_GET_USER_POINTER_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
@@ -204,8 +205,8 @@ impl PhysicsClientHandle {
     /// Results will be in random order.
     pub fn raycast(&self, start: Point3<f64>, end: Point3<f64>) -> Result<Vec<RayHitInfo>, Error> {
         let status = self.submit_client_command_and_wait_status(&Command::Raycast(start, end));
-        if status.get_status_type() !=
-            ::sys::EnumSharedMemoryServerStatus::CMD_REQUEST_RAY_CAST_INTERSECTIONS_COMPLETED
+        if status.get_status_type()
+            != ::sys::EnumSharedMemoryServerStatus::CMD_REQUEST_RAY_CAST_INTERSECTIONS_COMPLETED
         {
             return Err(Error::CommandFailed);
         }
@@ -223,7 +224,9 @@ impl PhysicsClientHandle {
                     None
                 } else {
                     Some(RigidBodyHandle {
-                        client_handle: PhysicsClientHandle { handle: self.handle },
+                        client_handle: PhysicsClientHandle {
+                            handle: self.handle,
+                        },
                         unique_id: hit.m_hitObjectUniqueId,
                     })
                 },
@@ -245,6 +248,5 @@ impl PhysicsClientHandle {
             line_width: 1.0,
             life_time: 666.0,
         });
-
     }
 }

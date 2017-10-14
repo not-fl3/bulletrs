@@ -2,7 +2,7 @@ use physics_client::PhysicsClientHandle;
 use command::Command;
 use errors::Error;
 
-use mint::{Vector3, Vector4};
+use mint::{Point3, Vector3, Vector4};
 
 #[derive(Clone)]
 pub struct RigidBodyHandle {
@@ -16,39 +16,57 @@ impl RigidBodyHandle {
     /// Object is retrieved based on body index, which is the order
     /// the object was loaded into the simulation (0-based)
     pub fn get_base_position_and_orientation(&self) -> Result<(Vector3<f64>, Vector4<f64>), Error> {
-        self.client_handle.get_body_actual_state(self.clone()).map(|state| (state.position, state.orientation))
+        self.client_handle.get_body_actual_state(self.clone()).map(
+            |state| (state.position, state.orientation),
+        )
     }
 
     pub fn get_linear_velocity(&self) -> Result<Vector3<f64>, Error> {
-        self.client_handle.get_body_actual_state(self.clone()).map(|state| (state.linear_velocity))
+        self.client_handle.get_body_actual_state(self.clone()).map(
+            |state| (state.linear_velocity),
+        )
     }
 
-    pub fn set_angular_factor(&self, factor : Vector3<f64>) {
+    pub fn set_angular_factor(&self, factor: Vector3<f64>) {
         self.client_handle.submit_client_command_and_wait_status(
-            &Command::SetAngularFactor(self.clone(), factor),
+            &Command::SetAngularFactor(
+                self.clone(),
+                factor,
+            ),
         );
     }
 
-    pub fn apply_central_impulse(&self, impulse : Vector3<f64>) {
+    pub fn apply_central_impulse(&self, impulse: Vector3<f64>) {
         self.client_handle.submit_client_command_and_wait_status(
             &Command::ApplyCentralImpulse(self.clone(), impulse),
         );
     }
 
-    pub fn set_user_data<T : 'static>(&self, data: Box<T>) {
+    pub fn set_user_data<T: 'static>(&self, data: Box<T>) {
         self.client_handle.set_user_data(self.clone(), data);
     }
 
-    pub fn get_user_data<T : 'static>(&self) -> Result<&T, Error> {
+    pub fn get_user_data<T: 'static>(&self) -> Result<&T, Error> {
         self.client_handle.get_user_data(self.clone())
     }
 
     /// Set gravity to only this specific object
     /// Be carefull, this will affect only btRigidBody (not btMultiBody).
-    pub fn set_body_gravity(&self, gravity : Vector3<f64>) {
+    pub fn set_body_gravity(&self, gravity: Vector3<f64>) {
         self.client_handle.submit_client_command_and_wait_status(
-            &Command::SetBodyGravity(self.clone(), gravity),
+            &Command::SetBodyGravity(
+                self.clone(),
+                gravity,
+            ),
         );
     }
 
+    /// Set position and orientation of the object.
+    /// Be carefull, it will affect collisions only after next simulation step
+    /// And forces/velocities will be flushed.
+    pub fn reset_position_and_orientation(&self, position: Point3<f64>, orientation: Vector4<f64>) {
+        self.client_handle.submit_client_command_and_wait_status(
+            &Command::ResetBasePositionAndOrientation(self.clone(), position, orientation),
+        );
+    }
 }
