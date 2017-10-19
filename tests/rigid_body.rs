@@ -28,3 +28,4 @@ fn get_actual_state() {
     assert_eq!(position, Vector3::from([1.0, 2.0, 3.0]));
     assert_eq!(velocity, Vector3::from([0.0, 0.0, 0.0]));
 }
+

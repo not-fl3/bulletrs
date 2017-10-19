@@ -30,7 +30,7 @@ fn raycast_test() {
             Vector4::from([0.0, 0.0, 0.0, 1.0]),
         )
         .unwrap();
-    body.reset_position_and_orientation(Point3::from([0.0, 0.0, 10.0]), Vector4::from([0.0, 0.0, 0.0, 1.0]));
+    body.reset_position_and_orientation(Point3::from([0.0, 0.0, 10.0]), Vector4::from([0.0, 0.0, 0.0, 1.0])).unwrap();
     let _ = client
         .create_rigid_body(
             sphere_shape.clone(),
@@ -60,4 +60,39 @@ fn raycast_test() {
         assert_eq!(tois[1], 9.0);
         assert_eq!(tois[2], 14.0);
     }
+}
+
+
+#[test]
+fn delete_rigid_body() {
+    let bullet = Bullet::connect(ConnectMethod::Direct).unwrap();
+    let client = bullet.physics_client_handle();
+
+    client.reset_simulation();
+
+    let sphere_shape = client
+        .create_collision_shape(ShapeType::Sphere { radius: 0.1 })
+        .unwrap();
+
+    let body = client
+        .create_rigid_body(
+            sphere_shape.clone(),
+            0.1,
+            Vector3::from([0.0, 0.0, 0.0]),
+            Vector4::from([0.0, 0.0, 0.0, 1.0]),
+        )
+        .unwrap();
+
+    let results = client
+                .raycast(
+                    Point3::from([0.0, 0.0, -1.0]),
+                    Point3::from([0.0, 00.0, 1.0]),
+                )
+                .unwrap();
+
+    for result in results {
+        client.remove_rigid_body(&result.body.unwrap());
+    }
+    
+    assert_eq!(body.removed(), true);
 }
