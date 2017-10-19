@@ -32,9 +32,9 @@ pub enum Command {
 
     ApplyCentralImpulse(RigidBodyHandle, Vector3<f64>),
 
-    SetUserPointer(RigidBodyHandle, *mut ::std::os::raw::c_void),
+    SetUserPointer(i32, *mut ::std::os::raw::c_void),
 
-    GetUserPointer(RigidBodyHandle),
+    GetUserPointer(i32),
 
     SetBodyGravity(RigidBodyHandle, Vector3<f64>),
 
@@ -118,7 +118,7 @@ impl Command {
                     );
                 }
 
-                // with USE_MAXIMAL_COORDINATES physcs clients creates btRigidBody instead of btMultiBody
+                // with USE_MAXIMAL_COORDINATES physics client creates btRigidBody instead of btMultiBody                
                 unsafe {
                     ::sys::b3CreateMultiBodyUseMaximalCoordinates(command);
                 }
@@ -279,20 +279,20 @@ impl Command {
                 CommandHandle { handle: command }
             }
 
-            &Command::SetUserPointer(ref body, ref data) => {
+            &Command::SetUserPointer(unique_id, ref data) => {
                 let command = unsafe {
                     ::sys::b3InitSetUserPointerCommand(
                         client.handle,
-                        body.unique_id,
+                        unique_id,
                         *data as *mut _,
                     )
                 };
                 CommandHandle { handle: command }
             }
 
-            &Command::GetUserPointer(ref body) => {
+            &Command::GetUserPointer(unique_id) => {
                 let command =
-                    unsafe { ::sys::b3InitGetUserPointerCommand(client.handle, body.unique_id) };
+                    unsafe { ::sys::b3InitGetUserPointerCommand(client.handle, unique_id) };
                 CommandHandle { handle: command }
             }
 

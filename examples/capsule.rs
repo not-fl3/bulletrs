@@ -49,7 +49,7 @@ fn main() {
         )
         .unwrap();
 
-    capsule.set_angular_factor(Vector3::from([0.0, 0.0, 0.0]));
+    capsule.set_angular_factor(Vector3::from([0.0, 0.0, 0.0])).unwrap();
 
     client
         .create_rigid_body(

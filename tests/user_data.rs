@@ -22,7 +22,7 @@ fn body_user_data() {
             Vector4::from([0.0, 0.0, 0.0, 1.0]),
         )
         .unwrap();
-    body1.set_user_data(Box::new(1));
+    body1.set_user_data(Box::new(1)).unwrap();
 
     let body2 = client
         .create_rigid_body(
@@ -32,7 +32,7 @@ fn body_user_data() {
             Vector4::from([0.0, 0.0, 0.0, 1.0]),
         )
         .unwrap();
-    body2.set_user_data(Box::new(2));
+    body2.set_user_data(Box::new(2)).unwrap();
 
     let body3 = client
         .create_rigid_body(
@@ -47,8 +47,8 @@ fn body_user_data() {
         client.step_simulation();
     }
 
-    assert_eq!(1, *body1.get_user_data::<i32>().unwrap());
-    assert_eq!(2, *body2.get_user_data::<i32>().unwrap());
+    assert_eq!(1, *body1.get_user_data().unwrap().downcast_ref::<i32>().unwrap());
+    assert_eq!(2, *body2.get_user_data().unwrap().downcast_ref::<i32>().unwrap());
 
-    assert_eq!(body3.get_user_data::<i32>().unwrap_err(), ::bulletrs::Error::NoValue);
+    assert_eq!(body3.get_user_data().unwrap_err(), ::bulletrs::Error::NoValue);
 }

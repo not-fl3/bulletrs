@@ -91,7 +91,7 @@ fn trimesh_raycast() {
             .collect();
         tois.sort_by(|a, b| a.partial_cmp(b).unwrap());
 
-        let user_data = results[0].body.as_ref().unwrap().get_user_data::<i32>().unwrap();
+        let user_data = results[0].body.as_ref().unwrap().get_user_data().unwrap().downcast_ref::<i32>().unwrap();
         assert_eq!(*user_data, 123);
     }
 }

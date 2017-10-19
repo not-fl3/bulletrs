@@ -1,7 +1,7 @@
 use command::{Command, CommandParam};
 use shape::{Shape, ShapeType};
 use dynamicsinfo::DynamicsInfo;
-use rigidbody::RigidBodyHandle;
+use rigidbody::{RigidBody, RigidBodyHandle};
 use status::Status;
 use errors::Error;
 
@@ -31,6 +31,28 @@ pub struct RayHitInfo {
 }
 
 impl PhysicsClientHandle {
+    fn internal_get_user_pointer(&self, body_id: i32) -> Result<*mut RigidBody, Error> {
+        let status = self.submit_client_command_and_wait_status(&Command::GetUserPointer(body_id));
+        if status.get_status_type()
+            != ::sys::EnumSharedMemoryServerStatus::CMD_GET_USER_POINTER_COMPLETED
+        {
+            return Err(Error::CommandFailed);
+        }
+
+        let mut value: &mut RigidBody = unsafe { ::std::mem::uninitialized() };
+        let pointer: *mut _ = &mut value as *mut _ as *mut _;
+        unsafe {
+            ::sys::b3GetUserPointer(status.handle, pointer);
+        }
+
+        if unsafe { (*pointer).is_null() } {
+            return Err(Error::NoValue);
+        } else {
+            let pointer = unsafe { *pointer as *mut _ };
+            Ok(pointer)
+        }
+    }
+
     /// There can only be 1 outstanding command. Check if a command can be send.
     pub fn can_submit_command(&self) -> bool {
         unsafe { ::sys::b3CanSubmitCommand(self.handle) != 0 }
@@ -116,14 +138,26 @@ impl PhysicsClientHandle {
             return Err(Error::CommandFailed);
         }
 
+        let unique_body_id = unsafe { ::sys::b3GetStatusBodyIndex(status.handle) };
+
+        let body = Box::new(RigidBody::new());
+        let pointer = Box::into_raw(body);
+
+        self.submit_client_command_and_wait_status(
+            &Command::SetUserPointer(unique_body_id, pointer as *mut _),
+        );
+
         return Ok(RigidBodyHandle {
+            rigid_body: pointer as *mut _,
             client_handle: self.clone(),
-            unique_id: unsafe { ::sys::b3GetStatusBodyIndex(status.handle) },
+            unique_id: unique_body_id,
         });
     }
 
-    pub fn remove_rigid_body(&self, body: RigidBodyHandle) {
-        self.submit_client_command_and_wait_status(&Command::RemoveRigidBody(body));
+    pub fn remove_rigid_body(&self, body: &RigidBodyHandle) {
+        let rigid_body = unsafe { body.rigid_body.as_mut().unwrap() };
+        rigid_body.deleted = true;
+        self.submit_client_command_and_wait_status(&Command::RemoveRigidBody(body.clone()));
     }
 
     /// Get the world position and orientation of the base of the object.
@@ -135,10 +169,9 @@ impl PhysicsClientHandle {
     }
 
     pub fn get_body_actual_state(&self, body: RigidBodyHandle) -> Result<BodyActualState, Error> {
-        let status =
-            self.submit_client_command_and_wait_status(
-                &Command::GetBasePositionAndOrientation(body),
-            );
+        let status = self.submit_client_command_and_wait_status(
+            &Command::GetBasePositionAndOrientation(body),
+        );
 
         if status.get_status_type()
             != ::sys::EnumSharedMemoryServerStatus::CMD_ACTUAL_STATE_UPDATE_COMPLETED
@@ -170,36 +203,6 @@ impl PhysicsClientHandle {
         })
     }
 
-    pub fn set_user_data<T: 'static>(&self, body: RigidBodyHandle, data: Box<T>) {
-        let pointer = Box::into_raw(data);
-
-        self.submit_client_command_and_wait_status(
-            &Command::SetUserPointer(body, pointer as *mut _),
-        );
-    }
-
-    pub fn get_user_data<T: 'static>(&self, body: RigidBodyHandle) -> Result<&T, Error> {
-        let status = self.submit_client_command_and_wait_status(&Command::GetUserPointer(body));
-        if status.get_status_type()
-            != ::sys::EnumSharedMemoryServerStatus::CMD_GET_USER_POINTER_COMPLETED
-        {
-            return Err(Error::CommandFailed);
-        }
-
-        let mut value: &mut T = unsafe { ::std::mem::uninitialized() };
-        let pointer: *mut _ = &mut value as *mut _ as *mut _;
-        unsafe {
-            ::sys::b3GetUserPointer(status.handle, pointer);
-        }
-
-        if unsafe { (*pointer).is_null() } {
-            return Err(Error::NoValue);
-        } else {
-            let pointer = unsafe { *pointer as *mut _ };
-            Ok(unsafe { &*(pointer as *mut _) })
-        }
-    }
-
     /// Cast the world with ray, constructed by start and end points.
     /// Begin and end is bounds of colliding segment.
     /// Results will be in random order.
@@ -218,12 +221,14 @@ impl PhysicsClientHandle {
         let ray_info = unsafe { *raycast_info.m_rayHits };
         let hits = ray_info.hits.iter().take(ray_info.m_numHits as usize);
         let hits = hits.map(|hit| {
+            let rigid_body = self.internal_get_user_pointer(hit.m_hitObjectUniqueId);
             RayHitInfo {
                 fraction: hit.m_hitFraction,
-                body: if hit.m_hitObjectUniqueId == -1 {
+                body: if hit.m_hitObjectUniqueId == -1 || rigid_body.is_err() {
                     None
                 } else {
                     Some(RigidBodyHandle {
+                        rigid_body: rigid_body.unwrap(),
                         client_handle: PhysicsClientHandle {
                             handle: self.handle,
                         },

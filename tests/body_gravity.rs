@@ -30,7 +30,7 @@ fn get_actual_state() {
             Vector4::from([0.0, 0.0, 0.0, 1.0]),
         )
         .unwrap();
-    body2.set_body_gravity(Vector3::from([0.0, 0.0, 0.0]));
+    body2.set_body_gravity(Vector3::from([0.0, 0.0, 0.0])).unwrap();
     for _ in 0..10 {
         client.step_simulation();
     }
