@@ -62,7 +62,7 @@ fn trimesh_raycast() {
             Vector4::from([0.0, 0.0, 0.0, 1.0]),
         )
         .unwrap();
-    body.set_user_data(Box::new(123));
+    body.set_user_data(Box::new(123)).unwrap();
 
     client.change_dynamics_info(
         body,
