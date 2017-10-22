@@ -48,6 +48,20 @@ impl RigidBodyHandle {
         )
     }
 
+    /// You can reset the linear and/or angular velocity of the base of a body using reset_base_velocity.
+    pub fn reset_base_velocity(&self, lin_vel: Option<Vector3<f64>>, ang_vel: Option<Vector3<f64>>) -> Result<(), Error> {
+        self.is_removed()?;
+
+        self.client_handle.submit_client_command_and_wait_status(
+            &Command::ResetBaseVelocity(
+                self.clone(),
+                lin_vel,
+                ang_vel,
+            ),
+        );
+        Ok(())
+    }
+
     pub fn set_angular_factor(&self, factor: Vector3<f64>) -> Result<(), Error> {
         self.is_removed()?;
 
