@@ -5,7 +5,7 @@ use mint::{Vector3, Vector4};
 pub enum ShapeType {
     Sphere { radius: f64 },
     Cylinder,
-    Box,
+    Box { half_extents: Vector3<f64> },
     Capsule { height: f64, radius: f64 },
     Plane { normal: Vector3<f64>, constant: f64 },
     TriMesh {
@@ -35,6 +35,12 @@ impl ShapeType {
                 };
                 Some(shape_id)
             }
+            &ShapeType::Box { half_extents } => unsafe {
+                let mut half_extents: [f64; 3] = half_extents.into();
+                let shape_id =
+                    ::sys::b3CreateCollisionShapeAddBox(command, &mut half_extents[0] as *mut f64);
+                Some(shape_id)
+            },
             &ShapeType::Capsule { radius, height } => unsafe {
                 let shape_id = ::sys::b3CreateCollisionShapeAddCapsule(command, radius, height);
                 Some(shape_id)
@@ -81,5 +87,3 @@ impl ShapeType {
         }
     }
 }
-
-
