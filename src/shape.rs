@@ -29,7 +29,7 @@ impl ShapeType {
                 let shape_id = unsafe {
                     ::sys::b3CreateCollisionShapeAddPlane(
                         command,
-                        &mut normal[0] as *mut f64,
+                        normal.as_mut_ptr(),
                         constant,
                     )
                 };
@@ -38,7 +38,7 @@ impl ShapeType {
             &ShapeType::Box { half_extents } => unsafe {
                 let mut half_extents: [f64; 3] = half_extents.into();
                 let shape_id =
-                    ::sys::b3CreateCollisionShapeAddBox(command, &mut half_extents[0] as *mut f64);
+                    ::sys::b3CreateCollisionShapeAddBox(command, half_extents.as_mut_ptr());
                 Some(shape_id)
             },
             &ShapeType::Capsule { radius, height } => unsafe {
@@ -59,7 +59,7 @@ impl ShapeType {
                     command,
                     vertices.len() as i32,
                     ::std::mem::transmute(vertices.as_ptr()),
-                    (&mut scale).as_mut_ptr(),
+                    scale.as_mut_ptr(),
                 );
                 Some(shape_id)
             },
@@ -76,8 +76,8 @@ impl ShapeType {
                         ::sys::b3CreateCollisionShapeSetChildTransform(
                             command,
                             shape_unique_id,
-                            &mut position[0] as *mut _,
-                            &mut orientation[0] as *mut _,
+                            position.as_mut_ptr(),
+                            orientation.as_mut_ptr(),
                         );
                     }
                 }
