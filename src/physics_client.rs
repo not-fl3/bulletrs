@@ -86,9 +86,9 @@ impl PhysicsClientHandle {
         );
     }
 
-    pub fn set_time_stamp(&self, delta: f64) {
+    pub fn set_time_step(&self, delta: f64) {
         self.submit_client_command_and_wait_status(
-            &Command::PhysicsParam(CommandParam::TimeStamp(delta)),
+            &Command::PhysicsParam(CommandParam::TimeStep(delta)),
         );
     }
 
