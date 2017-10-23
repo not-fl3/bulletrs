@@ -28,6 +28,8 @@ pub enum Command {
     GetBasePositionAndOrientation(RigidBodyHandle),
     ResetBasePositionAndOrientation(RigidBodyHandle, Point3<f64>, Vector4<f64>),
 
+    ResetBaseVelocity(RigidBodyHandle, Option<Vector3<f64>>, Option<Vector3<f64>>),
+
     SetAngularFactor(RigidBodyHandle, Vector3<f64>),
 
     ApplyCentralImpulse(RigidBodyHandle, Vector3<f64>),
@@ -118,7 +120,7 @@ impl Command {
                     );
                 }
 
-                // with USE_MAXIMAL_COORDINATES physics client creates btRigidBody instead of btMultiBody                
+                // with USE_MAXIMAL_COORDINATES physics client creates btRigidBody instead of btMultiBody
                 unsafe {
                     ::sys::b3CreateMultiBodyUseMaximalCoordinates(command);
                 }
@@ -250,6 +252,23 @@ impl Command {
                     )
                 };
 
+                CommandHandle { handle: command }
+            }
+
+            &Command::ResetBaseVelocity(ref body, lin_vel_opt, ang_vel_opt) => {
+                let command = unsafe {::sys::b3CreatePoseCommandInit(client.handle, body.unique_id)};
+                if let Some(lin_vel) = lin_vel_opt {
+                    let mut lin_vel_arr: [f64; 3] = lin_vel.into();
+                    unsafe {
+                        ::sys::b3CreatePoseCommandSetBaseLinearVelocity(command, lin_vel_arr.as_mut_ptr());
+                    }
+                }
+                if let Some(ang_vel) = ang_vel_opt {
+                    let mut ang_vel_arr: [f64; 3] = ang_vel.into();
+                    unsafe {
+                        ::sys::b3CreatePoseCommandSetBaseAngularVelocity(command, ang_vel_arr.as_mut_ptr());
+                    }
+                }
                 CommandHandle { handle: command }
             }
 
