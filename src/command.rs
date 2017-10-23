@@ -51,7 +51,7 @@ pub enum Command {
 
 pub enum CommandParam {
     SetGravity { gravx: f64, gravy: f64, gravz: f64 },
-    TimeStamp(f64),
+    TimeStep(f64),
     RealTimeSimulation(bool),
 }
 
@@ -77,7 +77,7 @@ impl Command {
                 };
                 CommandHandle { handle: command }
             }
-            &Command::PhysicsParam(CommandParam::TimeStamp(delta)) => {
+            &Command::PhysicsParam(CommandParam::TimeStep(delta)) => {
                 let command = unsafe { ::sys::b3InitPhysicsParamCommand(client.handle) };
                 unsafe { ::sys::b3PhysicsParamSetTimeStep(command, delta) };
                 CommandHandle { handle: command }
