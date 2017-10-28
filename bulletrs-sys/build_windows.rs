@@ -8,6 +8,7 @@ pub fn build_windows() {
         .define("NDEBUG", None)
         .opt_level(3) // ignoring OPT_LEVEL from the crate
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/src/LinearMath/btAlignedAllocator.cpp")
@@ -29,6 +30,7 @@ pub fn build_windows() {
         .define("NDEBUG", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/src/BulletCollision/BroadphaseCollision/btAxisSweep3.cpp")
@@ -137,6 +139,7 @@ pub fn build_windows() {
         .define("NDEBUG", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/src/BulletDynamics/Character/btKinematicCharacterController.cpp")
@@ -185,6 +188,7 @@ pub fn build_windows() {
         .define("BT_USE_DOUBLE_PRECISION", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/src/Bullet3Common/b3AlignedAllocator.cpp")
@@ -199,6 +203,7 @@ pub fn build_windows() {
         .define("BT_USE_DOUBLE_PRECISION", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/examples/ThirdPartyLibs/BussIK/Jacobian.cpp")
@@ -219,6 +224,7 @@ pub fn build_windows() {
         .define("NDEBUG", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/src/BulletInverseDynamics/IDMath.cpp")
@@ -234,6 +240,7 @@ pub fn build_windows() {
         .define("NDEBUG", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/Extras/InverseDynamics/CloneTreeCreator.cpp")
@@ -257,6 +264,7 @@ pub fn build_windows() {
         .define("NDEBUG", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp")
@@ -272,6 +280,7 @@ pub fn build_windows() {
         .define("NDEBUG", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp")
@@ -288,6 +297,7 @@ pub fn build_windows() {
         .define("NO_VISUALISER", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/examples/Utils/b3Clock.cpp")
@@ -332,17 +342,4 @@ pub fn build_windows() {
         .file("bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp")
         .file("bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp")
         .compile("pybullet");
-
-    cc::Build::new()
-        .include("bullet3/src")
-        .define("Bullet3Common_EXPORTS", None)
-        .define("NDEBUG", None)
-        .define("USE_GRAPHICAL_BENCHMARK", None)
-        .define("BT_USE_DOUBLE_PRECISION", None)
-        .opt_level(3)
-        .cpp(true)
-        .warnings(false)
-
-        .file("bullet3/src/rust_helpers.cpp")
-        .compile("Bullet3RustHelpers");
 }

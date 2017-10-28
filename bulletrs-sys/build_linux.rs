@@ -9,6 +9,7 @@ pub fn build_linux() {
         .define("USE_GRAPHICAL_BENCHMARK", None)
         .opt_level(3) // ignoring OPT_LEVEL from the crate
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/src/LinearMath/btAlignedAllocator.cpp")
@@ -31,6 +32,7 @@ pub fn build_linux() {
         .define("USE_GRAPHICAL_BENCHMARK", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/src/BulletCollision/BroadphaseCollision/btAxisSweep3.cpp")
@@ -140,6 +142,7 @@ pub fn build_linux() {
         .define("USE_GRAPHICAL_BENCHMARK", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/src/BulletDynamics/Character/btKinematicCharacterController.cpp")
@@ -189,6 +192,7 @@ pub fn build_linux() {
         .define("BT_USE_DOUBLE_PRECISION", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/src/Bullet3Common/b3AlignedAllocator.cpp")
@@ -213,6 +217,7 @@ pub fn build_linux() {
         .define("USE_GRAPHICAL_BENCHMARK", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/examples/OpenGLWindow/X11OpenGLWindow.cpp")
@@ -248,6 +253,7 @@ pub fn build_linux() {
         .define("_STATIC_CPPLIB", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/examples/ExampleBrowser/OpenGLExampleBrowser.cpp")
@@ -281,6 +287,7 @@ pub fn build_linux() {
         .define("BT_USE_DOUBLE_PRECISION", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/examples/ThirdPartyLibs/Gwen/Anim.cpp")
@@ -357,6 +364,7 @@ pub fn build_linux() {
         .define("BT_USE_DOUBLE_PRECISION", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/examples/ThirdPartyLibs/BussIK/Jacobian.cpp")
@@ -378,6 +386,7 @@ pub fn build_linux() {
         .define("USE_GRAPHICAL_BENCHMARK", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/src/BulletInverseDynamics/IDMath.cpp")
@@ -394,6 +403,7 @@ pub fn build_linux() {
         .define("USE_GRAPHICAL_BENCHMARK", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/Extras/InverseDynamics/CloneTreeCreator.cpp")
@@ -418,6 +428,7 @@ pub fn build_linux() {
         .define("USE_GRAPHICAL_BENCHMARK", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp")
@@ -434,6 +445,7 @@ pub fn build_linux() {
         .define("USE_GRAPHICAL_BENCHMARK", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp")
@@ -455,6 +467,7 @@ pub fn build_linux() {
         .define("USE_GRAPHICAL_BENCHMARK", None)
         .opt_level(3)
         .cpp(true)
+        .flag("-fkeep-inline-functions")
         .warnings(false)
 
         .file("bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp")
@@ -519,19 +532,5 @@ pub fn build_linux() {
         .file("bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.cpp")
         .file("bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.cpp")
         .compile("pybullet");
-
-    cc::Build::new()
-        .include("bullet3/src")
-        .define("Bullet3Common_EXPORTS", None)
-        .define("NDEBUG", None)
-        .define("USE_GRAPHICAL_BENCHMARK", None)
-        .define("BT_USE_DOUBLE_PRECISION", None)
-        .opt_level(3)
-        .cpp(true)
-        .warnings(false)
-
-        .file("bullet3/src/rust_helpers.cpp")
-        .compile("Bullet3RustHelpers");
-
 }
  
