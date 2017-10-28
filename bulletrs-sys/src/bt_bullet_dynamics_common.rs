@@ -1121,6 +1121,226 @@ pub struct std___is_move_iterator {
 pub const std___is_move_iterator___value: std___is_move_iterator__bindgen_ty_1 = 0;
 pub type std___is_move_iterator__bindgen_ty_1 = i32;
 pub type std___is_move_iterator___type = std___false_type;
+extern "C" {
+    #[link_name = "\u{1}_ZSt3absl"]
+    pub fn std_abs(__i: ::std::os::raw::c_long) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3absx"]
+    pub fn std_abs1(__x: ::std::os::raw::c_longlong) -> ::std::os::raw::c_longlong;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3absd"]
+    pub fn std_abs2(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3absf"]
+    pub fn std_abs3(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3abse"]
+    pub fn std_abs4(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3absn"]
+    pub fn std_abs5(__x: [u64; 2]) -> [u64; 2];
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3absg"]
+    pub fn std_abs6(__x: [u8; 16]) -> [u8; 16];
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4acosf"]
+    pub fn std_acos(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4acose"]
+    pub fn std_acos1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4asinf"]
+    pub fn std_asin(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4asine"]
+    pub fn std_asin1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4atanf"]
+    pub fn std_atan(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4atane"]
+    pub fn std_atan1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt5atan2ff"]
+    pub fn std_atan2(__y: f32, __x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt5atan2ee"]
+    pub fn std_atan21(__y: f64, __x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4ceilf"]
+    pub fn std_ceil(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4ceile"]
+    pub fn std_ceil1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3cosf"]
+    pub fn std_cos(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3cose"]
+    pub fn std_cos1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4coshf"]
+    pub fn std_cosh(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4coshe"]
+    pub fn std_cosh1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3expf"]
+    pub fn std_exp(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3expe"]
+    pub fn std_exp1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4fabsf"]
+    pub fn std_fabs(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4fabse"]
+    pub fn std_fabs1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt5floorf"]
+    pub fn std_floor(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt5floore"]
+    pub fn std_floor1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4fmodff"]
+    pub fn std_fmod(__x: f32, __y: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4fmodee"]
+    pub fn std_fmod1(__x: f64, __y: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt5frexpfPi"]
+    pub fn std_frexp(__x: f32, __exp: *mut ::std::os::raw::c_int) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt5frexpePi"]
+    pub fn std_frexp1(__x: f64, __exp: *mut ::std::os::raw::c_int) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt5ldexpfi"]
+    pub fn std_ldexp(__x: f32, __exp: ::std::os::raw::c_int) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt5ldexpei"]
+    pub fn std_ldexp1(__x: f64, __exp: ::std::os::raw::c_int) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3logf"]
+    pub fn std_log(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3loge"]
+    pub fn std_log1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt5log10f"]
+    pub fn std_log10(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt5log10e"]
+    pub fn std_log101(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4modffPf"]
+    pub fn std_modf(__x: f32, __iptr: *mut f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4modfePe"]
+    pub fn std_modf1(__x: f64, __iptr: *mut f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3powff"]
+    pub fn std_pow(__x: f32, __y: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3powee"]
+    pub fn std_pow1(__x: f64, __y: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3powdi"]
+    pub fn std_pow2(__x: f64, __i: ::std::os::raw::c_int) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3powfi"]
+    pub fn std_pow3(__x: f32, __n: ::std::os::raw::c_int) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3powei"]
+    pub fn std_pow4(__x: f64, __n: ::std::os::raw::c_int) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3sinf"]
+    pub fn std_sin(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3sine"]
+    pub fn std_sin1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4sinhf"]
+    pub fn std_sinh(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4sinhe"]
+    pub fn std_sinh1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4sqrtf"]
+    pub fn std_sqrt(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4sqrte"]
+    pub fn std_sqrt1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3tanf"]
+    pub fn std_tan(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3tane"]
+    pub fn std_tan1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4tanhf"]
+    pub fn std_tanh(__x: f32) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt4tanhe"]
+    pub fn std_tanh1(__x: f64) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZSt3divll"]
+    pub fn std_div(__i: ::std::os::raw::c_long, __j: ::std::os::raw::c_long) -> ldiv_t;
+}
 #[repr(C)]
 pub struct std_exception__bindgen_vtable(::std::os::raw::c_void);
 #[repr(C)]
@@ -1140,6 +1360,18 @@ fn bindgen_test_layout_std_exception() {
         8usize,
         concat!("Alignment of ", stringify!(std_exception))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNSt9exceptionC1Ev"]
+    pub fn std_exception_exception(this: *mut std_exception);
+}
+impl std_exception {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        std_exception_exception(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
 }
 extern "C" {
     #[link_name = "\u{1}_ZNSt9exceptionD0Ev"]
@@ -1166,6 +1398,18 @@ fn bindgen_test_layout_std_bad_exception() {
         8usize,
         concat!("Alignment of ", stringify!(std_bad_exception))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNSt13bad_exceptionC1Ev"]
+    pub fn std_bad_exception_bad_exception(this: *mut std_bad_exception);
+}
+impl std_bad_exception {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        std_bad_exception_bad_exception(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
 }
 extern "C" {
     #[link_name = "\u{1}_ZNSt13bad_exceptionD0Ev"]
@@ -1220,6 +1464,18 @@ fn bindgen_test_layout_std_bad_alloc() {
         8usize,
         concat!("Alignment of ", stringify!(std_bad_alloc))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNSt9bad_allocC1Ev"]
+    pub fn std_bad_alloc_bad_alloc(this: *mut std_bad_alloc);
+}
+impl std_bad_alloc {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        std_bad_alloc_bad_alloc(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
 }
 extern "C" {
     #[link_name = "\u{1}_ZNSt9bad_allocD0Ev"]
@@ -1519,6 +1775,13 @@ pub struct __gnu_cxx___promote_4 {
     pub _address: u8,
 }
 pub type __gnu_cxx___promote_4___type<_Tp2> = _Tp2;
+extern "C" {
+    #[link_name = "\u{1}_ZN9__gnu_cxx3divExx"]
+    pub fn __gnu_cxx_div(
+        __n: ::std::os::raw::c_longlong,
+        __d: ::std::os::raw::c_longlong,
+    ) -> lldiv_t;
+}
 extern "C" {
     #[link_name = "\u{1}_ZN9__gnu_cxx27__verbose_terminate_handlerEv"]
     pub fn __gnu_cxx___verbose_terminate_handler();
@@ -5604,6 +5867,10 @@ extern "C" {
     pub fn getloadavg(__loadavg: *mut f64, __nelem: ::std::os::raw::c_int)
         -> ::std::os::raw::c_int;
 }
+extern "C" {
+    #[link_name = "\u{1}_Z12btGetVersionv"]
+    pub fn btGetVersion() -> ::std::os::raw::c_int;
+}
 pub type btScalar = f64;
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -5667,8 +5934,192 @@ fn bindgen_test_layout_btInfMaskConverter() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN18btInfMaskConverterC1Ei"]
+    pub fn btInfMaskConverter_btInfMaskConverter(
+        this: *mut btInfMaskConverter,
+        mask: ::std::os::raw::c_int,
+    );
+}
+impl btInfMaskConverter {
+    #[inline]
+    pub unsafe fn new(mask: ::std::os::raw::c_int) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btInfMaskConverter_btInfMaskConverter(&mut __bindgen_tmp, mask);
+        __bindgen_tmp
+    }
+}
+extern "C" {
     #[link_name = "\u{1}_ZL14btInfinityMask"]
     pub static mut btInfinityMask: btInfMaskConverter;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z17btGetInfinityMaskv"]
+    pub fn btGetInfinityMask() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z6btSqrtd"]
+    pub fn btSqrt(x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z6btFabsd"]
+    pub fn btFabs(x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z5btCosd"]
+    pub fn btCos(x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z5btSind"]
+    pub fn btSin(x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z5btTand"]
+    pub fn btTan(x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z6btAcosd"]
+    pub fn btAcos(x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z6btAsind"]
+    pub fn btAsin(x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z6btAtand"]
+    pub fn btAtan(x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z7btAtan2dd"]
+    pub fn btAtan2(x: btScalar, y: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z5btExpd"]
+    pub fn btExp(x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z5btLogd"]
+    pub fn btLog(x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z5btPowdd"]
+    pub fn btPow(x: btScalar, y: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z6btFmoddd"]
+    pub fn btFmod(x: btScalar, y: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z11btAtan2Fastdd"]
+    pub fn btAtan2Fast(y: btScalar, x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z11btFuzzyZerod"]
+    pub fn btFuzzyZero(x: btScalar) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z7btEqualdd"]
+    pub fn btEqual(a: btScalar, eps: btScalar) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z14btGreaterEqualdd"]
+    pub fn btGreaterEqual(a: btScalar, eps: btScalar) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z12btIsNegatived"]
+    pub fn btIsNegative(x: btScalar) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z9btRadiansd"]
+    pub fn btRadians(x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z9btDegreesd"]
+    pub fn btDegrees(x: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z6btFselddd"]
+    pub fn btFsel(a: btScalar, b: btScalar, c: btScalar) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z23btMachineIsLittleEndianv"]
+    pub fn btMachineIsLittleEndian() -> bool;
+}
+extern "C" {
+
+    /// btSelect avoids branches, which makes performance much better for consoles like Playstation 3 and XBox 360
+    /// Thanks Phil Knight. See also http://www.cellperformance.com/articles/2006/04/more_techniques_for_eliminatin_1.html
+
+    #[link_name = "\u{1}_Z8btSelectjjj"]
+    pub fn btSelect(
+        condition: ::std::os::raw::c_uint,
+        valueIfConditionNonZero: ::std::os::raw::c_uint,
+        valueIfConditionZero: ::std::os::raw::c_uint,
+    ) -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z8btSelectjii"]
+    pub fn btSelect1(
+        condition: ::std::os::raw::c_uint,
+        valueIfConditionNonZero: ::std::os::raw::c_int,
+        valueIfConditionZero: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z8btSelectjff"]
+    pub fn btSelect2(
+        condition: ::std::os::raw::c_uint,
+        valueIfConditionNonZero: f32,
+        valueIfConditionZero: f32,
+    ) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z12btSwapEndianj"]
+    pub fn btSwapEndian(val: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z12btSwapEndiant"]
+    pub fn btSwapEndian1(val: ::std::os::raw::c_ushort) -> ::std::os::raw::c_ushort;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z12btSwapEndiani"]
+    pub fn btSwapEndian2(val: ::std::os::raw::c_int) -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z12btSwapEndians"]
+    pub fn btSwapEndian3(val: ::std::os::raw::c_short) -> ::std::os::raw::c_ushort;
+}
+extern "C" {
+
+    /// btSwapFloat uses using char pointers to swap the endianness
+    /// btSwapFloat/btSwapDouble will NOT return a float, because the machine might 'correct' invalid floating point values
+    /// Not all values of sign/exponent/mantissa are valid floating point numbers according to IEEE 754.
+    /// When a floating point unit is faced with an invalid value, it may actually change the value, or worse, throw an exception.
+    /// In most systems, running user mode code, you wouldn't get an exception, but instead the hardware/os/runtime will 'fix' the number for you.
+    /// so instead of returning a float/double, we return integer/long long integer
+
+    #[link_name = "\u{1}_Z17btSwapEndianFloatf"]
+    pub fn btSwapEndianFloat(d: f32) -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z19btUnswapEndianFloatj"]
+    pub fn btUnswapEndianFloat(a: ::std::os::raw::c_uint) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z18btSwapEndianDoubledPh"]
+    pub fn btSwapEndianDouble(d: f64, dst: *mut ::std::os::raw::c_uchar);
+}
+extern "C" {
+    #[link_name = "\u{1}_Z20btUnswapEndianDoublePKh"]
+    pub fn btUnswapEndianDouble(src: *const ::std::os::raw::c_uchar) -> f64;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z10btLargeDotPKdS0_i"]
+    pub fn btLargeDot(a: *const btScalar, b: *const btScalar, n: ::std::os::raw::c_int)
+        -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z16btNormalizeAngled"]
+    pub fn btNormalizeAngle(angleInRadians: btScalar) -> btScalar;
 }
 /// rudimentary class to provide type info
 #[repr(C)]
@@ -5698,6 +6149,26 @@ fn bindgen_test_layout_btTypedObject() {
             stringify!(m_objectType)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK13btTypedObject13getObjectTypeEv"]
+    pub fn btTypedObject_getObjectType(this: *const btTypedObject) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN13btTypedObjectC1Ei"]
+    pub fn btTypedObject_btTypedObject(this: *mut btTypedObject, objectType: ::std::os::raw::c_int);
+}
+impl btTypedObject {
+    #[inline]
+    pub unsafe fn getObjectType(&self) -> ::std::os::raw::c_int {
+        btTypedObject_getObjectType(self)
+    }
+    #[inline]
+    pub unsafe fn new(objectType: ::std::os::raw::c_int) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btTypedObject_btTypedObject(&mut __bindgen_tmp, objectType);
+        __bindgen_tmp
+    }
 }
 extern "C" {
     #[link_name = "\u{1}_Z22btAlignedAllocInternalmi"]
@@ -5784,6 +6255,660 @@ fn bindgen_test_layout_btVector3() {
         )
     );
 }
+extern "C" {
+
+    /// @brief Return the dot product
+    /// @param v The other vector in the dot product
+
+    #[link_name = "\u{1}_ZNK9btVector33dotERKS_"]
+    pub fn btVector3_dot(this: *const btVector3, v: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the length of the vector squared
+
+    #[link_name = "\u{1}_ZNK9btVector37length2Ev"]
+    pub fn btVector3_length2(this: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the length of the vector
+
+    #[link_name = "\u{1}_ZNK9btVector36lengthEv"]
+    pub fn btVector3_length(this: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the norm (length) of the vector
+
+    #[link_name = "\u{1}_ZNK9btVector34normEv"]
+    pub fn btVector3_norm(this: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the norm (length) of the vector
+
+    #[link_name = "\u{1}_ZNK9btVector38safeNormEv"]
+    pub fn btVector3_safeNorm(this: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the distance squared between the ends of this and another vector
+    /// This is symantically treating the vector like a point
+
+    #[link_name = "\u{1}_ZNK9btVector39distance2ERKS_"]
+    pub fn btVector3_distance2(this: *const btVector3, v: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the distance between the ends of this and another vector
+    /// This is symantically treating the vector like a point
+
+    #[link_name = "\u{1}_ZNK9btVector38distanceERKS_"]
+    pub fn btVector3_distance(this: *const btVector3, v: *const btVector3) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btVector313safeNormalizeEv"]
+    pub fn btVector3_safeNormalize(this: *mut btVector3) -> *mut btVector3;
+}
+extern "C" {
+
+    /// @brief Normalize this vector
+    /// x^2 + y^2 + z^2 = 1
+
+    #[link_name = "\u{1}_ZN9btVector39normalizeEv"]
+    pub fn btVector3_normalize(this: *mut btVector3) -> *mut btVector3;
+}
+extern "C" {
+
+    /// @brief Return a normalized version of this vector
+
+    #[link_name = "\u{1}_ZNK9btVector310normalizedEv"]
+    pub fn btVector3_normalized(this: *const btVector3) -> btVector3;
+}
+extern "C" {
+
+    /// @brief Return a rotated version of this vector
+    /// @param wAxis The axis to rotate about
+    /// @param angle The angle to rotate by
+
+    #[link_name = "\u{1}_ZNK9btVector36rotateERKS_d"]
+    pub fn btVector3_rotate(
+        this: *const btVector3,
+        wAxis: *const btVector3,
+        angle: btScalar,
+    ) -> btVector3;
+}
+extern "C" {
+
+    /// @brief Return the angle between this and another vector
+    /// @param v The other vector
+
+    #[link_name = "\u{1}_ZNK9btVector35angleERKS_"]
+    pub fn btVector3_angle(this: *const btVector3, v: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return a vector will the absolute values of each element
+
+    #[link_name = "\u{1}_ZNK9btVector38absoluteEv"]
+    pub fn btVector3_absolute(this: *const btVector3) -> btVector3;
+}
+extern "C" {
+
+    /// @brief Return the cross product between this and another vector
+    /// @param v The other vector
+
+    #[link_name = "\u{1}_ZNK9btVector35crossERKS_"]
+    pub fn btVector3_cross(this: *const btVector3, v: *const btVector3) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector36tripleERKS_S1_"]
+    pub fn btVector3_triple(
+        this: *const btVector3,
+        v1: *const btVector3,
+        v2: *const btVector3,
+    ) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the axis with the smallest value
+    /// Note return values are 0,1,2 for x, y, or z
+
+    #[link_name = "\u{1}_ZNK9btVector37minAxisEv"]
+    pub fn btVector3_minAxis(this: *const btVector3) -> ::std::os::raw::c_int;
+}
+extern "C" {
+
+    /// @brief Return the axis with the largest value
+    /// Note return values are 0,1,2 for x, y, or z
+
+    #[link_name = "\u{1}_ZNK9btVector37maxAxisEv"]
+    pub fn btVector3_maxAxis(this: *const btVector3) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector312furthestAxisEv"]
+    pub fn btVector3_furthestAxis(this: *const btVector3) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector311closestAxisEv"]
+    pub fn btVector3_closestAxis(this: *const btVector3) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btVector315setInterpolate3ERKS_S1_d"]
+    pub fn btVector3_setInterpolate3(
+        this: *mut btVector3,
+        v0: *const btVector3,
+        v1: *const btVector3,
+        rt: btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Return the linear interpolation between this and another vector
+    /// @param v The other vector
+    /// @param t The ration of this to v (t = 0 => return this, t=1 => return other)
+
+    #[link_name = "\u{1}_ZNK9btVector34lerpERKS_RKd"]
+    pub fn btVector3_lerp(
+        this: *const btVector3,
+        v: *const btVector3,
+        t: *const btScalar,
+    ) -> btVector3;
+}
+extern "C" {
+
+    /// @brief Return the x value
+
+    #[link_name = "\u{1}_ZNK9btVector34getXEv"]
+    pub fn btVector3_getX(this: *const btVector3) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Return the y value
+
+    #[link_name = "\u{1}_ZNK9btVector34getYEv"]
+    pub fn btVector3_getY(this: *const btVector3) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Return the z value
+
+    #[link_name = "\u{1}_ZNK9btVector34getZEv"]
+    pub fn btVector3_getZ(this: *const btVector3) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Set the x value
+
+    #[link_name = "\u{1}_ZN9btVector34setXEd"]
+    pub fn btVector3_setX(this: *mut btVector3, _x: btScalar);
+}
+extern "C" {
+
+    /// @brief Set the y value
+
+    #[link_name = "\u{1}_ZN9btVector34setYEd"]
+    pub fn btVector3_setY(this: *mut btVector3, _y: btScalar);
+}
+extern "C" {
+
+    /// @brief Set the z value
+
+    #[link_name = "\u{1}_ZN9btVector34setZEd"]
+    pub fn btVector3_setZ(this: *mut btVector3, _z: btScalar);
+}
+extern "C" {
+
+    /// @brief Set the w value
+
+    #[link_name = "\u{1}_ZN9btVector34setWEd"]
+    pub fn btVector3_setW(this: *mut btVector3, _w: btScalar);
+}
+extern "C" {
+
+    /// @brief Return the x value
+
+    #[link_name = "\u{1}_ZNK9btVector31xEv"]
+    pub fn btVector3_x(this: *const btVector3) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Return the y value
+
+    #[link_name = "\u{1}_ZNK9btVector31yEv"]
+    pub fn btVector3_y(this: *const btVector3) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Return the z value
+
+    #[link_name = "\u{1}_ZNK9btVector31zEv"]
+    pub fn btVector3_z(this: *const btVector3) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Return the w value
+
+    #[link_name = "\u{1}_ZNK9btVector31wEv"]
+    pub fn btVector3_w(this: *const btVector3) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Set each element to the max of the current values and the values of another btVector3
+    /// @param other The other btVector3 to compare with
+
+    #[link_name = "\u{1}_ZN9btVector36setMaxERKS_"]
+    pub fn btVector3_setMax(this: *mut btVector3, other: *const btVector3);
+}
+extern "C" {
+
+    /// @brief Set each element to the min of the current values and the values of another btVector3
+    /// @param other The other btVector3 to compare with
+
+    #[link_name = "\u{1}_ZN9btVector36setMinERKS_"]
+    pub fn btVector3_setMin(this: *mut btVector3, other: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btVector38setValueERKdS1_S1_"]
+    pub fn btVector3_setValue(
+        this: *mut btVector3,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector322getSkewSymmetricMatrixEPS_S0_S0_"]
+    pub fn btVector3_getSkewSymmetricMatrix(
+        this: *const btVector3,
+        v0: *mut btVector3,
+        v1: *mut btVector3,
+        v2: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btVector37setZeroEv"]
+    pub fn btVector3_setZero(this: *mut btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector36isZeroEv"]
+    pub fn btVector3_isZero(this: *const btVector3) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector39fuzzyZeroEv"]
+    pub fn btVector3_fuzzyZero(this: *const btVector3) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector39serializeER19btVector3DoubleData"]
+    pub fn btVector3_serialize(this: *const btVector3, dataOut: *mut btVector3DoubleData);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btVector311deSerializeERK19btVector3DoubleData"]
+    pub fn btVector3_deSerialize(this: *mut btVector3, dataIn: *const btVector3DoubleData);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector314serializeFloatER18btVector3FloatData"]
+    pub fn btVector3_serializeFloat(this: *const btVector3, dataOut: *mut btVector3FloatData);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btVector316deSerializeFloatERK18btVector3FloatData"]
+    pub fn btVector3_deSerializeFloat(this: *mut btVector3, dataIn: *const btVector3FloatData);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector315serializeDoubleER19btVector3DoubleData"]
+    pub fn btVector3_serializeDouble(this: *const btVector3, dataOut: *mut btVector3DoubleData);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btVector317deSerializeDoubleERK19btVector3DoubleData"]
+    pub fn btVector3_deSerializeDouble(this: *mut btVector3, dataIn: *const btVector3DoubleData);
+}
+extern "C" {
+
+    /// @brief returns index of maximum dot product between this and vectors in array[]
+    /// @param array The other vectors
+    /// @param array_count The number of other vectors
+    /// @param dotOut The maximum dot product
+
+    #[link_name = "\u{1}_ZNK9btVector36maxDotEPKS_lRd"]
+    pub fn btVector3_maxDot(
+        this: *const btVector3,
+        array: *const btVector3,
+        array_count: ::std::os::raw::c_long,
+        dotOut: *mut btScalar,
+    ) -> ::std::os::raw::c_long;
+}
+extern "C" {
+
+    /// @brief returns index of minimum dot product between this and vectors in array[]
+    /// @param array The other vectors
+    /// @param array_count The number of other vectors
+    /// @param dotOut The minimum dot product
+
+    #[link_name = "\u{1}_ZNK9btVector36minDotEPKS_lRd"]
+    pub fn btVector3_minDot(
+        this: *const btVector3,
+        array: *const btVector3,
+        array_count: ::std::os::raw::c_long,
+        dotOut: *mut btScalar,
+    ) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector34dot3ERKS_S1_S1_"]
+    pub fn btVector3_dot3(
+        this: *const btVector3,
+        v0: *const btVector3,
+        v1: *const btVector3,
+        v2: *const btVector3,
+    ) -> btVector3;
+}
+extern "C" {
+
+    /// @brief No initialization constructor
+
+    #[link_name = "\u{1}_ZN9btVector3C1Ev"]
+    pub fn btVector3_btVector3(this: *mut btVector3);
+}
+extern "C" {
+
+    /// @brief Constructor from scalars
+    /// @param x X value
+    /// @param y Y value
+    /// @param z Z value
+
+    #[link_name = "\u{1}_ZN9btVector3C1ERKdS1_S1_"]
+    pub fn btVector3_btVector31(
+        this: *mut btVector3,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+    );
+}
+impl btVector3 {
+    #[inline]
+    pub unsafe fn dot(&self, v: *const btVector3) -> btScalar {
+        btVector3_dot(self, v)
+    }
+    #[inline]
+    pub unsafe fn length2(&self) -> btScalar {
+        btVector3_length2(self)
+    }
+    #[inline]
+    pub unsafe fn length(&self) -> btScalar {
+        btVector3_length(self)
+    }
+    #[inline]
+    pub unsafe fn norm(&self) -> btScalar {
+        btVector3_norm(self)
+    }
+    #[inline]
+    pub unsafe fn safeNorm(&self) -> btScalar {
+        btVector3_safeNorm(self)
+    }
+    #[inline]
+    pub unsafe fn distance2(&self, v: *const btVector3) -> btScalar {
+        btVector3_distance2(self, v)
+    }
+    #[inline]
+    pub unsafe fn distance(&self, v: *const btVector3) -> btScalar {
+        btVector3_distance(self, v)
+    }
+    #[inline]
+    pub unsafe fn safeNormalize(&mut self) -> *mut btVector3 {
+        btVector3_safeNormalize(self)
+    }
+    #[inline]
+    pub unsafe fn normalize(&mut self) -> *mut btVector3 {
+        btVector3_normalize(self)
+    }
+    #[inline]
+    pub unsafe fn normalized(&self) -> btVector3 {
+        btVector3_normalized(self)
+    }
+    #[inline]
+    pub unsafe fn rotate(&self, wAxis: *const btVector3, angle: btScalar) -> btVector3 {
+        btVector3_rotate(self, wAxis, angle)
+    }
+    #[inline]
+    pub unsafe fn angle(&self, v: *const btVector3) -> btScalar {
+        btVector3_angle(self, v)
+    }
+    #[inline]
+    pub unsafe fn absolute(&self) -> btVector3 {
+        btVector3_absolute(self)
+    }
+    #[inline]
+    pub unsafe fn cross(&self, v: *const btVector3) -> btVector3 {
+        btVector3_cross(self, v)
+    }
+    #[inline]
+    pub unsafe fn triple(&self, v1: *const btVector3, v2: *const btVector3) -> btScalar {
+        btVector3_triple(self, v1, v2)
+    }
+    #[inline]
+    pub unsafe fn minAxis(&self) -> ::std::os::raw::c_int {
+        btVector3_minAxis(self)
+    }
+    #[inline]
+    pub unsafe fn maxAxis(&self) -> ::std::os::raw::c_int {
+        btVector3_maxAxis(self)
+    }
+    #[inline]
+    pub unsafe fn furthestAxis(&self) -> ::std::os::raw::c_int {
+        btVector3_furthestAxis(self)
+    }
+    #[inline]
+    pub unsafe fn closestAxis(&self) -> ::std::os::raw::c_int {
+        btVector3_closestAxis(self)
+    }
+    #[inline]
+    pub unsafe fn setInterpolate3(
+        &mut self,
+        v0: *const btVector3,
+        v1: *const btVector3,
+        rt: btScalar,
+    ) {
+        btVector3_setInterpolate3(self, v0, v1, rt)
+    }
+    #[inline]
+    pub unsafe fn lerp(&self, v: *const btVector3, t: *const btScalar) -> btVector3 {
+        btVector3_lerp(self, v, t)
+    }
+    #[inline]
+    pub unsafe fn getX(&self) -> *const btScalar {
+        btVector3_getX(self)
+    }
+    #[inline]
+    pub unsafe fn getY(&self) -> *const btScalar {
+        btVector3_getY(self)
+    }
+    #[inline]
+    pub unsafe fn getZ(&self) -> *const btScalar {
+        btVector3_getZ(self)
+    }
+    #[inline]
+    pub unsafe fn setX(&mut self, _x: btScalar) {
+        btVector3_setX(self, _x)
+    }
+    #[inline]
+    pub unsafe fn setY(&mut self, _y: btScalar) {
+        btVector3_setY(self, _y)
+    }
+    #[inline]
+    pub unsafe fn setZ(&mut self, _z: btScalar) {
+        btVector3_setZ(self, _z)
+    }
+    #[inline]
+    pub unsafe fn setW(&mut self, _w: btScalar) {
+        btVector3_setW(self, _w)
+    }
+    #[inline]
+    pub unsafe fn x(&self) -> *const btScalar {
+        btVector3_x(self)
+    }
+    #[inline]
+    pub unsafe fn y(&self) -> *const btScalar {
+        btVector3_y(self)
+    }
+    #[inline]
+    pub unsafe fn z(&self) -> *const btScalar {
+        btVector3_z(self)
+    }
+    #[inline]
+    pub unsafe fn w(&self) -> *const btScalar {
+        btVector3_w(self)
+    }
+    #[inline]
+    pub unsafe fn setMax(&mut self, other: *const btVector3) {
+        btVector3_setMax(self, other)
+    }
+    #[inline]
+    pub unsafe fn setMin(&mut self, other: *const btVector3) {
+        btVector3_setMin(self, other)
+    }
+    #[inline]
+    pub unsafe fn setValue(
+        &mut self,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+    ) {
+        btVector3_setValue(self, _x, _y, _z)
+    }
+    #[inline]
+    pub unsafe fn getSkewSymmetricMatrix(
+        &self,
+        v0: *mut btVector3,
+        v1: *mut btVector3,
+        v2: *mut btVector3,
+    ) {
+        btVector3_getSkewSymmetricMatrix(self, v0, v1, v2)
+    }
+    #[inline]
+    pub unsafe fn setZero(&mut self) {
+        btVector3_setZero(self)
+    }
+    #[inline]
+    pub unsafe fn isZero(&self) -> bool {
+        btVector3_isZero(self)
+    }
+    #[inline]
+    pub unsafe fn fuzzyZero(&self) -> bool {
+        btVector3_fuzzyZero(self)
+    }
+    #[inline]
+    pub unsafe fn serialize(&self, dataOut: *mut btVector3DoubleData) {
+        btVector3_serialize(self, dataOut)
+    }
+    #[inline]
+    pub unsafe fn deSerialize(&mut self, dataIn: *const btVector3DoubleData) {
+        btVector3_deSerialize(self, dataIn)
+    }
+    #[inline]
+    pub unsafe fn serializeFloat(&self, dataOut: *mut btVector3FloatData) {
+        btVector3_serializeFloat(self, dataOut)
+    }
+    #[inline]
+    pub unsafe fn deSerializeFloat(&mut self, dataIn: *const btVector3FloatData) {
+        btVector3_deSerializeFloat(self, dataIn)
+    }
+    #[inline]
+    pub unsafe fn serializeDouble(&self, dataOut: *mut btVector3DoubleData) {
+        btVector3_serializeDouble(self, dataOut)
+    }
+    #[inline]
+    pub unsafe fn deSerializeDouble(&mut self, dataIn: *const btVector3DoubleData) {
+        btVector3_deSerializeDouble(self, dataIn)
+    }
+    #[inline]
+    pub unsafe fn maxDot(
+        &self,
+        array: *const btVector3,
+        array_count: ::std::os::raw::c_long,
+        dotOut: *mut btScalar,
+    ) -> ::std::os::raw::c_long {
+        btVector3_maxDot(self, array, array_count, dotOut)
+    }
+    #[inline]
+    pub unsafe fn minDot(
+        &self,
+        array: *const btVector3,
+        array_count: ::std::os::raw::c_long,
+        dotOut: *mut btScalar,
+    ) -> ::std::os::raw::c_long {
+        btVector3_minDot(self, array, array_count, dotOut)
+    }
+    #[inline]
+    pub unsafe fn dot3(
+        &self,
+        v0: *const btVector3,
+        v1: *const btVector3,
+        v2: *const btVector3,
+    ) -> btVector3 {
+        btVector3_dot3(self, v0, v1, v2)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btVector3_btVector3(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(_x: *const btScalar, _y: *const btScalar, _z: *const btScalar) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btVector3_btVector31(&mut __bindgen_tmp, _x, _y, _z);
+        __bindgen_tmp
+    }
+}
+extern "C" {
+
+    /// @brief Return the dot product between two vectors
+
+    #[link_name = "\u{1}_Z5btDotRK9btVector3S1_"]
+    pub fn btDot(v1: *const btVector3, v2: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the distance squared between two vectors
+
+    #[link_name = "\u{1}_Z11btDistance2RK9btVector3S1_"]
+    pub fn btDistance2(v1: *const btVector3, v2: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the distance between two vectors
+
+    #[link_name = "\u{1}_Z10btDistanceRK9btVector3S1_"]
+    pub fn btDistance(v1: *const btVector3, v2: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the angle between two vectors
+
+    #[link_name = "\u{1}_Z7btAngleRK9btVector3S1_"]
+    pub fn btAngle(v1: *const btVector3, v2: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the cross product of two vectors
+
+    #[link_name = "\u{1}_Z7btCrossRK9btVector3S1_"]
+    pub fn btCross(v1: *const btVector3, v2: *const btVector3) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z8btTripleRK9btVector3S1_S1_"]
+    pub fn btTriple(v1: *const btVector3, v2: *const btVector3, v3: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the linear interpolation between two vectors
+    /// @param v1 One vector
+    /// @param v2 The other vector
+    /// @param t The ration of this to v (t = 0 => return v1, t=1 => return v2)
+
+    #[link_name = "\u{1}_Z4lerpRK9btVector3S1_RKd"]
+    pub fn lerp(v1: *const btVector3, v2: *const btVector3, t: *const btScalar) -> btVector3;
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct btVector4 {
@@ -5801,6 +6926,127 @@ fn bindgen_test_layout_btVector4() {
         8usize,
         concat!("Alignment of ", stringify!(btVector4))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector49absolute4Ev"]
+    pub fn btVector4_absolute4(this: *const btVector4) -> btVector4;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector44getWEv"]
+    pub fn btVector4_getW(this: *const btVector4) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector48maxAxis4Ev"]
+    pub fn btVector4_maxAxis4(this: *const btVector4) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector48minAxis4Ev"]
+    pub fn btVector4_minAxis4(this: *const btVector4) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btVector412closestAxis4Ev"]
+    pub fn btVector4_closestAxis4(this: *const btVector4) -> ::std::os::raw::c_int;
+}
+extern "C" {
+
+    /// @brief Set the values
+    /// @param x Value of x
+    /// @param y Value of y
+    /// @param z Value of z
+    /// @param w Value of w
+
+    #[link_name = "\u{1}_ZN9btVector48setValueERKdS1_S1_S1_"]
+    pub fn btVector4_setValue(
+        this: *mut btVector4,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+        _w: *const btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btVector4C1Ev"]
+    pub fn btVector4_btVector4(this: *mut btVector4);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btVector4C1ERKdS1_S1_S1_"]
+    pub fn btVector4_btVector41(
+        this: *mut btVector4,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+        _w: *const btScalar,
+    );
+}
+impl btVector4 {
+    #[inline]
+    pub unsafe fn absolute4(&self) -> btVector4 {
+        btVector4_absolute4(self)
+    }
+    #[inline]
+    pub unsafe fn getW(&self) -> btScalar {
+        btVector4_getW(self)
+    }
+    #[inline]
+    pub unsafe fn maxAxis4(&self) -> ::std::os::raw::c_int {
+        btVector4_maxAxis4(self)
+    }
+    #[inline]
+    pub unsafe fn minAxis4(&self) -> ::std::os::raw::c_int {
+        btVector4_minAxis4(self)
+    }
+    #[inline]
+    pub unsafe fn closestAxis4(&self) -> ::std::os::raw::c_int {
+        btVector4_closestAxis4(self)
+    }
+    #[inline]
+    pub unsafe fn setValue(
+        &mut self,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+        _w: *const btScalar,
+    ) {
+        btVector4_setValue(self, _x, _y, _z, _w)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btVector4_btVector4(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+        _w: *const btScalar,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btVector4_btVector41(&mut __bindgen_tmp, _x, _y, _z, _w);
+        __bindgen_tmp
+    }
+}
+extern "C" {
+
+    /// btSwapVector3Endian swaps vector endianness, useful for network and cross-platform serialization
+
+    #[link_name = "\u{1}_Z18btSwapScalarEndianRKdRd"]
+    pub fn btSwapScalarEndian(sourceVal: *const btScalar, destVal: *mut btScalar);
+}
+extern "C" {
+
+    /// btSwapVector3Endian swaps vector endianness, useful for network and cross-platform serialization
+
+    #[link_name = "\u{1}_Z19btSwapVector3EndianRK9btVector3RS_"]
+    pub fn btSwapVector3Endian(sourceVec: *const btVector3, destVec: *mut btVector3);
+}
+extern "C" {
+
+    /// btUnSwapVector3Endian swaps vector endianness, useful for network and cross-platform serialization
+
+    #[link_name = "\u{1}_Z21btUnSwapVector3EndianR9btVector3"]
+    pub fn btUnSwapVector3Endian(vector: *mut btVector3);
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -5886,6 +7132,266 @@ fn bindgen_test_layout_btQuadWord() {
         )
     );
 }
+extern "C" {
+
+    /// @brief Return the x value
+
+    #[link_name = "\u{1}_ZNK10btQuadWord4getXEv"]
+    pub fn btQuadWord_getX(this: *const btQuadWord) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Return the y value
+
+    #[link_name = "\u{1}_ZNK10btQuadWord4getYEv"]
+    pub fn btQuadWord_getY(this: *const btQuadWord) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Return the z value
+
+    #[link_name = "\u{1}_ZNK10btQuadWord4getZEv"]
+    pub fn btQuadWord_getZ(this: *const btQuadWord) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Set the x value
+
+    #[link_name = "\u{1}_ZN10btQuadWord4setXEd"]
+    pub fn btQuadWord_setX(this: *mut btQuadWord, _x: btScalar);
+}
+extern "C" {
+
+    /// @brief Set the y value
+
+    #[link_name = "\u{1}_ZN10btQuadWord4setYEd"]
+    pub fn btQuadWord_setY(this: *mut btQuadWord, _y: btScalar);
+}
+extern "C" {
+
+    /// @brief Set the z value
+
+    #[link_name = "\u{1}_ZN10btQuadWord4setZEd"]
+    pub fn btQuadWord_setZ(this: *mut btQuadWord, _z: btScalar);
+}
+extern "C" {
+
+    /// @brief Set the w value
+
+    #[link_name = "\u{1}_ZN10btQuadWord4setWEd"]
+    pub fn btQuadWord_setW(this: *mut btQuadWord, _w: btScalar);
+}
+extern "C" {
+
+    /// @brief Return the x value
+
+    #[link_name = "\u{1}_ZNK10btQuadWord1xEv"]
+    pub fn btQuadWord_x(this: *const btQuadWord) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Return the y value
+
+    #[link_name = "\u{1}_ZNK10btQuadWord1yEv"]
+    pub fn btQuadWord_y(this: *const btQuadWord) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Return the z value
+
+    #[link_name = "\u{1}_ZNK10btQuadWord1zEv"]
+    pub fn btQuadWord_z(this: *const btQuadWord) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Return the w value
+
+    #[link_name = "\u{1}_ZNK10btQuadWord1wEv"]
+    pub fn btQuadWord_w(this: *const btQuadWord) -> *const btScalar;
+}
+extern "C" {
+
+    /// @brief Set x,y,z and zero w
+    /// @param x Value of x
+    /// @param y Value of y
+    /// @param z Value of z
+
+    #[link_name = "\u{1}_ZN10btQuadWord8setValueERKdS1_S1_"]
+    pub fn btQuadWord_setValue(
+        this: *mut btQuadWord,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Set the values
+    /// @param x Value of x
+    /// @param y Value of y
+    /// @param z Value of z
+    /// @param w Value of w
+
+    #[link_name = "\u{1}_ZN10btQuadWord8setValueERKdS1_S1_S1_"]
+    pub fn btQuadWord_setValue1(
+        this: *mut btQuadWord,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+        _w: *const btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Set each element to the max of the current values and the values of another btQuadWord
+    /// @param other The other btQuadWord to compare with
+
+    #[link_name = "\u{1}_ZN10btQuadWord6setMaxERKS_"]
+    pub fn btQuadWord_setMax(this: *mut btQuadWord, other: *const btQuadWord);
+}
+extern "C" {
+
+    /// @brief Set each element to the min of the current values and the values of another btQuadWord
+    /// @param other The other btQuadWord to compare with
+
+    #[link_name = "\u{1}_ZN10btQuadWord6setMinERKS_"]
+    pub fn btQuadWord_setMin(this: *mut btQuadWord, other: *const btQuadWord);
+}
+extern "C" {
+
+    /// @brief No initialization constructor
+
+    #[link_name = "\u{1}_ZN10btQuadWordC1Ev"]
+    pub fn btQuadWord_btQuadWord(this: *mut btQuadWord);
+}
+extern "C" {
+
+    /// @brief Three argument constructor (zeros w)
+    /// @param x Value of x
+    /// @param y Value of y
+    /// @param z Value of z
+
+    #[link_name = "\u{1}_ZN10btQuadWordC1ERKdS1_S1_"]
+    pub fn btQuadWord_btQuadWord1(
+        this: *mut btQuadWord,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Initializing constructor
+    /// @param x Value of x
+    /// @param y Value of y
+    /// @param z Value of z
+    /// @param w Value of w
+
+    #[link_name = "\u{1}_ZN10btQuadWordC1ERKdS1_S1_S1_"]
+    pub fn btQuadWord_btQuadWord2(
+        this: *mut btQuadWord,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+        _w: *const btScalar,
+    );
+}
+impl btQuadWord {
+    #[inline]
+    pub unsafe fn getX(&self) -> *const btScalar {
+        btQuadWord_getX(self)
+    }
+    #[inline]
+    pub unsafe fn getY(&self) -> *const btScalar {
+        btQuadWord_getY(self)
+    }
+    #[inline]
+    pub unsafe fn getZ(&self) -> *const btScalar {
+        btQuadWord_getZ(self)
+    }
+    #[inline]
+    pub unsafe fn setX(&mut self, _x: btScalar) {
+        btQuadWord_setX(self, _x)
+    }
+    #[inline]
+    pub unsafe fn setY(&mut self, _y: btScalar) {
+        btQuadWord_setY(self, _y)
+    }
+    #[inline]
+    pub unsafe fn setZ(&mut self, _z: btScalar) {
+        btQuadWord_setZ(self, _z)
+    }
+    #[inline]
+    pub unsafe fn setW(&mut self, _w: btScalar) {
+        btQuadWord_setW(self, _w)
+    }
+    #[inline]
+    pub unsafe fn x(&self) -> *const btScalar {
+        btQuadWord_x(self)
+    }
+    #[inline]
+    pub unsafe fn y(&self) -> *const btScalar {
+        btQuadWord_y(self)
+    }
+    #[inline]
+    pub unsafe fn z(&self) -> *const btScalar {
+        btQuadWord_z(self)
+    }
+    #[inline]
+    pub unsafe fn w(&self) -> *const btScalar {
+        btQuadWord_w(self)
+    }
+    #[inline]
+    pub unsafe fn setValue(
+        &mut self,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+    ) {
+        btQuadWord_setValue(self, _x, _y, _z)
+    }
+    #[inline]
+    pub unsafe fn setValue1(
+        &mut self,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+        _w: *const btScalar,
+    ) {
+        btQuadWord_setValue1(self, _x, _y, _z, _w)
+    }
+    #[inline]
+    pub unsafe fn setMax(&mut self, other: *const btQuadWord) {
+        btQuadWord_setMax(self, other)
+    }
+    #[inline]
+    pub unsafe fn setMin(&mut self, other: *const btQuadWord) {
+        btQuadWord_setMin(self, other)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btQuadWord_btQuadWord(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(_x: *const btScalar, _y: *const btScalar, _z: *const btScalar) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btQuadWord_btQuadWord1(&mut __bindgen_tmp, _x, _y, _z);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new2(
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+        _w: *const btScalar,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btQuadWord_btQuadWord2(&mut __bindgen_tmp, _x, _y, _z, _w);
+        __bindgen_tmp
+    }
+}
 /// @brief The btQuaternion implements quaternion to perform linear algebra rotations in combination with btMatrix3x3, btVector3 and btTransform.
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -5904,6 +7410,489 @@ fn bindgen_test_layout_btQuaternion() {
         8usize,
         concat!("Alignment of ", stringify!(btQuaternion))
     );
+}
+extern "C" {
+
+    /// @brief Set the rotation using axis angle notation
+    /// @param axis The axis around which to rotate
+    /// @param angle The magnitude of the rotation in Radians
+
+    #[link_name = "\u{1}_ZN12btQuaternion11setRotationERK9btVector3RKd"]
+    pub fn btQuaternion_setRotation(
+        this: *mut btQuaternion,
+        axis: *const btVector3,
+        _angle: *const btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Set the quaternion using Euler angles
+    /// @param yaw Angle around Y
+    /// @param pitch Angle around X
+    /// @param roll Angle around Z
+
+    #[link_name = "\u{1}_ZN12btQuaternion8setEulerERKdS1_S1_"]
+    pub fn btQuaternion_setEuler(
+        this: *mut btQuaternion,
+        yaw: *const btScalar,
+        pitch: *const btScalar,
+        roll: *const btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Set the quaternion using euler angles
+    /// @param yaw Angle around Z
+    /// @param pitch Angle around Y
+    /// @param roll Angle around X
+
+    #[link_name = "\u{1}_ZN12btQuaternion11setEulerZYXERKdS1_S1_"]
+    pub fn btQuaternion_setEulerZYX(
+        this: *mut btQuaternion,
+        yawZ: *const btScalar,
+        pitchY: *const btScalar,
+        rollX: *const btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Get the euler angles from this quaternion
+    /// @param yaw Angle around Z
+    /// @param pitch Angle around Y
+    /// @param roll Angle around X
+
+    #[link_name = "\u{1}_ZNK12btQuaternion11getEulerZYXERdS0_S0_"]
+    pub fn btQuaternion_getEulerZYX(
+        this: *const btQuaternion,
+        yawZ: *mut btScalar,
+        pitchY: *mut btScalar,
+        rollX: *mut btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Return the dot product between this quaternion and another
+    /// @param q The other quaternion
+
+    #[link_name = "\u{1}_ZNK12btQuaternion3dotERKS_"]
+    pub fn btQuaternion_dot(this: *const btQuaternion, q: *const btQuaternion) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the length squared of the quaternion
+
+    #[link_name = "\u{1}_ZNK12btQuaternion7length2Ev"]
+    pub fn btQuaternion_length2(this: *const btQuaternion) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the length of the quaternion
+
+    #[link_name = "\u{1}_ZNK12btQuaternion6lengthEv"]
+    pub fn btQuaternion_length(this: *const btQuaternion) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btQuaternion13safeNormalizeEv"]
+    pub fn btQuaternion_safeNormalize(this: *mut btQuaternion) -> *mut btQuaternion;
+}
+extern "C" {
+
+    /// @brief Normalize the quaternion
+    /// Such that x^2 + y^2 + z^2 +w^2 = 1
+
+    #[link_name = "\u{1}_ZN12btQuaternion9normalizeEv"]
+    pub fn btQuaternion_normalize(this: *mut btQuaternion) -> *mut btQuaternion;
+}
+extern "C" {
+
+    /// @brief Return a normalized version of this quaternion
+
+    #[link_name = "\u{1}_ZNK12btQuaternion10normalizedEv"]
+    pub fn btQuaternion_normalized(this: *const btQuaternion) -> btQuaternion;
+}
+extern "C" {
+
+    /// @brief Return the ***half*** angle between this quaternion and the other
+    /// @param q The other quaternion
+
+    #[link_name = "\u{1}_ZNK12btQuaternion5angleERKS_"]
+    pub fn btQuaternion_angle(this: *const btQuaternion, q: *const btQuaternion) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the angle between this quaternion and the other along the shortest path
+    /// @param q The other quaternion
+
+    #[link_name = "\u{1}_ZNK12btQuaternion17angleShortestPathERKS_"]
+    pub fn btQuaternion_angleShortestPath(
+        this: *const btQuaternion,
+        q: *const btQuaternion,
+    ) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the angle [0, 2Pi] of rotation represented by this quaternion
+
+    #[link_name = "\u{1}_ZNK12btQuaternion8getAngleEv"]
+    pub fn btQuaternion_getAngle(this: *const btQuaternion) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the angle [0, Pi] of rotation represented by this quaternion along the shortest path
+
+    #[link_name = "\u{1}_ZNK12btQuaternion20getAngleShortestPathEv"]
+    pub fn btQuaternion_getAngleShortestPath(this: *const btQuaternion) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the axis of the rotation represented by this quaternion
+
+    #[link_name = "\u{1}_ZNK12btQuaternion7getAxisEv"]
+    pub fn btQuaternion_getAxis(this: *const btQuaternion) -> btVector3;
+}
+extern "C" {
+
+    /// @brief Return the inverse of this quaternion
+
+    #[link_name = "\u{1}_ZNK12btQuaternion7inverseEv"]
+    pub fn btQuaternion_inverse(this: *const btQuaternion) -> btQuaternion;
+}
+extern "C" {
+
+    /// @todo document this and it's use
+
+    #[link_name = "\u{1}_ZNK12btQuaternion8farthestERKS_"]
+    pub fn btQuaternion_farthest(
+        this: *const btQuaternion,
+        qd: *const btQuaternion,
+    ) -> btQuaternion;
+}
+extern "C" {
+
+    /// @todo document this and it's use
+
+    #[link_name = "\u{1}_ZNK12btQuaternion7nearestERKS_"]
+    pub fn btQuaternion_nearest(this: *const btQuaternion, qd: *const btQuaternion)
+        -> btQuaternion;
+}
+extern "C" {
+
+    /// @brief Return the quaternion which is the result of Spherical Linear Interpolation between this and the other quaternion
+    /// @param q The other quaternion to interpolate with
+    /// @param t The ratio between this and q to interpolate.  If t = 0 the result is this, if t=1 the result is q.
+    /// Slerp interpolates assuming constant velocity.
+
+    #[link_name = "\u{1}_ZNK12btQuaternion5slerpERKS_RKd"]
+    pub fn btQuaternion_slerp(
+        this: *const btQuaternion,
+        q: *const btQuaternion,
+        t: *const btScalar,
+    ) -> btQuaternion;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btQuaternion11getIdentityEv"]
+    pub fn btQuaternion_getIdentity() -> *const btQuaternion;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btQuaternion4getWEv"]
+    pub fn btQuaternion_getW(this: *const btQuaternion) -> *const btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btQuaternion9serializeER22btQuaternionDoubleData"]
+    pub fn btQuaternion_serialize(this: *const btQuaternion, dataOut: *mut btQuaternionDoubleData);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btQuaternion11deSerializeERK22btQuaternionDoubleData"]
+    pub fn btQuaternion_deSerialize(this: *mut btQuaternion, dataIn: *const btQuaternionDoubleData);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btQuaternion14serializeFloatER21btQuaternionFloatData"]
+    pub fn btQuaternion_serializeFloat(
+        this: *const btQuaternion,
+        dataOut: *mut btQuaternionFloatData,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btQuaternion16deSerializeFloatERK21btQuaternionFloatData"]
+    pub fn btQuaternion_deSerializeFloat(
+        this: *mut btQuaternion,
+        dataIn: *const btQuaternionFloatData,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btQuaternion15serializeDoubleER22btQuaternionDoubleData"]
+    pub fn btQuaternion_serializeDouble(
+        this: *const btQuaternion,
+        dataOut: *mut btQuaternionDoubleData,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btQuaternion17deSerializeDoubleERK22btQuaternionDoubleData"]
+    pub fn btQuaternion_deSerializeDouble(
+        this: *mut btQuaternion,
+        dataIn: *const btQuaternionDoubleData,
+    );
+}
+extern "C" {
+
+    /// @brief No initialization constructor
+
+    #[link_name = "\u{1}_ZN12btQuaternionC1Ev"]
+    pub fn btQuaternion_btQuaternion(this: *mut btQuaternion);
+}
+extern "C" {
+
+    /// @brief Constructor from scalars
+
+    #[link_name = "\u{1}_ZN12btQuaternionC1ERKdS1_S1_S1_"]
+    pub fn btQuaternion_btQuaternion1(
+        this: *mut btQuaternion,
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+        _w: *const btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Axis angle Constructor
+    /// @param axis The axis which the rotation is around
+    /// @param angle The magnitude of the rotation around the angle (Radians)
+
+    #[link_name = "\u{1}_ZN12btQuaternionC1ERK9btVector3RKd"]
+    pub fn btQuaternion_btQuaternion2(
+        this: *mut btQuaternion,
+        _axis: *const btVector3,
+        _angle: *const btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Constructor from Euler angles
+    /// @param yaw Angle around Y unless BT_EULER_DEFAULT_ZYX defined then Z
+    /// @param pitch Angle around X unless BT_EULER_DEFAULT_ZYX defined then Y
+    /// @param roll Angle around Z unless BT_EULER_DEFAULT_ZYX defined then X
+
+    #[link_name = "\u{1}_ZN12btQuaternionC1ERKdS1_S1_"]
+    pub fn btQuaternion_btQuaternion3(
+        this: *mut btQuaternion,
+        yaw: *const btScalar,
+        pitch: *const btScalar,
+        roll: *const btScalar,
+    );
+}
+impl btQuaternion {
+    #[inline]
+    pub unsafe fn setRotation(&mut self, axis: *const btVector3, _angle: *const btScalar) {
+        btQuaternion_setRotation(self, axis, _angle)
+    }
+    #[inline]
+    pub unsafe fn setEuler(
+        &mut self,
+        yaw: *const btScalar,
+        pitch: *const btScalar,
+        roll: *const btScalar,
+    ) {
+        btQuaternion_setEuler(self, yaw, pitch, roll)
+    }
+    #[inline]
+    pub unsafe fn setEulerZYX(
+        &mut self,
+        yawZ: *const btScalar,
+        pitchY: *const btScalar,
+        rollX: *const btScalar,
+    ) {
+        btQuaternion_setEulerZYX(self, yawZ, pitchY, rollX)
+    }
+    #[inline]
+    pub unsafe fn getEulerZYX(
+        &self,
+        yawZ: *mut btScalar,
+        pitchY: *mut btScalar,
+        rollX: *mut btScalar,
+    ) {
+        btQuaternion_getEulerZYX(self, yawZ, pitchY, rollX)
+    }
+    #[inline]
+    pub unsafe fn dot(&self, q: *const btQuaternion) -> btScalar {
+        btQuaternion_dot(self, q)
+    }
+    #[inline]
+    pub unsafe fn length2(&self) -> btScalar {
+        btQuaternion_length2(self)
+    }
+    #[inline]
+    pub unsafe fn length(&self) -> btScalar {
+        btQuaternion_length(self)
+    }
+    #[inline]
+    pub unsafe fn safeNormalize(&mut self) -> *mut btQuaternion {
+        btQuaternion_safeNormalize(self)
+    }
+    #[inline]
+    pub unsafe fn normalize(&mut self) -> *mut btQuaternion {
+        btQuaternion_normalize(self)
+    }
+    #[inline]
+    pub unsafe fn normalized(&self) -> btQuaternion {
+        btQuaternion_normalized(self)
+    }
+    #[inline]
+    pub unsafe fn angle(&self, q: *const btQuaternion) -> btScalar {
+        btQuaternion_angle(self, q)
+    }
+    #[inline]
+    pub unsafe fn angleShortestPath(&self, q: *const btQuaternion) -> btScalar {
+        btQuaternion_angleShortestPath(self, q)
+    }
+    #[inline]
+    pub unsafe fn getAngle(&self) -> btScalar {
+        btQuaternion_getAngle(self)
+    }
+    #[inline]
+    pub unsafe fn getAngleShortestPath(&self) -> btScalar {
+        btQuaternion_getAngleShortestPath(self)
+    }
+    #[inline]
+    pub unsafe fn getAxis(&self) -> btVector3 {
+        btQuaternion_getAxis(self)
+    }
+    #[inline]
+    pub unsafe fn inverse(&self) -> btQuaternion {
+        btQuaternion_inverse(self)
+    }
+    #[inline]
+    pub unsafe fn farthest(&self, qd: *const btQuaternion) -> btQuaternion {
+        btQuaternion_farthest(self, qd)
+    }
+    #[inline]
+    pub unsafe fn nearest(&self, qd: *const btQuaternion) -> btQuaternion {
+        btQuaternion_nearest(self, qd)
+    }
+    #[inline]
+    pub unsafe fn slerp(&self, q: *const btQuaternion, t: *const btScalar) -> btQuaternion {
+        btQuaternion_slerp(self, q, t)
+    }
+    #[inline]
+    pub unsafe fn getIdentity() -> *const btQuaternion {
+        btQuaternion_getIdentity()
+    }
+    #[inline]
+    pub unsafe fn getW(&self) -> *const btScalar {
+        btQuaternion_getW(self)
+    }
+    #[inline]
+    pub unsafe fn serialize(&self, dataOut: *mut btQuaternionDoubleData) {
+        btQuaternion_serialize(self, dataOut)
+    }
+    #[inline]
+    pub unsafe fn deSerialize(&mut self, dataIn: *const btQuaternionDoubleData) {
+        btQuaternion_deSerialize(self, dataIn)
+    }
+    #[inline]
+    pub unsafe fn serializeFloat(&self, dataOut: *mut btQuaternionFloatData) {
+        btQuaternion_serializeFloat(self, dataOut)
+    }
+    #[inline]
+    pub unsafe fn deSerializeFloat(&mut self, dataIn: *const btQuaternionFloatData) {
+        btQuaternion_deSerializeFloat(self, dataIn)
+    }
+    #[inline]
+    pub unsafe fn serializeDouble(&self, dataOut: *mut btQuaternionDoubleData) {
+        btQuaternion_serializeDouble(self, dataOut)
+    }
+    #[inline]
+    pub unsafe fn deSerializeDouble(&mut self, dataIn: *const btQuaternionDoubleData) {
+        btQuaternion_deSerializeDouble(self, dataIn)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btQuaternion_btQuaternion(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(
+        _x: *const btScalar,
+        _y: *const btScalar,
+        _z: *const btScalar,
+        _w: *const btScalar,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btQuaternion_btQuaternion1(&mut __bindgen_tmp, _x, _y, _z, _w);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new2(_axis: *const btVector3, _angle: *const btScalar) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btQuaternion_btQuaternion2(&mut __bindgen_tmp, _axis, _angle);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new3(
+        yaw: *const btScalar,
+        pitch: *const btScalar,
+        roll: *const btScalar,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btQuaternion_btQuaternion3(&mut __bindgen_tmp, yaw, pitch, roll);
+        __bindgen_tmp
+    }
+}
+extern "C" {
+
+    /// @brief Calculate the dot product between two quaternions
+
+    #[link_name = "\u{1}_Z3dotRK12btQuaternionS1_"]
+    pub fn dot(q1: *const btQuaternion, q2: *const btQuaternion) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the length of a quaternion
+
+    #[link_name = "\u{1}_Z6lengthRK12btQuaternion"]
+    pub fn length(q: *const btQuaternion) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the angle between two quaternions
+
+    #[link_name = "\u{1}_Z7btAngleRK12btQuaternionS1_"]
+    pub fn btAngle1(q1: *const btQuaternion, q2: *const btQuaternion) -> btScalar;
+}
+extern "C" {
+
+    /// @brief Return the inverse of a quaternion
+
+    #[link_name = "\u{1}_Z7inverseRK12btQuaternion"]
+    pub fn inverse(q: *const btQuaternion) -> btQuaternion;
+}
+extern "C" {
+
+    /// @brief Return the result of spherical linear interpolation betwen two quaternions
+    /// @param q1 The first quaternion
+    /// @param q2 The second quaternion
+    /// @param t The ration between q1 and q2.  t = 0 return q1, t=1 returns q2
+    /// Slerp assumes constant velocity between positions.
+
+    #[link_name = "\u{1}_Z5slerpRK12btQuaternionS1_RKd"]
+    pub fn slerp(
+        q1: *const btQuaternion,
+        q2: *const btQuaternion,
+        t: *const btScalar,
+    ) -> btQuaternion;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z10quatRotateRK12btQuaternionRK9btVector3"]
+    pub fn quatRotate(rotation: *const btQuaternion, v: *const btVector3) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z15shortestArcQuatRK9btVector3S1_"]
+    pub fn shortestArcQuat(v0: *const btVector3, v1: *const btVector3) -> btQuaternion;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z25shortestArcQuatNormalize2R9btVector3S0_"]
+    pub fn shortestArcQuatNormalize2(v0: *mut btVector3, v1: *mut btVector3) -> btQuaternion;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -7260,6 +9249,169 @@ fn bindgen_test_layout_btMatrix3x3() {
 }
 extern "C" {
 
+    /// @brief Get a column of the matrix as a vector
+    /// @param i Column number 0 indexed
+
+    #[link_name = "\u{1}_ZNK11btMatrix3x39getColumnEi"]
+    pub fn btMatrix3x3_getColumn(this: *const btMatrix3x3, i: ::std::os::raw::c_int) -> btVector3;
+}
+extern "C" {
+
+    /// @brief Get a row of the matrix as a vector
+    /// @param i Row number 0 indexed
+
+    #[link_name = "\u{1}_ZNK11btMatrix3x36getRowEi"]
+    pub fn btMatrix3x3_getRow(
+        this: *const btMatrix3x3,
+        i: ::std::os::raw::c_int,
+    ) -> *const btVector3;
+}
+extern "C" {
+
+    /// @brief Set from the rotational part of a 4x4 OpenGL matrix
+    /// @param m A pointer to the beginning of the array of scalars
+
+    #[link_name = "\u{1}_ZN11btMatrix3x322setFromOpenGLSubMatrixEPKd"]
+    pub fn btMatrix3x3_setFromOpenGLSubMatrix(this: *mut btMatrix3x3, m: *const btScalar);
+}
+extern "C" {
+
+    /// @brief Set the values of the matrix explicitly (row major)
+    /// @param xx Top left
+    /// @param xy Top Middle
+    /// @param xz Top Right
+    /// @param yx Middle Left
+    /// @param yy Middle Middle
+    /// @param yz Middle Right
+    /// @param zx Bottom Left
+    /// @param zy Bottom Middle
+    /// @param zz Bottom Right
+
+    #[link_name = "\u{1}_ZN11btMatrix3x38setValueERKdS1_S1_S1_S1_S1_S1_S1_S1_"]
+    pub fn btMatrix3x3_setValue(
+        this: *mut btMatrix3x3,
+        xx: *const btScalar,
+        xy: *const btScalar,
+        xz: *const btScalar,
+        yx: *const btScalar,
+        yy: *const btScalar,
+        yz: *const btScalar,
+        zx: *const btScalar,
+        zy: *const btScalar,
+        zz: *const btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Set the matrix from a quaternion
+    /// @param q The Quaternion to match
+
+    #[link_name = "\u{1}_ZN11btMatrix3x311setRotationERK12btQuaternion"]
+    pub fn btMatrix3x3_setRotation(this: *mut btMatrix3x3, q: *const btQuaternion);
+}
+extern "C" {
+
+    /// @brief Set the matrix from euler angles using YPR around YXZ respectively
+    /// @param yaw Yaw about Y axis
+    /// @param pitch Pitch about X axis
+    /// @param roll Roll about Z axis
+
+    #[link_name = "\u{1}_ZN11btMatrix3x311setEulerYPRERKdS1_S1_"]
+    pub fn btMatrix3x3_setEulerYPR(
+        this: *mut btMatrix3x3,
+        yaw: *const btScalar,
+        pitch: *const btScalar,
+        roll: *const btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Set the matrix from euler angles YPR around ZYX axes
+    /// @param eulerX Roll about X axis
+    /// @param eulerY Pitch around Y axis
+    /// @param eulerZ Yaw aboud Z axis
+    ///
+    /// These angles are used to produce a rotation matrix. The euler
+    /// angles are applied in ZYX order. I.e a vector is first rotated
+    /// about X then Y and then Z
+
+    #[link_name = "\u{1}_ZN11btMatrix3x311setEulerZYXEddd"]
+    pub fn btMatrix3x3_setEulerZYX(
+        this: *mut btMatrix3x3,
+        eulerX: btScalar,
+        eulerY: btScalar,
+        eulerZ: btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Set the matrix to the identity
+
+    #[link_name = "\u{1}_ZN11btMatrix3x311setIdentityEv"]
+    pub fn btMatrix3x3_setIdentity(this: *mut btMatrix3x3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btMatrix3x311getIdentityEv"]
+    pub fn btMatrix3x3_getIdentity() -> *const btMatrix3x3;
+}
+extern "C" {
+
+    /// @brief Fill the rotational part of an OpenGL matrix and clear the shear/perspective
+    /// @param m The array to be filled
+
+    #[link_name = "\u{1}_ZNK11btMatrix3x318getOpenGLSubMatrixEPd"]
+    pub fn btMatrix3x3_getOpenGLSubMatrix(this: *const btMatrix3x3, m: *mut btScalar);
+}
+extern "C" {
+
+    /// @brief Get the matrix represented as a quaternion
+    /// @param q The quaternion which will be set
+
+    #[link_name = "\u{1}_ZNK11btMatrix3x311getRotationER12btQuaternion"]
+    pub fn btMatrix3x3_getRotation(this: *const btMatrix3x3, q: *mut btQuaternion);
+}
+extern "C" {
+
+    /// @brief Get the matrix represented as euler angles around YXZ, roundtrip with setEulerYPR
+    /// @param yaw Yaw around Y axis
+    /// @param pitch Pitch around X axis
+    /// @param roll around Z axis
+
+    #[link_name = "\u{1}_ZNK11btMatrix3x311getEulerYPRERdS0_S0_"]
+    pub fn btMatrix3x3_getEulerYPR(
+        this: *const btMatrix3x3,
+        yaw: *mut btScalar,
+        pitch: *mut btScalar,
+        roll: *mut btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Get the matrix represented as euler angles around ZYX
+    /// @param yaw Yaw around X axis
+    /// @param pitch Pitch around Y axis
+    /// @param roll around X axis
+    /// @param solution_number Which solution of two possible solutions ( 1 or 2) are possible values
+
+    #[link_name = "\u{1}_ZNK11btMatrix3x311getEulerZYXERdS0_S0_j"]
+    pub fn btMatrix3x3_getEulerZYX(
+        this: *const btMatrix3x3,
+        yaw: *mut btScalar,
+        pitch: *mut btScalar,
+        roll: *mut btScalar,
+        solution_number: ::std::os::raw::c_uint,
+    );
+}
+extern "C" {
+
+    /// @brief Create a scaled copy of the matrix
+    /// @param s Scaling vector The elements of the vector will scale each column
+
+    #[link_name = "\u{1}_ZNK11btMatrix3x36scaledERK9btVector3"]
+    pub fn btMatrix3x3_scaled(this: *const btMatrix3x3, s: *const btVector3) -> btMatrix3x3;
+}
+extern "C" {
+
     /// @brief Return the determinant of the matrix
 
     #[link_name = "\u{1}_ZNK11btMatrix3x311determinantEv"]
@@ -7294,6 +9446,15 @@ extern "C" {
     pub fn btMatrix3x3_inverse(this: *const btMatrix3x3) -> btMatrix3x3;
 }
 extern "C" {
+
+    /// Solve A * x = b, where b is a column vector. This is more efficient
+    /// /// than computing the inverse in one-shot cases.
+    /// ///Solve33 is from Box2d, thanks to Erin Catto,
+
+    #[link_name = "\u{1}_ZNK11btMatrix3x37solve33ERK9btVector3"]
+    pub fn btMatrix3x3_solve33(this: *const btMatrix3x3, b: *const btVector3) -> btVector3;
+}
+extern "C" {
     #[link_name = "\u{1}_ZNK11btMatrix3x314transposeTimesERKS_"]
     pub fn btMatrix3x3_transposeTimes(
         this: *const btMatrix3x3,
@@ -7306,6 +9467,65 @@ extern "C" {
         this: *const btMatrix3x3,
         m: *const btMatrix3x3,
     ) -> btMatrix3x3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btMatrix3x35tdotxERK9btVector3"]
+    pub fn btMatrix3x3_tdotx(this: *const btMatrix3x3, v: *const btVector3) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btMatrix3x35tdotyERK9btVector3"]
+    pub fn btMatrix3x3_tdoty(this: *const btMatrix3x3, v: *const btVector3) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btMatrix3x35tdotzERK9btVector3"]
+    pub fn btMatrix3x3_tdotz(this: *const btMatrix3x3, v: *const btVector3) -> btScalar;
+}
+extern "C" {
+
+    /// extractRotation is from "A robust method to extract the rotational part of deformations"
+    /// ///See http://dl.acm.org/citation.cfm?doid=2994258.2994269
+
+    #[link_name = "\u{1}_ZN11btMatrix3x315extractRotationER12btQuaterniondi"]
+    pub fn btMatrix3x3_extractRotation(
+        this: *mut btMatrix3x3,
+        q: *mut btQuaternion,
+        tolerance: btScalar,
+        maxIter: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+
+    /// @brief diagonalizes this matrix
+    /// @param rot stores the rotation from the coordinate system in which the matrix is diagonal to the original
+    /// coordinate system, i.e., old_this = rot * new_this * rot^T.
+    /// @param threshold See iteration
+    /// @param maxIter The iteration stops when we hit the given tolerance or when maxIter have been executed.
+
+    #[link_name = "\u{1}_ZN11btMatrix3x311diagonalizeERS_di"]
+    pub fn btMatrix3x3_diagonalize(
+        this: *mut btMatrix3x3,
+        rot: *mut btMatrix3x3,
+        tolerance: btScalar,
+        maxIter: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+
+    /// @brief Calculate the matrix cofactor
+    /// @param r1 The first row to use for calculating the cofactor
+    /// @param c1 The first column to use for calculating the cofactor
+    /// @param r1 The second row to use for calculating the cofactor
+    /// @param c1 The second column to use for calculating the cofactor
+    /// See http://en.wikipedia.org/wiki/Cofactor_(linear_algebra) for more details
+
+    #[link_name = "\u{1}_ZNK11btMatrix3x35cofacEiiii"]
+    pub fn btMatrix3x3_cofac(
+        this: *const btMatrix3x3,
+        r1: ::std::os::raw::c_int,
+        c1: ::std::os::raw::c_int,
+        r2: ::std::os::raw::c_int,
+        c2: ::std::os::raw::c_int,
+    ) -> btScalar;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK11btMatrix3x39serializeER21btMatrix3x3DoubleData"]
@@ -7333,7 +9553,129 @@ extern "C" {
         dataIn: *const btMatrix3x3DoubleData,
     );
 }
+extern "C" {
+
+    /// @brief No initializaion constructor
+
+    #[link_name = "\u{1}_ZN11btMatrix3x3C1Ev"]
+    pub fn btMatrix3x3_btMatrix3x3(this: *mut btMatrix3x3);
+}
+extern "C" {
+
+    /// @brief Constructor from Quaternion
+
+    #[link_name = "\u{1}_ZN11btMatrix3x3C1ERK12btQuaternion"]
+    pub fn btMatrix3x3_btMatrix3x31(this: *mut btMatrix3x3, q: *const btQuaternion);
+}
+extern "C" {
+
+    /// @brief Constructor with row major formatting
+
+    #[link_name = "\u{1}_ZN11btMatrix3x3C1ERKdS1_S1_S1_S1_S1_S1_S1_S1_"]
+    pub fn btMatrix3x3_btMatrix3x32(
+        this: *mut btMatrix3x3,
+        xx: *const btScalar,
+        xy: *const btScalar,
+        xz: *const btScalar,
+        yx: *const btScalar,
+        yy: *const btScalar,
+        yz: *const btScalar,
+        zx: *const btScalar,
+        zy: *const btScalar,
+        zz: *const btScalar,
+    );
+}
+extern "C" {
+
+    /// @brief Copy constructor
+
+    #[link_name = "\u{1}_ZN11btMatrix3x3C1ERKS_"]
+    pub fn btMatrix3x3_btMatrix3x33(this: *mut btMatrix3x3, other: *const btMatrix3x3);
+}
 impl btMatrix3x3 {
+    #[inline]
+    pub unsafe fn getColumn(&self, i: ::std::os::raw::c_int) -> btVector3 {
+        btMatrix3x3_getColumn(self, i)
+    }
+    #[inline]
+    pub unsafe fn getRow(&self, i: ::std::os::raw::c_int) -> *const btVector3 {
+        btMatrix3x3_getRow(self, i)
+    }
+    #[inline]
+    pub unsafe fn setFromOpenGLSubMatrix(&mut self, m: *const btScalar) {
+        btMatrix3x3_setFromOpenGLSubMatrix(self, m)
+    }
+    #[inline]
+    pub unsafe fn setValue(
+        &mut self,
+        xx: *const btScalar,
+        xy: *const btScalar,
+        xz: *const btScalar,
+        yx: *const btScalar,
+        yy: *const btScalar,
+        yz: *const btScalar,
+        zx: *const btScalar,
+        zy: *const btScalar,
+        zz: *const btScalar,
+    ) {
+        btMatrix3x3_setValue(self, xx, xy, xz, yx, yy, yz, zx, zy, zz)
+    }
+    #[inline]
+    pub unsafe fn setRotation(&mut self, q: *const btQuaternion) {
+        btMatrix3x3_setRotation(self, q)
+    }
+    #[inline]
+    pub unsafe fn setEulerYPR(
+        &mut self,
+        yaw: *const btScalar,
+        pitch: *const btScalar,
+        roll: *const btScalar,
+    ) {
+        btMatrix3x3_setEulerYPR(self, yaw, pitch, roll)
+    }
+    #[inline]
+    pub unsafe fn setEulerZYX(&mut self, eulerX: btScalar, eulerY: btScalar, eulerZ: btScalar) {
+        btMatrix3x3_setEulerZYX(self, eulerX, eulerY, eulerZ)
+    }
+    #[inline]
+    pub unsafe fn setIdentity(&mut self) {
+        btMatrix3x3_setIdentity(self)
+    }
+    #[inline]
+    pub unsafe fn getIdentity() -> *const btMatrix3x3 {
+        btMatrix3x3_getIdentity()
+    }
+    #[inline]
+    pub unsafe fn getOpenGLSubMatrix(&self, m: *mut btScalar) {
+        btMatrix3x3_getOpenGLSubMatrix(self, m)
+    }
+    #[inline]
+    pub unsafe fn getRotation(&self, q: *mut btQuaternion) {
+        btMatrix3x3_getRotation(self, q)
+    }
+    #[inline]
+    pub unsafe fn getEulerYPR(
+        &self,
+        yaw: *mut btScalar,
+        pitch: *mut btScalar,
+        roll: *mut btScalar,
+    ) {
+        btMatrix3x3_getEulerYPR(self, yaw, pitch, roll)
+    }
+    #[inline]
+    pub unsafe fn getEulerZYX(
+        &self,
+        yaw: *mut btScalar,
+        pitch: *mut btScalar,
+        roll: *mut btScalar,
+        solution_number: ::std::os::raw::c_uint,
+    ) {
+        btMatrix3x3_getEulerZYX(self, yaw, pitch, roll, solution_number)
+    }
+    #[inline]
+    pub unsafe fn scaled(&self, s: *const btVector3) -> btMatrix3x3 {
+        btMatrix3x3_scaled(self, s)
+    }
     #[inline]
     pub unsafe fn determinant(&self) -> btScalar {
         btMatrix3x3_determinant(self)
@@ -7355,12 +9697,56 @@ impl btMatrix3x3 {
         btMatrix3x3_inverse(self)
     }
     #[inline]
+    pub unsafe fn solve33(&self, b: *const btVector3) -> btVector3 {
+        btMatrix3x3_solve33(self, b)
+    }
+    #[inline]
     pub unsafe fn transposeTimes(&self, m: *const btMatrix3x3) -> btMatrix3x3 {
         btMatrix3x3_transposeTimes(self, m)
     }
     #[inline]
     pub unsafe fn timesTranspose(&self, m: *const btMatrix3x3) -> btMatrix3x3 {
         btMatrix3x3_timesTranspose(self, m)
+    }
+    #[inline]
+    pub unsafe fn tdotx(&self, v: *const btVector3) -> btScalar {
+        btMatrix3x3_tdotx(self, v)
+    }
+    #[inline]
+    pub unsafe fn tdoty(&self, v: *const btVector3) -> btScalar {
+        btMatrix3x3_tdoty(self, v)
+    }
+    #[inline]
+    pub unsafe fn tdotz(&self, v: *const btVector3) -> btScalar {
+        btMatrix3x3_tdotz(self, v)
+    }
+    #[inline]
+    pub unsafe fn extractRotation(
+        &mut self,
+        q: *mut btQuaternion,
+        tolerance: btScalar,
+        maxIter: ::std::os::raw::c_int,
+    ) {
+        btMatrix3x3_extractRotation(self, q, tolerance, maxIter)
+    }
+    #[inline]
+    pub unsafe fn diagonalize(
+        &mut self,
+        rot: *mut btMatrix3x3,
+        tolerance: btScalar,
+        maxIter: ::std::os::raw::c_int,
+    ) {
+        btMatrix3x3_diagonalize(self, rot, tolerance, maxIter)
+    }
+    #[inline]
+    pub unsafe fn cofac(
+        &self,
+        r1: ::std::os::raw::c_int,
+        c1: ::std::os::raw::c_int,
+        r2: ::std::os::raw::c_int,
+        c2: ::std::os::raw::c_int,
+    ) -> btScalar {
+        btMatrix3x3_cofac(self, r1, c1, r2, c2)
     }
     #[inline]
     pub unsafe fn serialize(&self, dataOut: *mut btMatrix3x3DoubleData) {
@@ -7381,6 +9767,40 @@ impl btMatrix3x3 {
     #[inline]
     pub unsafe fn deSerializeDouble(&mut self, dataIn: *const btMatrix3x3DoubleData) {
         btMatrix3x3_deSerializeDouble(self, dataIn)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btMatrix3x3_btMatrix3x3(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(q: *const btQuaternion) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btMatrix3x3_btMatrix3x31(&mut __bindgen_tmp, q);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new2(
+        xx: *const btScalar,
+        xy: *const btScalar,
+        xz: *const btScalar,
+        yx: *const btScalar,
+        yy: *const btScalar,
+        yz: *const btScalar,
+        zx: *const btScalar,
+        zy: *const btScalar,
+        zz: *const btScalar,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btMatrix3x3_btMatrix3x32(&mut __bindgen_tmp, xx, xy, xz, yx, yy, yz, zx, zy, zz);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new3(other: *const btMatrix3x3) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btMatrix3x3_btMatrix3x33(&mut __bindgen_tmp, other);
+        __bindgen_tmp
     }
 }
 /// for serialization
@@ -7486,6 +9906,107 @@ fn bindgen_test_layout_btTransform() {
 }
 extern "C" {
 
+    /// @brief Set the current transform as the value of the product of two transforms
+    /// @param t1 Transform 1
+    /// @param t2 Transform 2
+    /// This = Transform1 * Transform2
+
+    #[link_name = "\u{1}_ZN11btTransform4multERKS_S1_"]
+    pub fn btTransform_mult(this: *mut btTransform, t1: *const btTransform, t2: *const btTransform);
+}
+extern "C" {
+
+    /// @brief Return the basis matrix for the rotation
+
+    #[link_name = "\u{1}_ZN11btTransform8getBasisEv"]
+    pub fn btTransform_getBasis(this: *mut btTransform) -> *mut btMatrix3x3;
+}
+extern "C" {
+
+    /// @brief Return the basis matrix for the rotation
+
+    #[link_name = "\u{1}_ZNK11btTransform8getBasisEv"]
+    pub fn btTransform_getBasis1(this: *const btTransform) -> *const btMatrix3x3;
+}
+extern "C" {
+
+    /// @brief Return the origin vector translation
+
+    #[link_name = "\u{1}_ZN11btTransform9getOriginEv"]
+    pub fn btTransform_getOrigin(this: *mut btTransform) -> *mut btVector3;
+}
+extern "C" {
+
+    /// @brief Return the origin vector translation
+
+    #[link_name = "\u{1}_ZNK11btTransform9getOriginEv"]
+    pub fn btTransform_getOrigin1(this: *const btTransform) -> *const btVector3;
+}
+extern "C" {
+
+    /// @brief Return a quaternion representing the rotation
+
+    #[link_name = "\u{1}_ZNK11btTransform11getRotationEv"]
+    pub fn btTransform_getRotation(this: *const btTransform) -> btQuaternion;
+}
+extern "C" {
+
+    /// @brief Set from an array
+    /// @param m A pointer to a 16 element array (12 rotation(row major padded on the right by 1), and 3 translation
+
+    #[link_name = "\u{1}_ZN11btTransform19setFromOpenGLMatrixEPKd"]
+    pub fn btTransform_setFromOpenGLMatrix(this: *mut btTransform, m: *const btScalar);
+}
+extern "C" {
+
+    /// @brief Fill an array representation
+    /// @param m A pointer to a 16 element array (12 rotation(row major padded on the right by 1), and 3 translation
+
+    #[link_name = "\u{1}_ZNK11btTransform15getOpenGLMatrixEPd"]
+    pub fn btTransform_getOpenGLMatrix(this: *const btTransform, m: *mut btScalar);
+}
+extern "C" {
+
+    /// @brief Set the translational element
+    /// @param origin The vector to set the translation to
+
+    #[link_name = "\u{1}_ZN11btTransform9setOriginERK9btVector3"]
+    pub fn btTransform_setOrigin(this: *mut btTransform, origin: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btTransform8invXformERK9btVector3"]
+    pub fn btTransform_invXform(this: *const btTransform, inVec: *const btVector3) -> btVector3;
+}
+extern "C" {
+
+    /// @brief Set the rotational element by btMatrix3x3
+
+    #[link_name = "\u{1}_ZN11btTransform8setBasisERK11btMatrix3x3"]
+    pub fn btTransform_setBasis(this: *mut btTransform, basis: *const btMatrix3x3);
+}
+extern "C" {
+
+    /// @brief Set the rotational element by btQuaternion
+
+    #[link_name = "\u{1}_ZN11btTransform11setRotationERK12btQuaternion"]
+    pub fn btTransform_setRotation(this: *mut btTransform, q: *const btQuaternion);
+}
+extern "C" {
+
+    /// @brief Set this transformation to the identity
+
+    #[link_name = "\u{1}_ZN11btTransform11setIdentityEv"]
+    pub fn btTransform_setIdentity(this: *mut btTransform);
+}
+extern "C" {
+
+    /// @brief Return the inverse of this transform
+
+    #[link_name = "\u{1}_ZNK11btTransform7inverseEv"]
+    pub fn btTransform_inverse(this: *const btTransform) -> btTransform;
+}
+extern "C" {
+
     /// @brief Return the inverse of this transform times the other transform
     /// @param t The other transform
     /// return this.inverse() * the other
@@ -7493,6 +10014,13 @@ extern "C" {
     #[link_name = "\u{1}_ZNK11btTransform12inverseTimesERKS_"]
     pub fn btTransform_inverseTimes(this: *const btTransform, t: *const btTransform)
         -> btTransform;
+}
+extern "C" {
+
+    /// @brief Return an identity transform
+
+    #[link_name = "\u{1}_ZN11btTransform11getIdentityEv"]
+    pub fn btTransform_getIdentity() -> *const btTransform;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK11btTransform9serializeER21btTransformDoubleData"]
@@ -7520,10 +10048,110 @@ extern "C" {
         dataIn: *const btTransformFloatData,
     );
 }
+extern "C" {
+
+    /// @brief No initialization constructor
+
+    #[link_name = "\u{1}_ZN11btTransformC1Ev"]
+    pub fn btTransform_btTransform(this: *mut btTransform);
+}
+extern "C" {
+
+    /// @brief Constructor from btQuaternion (optional btVector3 )
+    /// @param q Rotation from quaternion
+    /// @param c Translation from Vector (default 0,0,0)
+
+    #[link_name = "\u{1}_ZN11btTransformC1ERK12btQuaternionRK9btVector3"]
+    pub fn btTransform_btTransform1(
+        this: *mut btTransform,
+        q: *const btQuaternion,
+        c: *const btVector3,
+    );
+}
+extern "C" {
+
+    /// @brief Constructor from btMatrix3x3 (optional btVector3)
+    /// @param b Rotation from Matrix
+    /// @param c Translation from Vector default (0,0,0)
+
+    #[link_name = "\u{1}_ZN11btTransformC1ERK11btMatrix3x3RK9btVector3"]
+    pub fn btTransform_btTransform2(
+        this: *mut btTransform,
+        b: *const btMatrix3x3,
+        c: *const btVector3,
+    );
+}
+extern "C" {
+
+    /// @brief Copy constructor
+
+    #[link_name = "\u{1}_ZN11btTransformC1ERKS_"]
+    pub fn btTransform_btTransform3(this: *mut btTransform, other: *const btTransform);
+}
 impl btTransform {
+    #[inline]
+    pub unsafe fn mult(&mut self, t1: *const btTransform, t2: *const btTransform) {
+        btTransform_mult(self, t1, t2)
+    }
+    #[inline]
+    pub unsafe fn getBasis(&mut self) -> *mut btMatrix3x3 {
+        btTransform_getBasis(self)
+    }
+    #[inline]
+    pub unsafe fn getBasis1(&self) -> *const btMatrix3x3 {
+        btTransform_getBasis1(self)
+    }
+    #[inline]
+    pub unsafe fn getOrigin(&mut self) -> *mut btVector3 {
+        btTransform_getOrigin(self)
+    }
+    #[inline]
+    pub unsafe fn getOrigin1(&self) -> *const btVector3 {
+        btTransform_getOrigin1(self)
+    }
+    #[inline]
+    pub unsafe fn getRotation(&self) -> btQuaternion {
+        btTransform_getRotation(self)
+    }
+    #[inline]
+    pub unsafe fn setFromOpenGLMatrix(&mut self, m: *const btScalar) {
+        btTransform_setFromOpenGLMatrix(self, m)
+    }
+    #[inline]
+    pub unsafe fn getOpenGLMatrix(&self, m: *mut btScalar) {
+        btTransform_getOpenGLMatrix(self, m)
+    }
+    #[inline]
+    pub unsafe fn setOrigin(&mut self, origin: *const btVector3) {
+        btTransform_setOrigin(self, origin)
+    }
+    #[inline]
+    pub unsafe fn invXform(&self, inVec: *const btVector3) -> btVector3 {
+        btTransform_invXform(self, inVec)
+    }
+    #[inline]
+    pub unsafe fn setBasis(&mut self, basis: *const btMatrix3x3) {
+        btTransform_setBasis(self, basis)
+    }
+    #[inline]
+    pub unsafe fn setRotation(&mut self, q: *const btQuaternion) {
+        btTransform_setRotation(self, q)
+    }
+    #[inline]
+    pub unsafe fn setIdentity(&mut self) {
+        btTransform_setIdentity(self)
+    }
+    #[inline]
+    pub unsafe fn inverse(&self) -> btTransform {
+        btTransform_inverse(self)
+    }
     #[inline]
     pub unsafe fn inverseTimes(&self, t: *const btTransform) -> btTransform {
         btTransform_inverseTimes(self, t)
+    }
+    #[inline]
+    pub unsafe fn getIdentity() -> *const btTransform {
+        btTransform_getIdentity()
     }
     #[inline]
     pub unsafe fn serialize(&self, dataOut: *mut btTransformDoubleData) {
@@ -7544,6 +10172,30 @@ impl btTransform {
     #[inline]
     pub unsafe fn deSerializeFloat(&mut self, dataIn: *const btTransformFloatData) {
         btTransform_deSerializeFloat(self, dataIn)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btTransform_btTransform(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(q: *const btQuaternion, c: *const btVector3) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btTransform_btTransform1(&mut __bindgen_tmp, q, c);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new2(b: *const btMatrix3x3, c: *const btVector3) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btTransform_btTransform2(&mut __bindgen_tmp, b, c);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new3(other: *const btTransform) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btTransform_btTransform3(&mut __bindgen_tmp, other);
+        __bindgen_tmp
     }
 }
 /// for serialization
@@ -7646,6 +10298,10 @@ fn bindgen_test_layout_btMotionState() {
         8usize,
         concat!("Alignment of ", stringify!(btMotionState))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN13btMotionStateD0Ev"]
+    pub fn btMotionState_btMotionState_destructor(this: *mut btMotionState);
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK13btMotionState17getWorldTransformER11btTransform"]
@@ -8129,11 +10785,124 @@ fn bindgen_test_layout_btCollisionObject() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject23mergesSimulationIslandsEv"]
+    pub fn btCollisionObject_mergesSimulationIslands(this: *const btCollisionObject) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject22getAnisotropicFrictionEv"]
+    pub fn btCollisionObject_getAnisotropicFriction(
+        this: *const btCollisionObject,
+    ) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject22setAnisotropicFrictionERK9btVector3i"]
+    pub fn btCollisionObject_setAnisotropicFriction(
+        this: *mut btCollisionObject,
+        anisotropicFriction: *const btVector3,
+        frictionMode: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject22hasAnisotropicFrictionEi"]
+    pub fn btCollisionObject_hasAnisotropicFriction(
+        this: *const btCollisionObject,
+        frictionMode: ::std::os::raw::c_int,
+    ) -> bool;
+}
+extern "C" {
+
+    /// the constraint solver can discard solving contacts, if the distance is above this threshold. 0 by default.
+    /// ///Note that using contacts with positive distance can improve stability. It increases, however, the chance of colliding with degerate contacts, such as 'interior' triangle edges
+
+    #[link_name = "\u{1}_ZN17btCollisionObject29setContactProcessingThresholdEd"]
+    pub fn btCollisionObject_setContactProcessingThreshold(
+        this: *mut btCollisionObject,
+        contactProcessingThreshold: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject29getContactProcessingThresholdEv"]
+    pub fn btCollisionObject_getContactProcessingThreshold(
+        this: *const btCollisionObject,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject14isStaticObjectEv"]
+    pub fn btCollisionObject_isStaticObject(this: *const btCollisionObject) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject17isKinematicObjectEv"]
+    pub fn btCollisionObject_isKinematicObject(this: *const btCollisionObject) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject25isStaticOrKinematicObjectEv"]
+    pub fn btCollisionObject_isStaticOrKinematicObject(this: *const btCollisionObject) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject18hasContactResponseEv"]
+    pub fn btCollisionObject_hasContactResponse(this: *const btCollisionObject) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject17getCollisionShapeEv"]
+    pub fn btCollisionObject_getCollisionShape(
+        this: *const btCollisionObject,
+    ) -> *const btCollisionShape;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject17getCollisionShapeEv"]
+    pub fn btCollisionObject_getCollisionShape1(
+        this: *mut btCollisionObject,
+    ) -> *mut btCollisionShape;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject23setIgnoreCollisionCheckEPKS_b"]
+    pub fn btCollisionObject_setIgnoreCollisionCheck(
+        this: *mut btCollisionObject,
+        co: *const btCollisionObject,
+        ignoreCollisionCheck: bool,
+    );
+}
+extern "C" {
+
+    /// Avoid using this internal API call, the extension pointer is used by some Bullet extensions.
+    /// ///If you need to store your own user pointer, use 'setUserPointer/getUserPointer' instead.
+
+    #[link_name = "\u{1}_ZNK17btCollisionObject27internalGetExtensionPointerEv"]
+    pub fn btCollisionObject_internalGetExtensionPointer(
+        this: *const btCollisionObject,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+
+    /// Avoid using this internal API call, the extension pointer is used by some Bullet extensions
+    /// ///If you need to store your own user pointer, use 'setUserPointer/getUserPointer' instead.
+
+    #[link_name = "\u{1}_ZN17btCollisionObject27internalSetExtensionPointerEPv"]
+    pub fn btCollisionObject_internalSetExtensionPointer(
+        this: *mut btCollisionObject,
+        pointer: *mut ::std::os::raw::c_void,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject18getActivationStateEv"]
+    pub fn btCollisionObject_getActivationState(
+        this: *const btCollisionObject,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
     #[link_name = "\u{1}_ZNK17btCollisionObject18setActivationStateEi"]
     pub fn btCollisionObject_setActivationState(
         this: *const btCollisionObject,
         newState: ::std::os::raw::c_int,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject19setDeactivationTimeEd"]
+    pub fn btCollisionObject_setDeactivationTime(this: *mut btCollisionObject, time: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject19getDeactivationTimeEv"]
+    pub fn btCollisionObject_getDeactivationTime(this: *const btCollisionObject) -> btScalar;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK17btCollisionObject20forceActivationStateEi"]
@@ -8147,13 +10916,403 @@ extern "C" {
     pub fn btCollisionObject_activate(this: *const btCollisionObject, forceActivation: bool);
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject8isActiveEv"]
+    pub fn btCollisionObject_isActive(this: *const btCollisionObject) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject14setRestitutionEd"]
+    pub fn btCollisionObject_setRestitution(this: *mut btCollisionObject, rest: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject14getRestitutionEv"]
+    pub fn btCollisionObject_getRestitution(this: *const btCollisionObject) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject11setFrictionEd"]
+    pub fn btCollisionObject_setFriction(this: *mut btCollisionObject, frict: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject11getFrictionEv"]
+    pub fn btCollisionObject_getFriction(this: *const btCollisionObject) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject18setRollingFrictionEd"]
+    pub fn btCollisionObject_setRollingFriction(this: *mut btCollisionObject, frict: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject18getRollingFrictionEv"]
+    pub fn btCollisionObject_getRollingFriction(this: *const btCollisionObject) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject19setSpinningFrictionEd"]
+    pub fn btCollisionObject_setSpinningFriction(this: *mut btCollisionObject, frict: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject19getSpinningFrictionEv"]
+    pub fn btCollisionObject_getSpinningFriction(this: *const btCollisionObject) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject29setContactStiffnessAndDampingEdd"]
+    pub fn btCollisionObject_setContactStiffnessAndDamping(
+        this: *mut btCollisionObject,
+        stiffness: btScalar,
+        damping: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject19getContactStiffnessEv"]
+    pub fn btCollisionObject_getContactStiffness(this: *const btCollisionObject) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject17getContactDampingEv"]
+    pub fn btCollisionObject_getContactDamping(this: *const btCollisionObject) -> btScalar;
+}
+extern "C" {
+
+    /// reserved for Bullet internal usage
+
+    #[link_name = "\u{1}_ZNK17btCollisionObject15getInternalTypeEv"]
+    pub fn btCollisionObject_getInternalType(
+        this: *const btCollisionObject,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject17getWorldTransformEv"]
+    pub fn btCollisionObject_getWorldTransform(this: *mut btCollisionObject) -> *mut btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject17getWorldTransformEv"]
+    pub fn btCollisionObject_getWorldTransform1(
+        this: *const btCollisionObject,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject17setWorldTransformERK11btTransform"]
+    pub fn btCollisionObject_setWorldTransform(
+        this: *mut btCollisionObject,
+        worldTrans: *const btTransform,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject19getBroadphaseHandleEv"]
+    pub fn btCollisionObject_getBroadphaseHandle(
+        this: *mut btCollisionObject,
+    ) -> *mut btBroadphaseProxy;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject19getBroadphaseHandleEv"]
+    pub fn btCollisionObject_getBroadphaseHandle1(
+        this: *const btCollisionObject,
+    ) -> *const btBroadphaseProxy;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject19setBroadphaseHandleEP17btBroadphaseProxy"]
+    pub fn btCollisionObject_setBroadphaseHandle(
+        this: *mut btCollisionObject,
+        handle: *mut btBroadphaseProxy,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject30getInterpolationWorldTransformEv"]
+    pub fn btCollisionObject_getInterpolationWorldTransform(
+        this: *const btCollisionObject,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject30getInterpolationWorldTransformEv"]
+    pub fn btCollisionObject_getInterpolationWorldTransform1(
+        this: *mut btCollisionObject,
+    ) -> *mut btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject30setInterpolationWorldTransformERK11btTransform"]
+    pub fn btCollisionObject_setInterpolationWorldTransform(
+        this: *mut btCollisionObject,
+        trans: *const btTransform,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject30setInterpolationLinearVelocityERK9btVector3"]
+    pub fn btCollisionObject_setInterpolationLinearVelocity(
+        this: *mut btCollisionObject,
+        linvel: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject31setInterpolationAngularVelocityERK9btVector3"]
+    pub fn btCollisionObject_setInterpolationAngularVelocity(
+        this: *mut btCollisionObject,
+        angvel: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject30getInterpolationLinearVelocityEv"]
+    pub fn btCollisionObject_getInterpolationLinearVelocity(
+        this: *const btCollisionObject,
+    ) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject31getInterpolationAngularVelocityEv"]
+    pub fn btCollisionObject_getInterpolationAngularVelocity(
+        this: *const btCollisionObject,
+    ) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject12getIslandTagEv"]
+    pub fn btCollisionObject_getIslandTag(this: *const btCollisionObject) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject12setIslandTagEi"]
+    pub fn btCollisionObject_setIslandTag(this: *mut btCollisionObject, tag: ::std::os::raw::c_int);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject14getCompanionIdEv"]
+    pub fn btCollisionObject_getCompanionId(
+        this: *const btCollisionObject,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject14setCompanionIdEi"]
+    pub fn btCollisionObject_setCompanionId(
+        this: *mut btCollisionObject,
+        id: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject18getWorldArrayIndexEv"]
+    pub fn btCollisionObject_getWorldArrayIndex(
+        this: *const btCollisionObject,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject18setWorldArrayIndexEi"]
+    pub fn btCollisionObject_setWorldArrayIndex(
+        this: *mut btCollisionObject,
+        ix: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject14getHitFractionEv"]
+    pub fn btCollisionObject_getHitFraction(this: *const btCollisionObject) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject14setHitFractionEd"]
+    pub fn btCollisionObject_setHitFraction(this: *mut btCollisionObject, hitFraction: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject17getCollisionFlagsEv"]
+    pub fn btCollisionObject_getCollisionFlags(
+        this: *const btCollisionObject,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject17setCollisionFlagsEi"]
+    pub fn btCollisionObject_setCollisionFlags(
+        this: *mut btCollisionObject,
+        flags: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+
+    /// Swept sphere radius (0.0 by default), see btConvexConvexAlgorithm::
+
+    #[link_name = "\u{1}_ZNK17btCollisionObject23getCcdSweptSphereRadiusEv"]
+    pub fn btCollisionObject_getCcdSweptSphereRadius(this: *const btCollisionObject) -> btScalar;
+}
+extern "C" {
+
+    /// Swept sphere radius (0.0 by default), see btConvexConvexAlgorithm::
+
+    #[link_name = "\u{1}_ZN17btCollisionObject23setCcdSweptSphereRadiusEd"]
+    pub fn btCollisionObject_setCcdSweptSphereRadius(
+        this: *mut btCollisionObject,
+        radius: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject21getCcdMotionThresholdEv"]
+    pub fn btCollisionObject_getCcdMotionThreshold(this: *const btCollisionObject) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject27getCcdSquareMotionThresholdEv"]
+    pub fn btCollisionObject_getCcdSquareMotionThreshold(
+        this: *const btCollisionObject,
+    ) -> btScalar;
+}
+extern "C" {
+
+    /// Don't do continuous collision detection if the motion (in one step) is less then m_ccdMotionThreshold
+
+    #[link_name = "\u{1}_ZN17btCollisionObject21setCcdMotionThresholdEd"]
+    pub fn btCollisionObject_setCcdMotionThreshold(
+        this: *mut btCollisionObject,
+        ccdMotionThreshold: btScalar,
+    );
+}
+extern "C" {
+
+    /// users can point to their objects, userPointer is not used by Bullet
+
+    #[link_name = "\u{1}_ZNK17btCollisionObject14getUserPointerEv"]
+    pub fn btCollisionObject_getUserPointer(
+        this: *const btCollisionObject,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject12getUserIndexEv"]
+    pub fn btCollisionObject_getUserIndex(this: *const btCollisionObject) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject13getUserIndex2Ev"]
+    pub fn btCollisionObject_getUserIndex2(this: *const btCollisionObject)
+        -> ::std::os::raw::c_int;
+}
+extern "C" {
+
+    /// users can point to their objects, userPointer is not used by Bullet
+
+    #[link_name = "\u{1}_ZN17btCollisionObject14setUserPointerEPv"]
+    pub fn btCollisionObject_setUserPointer(
+        this: *mut btCollisionObject,
+        userPointer: *mut ::std::os::raw::c_void,
+    );
+}
+extern "C" {
+
+    /// users can point to their objects, userPointer is not used by Bullet
+
+    #[link_name = "\u{1}_ZN17btCollisionObject12setUserIndexEi"]
+    pub fn btCollisionObject_setUserIndex(
+        this: *mut btCollisionObject,
+        index: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject13setUserIndex2Ei"]
+    pub fn btCollisionObject_setUserIndex2(
+        this: *mut btCollisionObject,
+        index: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject25getUpdateRevisionInternalEv"]
+    pub fn btCollisionObject_getUpdateRevisionInternal(
+        this: *const btCollisionObject,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject19setCustomDebugColorERK9btVector3"]
+    pub fn btCollisionObject_setCustomDebugColor(
+        this: *mut btCollisionObject,
+        colorRGB: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject22removeCustomDebugColorEv"]
+    pub fn btCollisionObject_removeCustomDebugColor(this: *mut btCollisionObject);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject19getCustomDebugColorER9btVector3"]
+    pub fn btCollisionObject_getCustomDebugColor(
+        this: *const btCollisionObject,
+        colorRGB: *mut btVector3,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject16checkCollideWithEPKS_"]
+    pub fn btCollisionObject_checkCollideWith(
+        this: *const btCollisionObject,
+        co: *const btCollisionObject,
+    ) -> bool;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN17btCollisionObjectC1Ev"]
     pub fn btCollisionObject_btCollisionObject(this: *mut btCollisionObject);
 }
 impl btCollisionObject {
     #[inline]
+    pub unsafe fn mergesSimulationIslands(&self) -> bool {
+        btCollisionObject_mergesSimulationIslands(self)
+    }
+    #[inline]
+    pub unsafe fn getAnisotropicFriction(&self) -> *const btVector3 {
+        btCollisionObject_getAnisotropicFriction(self)
+    }
+    #[inline]
+    pub unsafe fn setAnisotropicFriction(
+        &mut self,
+        anisotropicFriction: *const btVector3,
+        frictionMode: ::std::os::raw::c_int,
+    ) {
+        btCollisionObject_setAnisotropicFriction(self, anisotropicFriction, frictionMode)
+    }
+    #[inline]
+    pub unsafe fn hasAnisotropicFriction(&self, frictionMode: ::std::os::raw::c_int) -> bool {
+        btCollisionObject_hasAnisotropicFriction(self, frictionMode)
+    }
+    #[inline]
+    pub unsafe fn setContactProcessingThreshold(&mut self, contactProcessingThreshold: btScalar) {
+        btCollisionObject_setContactProcessingThreshold(self, contactProcessingThreshold)
+    }
+    #[inline]
+    pub unsafe fn getContactProcessingThreshold(&self) -> btScalar {
+        btCollisionObject_getContactProcessingThreshold(self)
+    }
+    #[inline]
+    pub unsafe fn isStaticObject(&self) -> bool {
+        btCollisionObject_isStaticObject(self)
+    }
+    #[inline]
+    pub unsafe fn isKinematicObject(&self) -> bool {
+        btCollisionObject_isKinematicObject(self)
+    }
+    #[inline]
+    pub unsafe fn isStaticOrKinematicObject(&self) -> bool {
+        btCollisionObject_isStaticOrKinematicObject(self)
+    }
+    #[inline]
+    pub unsafe fn hasContactResponse(&self) -> bool {
+        btCollisionObject_hasContactResponse(self)
+    }
+    #[inline]
+    pub unsafe fn getCollisionShape(&self) -> *const btCollisionShape {
+        btCollisionObject_getCollisionShape(self)
+    }
+    #[inline]
+    pub unsafe fn getCollisionShape1(&mut self) -> *mut btCollisionShape {
+        btCollisionObject_getCollisionShape1(self)
+    }
+    #[inline]
+    pub unsafe fn setIgnoreCollisionCheck(
+        &mut self,
+        co: *const btCollisionObject,
+        ignoreCollisionCheck: bool,
+    ) {
+        btCollisionObject_setIgnoreCollisionCheck(self, co, ignoreCollisionCheck)
+    }
+    #[inline]
+    pub unsafe fn internalGetExtensionPointer(&self) -> *mut ::std::os::raw::c_void {
+        btCollisionObject_internalGetExtensionPointer(self)
+    }
+    #[inline]
+    pub unsafe fn internalSetExtensionPointer(&mut self, pointer: *mut ::std::os::raw::c_void) {
+        btCollisionObject_internalSetExtensionPointer(self, pointer)
+    }
+    #[inline]
+    pub unsafe fn getActivationState(&self) -> ::std::os::raw::c_int {
+        btCollisionObject_getActivationState(self)
+    }
+    #[inline]
     pub unsafe fn setActivationState(&self, newState: ::std::os::raw::c_int) {
         btCollisionObject_setActivationState(self, newState)
+    }
+    #[inline]
+    pub unsafe fn setDeactivationTime(&mut self, time: btScalar) {
+        btCollisionObject_setDeactivationTime(self, time)
+    }
+    #[inline]
+    pub unsafe fn getDeactivationTime(&self) -> btScalar {
+        btCollisionObject_getDeactivationTime(self)
     }
     #[inline]
     pub unsafe fn forceActivationState(&self, newState: ::std::os::raw::c_int) {
@@ -8162,6 +11321,214 @@ impl btCollisionObject {
     #[inline]
     pub unsafe fn activate(&self, forceActivation: bool) {
         btCollisionObject_activate(self, forceActivation)
+    }
+    #[inline]
+    pub unsafe fn isActive(&self) -> bool {
+        btCollisionObject_isActive(self)
+    }
+    #[inline]
+    pub unsafe fn setRestitution(&mut self, rest: btScalar) {
+        btCollisionObject_setRestitution(self, rest)
+    }
+    #[inline]
+    pub unsafe fn getRestitution(&self) -> btScalar {
+        btCollisionObject_getRestitution(self)
+    }
+    #[inline]
+    pub unsafe fn setFriction(&mut self, frict: btScalar) {
+        btCollisionObject_setFriction(self, frict)
+    }
+    #[inline]
+    pub unsafe fn getFriction(&self) -> btScalar {
+        btCollisionObject_getFriction(self)
+    }
+    #[inline]
+    pub unsafe fn setRollingFriction(&mut self, frict: btScalar) {
+        btCollisionObject_setRollingFriction(self, frict)
+    }
+    #[inline]
+    pub unsafe fn getRollingFriction(&self) -> btScalar {
+        btCollisionObject_getRollingFriction(self)
+    }
+    #[inline]
+    pub unsafe fn setSpinningFriction(&mut self, frict: btScalar) {
+        btCollisionObject_setSpinningFriction(self, frict)
+    }
+    #[inline]
+    pub unsafe fn getSpinningFriction(&self) -> btScalar {
+        btCollisionObject_getSpinningFriction(self)
+    }
+    #[inline]
+    pub unsafe fn setContactStiffnessAndDamping(&mut self, stiffness: btScalar, damping: btScalar) {
+        btCollisionObject_setContactStiffnessAndDamping(self, stiffness, damping)
+    }
+    #[inline]
+    pub unsafe fn getContactStiffness(&self) -> btScalar {
+        btCollisionObject_getContactStiffness(self)
+    }
+    #[inline]
+    pub unsafe fn getContactDamping(&self) -> btScalar {
+        btCollisionObject_getContactDamping(self)
+    }
+    #[inline]
+    pub unsafe fn getInternalType(&self) -> ::std::os::raw::c_int {
+        btCollisionObject_getInternalType(self)
+    }
+    #[inline]
+    pub unsafe fn getWorldTransform(&mut self) -> *mut btTransform {
+        btCollisionObject_getWorldTransform(self)
+    }
+    #[inline]
+    pub unsafe fn getWorldTransform1(&self) -> *const btTransform {
+        btCollisionObject_getWorldTransform1(self)
+    }
+    #[inline]
+    pub unsafe fn setWorldTransform(&mut self, worldTrans: *const btTransform) {
+        btCollisionObject_setWorldTransform(self, worldTrans)
+    }
+    #[inline]
+    pub unsafe fn getBroadphaseHandle(&mut self) -> *mut btBroadphaseProxy {
+        btCollisionObject_getBroadphaseHandle(self)
+    }
+    #[inline]
+    pub unsafe fn getBroadphaseHandle1(&self) -> *const btBroadphaseProxy {
+        btCollisionObject_getBroadphaseHandle1(self)
+    }
+    #[inline]
+    pub unsafe fn setBroadphaseHandle(&mut self, handle: *mut btBroadphaseProxy) {
+        btCollisionObject_setBroadphaseHandle(self, handle)
+    }
+    #[inline]
+    pub unsafe fn getInterpolationWorldTransform(&self) -> *const btTransform {
+        btCollisionObject_getInterpolationWorldTransform(self)
+    }
+    #[inline]
+    pub unsafe fn getInterpolationWorldTransform1(&mut self) -> *mut btTransform {
+        btCollisionObject_getInterpolationWorldTransform1(self)
+    }
+    #[inline]
+    pub unsafe fn setInterpolationWorldTransform(&mut self, trans: *const btTransform) {
+        btCollisionObject_setInterpolationWorldTransform(self, trans)
+    }
+    #[inline]
+    pub unsafe fn setInterpolationLinearVelocity(&mut self, linvel: *const btVector3) {
+        btCollisionObject_setInterpolationLinearVelocity(self, linvel)
+    }
+    #[inline]
+    pub unsafe fn setInterpolationAngularVelocity(&mut self, angvel: *const btVector3) {
+        btCollisionObject_setInterpolationAngularVelocity(self, angvel)
+    }
+    #[inline]
+    pub unsafe fn getInterpolationLinearVelocity(&self) -> *const btVector3 {
+        btCollisionObject_getInterpolationLinearVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn getInterpolationAngularVelocity(&self) -> *const btVector3 {
+        btCollisionObject_getInterpolationAngularVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn getIslandTag(&self) -> ::std::os::raw::c_int {
+        btCollisionObject_getIslandTag(self)
+    }
+    #[inline]
+    pub unsafe fn setIslandTag(&mut self, tag: ::std::os::raw::c_int) {
+        btCollisionObject_setIslandTag(self, tag)
+    }
+    #[inline]
+    pub unsafe fn getCompanionId(&self) -> ::std::os::raw::c_int {
+        btCollisionObject_getCompanionId(self)
+    }
+    #[inline]
+    pub unsafe fn setCompanionId(&mut self, id: ::std::os::raw::c_int) {
+        btCollisionObject_setCompanionId(self, id)
+    }
+    #[inline]
+    pub unsafe fn getWorldArrayIndex(&self) -> ::std::os::raw::c_int {
+        btCollisionObject_getWorldArrayIndex(self)
+    }
+    #[inline]
+    pub unsafe fn setWorldArrayIndex(&mut self, ix: ::std::os::raw::c_int) {
+        btCollisionObject_setWorldArrayIndex(self, ix)
+    }
+    #[inline]
+    pub unsafe fn getHitFraction(&self) -> btScalar {
+        btCollisionObject_getHitFraction(self)
+    }
+    #[inline]
+    pub unsafe fn setHitFraction(&mut self, hitFraction: btScalar) {
+        btCollisionObject_setHitFraction(self, hitFraction)
+    }
+    #[inline]
+    pub unsafe fn getCollisionFlags(&self) -> ::std::os::raw::c_int {
+        btCollisionObject_getCollisionFlags(self)
+    }
+    #[inline]
+    pub unsafe fn setCollisionFlags(&mut self, flags: ::std::os::raw::c_int) {
+        btCollisionObject_setCollisionFlags(self, flags)
+    }
+    #[inline]
+    pub unsafe fn getCcdSweptSphereRadius(&self) -> btScalar {
+        btCollisionObject_getCcdSweptSphereRadius(self)
+    }
+    #[inline]
+    pub unsafe fn setCcdSweptSphereRadius(&mut self, radius: btScalar) {
+        btCollisionObject_setCcdSweptSphereRadius(self, radius)
+    }
+    #[inline]
+    pub unsafe fn getCcdMotionThreshold(&self) -> btScalar {
+        btCollisionObject_getCcdMotionThreshold(self)
+    }
+    #[inline]
+    pub unsafe fn getCcdSquareMotionThreshold(&self) -> btScalar {
+        btCollisionObject_getCcdSquareMotionThreshold(self)
+    }
+    #[inline]
+    pub unsafe fn setCcdMotionThreshold(&mut self, ccdMotionThreshold: btScalar) {
+        btCollisionObject_setCcdMotionThreshold(self, ccdMotionThreshold)
+    }
+    #[inline]
+    pub unsafe fn getUserPointer(&self) -> *mut ::std::os::raw::c_void {
+        btCollisionObject_getUserPointer(self)
+    }
+    #[inline]
+    pub unsafe fn getUserIndex(&self) -> ::std::os::raw::c_int {
+        btCollisionObject_getUserIndex(self)
+    }
+    #[inline]
+    pub unsafe fn getUserIndex2(&self) -> ::std::os::raw::c_int {
+        btCollisionObject_getUserIndex2(self)
+    }
+    #[inline]
+    pub unsafe fn setUserPointer(&mut self, userPointer: *mut ::std::os::raw::c_void) {
+        btCollisionObject_setUserPointer(self, userPointer)
+    }
+    #[inline]
+    pub unsafe fn setUserIndex(&mut self, index: ::std::os::raw::c_int) {
+        btCollisionObject_setUserIndex(self, index)
+    }
+    #[inline]
+    pub unsafe fn setUserIndex2(&mut self, index: ::std::os::raw::c_int) {
+        btCollisionObject_setUserIndex2(self, index)
+    }
+    #[inline]
+    pub unsafe fn getUpdateRevisionInternal(&self) -> ::std::os::raw::c_int {
+        btCollisionObject_getUpdateRevisionInternal(self)
+    }
+    #[inline]
+    pub unsafe fn setCustomDebugColor(&mut self, colorRGB: *const btVector3) {
+        btCollisionObject_setCustomDebugColor(self, colorRGB)
+    }
+    #[inline]
+    pub unsafe fn removeCustomDebugColor(&mut self) {
+        btCollisionObject_removeCustomDebugColor(self)
+    }
+    #[inline]
+    pub unsafe fn getCustomDebugColor(&self, colorRGB: *mut btVector3) -> bool {
+        btCollisionObject_getCustomDebugColor(self, colorRGB)
+    }
+    #[inline]
+    pub unsafe fn checkCollideWith(&self, co: *const btCollisionObject) -> bool {
+        btCollisionObject_checkCollideWith(self, co)
     }
     #[inline]
     pub unsafe fn new() -> Self {
@@ -8173,6 +11540,20 @@ impl btCollisionObject {
 extern "C" {
     #[link_name = "\u{1}_ZN17btCollisionObjectD0Ev"]
     pub fn btCollisionObject_btCollisionObject_destructor(this: *mut btCollisionObject);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btCollisionObject17setCollisionShapeEP16btCollisionShape"]
+    pub fn btCollisionObject_setCollisionShape(
+        this: *mut ::std::os::raw::c_void,
+        collisionShape: *mut btCollisionShape,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btCollisionObject24checkCollideWithOverrideEPKS_"]
+    pub fn btCollisionObject_checkCollideWithOverride(
+        this: *mut ::std::os::raw::c_void,
+        co: *const btCollisionObject,
+    ) -> bool;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK17btCollisionObject28calculateSerializeBufferSizeEv"]
@@ -9080,6 +12461,18 @@ fn bindgen_test_layout_btDispatcherInfo() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN16btDispatcherInfoC1Ev"]
+    pub fn btDispatcherInfo_btDispatcherInfo(this: *mut btDispatcherInfo);
+}
+impl btDispatcherInfo {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDispatcherInfo_btDispatcherInfo(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
 pub const ebtDispatcherQueryType_BT_CONTACT_POINT_ALGORITHMS: ebtDispatcherQueryType = 1;
 pub const ebtDispatcherQueryType_BT_CLOSEST_POINT_ALGORITHMS: ebtDispatcherQueryType = 2;
 pub type ebtDispatcherQueryType = ::std::os::raw::c_uint;
@@ -9210,6 +12603,10 @@ extern "C" {
         ptr: *mut ::std::os::raw::c_void,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_Z13btAabbSupportRK9btVector3S1_"]
+    pub fn btAabbSupport(halfExtents: *const btVector3, supportDir: *const btVector3) -> btVector3;
+}
 /// Utils related to temporal transforms
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -9228,6 +12625,116 @@ fn bindgen_test_layout_btTransformUtil() {
         1usize,
         concat!("Alignment of ", stringify!(btTransformUtil))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btTransformUtil18integrateTransformERK11btTransformRK9btVector3S5_dRS0_"]
+    pub fn btTransformUtil_integrateTransform(
+        curTrans: *const btTransform,
+        linvel: *const btVector3,
+        angvel: *const btVector3,
+        timeStep: btScalar,
+        predictedTransform: *mut btTransform,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btTransformUtil27calculateVelocityQuaternionERK9btVector3S2_RK12btQuaternionS5_dRS0_S6_"]
+    pub fn btTransformUtil_calculateVelocityQuaternion(
+        pos0: *const btVector3,
+        pos1: *const btVector3,
+        orn0: *const btQuaternion,
+        orn1: *const btQuaternion,
+        timeStep: btScalar,
+        linVel: *mut btVector3,
+        angVel: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btTransformUtil32calculateDiffAxisAngleQuaternionERK12btQuaternionS2_R9btVector3Rd"]
+    pub fn btTransformUtil_calculateDiffAxisAngleQuaternion(
+        orn0: *const btQuaternion,
+        orn1a: *const btQuaternion,
+        axis: *mut btVector3,
+        angle: *mut btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btTransformUtil17calculateVelocityERK11btTransformS2_dR9btVector3S4_"]
+    pub fn btTransformUtil_calculateVelocity(
+        transform0: *const btTransform,
+        transform1: *const btTransform,
+        timeStep: btScalar,
+        linVel: *mut btVector3,
+        angVel: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btTransformUtil22calculateDiffAxisAngleERK11btTransformS2_R9btVector3Rd"]
+    pub fn btTransformUtil_calculateDiffAxisAngle(
+        transform0: *const btTransform,
+        transform1: *const btTransform,
+        axis: *mut btVector3,
+        angle: *mut btScalar,
+    );
+}
+impl btTransformUtil {
+    #[inline]
+    pub unsafe fn integrateTransform(
+        curTrans: *const btTransform,
+        linvel: *const btVector3,
+        angvel: *const btVector3,
+        timeStep: btScalar,
+        predictedTransform: *mut btTransform,
+    ) {
+        btTransformUtil_integrateTransform(curTrans, linvel, angvel, timeStep, predictedTransform)
+    }
+    #[inline]
+    pub unsafe fn calculateVelocityQuaternion(
+        pos0: *const btVector3,
+        pos1: *const btVector3,
+        orn0: *const btQuaternion,
+        orn1: *const btQuaternion,
+        timeStep: btScalar,
+        linVel: *mut btVector3,
+        angVel: *mut btVector3,
+    ) {
+        btTransformUtil_calculateVelocityQuaternion(
+            pos0,
+            pos1,
+            orn0,
+            orn1,
+            timeStep,
+            linVel,
+            angVel,
+        )
+    }
+    #[inline]
+    pub unsafe fn calculateDiffAxisAngleQuaternion(
+        orn0: *const btQuaternion,
+        orn1a: *const btQuaternion,
+        axis: *mut btVector3,
+        angle: *mut btScalar,
+    ) {
+        btTransformUtil_calculateDiffAxisAngleQuaternion(orn0, orn1a, axis, angle)
+    }
+    #[inline]
+    pub unsafe fn calculateVelocity(
+        transform0: *const btTransform,
+        transform1: *const btTransform,
+        timeStep: btScalar,
+        linVel: *mut btVector3,
+        angVel: *mut btVector3,
+    ) {
+        btTransformUtil_calculateVelocity(transform0, transform1, timeStep, linVel, angVel)
+    }
+    #[inline]
+    pub unsafe fn calculateDiffAxisAngle(
+        transform0: *const btTransform,
+        transform1: *const btTransform,
+        axis: *mut btVector3,
+        angle: *mut btScalar,
+    ) {
+        btTransformUtil_calculateDiffAxisAngle(transform0, transform1, axis, angle)
+    }
 }
 /// The btConvexSeparatingDistanceUtil can help speed up convex collision detection
 /// by conservatively updating a cached separating distance/vector instead of re-calculating the closest distance
@@ -9344,6 +12851,78 @@ fn bindgen_test_layout_btConvexSeparatingDistanceUtil() {
             stringify!(m_separatingDistance)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btConvexSeparatingDistanceUtil33getConservativeSeparatingDistanceEv"]
+    pub fn btConvexSeparatingDistanceUtil_getConservativeSeparatingDistance(
+        this: *mut btConvexSeparatingDistanceUtil,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btConvexSeparatingDistanceUtil24updateSeparatingDistanceERK11btTransformS2_"]
+    pub fn btConvexSeparatingDistanceUtil_updateSeparatingDistance(
+        this: *mut btConvexSeparatingDistanceUtil,
+        transA: *const btTransform,
+        transB: *const btTransform,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btConvexSeparatingDistanceUtil22initSeparatingDistanceERK9btVector3dRK11btTransformS5_"]
+    pub fn btConvexSeparatingDistanceUtil_initSeparatingDistance(
+        this: *mut btConvexSeparatingDistanceUtil,
+        separatingVector: *const btVector3,
+        separatingDistance: btScalar,
+        transA: *const btTransform,
+        transB: *const btTransform,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btConvexSeparatingDistanceUtilC1Edd"]
+    pub fn btConvexSeparatingDistanceUtil_btConvexSeparatingDistanceUtil(
+        this: *mut btConvexSeparatingDistanceUtil,
+        boundingRadiusA: btScalar,
+        boundingRadiusB: btScalar,
+    );
+}
+impl btConvexSeparatingDistanceUtil {
+    #[inline]
+    pub unsafe fn getConservativeSeparatingDistance(&mut self) -> btScalar {
+        btConvexSeparatingDistanceUtil_getConservativeSeparatingDistance(self)
+    }
+    #[inline]
+    pub unsafe fn updateSeparatingDistance(
+        &mut self,
+        transA: *const btTransform,
+        transB: *const btTransform,
+    ) {
+        btConvexSeparatingDistanceUtil_updateSeparatingDistance(self, transA, transB)
+    }
+    #[inline]
+    pub unsafe fn initSeparatingDistance(
+        &mut self,
+        separatingVector: *const btVector3,
+        separatingDistance: btScalar,
+        transA: *const btTransform,
+        transB: *const btTransform,
+    ) {
+        btConvexSeparatingDistanceUtil_initSeparatingDistance(
+            self,
+            separatingVector,
+            separatingDistance,
+            transA,
+            transB,
+        )
+    }
+    #[inline]
+    pub unsafe fn new(boundingRadiusA: btScalar, boundingRadiusB: btScalar) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btConvexSeparatingDistanceUtil_btConvexSeparatingDistanceUtil(
+            &mut __bindgen_tmp,
+            boundingRadiusA,
+            boundingRadiusB,
+        );
+        __bindgen_tmp
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -9824,6 +13403,90 @@ fn bindgen_test_layout_btManifoldPoint() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btManifoldPoint11getDistanceEv"]
+    pub fn btManifoldPoint_getDistance(this: *const btManifoldPoint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btManifoldPoint11getLifeTimeEv"]
+    pub fn btManifoldPoint_getLifeTime(this: *const btManifoldPoint) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btManifoldPoint19getPositionWorldOnAEv"]
+    pub fn btManifoldPoint_getPositionWorldOnA(this: *const btManifoldPoint) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btManifoldPoint19getPositionWorldOnBEv"]
+    pub fn btManifoldPoint_getPositionWorldOnB(this: *const btManifoldPoint) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btManifoldPoint11setDistanceEd"]
+    pub fn btManifoldPoint_setDistance(this: *mut btManifoldPoint, dist: btScalar);
+}
+extern "C" {
+
+    /// this returns the most recent applied impulse, to satisfy contact constraints by the constraint solver
+
+    #[link_name = "\u{1}_ZNK15btManifoldPoint17getAppliedImpulseEv"]
+    pub fn btManifoldPoint_getAppliedImpulse(this: *const btManifoldPoint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btManifoldPointC1Ev"]
+    pub fn btManifoldPoint_btManifoldPoint(this: *mut btManifoldPoint);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btManifoldPointC1ERK9btVector3S2_S2_d"]
+    pub fn btManifoldPoint_btManifoldPoint1(
+        this: *mut btManifoldPoint,
+        pointA: *const btVector3,
+        pointB: *const btVector3,
+        normal: *const btVector3,
+        distance: btScalar,
+    );
+}
+impl btManifoldPoint {
+    #[inline]
+    pub unsafe fn getDistance(&self) -> btScalar {
+        btManifoldPoint_getDistance(self)
+    }
+    #[inline]
+    pub unsafe fn getLifeTime(&self) -> ::std::os::raw::c_int {
+        btManifoldPoint_getLifeTime(self)
+    }
+    #[inline]
+    pub unsafe fn getPositionWorldOnA(&self) -> *const btVector3 {
+        btManifoldPoint_getPositionWorldOnA(self)
+    }
+    #[inline]
+    pub unsafe fn getPositionWorldOnB(&self) -> *const btVector3 {
+        btManifoldPoint_getPositionWorldOnB(self)
+    }
+    #[inline]
+    pub unsafe fn setDistance(&mut self, dist: btScalar) {
+        btManifoldPoint_setDistance(self, dist)
+    }
+    #[inline]
+    pub unsafe fn getAppliedImpulse(&self) -> btScalar {
+        btManifoldPoint_getAppliedImpulse(self)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btManifoldPoint_btManifoldPoint(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(
+        pointA: *const btVector3,
+        pointB: *const btVector3,
+        normal: *const btVector3,
+        distance: btScalar,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btManifoldPoint_btManifoldPoint1(&mut __bindgen_tmp, pointA, pointB, normal, distance);
+        __bindgen_tmp
+    }
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct btCollisionResult {
@@ -9998,11 +13661,61 @@ fn bindgen_test_layout_btPersistentManifold() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK20btPersistentManifold8getBody0Ev"]
+    pub fn btPersistentManifold_getBody0(
+        this: *const btPersistentManifold,
+    ) -> *const btCollisionObject;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK20btPersistentManifold8getBody1Ev"]
+    pub fn btPersistentManifold_getBody1(
+        this: *const btPersistentManifold,
+    ) -> *const btCollisionObject;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN20btPersistentManifold9setBodiesEPK17btCollisionObjectS2_"]
+    pub fn btPersistentManifold_setBodies(
+        this: *mut btPersistentManifold,
+        body0: *const btCollisionObject,
+        body1: *const btCollisionObject,
+    );
+}
+extern "C" {
     #[link_name = "\u{1}_ZN20btPersistentManifold14clearUserCacheER15btManifoldPoint"]
     pub fn btPersistentManifold_clearUserCache(
         this: *mut btPersistentManifold,
         pt: *mut btManifoldPoint,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK20btPersistentManifold14getNumContactsEv"]
+    pub fn btPersistentManifold_getNumContacts(
+        this: *const btPersistentManifold,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+
+    /// the setNumContacts API is usually not used, except when you gather/fill all contacts manually
+
+    #[link_name = "\u{1}_ZN20btPersistentManifold14setNumContactsEi"]
+    pub fn btPersistentManifold_setNumContacts(
+        this: *mut btPersistentManifold,
+        cachedPoints: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK20btPersistentManifold15getContactPointEi"]
+    pub fn btPersistentManifold_getContactPoint(
+        this: *const btPersistentManifold,
+        index: ::std::os::raw::c_int,
+    ) -> *const btManifoldPoint;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN20btPersistentManifold15getContactPointEi"]
+    pub fn btPersistentManifold_getContactPoint1(
+        this: *mut btPersistentManifold,
+        index: ::std::os::raw::c_int,
+    ) -> *mut btManifoldPoint;
 }
 extern "C" {
 
@@ -10012,6 +13725,26 @@ extern "C" {
     pub fn btPersistentManifold_getContactBreakingThreshold(
         this: *const btPersistentManifold,
     ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK20btPersistentManifold29getContactProcessingThresholdEv"]
+    pub fn btPersistentManifold_getContactProcessingThreshold(
+        this: *const btPersistentManifold,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN20btPersistentManifold27setContactBreakingThresholdEd"]
+    pub fn btPersistentManifold_setContactBreakingThreshold(
+        this: *mut btPersistentManifold,
+        contactBreakingThreshold: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN20btPersistentManifold29setContactProcessingThresholdEd"]
+    pub fn btPersistentManifold_setContactProcessingThreshold(
+        this: *mut btPersistentManifold,
+        contactProcessingThreshold: btScalar,
+    );
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK20btPersistentManifold13getCacheEntryERK15btManifoldPoint"]
@@ -10029,6 +13762,28 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN20btPersistentManifold18removeContactPointEi"]
+    pub fn btPersistentManifold_removeContactPoint(
+        this: *mut btPersistentManifold,
+        index: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN20btPersistentManifold19replaceContactPointERK15btManifoldPointi"]
+    pub fn btPersistentManifold_replaceContactPoint(
+        this: *mut btPersistentManifold,
+        newPoint: *const btManifoldPoint,
+        insertIndex: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK20btPersistentManifold20validContactDistanceERK15btManifoldPoint"]
+    pub fn btPersistentManifold_validContactDistance(
+        this: *const btPersistentManifold,
+        pt: *const btManifoldPoint,
+    ) -> bool;
+}
+extern "C" {
 
     /// calculated new worldspace coordinates and depth, and reject points that exceed the collision margin
 
@@ -10040,17 +13795,79 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN20btPersistentManifold13clearManifoldEv"]
+    pub fn btPersistentManifold_clearManifold(this: *mut btPersistentManifold);
+}
+extern "C" {
     #[link_name = "\u{1}_ZN20btPersistentManifoldC1Ev"]
     pub fn btPersistentManifold_btPersistentManifold(this: *mut btPersistentManifold);
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN20btPersistentManifoldC1EPK17btCollisionObjectS2_idd"]
+    pub fn btPersistentManifold_btPersistentManifold1(
+        this: *mut btPersistentManifold,
+        body0: *const btCollisionObject,
+        body1: *const btCollisionObject,
+        arg1: ::std::os::raw::c_int,
+        contactBreakingThreshold: btScalar,
+        contactProcessingThreshold: btScalar,
+    );
+}
 impl btPersistentManifold {
+    #[inline]
+    pub unsafe fn getBody0(&self) -> *const btCollisionObject {
+        btPersistentManifold_getBody0(self)
+    }
+    #[inline]
+    pub unsafe fn getBody1(&self) -> *const btCollisionObject {
+        btPersistentManifold_getBody1(self)
+    }
+    #[inline]
+    pub unsafe fn setBodies(
+        &mut self,
+        body0: *const btCollisionObject,
+        body1: *const btCollisionObject,
+    ) {
+        btPersistentManifold_setBodies(self, body0, body1)
+    }
     #[inline]
     pub unsafe fn clearUserCache(&mut self, pt: *mut btManifoldPoint) {
         btPersistentManifold_clearUserCache(self, pt)
     }
     #[inline]
+    pub unsafe fn getNumContacts(&self) -> ::std::os::raw::c_int {
+        btPersistentManifold_getNumContacts(self)
+    }
+    #[inline]
+    pub unsafe fn setNumContacts(&mut self, cachedPoints: ::std::os::raw::c_int) {
+        btPersistentManifold_setNumContacts(self, cachedPoints)
+    }
+    #[inline]
+    pub unsafe fn getContactPoint(&self, index: ::std::os::raw::c_int) -> *const btManifoldPoint {
+        btPersistentManifold_getContactPoint(self, index)
+    }
+    #[inline]
+    pub unsafe fn getContactPoint1(
+        &mut self,
+        index: ::std::os::raw::c_int,
+    ) -> *mut btManifoldPoint {
+        btPersistentManifold_getContactPoint1(self, index)
+    }
+    #[inline]
     pub unsafe fn getContactBreakingThreshold(&self) -> btScalar {
         btPersistentManifold_getContactBreakingThreshold(self)
+    }
+    #[inline]
+    pub unsafe fn getContactProcessingThreshold(&self) -> btScalar {
+        btPersistentManifold_getContactProcessingThreshold(self)
+    }
+    #[inline]
+    pub unsafe fn setContactBreakingThreshold(&mut self, contactBreakingThreshold: btScalar) {
+        btPersistentManifold_setContactBreakingThreshold(self, contactBreakingThreshold)
+    }
+    #[inline]
+    pub unsafe fn setContactProcessingThreshold(&mut self, contactProcessingThreshold: btScalar) {
+        btPersistentManifold_setContactProcessingThreshold(self, contactProcessingThreshold)
     }
     #[inline]
     pub unsafe fn getCacheEntry(&self, newPoint: *const btManifoldPoint) -> ::std::os::raw::c_int {
@@ -10065,6 +13882,22 @@ impl btPersistentManifold {
         btPersistentManifold_addManifoldPoint(self, newPoint, isPredictive)
     }
     #[inline]
+    pub unsafe fn removeContactPoint(&mut self, index: ::std::os::raw::c_int) {
+        btPersistentManifold_removeContactPoint(self, index)
+    }
+    #[inline]
+    pub unsafe fn replaceContactPoint(
+        &mut self,
+        newPoint: *const btManifoldPoint,
+        insertIndex: ::std::os::raw::c_int,
+    ) {
+        btPersistentManifold_replaceContactPoint(self, newPoint, insertIndex)
+    }
+    #[inline]
+    pub unsafe fn validContactDistance(&self, pt: *const btManifoldPoint) -> bool {
+        btPersistentManifold_validContactDistance(self, pt)
+    }
+    #[inline]
     pub unsafe fn refreshContactPoints(
         &mut self,
         trA: *const btTransform,
@@ -10073,9 +13906,32 @@ impl btPersistentManifold {
         btPersistentManifold_refreshContactPoints(self, trA, trB)
     }
     #[inline]
+    pub unsafe fn clearManifold(&mut self) {
+        btPersistentManifold_clearManifold(self)
+    }
+    #[inline]
     pub unsafe fn new() -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
         btPersistentManifold_btPersistentManifold(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(
+        body0: *const btCollisionObject,
+        body1: *const btCollisionObject,
+        arg1: ::std::os::raw::c_int,
+        contactBreakingThreshold: btScalar,
+        contactProcessingThreshold: btScalar,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btPersistentManifold_btPersistentManifold1(
+            &mut __bindgen_tmp,
+            body0,
+            body1,
+            arg1,
+            contactBreakingThreshold,
+            contactProcessingThreshold,
+        );
         __bindgen_tmp
     }
 }
@@ -10182,6 +14038,22 @@ fn bindgen_test_layout_btDiscreteCollisionDetectorInterface_ClosestPointInput() 
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN36btDiscreteCollisionDetectorInterface17ClosestPointInputC1Ev"]
+    pub fn btDiscreteCollisionDetectorInterface_ClosestPointInput_ClosestPointInput(
+        this: *mut btDiscreteCollisionDetectorInterface_ClosestPointInput,
+    );
+}
+impl btDiscreteCollisionDetectorInterface_ClosestPointInput {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDiscreteCollisionDetectorInterface_ClosestPointInput_ClosestPointInput(
+            &mut __bindgen_tmp,
+        );
+        __bindgen_tmp
+    }
+}
 #[test]
 fn bindgen_test_layout_btDiscreteCollisionDetectorInterface() {
     assert_eq!(
@@ -10199,6 +14071,12 @@ fn bindgen_test_layout_btDiscreteCollisionDetectorInterface() {
             "Alignment of ",
             stringify!(btDiscreteCollisionDetectorInterface)
         )
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN36btDiscreteCollisionDetectorInterface6ResultD0Ev"]
+    pub fn btDiscreteCollisionDetectorInterface_Result_Result_destructor(
+        this: *mut btDiscreteCollisionDetectorInterface_Result,
     );
 }
 extern "C" {
@@ -10227,6 +14105,12 @@ extern "C" {
         normalOnBInWorld: *const btVector3,
         pointInWorld: *const btVector3,
         depth: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN36btDiscreteCollisionDetectorInterfaceD0Ev"]
+    pub fn btDiscreteCollisionDetectorInterface_btDiscreteCollisionDetectorInterface_destructor(
+        this: *mut btDiscreteCollisionDetectorInterface,
     );
 }
 extern "C" {
@@ -10288,6 +14172,31 @@ fn bindgen_test_layout_btStorageResult() {
             "::",
             stringify!(m_distance)
         )
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btStorageResultC2Ev"]
+    pub fn btStorageResult_btStorageResult(this: *mut btStorageResult);
+}
+impl btStorageResult {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btStorageResult_btStorageResult(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btStorageResultD0Ev"]
+    pub fn btStorageResult_btStorageResult_destructor(this: *mut btStorageResult);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btStorageResult15addContactPointERK9btVector3S2_d"]
+    pub fn btStorageResult_addContactPoint(
+        this: *mut ::std::os::raw::c_void,
+        normalOnBInWorld: *const btVector3,
+        pointInWorld: *const btVector3,
+        depth: btScalar,
     );
 }
 #[repr(C)]
@@ -10374,6 +14283,71 @@ fn bindgen_test_layout_btCollisionObjectWrapper() {
             stringify!(m_index)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK24btCollisionObjectWrapper17getWorldTransformEv"]
+    pub fn btCollisionObjectWrapper_getWorldTransform(
+        this: *const btCollisionObjectWrapper,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK24btCollisionObjectWrapper18getCollisionObjectEv"]
+    pub fn btCollisionObjectWrapper_getCollisionObject(
+        this: *const btCollisionObjectWrapper,
+    ) -> *const btCollisionObject;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK24btCollisionObjectWrapper17getCollisionShapeEv"]
+    pub fn btCollisionObjectWrapper_getCollisionShape(
+        this: *const btCollisionObjectWrapper,
+    ) -> *const btCollisionShape;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN24btCollisionObjectWrapperC1EPKS_PK16btCollisionShapePK17btCollisionObjectRK11btTransformii"]
+    pub fn btCollisionObjectWrapper_btCollisionObjectWrapper(
+        this: *mut btCollisionObjectWrapper,
+        parent: *const btCollisionObjectWrapper,
+        shape: *const btCollisionShape,
+        collisionObject: *const btCollisionObject,
+        worldTransform: *const btTransform,
+        partId: ::std::os::raw::c_int,
+        index: ::std::os::raw::c_int,
+    );
+}
+impl btCollisionObjectWrapper {
+    #[inline]
+    pub unsafe fn getWorldTransform(&self) -> *const btTransform {
+        btCollisionObjectWrapper_getWorldTransform(self)
+    }
+    #[inline]
+    pub unsafe fn getCollisionObject(&self) -> *const btCollisionObject {
+        btCollisionObjectWrapper_getCollisionObject(self)
+    }
+    #[inline]
+    pub unsafe fn getCollisionShape(&self) -> *const btCollisionShape {
+        btCollisionObjectWrapper_getCollisionShape(self)
+    }
+    #[inline]
+    pub unsafe fn new(
+        parent: *const btCollisionObjectWrapper,
+        shape: *const btCollisionShape,
+        collisionObject: *const btCollisionObject,
+        worldTransform: *const btTransform,
+        partId: ::std::os::raw::c_int,
+        index: ::std::os::raw::c_int,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionObjectWrapper_btCollisionObjectWrapper(
+            &mut __bindgen_tmp,
+            parent,
+            shape,
+            collisionObject,
+            worldTransform,
+            partId,
+            index,
+        );
+        __bindgen_tmp
+    }
 }
 pub type ContactAddedCallback = ::std::option::Option<
     unsafe extern "C" fn(
@@ -10500,6 +14474,67 @@ fn bindgen_test_layout_btManifoldResult() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN16btManifoldResult21setPersistentManifoldEP20btPersistentManifold"]
+    pub fn btManifoldResult_setPersistentManifold(
+        this: *mut btManifoldResult,
+        manifoldPtr: *mut btPersistentManifold,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btManifoldResult21getPersistentManifoldEv"]
+    pub fn btManifoldResult_getPersistentManifold(
+        this: *const btManifoldResult,
+    ) -> *const btPersistentManifold;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btManifoldResult21getPersistentManifoldEv"]
+    pub fn btManifoldResult_getPersistentManifold1(
+        this: *mut btManifoldResult,
+    ) -> *mut btPersistentManifold;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btManifoldResult20refreshContactPointsEv"]
+    pub fn btManifoldResult_refreshContactPoints(this: *mut btManifoldResult);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btManifoldResult12getBody0WrapEv"]
+    pub fn btManifoldResult_getBody0Wrap(
+        this: *const btManifoldResult,
+    ) -> *const btCollisionObjectWrapper;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btManifoldResult12getBody1WrapEv"]
+    pub fn btManifoldResult_getBody1Wrap(
+        this: *const btManifoldResult,
+    ) -> *const btCollisionObjectWrapper;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btManifoldResult12setBody0WrapEPK24btCollisionObjectWrapper"]
+    pub fn btManifoldResult_setBody0Wrap(
+        this: *mut btManifoldResult,
+        obj0Wrap: *const btCollisionObjectWrapper,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btManifoldResult12setBody1WrapEPK24btCollisionObjectWrapper"]
+    pub fn btManifoldResult_setBody1Wrap(
+        this: *mut btManifoldResult,
+        obj1Wrap: *const btCollisionObjectWrapper,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btManifoldResult16getBody0InternalEv"]
+    pub fn btManifoldResult_getBody0Internal(
+        this: *const btManifoldResult,
+    ) -> *const btCollisionObject;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btManifoldResult16getBody1InternalEv"]
+    pub fn btManifoldResult_getBody1Internal(
+        this: *const btManifoldResult,
+    ) -> *const btCollisionObject;
+}
+extern "C" {
 
     /// in the future we can let the user override the methods to combine restitution and friction
 
@@ -10545,14 +14580,58 @@ extern "C" {
     ) -> btScalar;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN16btManifoldResultC1Ev"]
+    pub fn btManifoldResult_btManifoldResult(this: *mut btManifoldResult);
+}
+extern "C" {
     #[link_name = "\u{1}_ZN16btManifoldResultC1EPK24btCollisionObjectWrapperS2_"]
-    pub fn btManifoldResult_btManifoldResult(
+    pub fn btManifoldResult_btManifoldResult1(
         this: *mut btManifoldResult,
         body0Wrap: *const btCollisionObjectWrapper,
         body1Wrap: *const btCollisionObjectWrapper,
     );
 }
 impl btManifoldResult {
+    #[inline]
+    pub unsafe fn setPersistentManifold(&mut self, manifoldPtr: *mut btPersistentManifold) {
+        btManifoldResult_setPersistentManifold(self, manifoldPtr)
+    }
+    #[inline]
+    pub unsafe fn getPersistentManifold(&self) -> *const btPersistentManifold {
+        btManifoldResult_getPersistentManifold(self)
+    }
+    #[inline]
+    pub unsafe fn getPersistentManifold1(&mut self) -> *mut btPersistentManifold {
+        btManifoldResult_getPersistentManifold1(self)
+    }
+    #[inline]
+    pub unsafe fn refreshContactPoints(&mut self) {
+        btManifoldResult_refreshContactPoints(self)
+    }
+    #[inline]
+    pub unsafe fn getBody0Wrap(&self) -> *const btCollisionObjectWrapper {
+        btManifoldResult_getBody0Wrap(self)
+    }
+    #[inline]
+    pub unsafe fn getBody1Wrap(&self) -> *const btCollisionObjectWrapper {
+        btManifoldResult_getBody1Wrap(self)
+    }
+    #[inline]
+    pub unsafe fn setBody0Wrap(&mut self, obj0Wrap: *const btCollisionObjectWrapper) {
+        btManifoldResult_setBody0Wrap(self, obj0Wrap)
+    }
+    #[inline]
+    pub unsafe fn setBody1Wrap(&mut self, obj1Wrap: *const btCollisionObjectWrapper) {
+        btManifoldResult_setBody1Wrap(self, obj1Wrap)
+    }
+    #[inline]
+    pub unsafe fn getBody0Internal(&self) -> *const btCollisionObject {
+        btManifoldResult_getBody0Internal(self)
+    }
+    #[inline]
+    pub unsafe fn getBody1Internal(&self) -> *const btCollisionObject {
+        btManifoldResult_getBody1Internal(self)
+    }
     #[inline]
     pub unsafe fn calculateCombinedRestitution(
         body0: *const btCollisionObject,
@@ -10596,14 +14675,40 @@ impl btManifoldResult {
         btManifoldResult_calculateCombinedContactStiffness(body0, body1)
     }
     #[inline]
-    pub unsafe fn new(
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btManifoldResult_btManifoldResult(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(
         body0Wrap: *const btCollisionObjectWrapper,
         body1Wrap: *const btCollisionObjectWrapper,
     ) -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
-        btManifoldResult_btManifoldResult(&mut __bindgen_tmp, body0Wrap, body1Wrap);
+        btManifoldResult_btManifoldResult1(&mut __bindgen_tmp, body0Wrap, body1Wrap);
         __bindgen_tmp
     }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btManifoldResultD0Ev"]
+    pub fn btManifoldResult_btManifoldResult_destructor(this: *mut btManifoldResult);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btManifoldResult20setShapeIdentifiersAEii"]
+    pub fn btManifoldResult_setShapeIdentifiersA(
+        this: *mut ::std::os::raw::c_void,
+        partId0: ::std::os::raw::c_int,
+        index0: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btManifoldResult20setShapeIdentifiersBEii"]
+    pub fn btManifoldResult_setShapeIdentifiersB(
+        this: *mut ::std::os::raw::c_void,
+        partId1: ::std::os::raw::c_int,
+        index1: ::std::os::raw::c_int,
+    );
 }
 extern "C" {
     #[link_name = "\u{1}_ZN16btManifoldResult15addContactPointERK9btVector3S2_d"]
@@ -10745,6 +14850,120 @@ fn bindgen_test_layout_btBroadphaseProxy() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btBroadphaseProxy6getUidEv"]
+    pub fn btBroadphaseProxy_getUid(this: *const btBroadphaseProxy) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btBroadphaseProxy12isPolyhedralEi"]
+    pub fn btBroadphaseProxy_isPolyhedral(proxyType: ::std::os::raw::c_int) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btBroadphaseProxy8isConvexEi"]
+    pub fn btBroadphaseProxy_isConvex(proxyType: ::std::os::raw::c_int) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btBroadphaseProxy11isNonMovingEi"]
+    pub fn btBroadphaseProxy_isNonMoving(proxyType: ::std::os::raw::c_int) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btBroadphaseProxy9isConcaveEi"]
+    pub fn btBroadphaseProxy_isConcave(proxyType: ::std::os::raw::c_int) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btBroadphaseProxy10isCompoundEi"]
+    pub fn btBroadphaseProxy_isCompound(proxyType: ::std::os::raw::c_int) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btBroadphaseProxy10isSoftBodyEi"]
+    pub fn btBroadphaseProxy_isSoftBody(proxyType: ::std::os::raw::c_int) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btBroadphaseProxy10isInfiniteEi"]
+    pub fn btBroadphaseProxy_isInfinite(proxyType: ::std::os::raw::c_int) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btBroadphaseProxy10isConvex2dEi"]
+    pub fn btBroadphaseProxy_isConvex2d(proxyType: ::std::os::raw::c_int) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btBroadphaseProxyC1Ev"]
+    pub fn btBroadphaseProxy_btBroadphaseProxy(this: *mut btBroadphaseProxy);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btBroadphaseProxyC1ERK9btVector3S2_Pvii"]
+    pub fn btBroadphaseProxy_btBroadphaseProxy1(
+        this: *mut btBroadphaseProxy,
+        aabbMin: *const btVector3,
+        aabbMax: *const btVector3,
+        userPtr: *mut ::std::os::raw::c_void,
+        collisionFilterGroup: ::std::os::raw::c_int,
+        collisionFilterMask: ::std::os::raw::c_int,
+    );
+}
+impl btBroadphaseProxy {
+    #[inline]
+    pub unsafe fn getUid(&self) -> ::std::os::raw::c_int {
+        btBroadphaseProxy_getUid(self)
+    }
+    #[inline]
+    pub unsafe fn isPolyhedral(proxyType: ::std::os::raw::c_int) -> bool {
+        btBroadphaseProxy_isPolyhedral(proxyType)
+    }
+    #[inline]
+    pub unsafe fn isConvex(proxyType: ::std::os::raw::c_int) -> bool {
+        btBroadphaseProxy_isConvex(proxyType)
+    }
+    #[inline]
+    pub unsafe fn isNonMoving(proxyType: ::std::os::raw::c_int) -> bool {
+        btBroadphaseProxy_isNonMoving(proxyType)
+    }
+    #[inline]
+    pub unsafe fn isConcave(proxyType: ::std::os::raw::c_int) -> bool {
+        btBroadphaseProxy_isConcave(proxyType)
+    }
+    #[inline]
+    pub unsafe fn isCompound(proxyType: ::std::os::raw::c_int) -> bool {
+        btBroadphaseProxy_isCompound(proxyType)
+    }
+    #[inline]
+    pub unsafe fn isSoftBody(proxyType: ::std::os::raw::c_int) -> bool {
+        btBroadphaseProxy_isSoftBody(proxyType)
+    }
+    #[inline]
+    pub unsafe fn isInfinite(proxyType: ::std::os::raw::c_int) -> bool {
+        btBroadphaseProxy_isInfinite(proxyType)
+    }
+    #[inline]
+    pub unsafe fn isConvex2d(proxyType: ::std::os::raw::c_int) -> bool {
+        btBroadphaseProxy_isConvex2d(proxyType)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btBroadphaseProxy_btBroadphaseProxy(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(
+        aabbMin: *const btVector3,
+        aabbMax: *const btVector3,
+        userPtr: *mut ::std::os::raw::c_void,
+        collisionFilterGroup: ::std::os::raw::c_int,
+        collisionFilterMask: ::std::os::raw::c_int,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btBroadphaseProxy_btBroadphaseProxy1(
+            &mut __bindgen_tmp,
+            aabbMin,
+            aabbMax,
+            userPtr,
+            collisionFilterGroup,
+            collisionFilterMask,
+        );
+        __bindgen_tmp
+    }
+}
 /// The btBroadphasePair class contains a pair of aabb-overlapping objects.
 /// A btDispatcher can search a btCollisionAlgorithm that performs exact/narrowphase collision detection on the actual collision shapes.
 #[repr(C)]
@@ -10842,6 +15061,45 @@ fn bindgen_test_layout_btBroadphasePair() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN16btBroadphasePairC1Ev"]
+    pub fn btBroadphasePair_btBroadphasePair(this: *mut btBroadphasePair);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btBroadphasePairC1ERKS_"]
+    pub fn btBroadphasePair_btBroadphasePair1(
+        this: *mut btBroadphasePair,
+        other: *const btBroadphasePair,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btBroadphasePairC1ER17btBroadphaseProxyS1_"]
+    pub fn btBroadphasePair_btBroadphasePair2(
+        this: *mut btBroadphasePair,
+        proxy0: *mut btBroadphaseProxy,
+        proxy1: *mut btBroadphaseProxy,
+    );
+}
+impl btBroadphasePair {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btBroadphasePair_btBroadphasePair(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(other: *const btBroadphasePair) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btBroadphasePair_btBroadphasePair1(&mut __bindgen_tmp, other);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new2(proxy0: *mut btBroadphaseProxy, proxy1: *mut btBroadphaseProxy) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btBroadphasePair_btBroadphasePair2(&mut __bindgen_tmp, proxy0, proxy1);
+        __bindgen_tmp
+    }
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct btBroadphasePairSortPredicate {
@@ -10891,6 +15149,35 @@ fn bindgen_test_layout_btCollisionAlgorithmCreateFunc() {
             stringify!(m_swapped)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btCollisionAlgorithmCreateFuncC1Ev"]
+    pub fn btCollisionAlgorithmCreateFunc_btCollisionAlgorithmCreateFunc(
+        this: *mut btCollisionAlgorithmCreateFunc,
+    );
+}
+impl btCollisionAlgorithmCreateFunc {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionAlgorithmCreateFunc_btCollisionAlgorithmCreateFunc(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btCollisionAlgorithmCreateFuncD0Ev"]
+    pub fn btCollisionAlgorithmCreateFunc_btCollisionAlgorithmCreateFunc_destructor(
+        this: *mut btCollisionAlgorithmCreateFunc,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btCollisionAlgorithmCreateFunc24CreateCollisionAlgorithmER36btCollisionAlgorithmConstructionInfoPK24btCollisionObjectWrapperS4_"]
+    pub fn btCollisionAlgorithmCreateFunc_CreateCollisionAlgorithm(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *mut btCollisionAlgorithmConstructionInfo,
+        body0Wrap: *const btCollisionObjectWrapper,
+        body1Wrap: *const btCollisionObjectWrapper,
+    ) -> *mut btCollisionAlgorithm;
 }
 /// user can override this nearcallback for collision filtering and more finegrained control over collision detection
 pub type btNearCallback = ::std::option::Option<
@@ -11039,6 +15326,19 @@ fn bindgen_test_layout_btCollisionDispatcher() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK21btCollisionDispatcher18getDispatcherFlagsEv"]
+    pub fn btCollisionDispatcher_getDispatcherFlags(
+        this: *const btCollisionDispatcher,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btCollisionDispatcher18setDispatcherFlagsEi"]
+    pub fn btCollisionDispatcher_setDispatcherFlags(
+        this: *mut btCollisionDispatcher,
+        flags: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
 
     /// registerCollisionCreateFunc allows registration of custom/alternative collision create functions
 
@@ -11060,11 +15360,50 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK21btCollisionDispatcher26getManifoldByIndexInternalEi"]
+    pub fn btCollisionDispatcher_getManifoldByIndexInternal1(
+        this: *const btCollisionDispatcher,
+        index: ::std::os::raw::c_int,
+    ) -> *const btPersistentManifold;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btCollisionDispatcher15setNearCallbackEPFvR16btBroadphasePairRS_RK16btDispatcherInfoE"]
+    pub fn btCollisionDispatcher_setNearCallback(
+        this: *mut btCollisionDispatcher,
+        nearCallback: btNearCallback,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btCollisionDispatcher15getNearCallbackEv"]
+    pub fn btCollisionDispatcher_getNearCallback(
+        this: *const btCollisionDispatcher,
+    ) -> btNearCallback;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN21btCollisionDispatcher19defaultNearCallbackER16btBroadphasePairRS_RK16btDispatcherInfo"]
     pub fn btCollisionDispatcher_defaultNearCallback(
         collisionPair: *mut btBroadphasePair,
         dispatcher: *mut btCollisionDispatcher,
         dispatchInfo: *const btDispatcherInfo,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btCollisionDispatcher25getCollisionConfigurationEv"]
+    pub fn btCollisionDispatcher_getCollisionConfiguration(
+        this: *mut btCollisionDispatcher,
+    ) -> *mut btCollisionConfiguration;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btCollisionDispatcher25getCollisionConfigurationEv"]
+    pub fn btCollisionDispatcher_getCollisionConfiguration1(
+        this: *const btCollisionDispatcher,
+    ) -> *const btCollisionConfiguration;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btCollisionDispatcher25setCollisionConfigurationEP24btCollisionConfiguration"]
+    pub fn btCollisionDispatcher_setCollisionConfiguration(
+        this: *mut btCollisionDispatcher,
+        config: *mut btCollisionConfiguration,
     );
 }
 extern "C" {
@@ -11075,6 +15414,14 @@ extern "C" {
     );
 }
 impl btCollisionDispatcher {
+    #[inline]
+    pub unsafe fn getDispatcherFlags(&self) -> ::std::os::raw::c_int {
+        btCollisionDispatcher_getDispatcherFlags(self)
+    }
+    #[inline]
+    pub unsafe fn setDispatcherFlags(&mut self, flags: ::std::os::raw::c_int) {
+        btCollisionDispatcher_setDispatcherFlags(self, flags)
+    }
     #[inline]
     pub unsafe fn registerCollisionCreateFunc(
         &mut self,
@@ -11099,6 +15446,21 @@ impl btCollisionDispatcher {
         )
     }
     #[inline]
+    pub unsafe fn getManifoldByIndexInternal(
+        &self,
+        index: ::std::os::raw::c_int,
+    ) -> *const btPersistentManifold {
+        btCollisionDispatcher_getManifoldByIndexInternal1(self, index)
+    }
+    #[inline]
+    pub unsafe fn setNearCallback(&mut self, nearCallback: btNearCallback) {
+        btCollisionDispatcher_setNearCallback(self, nearCallback)
+    }
+    #[inline]
+    pub unsafe fn getNearCallback(&self) -> btNearCallback {
+        btCollisionDispatcher_getNearCallback(self)
+    }
+    #[inline]
     pub unsafe fn defaultNearCallback(
         collisionPair: *mut btBroadphasePair,
         dispatcher: *mut btCollisionDispatcher,
@@ -11107,11 +15469,42 @@ impl btCollisionDispatcher {
         btCollisionDispatcher_defaultNearCallback(collisionPair, dispatcher, dispatchInfo)
     }
     #[inline]
+    pub unsafe fn getCollisionConfiguration(&mut self) -> *mut btCollisionConfiguration {
+        btCollisionDispatcher_getCollisionConfiguration(self)
+    }
+    #[inline]
+    pub unsafe fn getCollisionConfiguration1(&self) -> *const btCollisionConfiguration {
+        btCollisionDispatcher_getCollisionConfiguration1(self)
+    }
+    #[inline]
+    pub unsafe fn setCollisionConfiguration(&mut self, config: *mut btCollisionConfiguration) {
+        btCollisionDispatcher_setCollisionConfiguration(self, config)
+    }
+    #[inline]
     pub unsafe fn new(collisionConfiguration: *mut btCollisionConfiguration) -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
         btCollisionDispatcher_btCollisionDispatcher(&mut __bindgen_tmp, collisionConfiguration);
         __bindgen_tmp
     }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btCollisionDispatcher15getNumManifoldsEv"]
+    pub fn btCollisionDispatcher_getNumManifolds(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btCollisionDispatcher26getInternalManifoldPointerEv"]
+    pub fn btCollisionDispatcher_getInternalManifoldPointer(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *mut *mut btPersistentManifold;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btCollisionDispatcher26getManifoldByIndexInternalEi"]
+    pub fn btCollisionDispatcher_getManifoldByIndexInternal(
+        this: *mut ::std::os::raw::c_void,
+        index: ::std::os::raw::c_int,
+    ) -> *mut btPersistentManifold;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN21btCollisionDispatcherD0Ev"]
@@ -11188,6 +15581,18 @@ extern "C" {
         ptr: *mut ::std::os::raw::c_void,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN21btCollisionDispatcher23getInternalManifoldPoolEv"]
+    pub fn btCollisionDispatcher_getInternalManifoldPool(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *mut btPoolAllocator;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btCollisionDispatcher23getInternalManifoldPoolEv"]
+    pub fn btCollisionDispatcher_getInternalManifoldPool1(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const btPoolAllocator;
+}
 #[repr(C)]
 pub struct btBroadphaseAabbCallback__bindgen_vtable(::std::os::raw::c_void);
 #[repr(C)]
@@ -11206,6 +15611,12 @@ fn bindgen_test_layout_btBroadphaseAabbCallback() {
         ::std::mem::align_of::<btBroadphaseAabbCallback>(),
         8usize,
         concat!("Alignment of ", stringify!(btBroadphaseAabbCallback))
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN24btBroadphaseAabbCallbackD0Ev"]
+    pub fn btBroadphaseAabbCallback_btBroadphaseAabbCallback_destructor(
+        this: *mut btBroadphaseAabbCallback,
     );
 }
 extern "C" {
@@ -11269,6 +15680,24 @@ fn bindgen_test_layout_btBroadphaseRayCallback() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN23btBroadphaseRayCallbackC2Ev"]
+    pub fn btBroadphaseRayCallback_btBroadphaseRayCallback(this: *mut btBroadphaseRayCallback);
+}
+impl btBroadphaseRayCallback {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btBroadphaseRayCallback_btBroadphaseRayCallback(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btBroadphaseRayCallbackD0Ev"]
+    pub fn btBroadphaseRayCallback_btBroadphaseRayCallback_destructor(
+        this: *mut btBroadphaseRayCallback,
+    );
+}
 #[repr(C)]
 pub struct btBroadphaseInterface__bindgen_vtable(::std::os::raw::c_void);
 /// The btBroadphaseInterface class provides an interface to detect aabb-overlapping object pairs.
@@ -11291,6 +15720,10 @@ fn bindgen_test_layout_btBroadphaseInterface() {
         8usize,
         concat!("Alignment of ", stringify!(btBroadphaseInterface))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btBroadphaseInterfaceD0Ev"]
+    pub fn btBroadphaseInterface_btBroadphaseInterface_destructor(this: *mut btBroadphaseInterface);
 }
 extern "C" {
     #[link_name = "\u{1}_ZN21btBroadphaseInterface11createProxyERK9btVector3S2_iPviiP12btDispatcher"]
@@ -11387,6 +15820,16 @@ extern "C" {
     );
 }
 extern "C" {
+
+    /// reset broadphase internal structures, to ensure determinism/reproducability
+
+    #[link_name = "\u{1}_ZN21btBroadphaseInterface9resetPoolEP12btDispatcher"]
+    pub fn btBroadphaseInterface_resetPool(
+        this: *mut ::std::os::raw::c_void,
+        dispatcher: *mut btDispatcher,
+    );
+}
+extern "C" {
     #[link_name = "\u{1}_ZN21btBroadphaseInterface10printStatsEv"]
     pub fn btBroadphaseInterface_printStats(this: *mut ::std::os::raw::c_void);
 }
@@ -11409,6 +15852,26 @@ fn bindgen_test_layout_btOverlappingPairCallback() {
         ::std::mem::align_of::<btOverlappingPairCallback>(),
         8usize,
         concat!("Alignment of ", stringify!(btOverlappingPairCallback))
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN25btOverlappingPairCallbackC2Ev"]
+    pub fn btOverlappingPairCallback_btOverlappingPairCallback(
+        this: *mut btOverlappingPairCallback,
+    );
+}
+impl btOverlappingPairCallback {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btOverlappingPairCallback_btOverlappingPairCallback(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN25btOverlappingPairCallbackD0Ev"]
+    pub fn btOverlappingPairCallback_btOverlappingPairCallback_destructor(
+        this: *mut btOverlappingPairCallback,
     );
 }
 extern "C" {
@@ -11458,6 +15921,10 @@ fn bindgen_test_layout_btOverlapCallback() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN17btOverlapCallbackD0Ev"]
+    pub fn btOverlapCallback_btOverlapCallback_destructor(this: *mut btOverlapCallback);
+}
+extern "C" {
     #[link_name = "\u{1}_ZN17btOverlapCallback14processOverlapER16btBroadphasePair"]
     pub fn btOverlapCallback_processOverlap(
         this: *mut ::std::os::raw::c_void,
@@ -11482,6 +15949,12 @@ fn bindgen_test_layout_btOverlapFilterCallback() {
         ::std::mem::align_of::<btOverlapFilterCallback>(),
         8usize,
         concat!("Alignment of ", stringify!(btOverlapFilterCallback))
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btOverlapFilterCallbackD0Ev"]
+    pub fn btOverlapFilterCallback_btOverlapFilterCallback_destructor(
+        this: *mut btOverlapFilterCallback,
     );
 }
 extern "C" {
@@ -11523,6 +15996,12 @@ fn bindgen_test_layout_btOverlappingPairCache() {
         ::std::mem::align_of::<btOverlappingPairCache>(),
         8usize,
         concat!("Alignment of ", stringify!(btOverlappingPairCache))
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN22btOverlappingPairCacheD0Ev"]
+    pub fn btOverlappingPairCache_btOverlappingPairCache_destructor(
+        this: *mut btOverlappingPairCache,
     );
 }
 extern "C" {
@@ -11688,12 +16167,58 @@ fn bindgen_test_layout_btHashedOverlappingPairCache() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK28btHashedOverlappingPairCache24needsBroadphaseCollisionEP17btBroadphaseProxyS1_"]
+    pub fn btHashedOverlappingPairCache_needsBroadphaseCollision(
+        this: *const btHashedOverlappingPairCache,
+        proxy0: *mut btBroadphaseProxy,
+        proxy1: *mut btBroadphaseProxy,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK28btHashedOverlappingPairCache23getOverlappingPairArrayEv"]
+    pub fn btHashedOverlappingPairCache_getOverlappingPairArray1(
+        this: *const btHashedOverlappingPairCache,
+    ) -> *const btBroadphasePairArray;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK28btHashedOverlappingPairCache8GetCountEv"]
+    pub fn btHashedOverlappingPairCache_GetCount(
+        this: *const btHashedOverlappingPairCache,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN28btHashedOverlappingPairCache24getOverlapFilterCallbackEv"]
+    pub fn btHashedOverlappingPairCache_getOverlapFilterCallback(
+        this: *mut btHashedOverlappingPairCache,
+    ) -> *mut btOverlapFilterCallback;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN28btHashedOverlappingPairCacheC1Ev"]
     pub fn btHashedOverlappingPairCache_btHashedOverlappingPairCache(
         this: *mut btHashedOverlappingPairCache,
     );
 }
 impl btHashedOverlappingPairCache {
+    #[inline]
+    pub unsafe fn needsBroadphaseCollision(
+        &self,
+        proxy0: *mut btBroadphaseProxy,
+        proxy1: *mut btBroadphaseProxy,
+    ) -> bool {
+        btHashedOverlappingPairCache_needsBroadphaseCollision(self, proxy0, proxy1)
+    }
+    #[inline]
+    pub unsafe fn getOverlappingPairArray(&self) -> *const btBroadphasePairArray {
+        btHashedOverlappingPairCache_getOverlappingPairArray1(self)
+    }
+    #[inline]
+    pub unsafe fn GetCount(&self) -> ::std::os::raw::c_int {
+        btHashedOverlappingPairCache_GetCount(self)
+    }
+    #[inline]
+    pub unsafe fn getOverlapFilterCallback(&mut self) -> *mut btOverlapFilterCallback {
+        btHashedOverlappingPairCache_getOverlapFilterCallback(self)
+    }
     #[inline]
     pub unsafe fn new() -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
@@ -11725,6 +16250,14 @@ extern "C" {
     ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN28btHashedOverlappingPairCache18addOverlappingPairEP17btBroadphaseProxyS1_"]
+    pub fn btHashedOverlappingPairCache_addOverlappingPair(
+        this: *mut ::std::os::raw::c_void,
+        proxy0: *mut btBroadphaseProxy,
+        proxy1: *mut btBroadphaseProxy,
+    ) -> *mut btBroadphasePair;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN28btHashedOverlappingPairCache19cleanProxyFromPairsEP17btBroadphaseProxyP12btDispatcher"]
     pub fn btHashedOverlappingPairCache_cleanProxyFromPairs(
         this: *mut ::std::os::raw::c_void,
@@ -11741,6 +16274,24 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN28btHashedOverlappingPairCache26getOverlappingPairArrayPtrEv"]
+    pub fn btHashedOverlappingPairCache_getOverlappingPairArrayPtr(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *mut btBroadphasePair;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK28btHashedOverlappingPairCache26getOverlappingPairArrayPtrEv"]
+    pub fn btHashedOverlappingPairCache_getOverlappingPairArrayPtr1(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const btBroadphasePair;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN28btHashedOverlappingPairCache23getOverlappingPairArrayEv"]
+    pub fn btHashedOverlappingPairCache_getOverlappingPairArray(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *mut btBroadphasePairArray;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN28btHashedOverlappingPairCache20cleanOverlappingPairER16btBroadphasePairP12btDispatcher"]
     pub fn btHashedOverlappingPairCache_cleanOverlappingPair(
         this: *mut ::std::os::raw::c_void,
@@ -11755,6 +16306,19 @@ extern "C" {
         proxy0: *mut btBroadphaseProxy,
         proxy1: *mut btBroadphaseProxy,
     ) -> *mut btBroadphasePair;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN28btHashedOverlappingPairCache24setOverlapFilterCallbackEP23btOverlapFilterCallback"]
+    pub fn btHashedOverlappingPairCache_setOverlapFilterCallback(
+        this: *mut ::std::os::raw::c_void,
+        callback: *mut btOverlapFilterCallback,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK28btHashedOverlappingPairCache22getNumOverlappingPairsEv"]
+    pub fn btHashedOverlappingPairCache_getNumOverlappingPairs(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
 }
 /// btSortedOverlappingPairCache maintains the objects with overlapping AABB
 /// Typically managed by the Broadphase, Axis3Sweep or btSimpleBroadphase
@@ -11844,12 +16408,48 @@ fn bindgen_test_layout_btSortedOverlappingPairCache() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK28btSortedOverlappingPairCache24needsBroadphaseCollisionEP17btBroadphaseProxyS1_"]
+    pub fn btSortedOverlappingPairCache_needsBroadphaseCollision(
+        this: *const btSortedOverlappingPairCache,
+        proxy0: *mut btBroadphaseProxy,
+        proxy1: *mut btBroadphaseProxy,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK28btSortedOverlappingPairCache23getOverlappingPairArrayEv"]
+    pub fn btSortedOverlappingPairCache_getOverlappingPairArray1(
+        this: *const btSortedOverlappingPairCache,
+    ) -> *const btBroadphasePairArray;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN28btSortedOverlappingPairCache24getOverlapFilterCallbackEv"]
+    pub fn btSortedOverlappingPairCache_getOverlapFilterCallback(
+        this: *mut btSortedOverlappingPairCache,
+    ) -> *mut btOverlapFilterCallback;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN28btSortedOverlappingPairCacheC1Ev"]
     pub fn btSortedOverlappingPairCache_btSortedOverlappingPairCache(
         this: *mut btSortedOverlappingPairCache,
     );
 }
 impl btSortedOverlappingPairCache {
+    #[inline]
+    pub unsafe fn needsBroadphaseCollision(
+        &self,
+        proxy0: *mut btBroadphaseProxy,
+        proxy1: *mut btBroadphaseProxy,
+    ) -> bool {
+        btSortedOverlappingPairCache_needsBroadphaseCollision(self, proxy0, proxy1)
+    }
+    #[inline]
+    pub unsafe fn getOverlappingPairArray(&self) -> *const btBroadphasePairArray {
+        btSortedOverlappingPairCache_getOverlappingPairArray1(self)
+    }
+    #[inline]
+    pub unsafe fn getOverlapFilterCallback(&mut self) -> *mut btOverlapFilterCallback {
+        btSortedOverlappingPairCache_getOverlapFilterCallback(self)
+    }
     #[inline]
     pub unsafe fn new() -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
@@ -11921,6 +16521,50 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN28btSortedOverlappingPairCache23getOverlappingPairArrayEv"]
+    pub fn btSortedOverlappingPairCache_getOverlappingPairArray(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *mut btBroadphasePairArray;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN28btSortedOverlappingPairCache26getOverlappingPairArrayPtrEv"]
+    pub fn btSortedOverlappingPairCache_getOverlappingPairArrayPtr(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *mut btBroadphasePair;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK28btSortedOverlappingPairCache26getOverlappingPairArrayPtrEv"]
+    pub fn btSortedOverlappingPairCache_getOverlappingPairArrayPtr1(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const btBroadphasePair;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK28btSortedOverlappingPairCache22getNumOverlappingPairsEv"]
+    pub fn btSortedOverlappingPairCache_getNumOverlappingPairs(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN28btSortedOverlappingPairCache24setOverlapFilterCallbackEP23btOverlapFilterCallback"]
+    pub fn btSortedOverlappingPairCache_setOverlapFilterCallback(
+        this: *mut ::std::os::raw::c_void,
+        callback: *mut btOverlapFilterCallback,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN28btSortedOverlappingPairCache18hasDeferredRemovalEv"]
+    pub fn btSortedOverlappingPairCache_hasDeferredRemoval(
+        this: *mut ::std::os::raw::c_void,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN28btSortedOverlappingPairCache28setInternalGhostPairCallbackEP25btOverlappingPairCallback"]
+    pub fn btSortedOverlappingPairCache_setInternalGhostPairCallback(
+        this: *mut ::std::os::raw::c_void,
+        ghostPairCallback: *mut btOverlappingPairCallback,
+    );
+}
+extern "C" {
     #[link_name = "\u{1}_ZN28btSortedOverlappingPairCache20sortOverlappingPairsEP12btDispatcher"]
     pub fn btSortedOverlappingPairCache_sortOverlappingPairs(
         this: *mut ::std::os::raw::c_void,
@@ -11954,6 +16598,112 @@ fn bindgen_test_layout_btNullPairCache() {
             "::",
             stringify!(m_overlappingPairArray)
         )
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache26getOverlappingPairArrayPtrEv"]
+    pub fn btNullPairCache_getOverlappingPairArrayPtr(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *mut btBroadphasePair;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btNullPairCache26getOverlappingPairArrayPtrEv"]
+    pub fn btNullPairCache_getOverlappingPairArrayPtr1(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const btBroadphasePair;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache23getOverlappingPairArrayEv"]
+    pub fn btNullPairCache_getOverlappingPairArray(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *mut btBroadphasePairArray;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache20cleanOverlappingPairER16btBroadphasePairP12btDispatcher"]
+    pub fn btNullPairCache_cleanOverlappingPair(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *mut btBroadphasePair,
+        arg2: *mut btDispatcher,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btNullPairCache22getNumOverlappingPairsEv"]
+    pub fn btNullPairCache_getNumOverlappingPairs(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache19cleanProxyFromPairsEP17btBroadphaseProxyP12btDispatcher"]
+    pub fn btNullPairCache_cleanProxyFromPairs(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *mut btBroadphaseProxy,
+        arg2: *mut btDispatcher,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache24setOverlapFilterCallbackEP23btOverlapFilterCallback"]
+    pub fn btNullPairCache_setOverlapFilterCallback(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *mut btOverlapFilterCallback,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache26processAllOverlappingPairsEP17btOverlapCallbackP12btDispatcher"]
+    pub fn btNullPairCache_processAllOverlappingPairs(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *mut btOverlapCallback,
+        arg2: *mut btDispatcher,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache8findPairEP17btBroadphaseProxyS1_"]
+    pub fn btNullPairCache_findPair(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *mut btBroadphaseProxy,
+        arg2: *mut btBroadphaseProxy,
+    ) -> *mut btBroadphasePair;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache18hasDeferredRemovalEv"]
+    pub fn btNullPairCache_hasDeferredRemoval(this: *mut ::std::os::raw::c_void) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache28setInternalGhostPairCallbackEP25btOverlappingPairCallback"]
+    pub fn btNullPairCache_setInternalGhostPairCallback(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *mut btOverlappingPairCallback,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache18addOverlappingPairEP17btBroadphaseProxyS1_"]
+    pub fn btNullPairCache_addOverlappingPair(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *mut btBroadphaseProxy,
+        arg2: *mut btBroadphaseProxy,
+    ) -> *mut btBroadphasePair;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache21removeOverlappingPairEP17btBroadphaseProxyS1_P12btDispatcher"]
+    pub fn btNullPairCache_removeOverlappingPair(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *mut btBroadphaseProxy,
+        arg2: *mut btBroadphaseProxy,
+        arg3: *mut btDispatcher,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache37removeOverlappingPairsContainingProxyEP17btBroadphaseProxyP12btDispatcher"]
+    pub fn btNullPairCache_removeOverlappingPairsContainingProxy(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *mut btBroadphaseProxy,
+        arg2: *mut btDispatcher,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btNullPairCache20sortOverlappingPairsEP12btDispatcher"]
+    pub fn btNullPairCache_sortOverlappingPairs(
+        this: *mut ::std::os::raw::c_void,
+        dispatcher: *mut btDispatcher,
     );
 }
 #[repr(C)]
@@ -12086,6 +16836,35 @@ fn bindgen_test_layout_btCollisionWorld_LocalRayResult() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld14LocalRayResultC1EPK17btCollisionObjectPNS_14LocalShapeInfoERK9btVector3d"]
+    pub fn btCollisionWorld_LocalRayResult_LocalRayResult(
+        this: *mut btCollisionWorld_LocalRayResult,
+        collisionObject: *const btCollisionObject,
+        localShapeInfo: *mut btCollisionWorld_LocalShapeInfo,
+        hitNormalLocal: *const btVector3,
+        hitFraction: btScalar,
+    );
+}
+impl btCollisionWorld_LocalRayResult {
+    #[inline]
+    pub unsafe fn new(
+        collisionObject: *const btCollisionObject,
+        localShapeInfo: *mut btCollisionWorld_LocalShapeInfo,
+        hitNormalLocal: *const btVector3,
+        hitFraction: btScalar,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionWorld_LocalRayResult_LocalRayResult(
+            &mut __bindgen_tmp,
+            collisionObject,
+            localShapeInfo,
+            hitNormalLocal,
+            hitFraction,
+        );
+        __bindgen_tmp
+    }
+}
 #[repr(C)]
 pub struct btCollisionWorld_RayResultCallback__bindgen_vtable(::std::os::raw::c_void);
 /// RayResultCallback is used to report new raycast results
@@ -12179,6 +16958,30 @@ fn bindgen_test_layout_btCollisionWorld_RayResultCallback() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionWorld17RayResultCallback6hasHitEv"]
+    pub fn btCollisionWorld_RayResultCallback_hasHit(
+        this: *const btCollisionWorld_RayResultCallback,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld17RayResultCallbackC2Ev"]
+    pub fn btCollisionWorld_RayResultCallback_RayResultCallback(
+        this: *mut btCollisionWorld_RayResultCallback,
+    );
+}
+impl btCollisionWorld_RayResultCallback {
+    #[inline]
+    pub unsafe fn hasHit(&self) -> bool {
+        btCollisionWorld_RayResultCallback_hasHit(self)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionWorld_RayResultCallback_RayResultCallback(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
 #[repr(C)]
 #[derive(Debug)]
 pub struct btCollisionWorld_ClosestRayResultCallback {
@@ -12258,6 +17061,26 @@ fn bindgen_test_layout_btCollisionWorld_ClosestRayResultCallback() {
             stringify!(m_hitPointWorld)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld24ClosestRayResultCallbackC1ERK9btVector3S3_"]
+    pub fn btCollisionWorld_ClosestRayResultCallback_ClosestRayResultCallback(
+        this: *mut btCollisionWorld_ClosestRayResultCallback,
+        rayFromWorld: *const btVector3,
+        rayToWorld: *const btVector3,
+    );
+}
+impl btCollisionWorld_ClosestRayResultCallback {
+    #[inline]
+    pub unsafe fn new(rayFromWorld: *const btVector3, rayToWorld: *const btVector3) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionWorld_ClosestRayResultCallback_ClosestRayResultCallback(
+            &mut __bindgen_tmp,
+            rayFromWorld,
+            rayToWorld,
+        );
+        __bindgen_tmp
+    }
 }
 #[repr(C)]
 #[derive(Debug)]
@@ -12367,6 +17190,26 @@ fn bindgen_test_layout_btCollisionWorld_AllHitsRayResultCallback() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld24AllHitsRayResultCallbackC1ERK9btVector3S3_"]
+    pub fn btCollisionWorld_AllHitsRayResultCallback_AllHitsRayResultCallback(
+        this: *mut btCollisionWorld_AllHitsRayResultCallback,
+        rayFromWorld: *const btVector3,
+        rayToWorld: *const btVector3,
+    );
+}
+impl btCollisionWorld_AllHitsRayResultCallback {
+    #[inline]
+    pub unsafe fn new(rayFromWorld: *const btVector3, rayToWorld: *const btVector3) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionWorld_AllHitsRayResultCallback_AllHitsRayResultCallback(
+            &mut __bindgen_tmp,
+            rayFromWorld,
+            rayToWorld,
+        );
+        __bindgen_tmp
+    }
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct btCollisionWorld_LocalConvexResult {
@@ -12456,6 +17299,38 @@ fn bindgen_test_layout_btCollisionWorld_LocalConvexResult() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld17LocalConvexResultC1EPK17btCollisionObjectPNS_14LocalShapeInfoERK9btVector3S8_d"]
+    pub fn btCollisionWorld_LocalConvexResult_LocalConvexResult(
+        this: *mut btCollisionWorld_LocalConvexResult,
+        hitCollisionObject: *const btCollisionObject,
+        localShapeInfo: *mut btCollisionWorld_LocalShapeInfo,
+        hitNormalLocal: *const btVector3,
+        hitPointLocal: *const btVector3,
+        hitFraction: btScalar,
+    );
+}
+impl btCollisionWorld_LocalConvexResult {
+    #[inline]
+    pub unsafe fn new(
+        hitCollisionObject: *const btCollisionObject,
+        localShapeInfo: *mut btCollisionWorld_LocalShapeInfo,
+        hitNormalLocal: *const btVector3,
+        hitPointLocal: *const btVector3,
+        hitFraction: btScalar,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionWorld_LocalConvexResult_LocalConvexResult(
+            &mut __bindgen_tmp,
+            hitCollisionObject,
+            localShapeInfo,
+            hitNormalLocal,
+            hitPointLocal,
+            hitFraction,
+        );
+        __bindgen_tmp
+    }
+}
 #[repr(C)]
 pub struct btCollisionWorld_ConvexResultCallback__bindgen_vtable(::std::os::raw::c_void);
 /// RayResultCallback is used to report new raycast results
@@ -12524,6 +17399,30 @@ fn bindgen_test_layout_btCollisionWorld_ConvexResultCallback() {
             stringify!(m_collisionFilterMask)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionWorld20ConvexResultCallback6hasHitEv"]
+    pub fn btCollisionWorld_ConvexResultCallback_hasHit(
+        this: *const btCollisionWorld_ConvexResultCallback,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld20ConvexResultCallbackC2Ev"]
+    pub fn btCollisionWorld_ConvexResultCallback_ConvexResultCallback(
+        this: *mut btCollisionWorld_ConvexResultCallback,
+    );
+}
+impl btCollisionWorld_ConvexResultCallback {
+    #[inline]
+    pub unsafe fn hasHit(&self) -> bool {
+        btCollisionWorld_ConvexResultCallback_hasHit(self)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionWorld_ConvexResultCallback_ConvexResultCallback(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
 }
 #[repr(C)]
 #[derive(Debug)]
@@ -12619,6 +17518,26 @@ fn bindgen_test_layout_btCollisionWorld_ClosestConvexResultCallback() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld27ClosestConvexResultCallbackC1ERK9btVector3S3_"]
+    pub fn btCollisionWorld_ClosestConvexResultCallback_ClosestConvexResultCallback(
+        this: *mut btCollisionWorld_ClosestConvexResultCallback,
+        convexFromWorld: *const btVector3,
+        convexToWorld: *const btVector3,
+    );
+}
+impl btCollisionWorld_ClosestConvexResultCallback {
+    #[inline]
+    pub unsafe fn new(convexFromWorld: *const btVector3, convexToWorld: *const btVector3) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionWorld_ClosestConvexResultCallback_ClosestConvexResultCallback(
+            &mut __bindgen_tmp,
+            convexFromWorld,
+            convexToWorld,
+        );
+        __bindgen_tmp
+    }
+}
 #[repr(C)]
 pub struct btCollisionWorld_ContactResultCallback__bindgen_vtable(::std::os::raw::c_void);
 /// ContactResultCallback is used to report contact points
@@ -12687,6 +17606,20 @@ fn bindgen_test_layout_btCollisionWorld_ContactResultCallback() {
             stringify!(m_closestDistanceThreshold)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld21ContactResultCallbackC2Ev"]
+    pub fn btCollisionWorld_ContactResultCallback_ContactResultCallback(
+        this: *mut btCollisionWorld_ContactResultCallback,
+    );
+}
+impl btCollisionWorld_ContactResultCallback {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionWorld_ContactResultCallback_ContactResultCallback(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
 }
 #[test]
 fn bindgen_test_layout_btCollisionWorld() {
@@ -12769,11 +17702,50 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld13setBroadphaseEP21btBroadphaseInterface"]
+    pub fn btCollisionWorld_setBroadphase(
+        this: *mut btCollisionWorld,
+        pairCache: *mut btBroadphaseInterface,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionWorld13getBroadphaseEv"]
+    pub fn btCollisionWorld_getBroadphase(
+        this: *const btCollisionWorld,
+    ) -> *const btBroadphaseInterface;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld13getBroadphaseEv"]
+    pub fn btCollisionWorld_getBroadphase1(
+        this: *mut btCollisionWorld,
+    ) -> *mut btBroadphaseInterface;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld12getPairCacheEv"]
+    pub fn btCollisionWorld_getPairCache(
+        this: *mut btCollisionWorld,
+    ) -> *mut btOverlappingPairCache;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld13getDispatcherEv"]
+    pub fn btCollisionWorld_getDispatcher(this: *mut btCollisionWorld) -> *mut btDispatcher;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionWorld13getDispatcherEv"]
+    pub fn btCollisionWorld_getDispatcher1(this: *const btCollisionWorld) -> *const btDispatcher;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN16btCollisionWorld16updateSingleAabbEP17btCollisionObject"]
     pub fn btCollisionWorld_updateSingleAabb(
         this: *mut btCollisionWorld,
         colObj: *mut btCollisionObject,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionWorld22getNumCollisionObjectsEv"]
+    pub fn btCollisionWorld_getNumCollisionObjects(
+        this: *const btCollisionWorld,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
 
@@ -12868,6 +17840,39 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld23getCollisionObjectArrayEv"]
+    pub fn btCollisionWorld_getCollisionObjectArray(
+        this: *mut btCollisionWorld,
+    ) -> *mut btCollisionObjectArray;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionWorld23getCollisionObjectArrayEv"]
+    pub fn btCollisionWorld_getCollisionObjectArray1(
+        this: *const btCollisionWorld,
+    ) -> *const btCollisionObjectArray;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld15getDispatchInfoEv"]
+    pub fn btCollisionWorld_getDispatchInfo(this: *mut btCollisionWorld) -> *mut btDispatcherInfo;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionWorld15getDispatchInfoEv"]
+    pub fn btCollisionWorld_getDispatchInfo1(
+        this: *const btCollisionWorld,
+    ) -> *const btDispatcherInfo;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionWorld22getForceUpdateAllAabbsEv"]
+    pub fn btCollisionWorld_getForceUpdateAllAabbs(this: *const btCollisionWorld) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld22setForceUpdateAllAabbsEb"]
+    pub fn btCollisionWorld_setForceUpdateAllAabbs(
+        this: *mut btCollisionWorld,
+        forceUpdateAllAabbs: bool,
+    );
+}
+extern "C" {
     #[link_name = "\u{1}_ZN16btCollisionWorldC1EP12btDispatcherP21btBroadphaseInterfaceP24btCollisionConfiguration"]
     pub fn btCollisionWorld_btCollisionWorld(
         this: *mut btCollisionWorld,
@@ -12882,8 +17887,36 @@ impl btCollisionWorld {
         btCollisionWorld_serializeCollisionObjects(self, serializer)
     }
     #[inline]
+    pub unsafe fn setBroadphase(&mut self, pairCache: *mut btBroadphaseInterface) {
+        btCollisionWorld_setBroadphase(self, pairCache)
+    }
+    #[inline]
+    pub unsafe fn getBroadphase(&self) -> *const btBroadphaseInterface {
+        btCollisionWorld_getBroadphase(self)
+    }
+    #[inline]
+    pub unsafe fn getBroadphase1(&mut self) -> *mut btBroadphaseInterface {
+        btCollisionWorld_getBroadphase1(self)
+    }
+    #[inline]
+    pub unsafe fn getPairCache(&mut self) -> *mut btOverlappingPairCache {
+        btCollisionWorld_getPairCache(self)
+    }
+    #[inline]
+    pub unsafe fn getDispatcher(&mut self) -> *mut btDispatcher {
+        btCollisionWorld_getDispatcher(self)
+    }
+    #[inline]
+    pub unsafe fn getDispatcher1(&self) -> *const btDispatcher {
+        btCollisionWorld_getDispatcher1(self)
+    }
+    #[inline]
     pub unsafe fn updateSingleAabb(&mut self, colObj: *mut btCollisionObject) {
         btCollisionWorld_updateSingleAabb(self, colObj)
+    }
+    #[inline]
+    pub unsafe fn getNumCollisionObjects(&self) -> ::std::os::raw::c_int {
+        btCollisionWorld_getNumCollisionObjects(self)
     }
     #[inline]
     pub unsafe fn convexSweepTest(
@@ -12993,6 +18026,30 @@ impl btCollisionWorld {
         )
     }
     #[inline]
+    pub unsafe fn getCollisionObjectArray(&mut self) -> *mut btCollisionObjectArray {
+        btCollisionWorld_getCollisionObjectArray(self)
+    }
+    #[inline]
+    pub unsafe fn getCollisionObjectArray1(&self) -> *const btCollisionObjectArray {
+        btCollisionWorld_getCollisionObjectArray1(self)
+    }
+    #[inline]
+    pub unsafe fn getDispatchInfo(&mut self) -> *mut btDispatcherInfo {
+        btCollisionWorld_getDispatchInfo(self)
+    }
+    #[inline]
+    pub unsafe fn getDispatchInfo1(&self) -> *const btDispatcherInfo {
+        btCollisionWorld_getDispatchInfo1(self)
+    }
+    #[inline]
+    pub unsafe fn getForceUpdateAllAabbs(&self) -> bool {
+        btCollisionWorld_getForceUpdateAllAabbs(self)
+    }
+    #[inline]
+    pub unsafe fn setForceUpdateAllAabbs(&mut self, forceUpdateAllAabbs: bool) {
+        btCollisionWorld_setForceUpdateAllAabbs(self, forceUpdateAllAabbs)
+    }
+    #[inline]
     pub unsafe fn new(
         dispatcher: *mut btDispatcher,
         broadphasePairCache: *mut btBroadphaseInterface,
@@ -13025,6 +18082,17 @@ extern "C" {
     pub fn btCollisionWorld_computeOverlappingPairs(this: *mut ::std::os::raw::c_void);
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld14setDebugDrawerEP12btIDebugDraw"]
+    pub fn btCollisionWorld_setDebugDrawer(
+        this: *mut ::std::os::raw::c_void,
+        debugDrawer: *mut btIDebugDraw,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld14getDebugDrawerEv"]
+    pub fn btCollisionWorld_getDebugDrawer(this: *mut ::std::os::raw::c_void) -> *mut btIDebugDraw;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN16btCollisionWorld14debugDrawWorldEv"]
     pub fn btCollisionWorld_debugDrawWorld(this: *mut ::std::os::raw::c_void);
 }
@@ -13038,6 +18106,19 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld17RayResultCallbackD0Ev"]
+    pub fn btCollisionWorld_RayResultCallback_RayResultCallback_destructor(
+        this: *mut btCollisionWorld_RayResultCallback,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionWorld17RayResultCallback14needsCollisionEP17btBroadphaseProxy"]
+    pub fn btCollisionWorld_RayResultCallback_needsCollision(
+        this: *mut ::std::os::raw::c_void,
+        proxy0: *mut btBroadphaseProxy,
+    ) -> bool;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN16btCollisionWorld17RayResultCallback15addSingleResultERNS_14LocalRayResultEb"]
     pub fn btCollisionWorld_RayResultCallback_addSingleResult(
         this: *mut ::std::os::raw::c_void,
@@ -13046,12 +18127,62 @@ extern "C" {
     ) -> btScalar;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld24ClosestRayResultCallback15addSingleResultERNS_14LocalRayResultEb"]
+    pub fn btCollisionWorld_ClosestRayResultCallback_addSingleResult(
+        this: *mut ::std::os::raw::c_void,
+        rayResult: *mut btCollisionWorld_LocalRayResult,
+        normalInWorldSpace: bool,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld24AllHitsRayResultCallback15addSingleResultERNS_14LocalRayResultEb"]
+    pub fn btCollisionWorld_AllHitsRayResultCallback_addSingleResult(
+        this: *mut ::std::os::raw::c_void,
+        rayResult: *mut btCollisionWorld_LocalRayResult,
+        normalInWorldSpace: bool,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld20ConvexResultCallbackD0Ev"]
+    pub fn btCollisionWorld_ConvexResultCallback_ConvexResultCallback_destructor(
+        this: *mut btCollisionWorld_ConvexResultCallback,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionWorld20ConvexResultCallback14needsCollisionEP17btBroadphaseProxy"]
+    pub fn btCollisionWorld_ConvexResultCallback_needsCollision(
+        this: *mut ::std::os::raw::c_void,
+        proxy0: *mut btBroadphaseProxy,
+    ) -> bool;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN16btCollisionWorld20ConvexResultCallback15addSingleResultERNS_17LocalConvexResultEb"]
     pub fn btCollisionWorld_ConvexResultCallback_addSingleResult(
         this: *mut ::std::os::raw::c_void,
         convexResult: *mut btCollisionWorld_LocalConvexResult,
         normalInWorldSpace: bool,
     ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld27ClosestConvexResultCallback15addSingleResultERNS_17LocalConvexResultEb"]
+    pub fn btCollisionWorld_ClosestConvexResultCallback_addSingleResult(
+        this: *mut ::std::os::raw::c_void,
+        convexResult: *mut btCollisionWorld_LocalConvexResult,
+        normalInWorldSpace: bool,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionWorld21ContactResultCallbackD0Ev"]
+    pub fn btCollisionWorld_ContactResultCallback_ContactResultCallback_destructor(
+        this: *mut btCollisionWorld_ContactResultCallback,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionWorld21ContactResultCallback14needsCollisionEP17btBroadphaseProxy"]
+    pub fn btCollisionWorld_ContactResultCallback_needsCollision(
+        this: *mut ::std::os::raw::c_void,
+        proxy0: *mut btBroadphaseProxy,
+    ) -> bool;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN16btCollisionWorld21ContactResultCallback15addSingleResultER15btManifoldPointPK24btCollisionObjectWrapperiiS5_ii"]
@@ -13179,6 +18310,73 @@ extern "C" {
         temporalAabbMax: *mut btVector3,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionShape12isPolyhedralEv"]
+    pub fn btCollisionShape_isPolyhedral(this: *const btCollisionShape) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionShape10isConvex2dEv"]
+    pub fn btCollisionShape_isConvex2d(this: *const btCollisionShape) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionShape8isConvexEv"]
+    pub fn btCollisionShape_isConvex(this: *const btCollisionShape) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionShape11isNonMovingEv"]
+    pub fn btCollisionShape_isNonMoving(this: *const btCollisionShape) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionShape9isConcaveEv"]
+    pub fn btCollisionShape_isConcave(this: *const btCollisionShape) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionShape10isCompoundEv"]
+    pub fn btCollisionShape_isCompound(this: *const btCollisionShape) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionShape10isSoftBodyEv"]
+    pub fn btCollisionShape_isSoftBody(this: *const btCollisionShape) -> bool;
+}
+extern "C" {
+
+    /// isInfinite is used to catch simulation error (aabb check)
+
+    #[link_name = "\u{1}_ZNK16btCollisionShape10isInfiniteEv"]
+    pub fn btCollisionShape_isInfinite(this: *const btCollisionShape) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionShape12getShapeTypeEv"]
+    pub fn btCollisionShape_getShapeType(this: *const btCollisionShape) -> ::std::os::raw::c_int;
+}
+extern "C" {
+
+    /// optional user data pointer
+
+    #[link_name = "\u{1}_ZN16btCollisionShape14setUserPointerEPv"]
+    pub fn btCollisionShape_setUserPointer(
+        this: *mut btCollisionShape,
+        userPtr: *mut ::std::os::raw::c_void,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionShape14getUserPointerEv"]
+    pub fn btCollisionShape_getUserPointer(
+        this: *const btCollisionShape,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionShape12setUserIndexEi"]
+    pub fn btCollisionShape_setUserIndex(this: *mut btCollisionShape, index: ::std::os::raw::c_int);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCollisionShape12getUserIndexEv"]
+    pub fn btCollisionShape_getUserIndex(this: *const btCollisionShape) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionShapeC2Ev"]
+    pub fn btCollisionShape_btCollisionShape(this: *mut btCollisionShape);
+}
 impl btCollisionShape {
     #[inline]
     pub unsafe fn calculateTemporalAabb(
@@ -13200,6 +18398,68 @@ impl btCollisionShape {
             temporalAabbMax,
         )
     }
+    #[inline]
+    pub unsafe fn isPolyhedral(&self) -> bool {
+        btCollisionShape_isPolyhedral(self)
+    }
+    #[inline]
+    pub unsafe fn isConvex2d(&self) -> bool {
+        btCollisionShape_isConvex2d(self)
+    }
+    #[inline]
+    pub unsafe fn isConvex(&self) -> bool {
+        btCollisionShape_isConvex(self)
+    }
+    #[inline]
+    pub unsafe fn isNonMoving(&self) -> bool {
+        btCollisionShape_isNonMoving(self)
+    }
+    #[inline]
+    pub unsafe fn isConcave(&self) -> bool {
+        btCollisionShape_isConcave(self)
+    }
+    #[inline]
+    pub unsafe fn isCompound(&self) -> bool {
+        btCollisionShape_isCompound(self)
+    }
+    #[inline]
+    pub unsafe fn isSoftBody(&self) -> bool {
+        btCollisionShape_isSoftBody(self)
+    }
+    #[inline]
+    pub unsafe fn isInfinite(&self) -> bool {
+        btCollisionShape_isInfinite(self)
+    }
+    #[inline]
+    pub unsafe fn getShapeType(&self) -> ::std::os::raw::c_int {
+        btCollisionShape_getShapeType(self)
+    }
+    #[inline]
+    pub unsafe fn setUserPointer(&mut self, userPtr: *mut ::std::os::raw::c_void) {
+        btCollisionShape_setUserPointer(self, userPtr)
+    }
+    #[inline]
+    pub unsafe fn getUserPointer(&self) -> *mut ::std::os::raw::c_void {
+        btCollisionShape_getUserPointer(self)
+    }
+    #[inline]
+    pub unsafe fn setUserIndex(&mut self, index: ::std::os::raw::c_int) {
+        btCollisionShape_setUserIndex(self, index)
+    }
+    #[inline]
+    pub unsafe fn getUserIndex(&self) -> ::std::os::raw::c_int {
+        btCollisionShape_getUserIndex(self)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionShape_btCollisionShape(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btCollisionShapeD0Ev"]
+    pub fn btCollisionShape_btCollisionShape_destructor(this: *mut btCollisionShape);
 }
 extern "C" {
 
@@ -13259,6 +18519,16 @@ extern "C" {
     pub fn btCollisionShape_getName(
         this: *mut ::std::os::raw::c_void,
     ) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+
+    /// the getAnisotropicRollingFrictionDirection can be used in combination with setAnisotropicFriction
+    /// ///See Bullet/Demos/RollingFrictionDemo for an example
+
+    #[link_name = "\u{1}_ZNK16btCollisionShape38getAnisotropicRollingFrictionDirectionEv"]
+    pub fn btCollisionShape_getAnisotropicRollingFrictionDirection(
+        this: *mut ::std::os::raw::c_void,
+    ) -> btVector3;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN16btCollisionShape9setMarginEd"]
@@ -13519,6 +18789,106 @@ extern "C" {
         penetrationVector: *mut btVector3,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_Z10AabbExpandR9btVector3S0_RKS_S2_"]
+    pub fn AabbExpand(
+        aabbMin: *mut btVector3,
+        aabbMax: *mut btVector3,
+        expansionMin: *const btVector3,
+        expansionMax: *const btVector3,
+    );
+}
+extern "C" {
+
+    /// conservative test for overlap between two aabbs
+
+    #[link_name = "\u{1}_Z21TestPointAgainstAabb2RK9btVector3S1_S1_"]
+    pub fn TestPointAgainstAabb2(
+        aabbMin1: *const btVector3,
+        aabbMax1: *const btVector3,
+        point: *const btVector3,
+    ) -> bool;
+}
+extern "C" {
+
+    /// conservative test for overlap between two aabbs
+
+    #[link_name = "\u{1}_Z20TestAabbAgainstAabb2RK9btVector3S1_S1_S1_"]
+    pub fn TestAabbAgainstAabb2(
+        aabbMin1: *const btVector3,
+        aabbMax1: *const btVector3,
+        aabbMin2: *const btVector3,
+        aabbMax2: *const btVector3,
+    ) -> bool;
+}
+extern "C" {
+
+    /// conservative test for overlap between triangle and aabb
+
+    #[link_name = "\u{1}_Z24TestTriangleAgainstAabb2PK9btVector3RS0_S2_"]
+    pub fn TestTriangleAgainstAabb2(
+        vertices: *const btVector3,
+        aabbMin: *const btVector3,
+        aabbMax: *const btVector3,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z9btOutcodeRK9btVector3S1_"]
+    pub fn btOutcode(p: *const btVector3, halfExtent: *const btVector3) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z10btRayAabb2RK9btVector3S1_PKjPS0_Rddd"]
+    pub fn btRayAabb2(
+        rayFrom: *const btVector3,
+        rayInvDirection: *const btVector3,
+        raySign: *const ::std::os::raw::c_uint,
+        bounds: *const btVector3,
+        tmin: *mut btScalar,
+        lambda_min: btScalar,
+        lambda_max: btScalar,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z9btRayAabbRK9btVector3S1_S1_S1_RdRS_"]
+    pub fn btRayAabb(
+        rayFrom: *const btVector3,
+        rayTo: *const btVector3,
+        aabbMin: *const btVector3,
+        aabbMax: *const btVector3,
+        param: *mut btScalar,
+        normal: *mut btVector3,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z15btTransformAabbRK9btVector3dRK11btTransformRS_S5_"]
+    pub fn btTransformAabb(
+        halfExtents: *const btVector3,
+        margin: btScalar,
+        t: *const btTransform,
+        aabbMinOut: *mut btVector3,
+        aabbMaxOut: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_Z15btTransformAabbRK9btVector3S1_dRK11btTransformRS_S5_"]
+    pub fn btTransformAabb1(
+        localAabbMin: *const btVector3,
+        localAabbMax: *const btVector3,
+        margin: btScalar,
+        trans: *const btTransform,
+        aabbMinOut: *mut btVector3,
+        aabbMaxOut: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_Z37testQuantizedAabbAgainstQuantizedAabbPKtS0_S0_S0_"]
+    pub fn testQuantizedAabbAgainstQuantizedAabb(
+        aabbMin1: *const ::std::os::raw::c_ushort,
+        aabbMax1: *const ::std::os::raw::c_ushort,
+        aabbMin2: *const ::std::os::raw::c_ushort,
+        aabbMax2: *const ::std::os::raw::c_ushort,
+    ) -> ::std::os::raw::c_uint;
+}
 /// The btConvexInternalShape is an internal base class, shared by most convex shape implementations.
 /// The btConvexInternalShape uses a default collision margin set to CONVEX_DISTANCE_MARGIN.
 /// This collision margin used by Gjk and some other algorithms, see also btCollisionMargin.h
@@ -13590,10 +18960,87 @@ fn bindgen_test_layout_btConvexInternalShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK21btConvexInternalShape26getImplicitShapeDimensionsEv"]
+    pub fn btConvexInternalShape_getImplicitShapeDimensions(
+        this: *const btConvexInternalShape,
+    ) -> *const btVector3;
+}
+extern "C" {
+
+    /// warning: use setImplicitShapeDimensions with care
+    /// ///changing a collision shape while the body is in the world is not recommended,
+    /// ///it is best to remove the body from the world, then make the change, and re-add it
+    /// ///alternatively flush the contact points, see documentation for 'cleanProxyFromPairs'
+
+    #[link_name = "\u{1}_ZN21btConvexInternalShape26setImplicitShapeDimensionsERK9btVector3"]
+    pub fn btConvexInternalShape_setImplicitShapeDimensions(
+        this: *mut btConvexInternalShape,
+        dimensions: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConvexInternalShape13setSafeMarginEdd"]
+    pub fn btConvexInternalShape_setSafeMargin(
+        this: *mut btConvexInternalShape,
+        minDimension: btScalar,
+        defaultMarginMultiplier: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConvexInternalShape13setSafeMarginERK9btVector3d"]
+    pub fn btConvexInternalShape_setSafeMargin1(
+        this: *mut btConvexInternalShape,
+        halfExtents: *const btVector3,
+        defaultMarginMultiplier: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConvexInternalShape17getLocalScalingNVEv"]
+    pub fn btConvexInternalShape_getLocalScalingNV(
+        this: *const btConvexInternalShape,
+    ) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConvexInternalShape11getMarginNVEv"]
+    pub fn btConvexInternalShape_getMarginNV(this: *const btConvexInternalShape) -> btScalar;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN21btConvexInternalShapeC2Ev"]
     pub fn btConvexInternalShape_btConvexInternalShape(this: *mut btConvexInternalShape);
 }
 impl btConvexInternalShape {
+    #[inline]
+    pub unsafe fn getImplicitShapeDimensions(&self) -> *const btVector3 {
+        btConvexInternalShape_getImplicitShapeDimensions(self)
+    }
+    #[inline]
+    pub unsafe fn setImplicitShapeDimensions(&mut self, dimensions: *const btVector3) {
+        btConvexInternalShape_setImplicitShapeDimensions(self, dimensions)
+    }
+    #[inline]
+    pub unsafe fn setSafeMargin(
+        &mut self,
+        minDimension: btScalar,
+        defaultMarginMultiplier: btScalar,
+    ) {
+        btConvexInternalShape_setSafeMargin(self, minDimension, defaultMarginMultiplier)
+    }
+    #[inline]
+    pub unsafe fn setSafeMargin1(
+        &mut self,
+        halfExtents: *const btVector3,
+        defaultMarginMultiplier: btScalar,
+    ) {
+        btConvexInternalShape_setSafeMargin1(self, halfExtents, defaultMarginMultiplier)
+    }
+    #[inline]
+    pub unsafe fn getLocalScalingNV(&self) -> *const btVector3 {
+        btConvexInternalShape_getLocalScalingNV(self)
+    }
+    #[inline]
+    pub unsafe fn getMarginNV(&self) -> btScalar {
+        btConvexInternalShape_getMarginNV(self)
+    }
     #[inline]
     pub unsafe fn new() -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
@@ -13602,11 +19049,27 @@ impl btConvexInternalShape {
     }
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN21btConvexInternalShapeD0Ev"]
+    pub fn btConvexInternalShape_btConvexInternalShape_destructor(this: *mut btConvexInternalShape);
+}
+extern "C" {
     #[link_name = "\u{1}_ZNK21btConvexInternalShape24localGetSupportingVertexERK9btVector3"]
     pub fn btConvexInternalShape_localGetSupportingVertex(
         this: *mut ::std::os::raw::c_void,
         vec: *const btVector3,
     ) -> btVector3;
+}
+extern "C" {
+
+    /// getAabb's default implementation is brute force, expected derived classes to implement a fast dedicated version
+
+    #[link_name = "\u{1}_ZNK21btConvexInternalShape7getAabbERK11btTransformR9btVector3S4_"]
+    pub fn btConvexInternalShape_getAabb(
+        this: *mut ::std::os::raw::c_void,
+        t: *const btTransform,
+        aabbMin: *mut btVector3,
+        aabbMax: *mut btVector3,
+    );
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK21btConvexInternalShape11getAabbSlowERK11btTransformR9btVector3S4_"]
@@ -13622,6 +19085,34 @@ extern "C" {
     pub fn btConvexInternalShape_setLocalScaling(
         this: *mut ::std::os::raw::c_void,
         scaling: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConvexInternalShape15getLocalScalingEv"]
+    pub fn btConvexInternalShape_getLocalScaling(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConvexInternalShape9setMarginEd"]
+    pub fn btConvexInternalShape_setMargin(this: *mut ::std::os::raw::c_void, margin: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConvexInternalShape9getMarginEv"]
+    pub fn btConvexInternalShape_getMargin(this: *mut ::std::os::raw::c_void) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConvexInternalShape36getNumPreferredPenetrationDirectionsEv"]
+    pub fn btConvexInternalShape_getNumPreferredPenetrationDirections(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConvexInternalShape32getPreferredPenetrationDirectionEiR9btVector3"]
+    pub fn btConvexInternalShape_getPreferredPenetrationDirection(
+        this: *mut ::std::os::raw::c_void,
+        index: ::std::os::raw::c_int,
+        penetrationVector: *mut btVector3,
     );
 }
 extern "C" {
@@ -13784,6 +19275,32 @@ fn bindgen_test_layout_btConvexInternalAabbCachingShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN32btConvexInternalAabbCachingShape18setCachedLocalAabbERK9btVector3S2_"]
+    pub fn btConvexInternalAabbCachingShape_setCachedLocalAabb(
+        this: *mut btConvexInternalAabbCachingShape,
+        aabbMin: *const btVector3,
+        aabbMax: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK32btConvexInternalAabbCachingShape18getCachedLocalAabbER9btVector3S1_"]
+    pub fn btConvexInternalAabbCachingShape_getCachedLocalAabb(
+        this: *const btConvexInternalAabbCachingShape,
+        aabbMin: *mut btVector3,
+        aabbMax: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK32btConvexInternalAabbCachingShape17getNonvirtualAabbERK11btTransformR9btVector3S4_d"]
+    pub fn btConvexInternalAabbCachingShape_getNonvirtualAabb(
+        this: *const btConvexInternalAabbCachingShape,
+        trans: *const btTransform,
+        aabbMin: *mut btVector3,
+        aabbMax: *mut btVector3,
+        margin: btScalar,
+    );
+}
+extern "C" {
     #[link_name = "\u{1}_ZN32btConvexInternalAabbCachingShape15recalcLocalAabbEv"]
     pub fn btConvexInternalAabbCachingShape_recalcLocalAabb(
         this: *mut btConvexInternalAabbCachingShape,
@@ -13796,6 +19313,28 @@ extern "C" {
     );
 }
 impl btConvexInternalAabbCachingShape {
+    #[inline]
+    pub unsafe fn setCachedLocalAabb(
+        &mut self,
+        aabbMin: *const btVector3,
+        aabbMax: *const btVector3,
+    ) {
+        btConvexInternalAabbCachingShape_setCachedLocalAabb(self, aabbMin, aabbMax)
+    }
+    #[inline]
+    pub unsafe fn getCachedLocalAabb(&self, aabbMin: *mut btVector3, aabbMax: *mut btVector3) {
+        btConvexInternalAabbCachingShape_getCachedLocalAabb(self, aabbMin, aabbMax)
+    }
+    #[inline]
+    pub unsafe fn getNonvirtualAabb(
+        &self,
+        trans: *const btTransform,
+        aabbMin: *mut btVector3,
+        aabbMax: *mut btVector3,
+        margin: btScalar,
+    ) {
+        btConvexInternalAabbCachingShape_getNonvirtualAabb(self, trans, aabbMin, aabbMax, margin)
+    }
     #[inline]
     pub unsafe fn recalcLocalAabb(&mut self) {
         btConvexInternalAabbCachingShape_recalcLocalAabb(self)
@@ -13859,10 +19398,20 @@ fn bindgen_test_layout_btPolyhedralConvexShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK23btPolyhedralConvexShape19getConvexPolyhedronEv"]
+    pub fn btPolyhedralConvexShape_getConvexPolyhedron(
+        this: *const btPolyhedralConvexShape,
+    ) -> *const btConvexPolyhedron;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN23btPolyhedralConvexShapeC2Ev"]
     pub fn btPolyhedralConvexShape_btPolyhedralConvexShape(this: *mut btPolyhedralConvexShape);
 }
 impl btPolyhedralConvexShape {
+    #[inline]
+    pub unsafe fn getConvexPolyhedron(&self) -> *const btConvexPolyhedron {
+        btPolyhedralConvexShape_getConvexPolyhedron(self)
+    }
     #[inline]
     pub unsafe fn new() -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
@@ -14026,6 +19575,32 @@ fn bindgen_test_layout_btPolyhedralConvexAabbCachingShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN34btPolyhedralConvexAabbCachingShape18setCachedLocalAabbERK9btVector3S2_"]
+    pub fn btPolyhedralConvexAabbCachingShape_setCachedLocalAabb(
+        this: *mut btPolyhedralConvexAabbCachingShape,
+        aabbMin: *const btVector3,
+        aabbMax: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK34btPolyhedralConvexAabbCachingShape18getCachedLocalAabbER9btVector3S1_"]
+    pub fn btPolyhedralConvexAabbCachingShape_getCachedLocalAabb(
+        this: *const btPolyhedralConvexAabbCachingShape,
+        aabbMin: *mut btVector3,
+        aabbMax: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK34btPolyhedralConvexAabbCachingShape17getNonvirtualAabbERK11btTransformR9btVector3S4_d"]
+    pub fn btPolyhedralConvexAabbCachingShape_getNonvirtualAabb(
+        this: *const btPolyhedralConvexAabbCachingShape,
+        trans: *const btTransform,
+        aabbMin: *mut btVector3,
+        aabbMax: *mut btVector3,
+        margin: btScalar,
+    );
+}
+extern "C" {
     #[link_name = "\u{1}_ZN34btPolyhedralConvexAabbCachingShape15recalcLocalAabbEv"]
     pub fn btPolyhedralConvexAabbCachingShape_recalcLocalAabb(
         this: *mut btPolyhedralConvexAabbCachingShape,
@@ -14038,6 +19613,28 @@ extern "C" {
     );
 }
 impl btPolyhedralConvexAabbCachingShape {
+    #[inline]
+    pub unsafe fn setCachedLocalAabb(
+        &mut self,
+        aabbMin: *const btVector3,
+        aabbMax: *const btVector3,
+    ) {
+        btPolyhedralConvexAabbCachingShape_setCachedLocalAabb(self, aabbMin, aabbMax)
+    }
+    #[inline]
+    pub unsafe fn getCachedLocalAabb(&self, aabbMin: *mut btVector3, aabbMax: *mut btVector3) {
+        btPolyhedralConvexAabbCachingShape_getCachedLocalAabb(self, aabbMin, aabbMax)
+    }
+    #[inline]
+    pub unsafe fn getNonvirtualAabb(
+        &self,
+        trans: *const btTransform,
+        aabbMin: *mut btVector3,
+        aabbMax: *mut btVector3,
+        margin: btScalar,
+    ) {
+        btPolyhedralConvexAabbCachingShape_getNonvirtualAabb(self, trans, aabbMin, aabbMax, margin)
+    }
     #[inline]
     pub unsafe fn recalcLocalAabb(&mut self) {
         btPolyhedralConvexAabbCachingShape_recalcLocalAabb(self)
@@ -14085,16 +19682,63 @@ fn bindgen_test_layout_btBoxShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape24getHalfExtentsWithMarginEv"]
+    pub fn btBoxShape_getHalfExtentsWithMargin(this: *const btBoxShape) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape27getHalfExtentsWithoutMarginEv"]
+    pub fn btBoxShape_getHalfExtentsWithoutMargin(this: *const btBoxShape) -> *const btVector3;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN10btBoxShapeC1ERK9btVector3"]
     pub fn btBoxShape_btBoxShape(this: *mut btBoxShape, boxHalfExtents: *const btVector3);
 }
 impl btBoxShape {
+    #[inline]
+    pub unsafe fn getHalfExtentsWithMargin(&self) -> btVector3 {
+        btBoxShape_getHalfExtentsWithMargin(self)
+    }
+    #[inline]
+    pub unsafe fn getHalfExtentsWithoutMargin(&self) -> *const btVector3 {
+        btBoxShape_getHalfExtentsWithoutMargin(self)
+    }
     #[inline]
     pub unsafe fn new(boxHalfExtents: *const btVector3) -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
         btBoxShape_btBoxShape(&mut __bindgen_tmp, boxHalfExtents);
         __bindgen_tmp
     }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape24localGetSupportingVertexERK9btVector3"]
+    pub fn btBoxShape_localGetSupportingVertex(
+        this: *mut ::std::os::raw::c_void,
+        vec: *const btVector3,
+    ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape37localGetSupportingVertexWithoutMarginERK9btVector3"]
+    pub fn btBoxShape_localGetSupportingVertexWithoutMargin(
+        this: *mut ::std::os::raw::c_void,
+        vec: *const btVector3,
+    ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape49batchedUnitVectorGetSupportingVertexWithoutMarginEPK9btVector3PS0_i"]
+    pub fn btBoxShape_batchedUnitVectorGetSupportingVertexWithoutMargin(
+        this: *mut ::std::os::raw::c_void,
+        vectors: *const btVector3,
+        supportVerticesOut: *mut btVector3,
+        numVectors: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN10btBoxShape9setMarginEd"]
+    pub fn btBoxShape_setMargin(this: *mut ::std::os::raw::c_void, collisionMargin: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN10btBoxShape15setLocalScalingERK9btVector3"]
+    pub fn btBoxShape_setLocalScaling(this: *mut ::std::os::raw::c_void, scaling: *const btVector3);
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK10btBoxShape7getAabbERK11btTransformR9btVector3S4_"]
@@ -14111,6 +19755,78 @@ extern "C" {
         this: *mut ::std::os::raw::c_void,
         mass: btScalar,
         inertia: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape8getPlaneER9btVector3S1_i"]
+    pub fn btBoxShape_getPlane(
+        this: *mut ::std::os::raw::c_void,
+        planeNormal: *mut btVector3,
+        planeSupport: *mut btVector3,
+        i: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape12getNumPlanesEv"]
+    pub fn btBoxShape_getNumPlanes(this: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape14getNumVerticesEv"]
+    pub fn btBoxShape_getNumVertices(this: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape11getNumEdgesEv"]
+    pub fn btBoxShape_getNumEdges(this: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape9getVertexEiR9btVector3"]
+    pub fn btBoxShape_getVertex(
+        this: *mut ::std::os::raw::c_void,
+        i: ::std::os::raw::c_int,
+        vtx: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape16getPlaneEquationER9btVector4i"]
+    pub fn btBoxShape_getPlaneEquation(
+        this: *mut ::std::os::raw::c_void,
+        plane: *mut btVector4,
+        i: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape7getEdgeEiR9btVector3S1_"]
+    pub fn btBoxShape_getEdge(
+        this: *mut ::std::os::raw::c_void,
+        i: ::std::os::raw::c_int,
+        pa: *mut btVector3,
+        pb: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape8isInsideERK9btVector3d"]
+    pub fn btBoxShape_isInside(
+        this: *mut ::std::os::raw::c_void,
+        pt: *const btVector3,
+        tolerance: btScalar,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape7getNameEv"]
+    pub fn btBoxShape_getName(this: *mut ::std::os::raw::c_void) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape36getNumPreferredPenetrationDirectionsEv"]
+    pub fn btBoxShape_getNumPreferredPenetrationDirections(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btBoxShape32getPreferredPenetrationDirectionEiR9btVector3"]
+    pub fn btBoxShape_getPreferredPenetrationDirection(
+        this: *mut ::std::os::raw::c_void,
+        index: ::std::os::raw::c_int,
+        penetrationVector: *mut btVector3,
     );
 }
 /// The btSphereShape implements an implicit sphere, centered around a local origin with radius.
@@ -14131,6 +19847,34 @@ fn bindgen_test_layout_btSphereShape() {
         8usize,
         concat!("Alignment of ", stringify!(btSphereShape))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK13btSphereShape9getRadiusEv"]
+    pub fn btSphereShape_getRadius(this: *const btSphereShape) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN13btSphereShape17setUnscaledRadiusEd"]
+    pub fn btSphereShape_setUnscaledRadius(this: *mut btSphereShape, radius: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN13btSphereShapeC1Ed"]
+    pub fn btSphereShape_btSphereShape(this: *mut btSphereShape, radius: btScalar);
+}
+impl btSphereShape {
+    #[inline]
+    pub unsafe fn getRadius(&self) -> btScalar {
+        btSphereShape_getRadius(self)
+    }
+    #[inline]
+    pub unsafe fn setUnscaledRadius(&mut self, radius: btScalar) {
+        btSphereShape_setUnscaledRadius(self, radius)
+    }
+    #[inline]
+    pub unsafe fn new(radius: btScalar) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btSphereShape_btSphereShape(&mut __bindgen_tmp, radius);
+        __bindgen_tmp
+    }
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK13btSphereShape24localGetSupportingVertexERK9btVector3"]
@@ -14172,6 +19916,20 @@ extern "C" {
         aabbMax: *mut btVector3,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK13btSphereShape7getNameEv"]
+    pub fn btSphereShape_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN13btSphereShape9setMarginEd"]
+    pub fn btSphereShape_setMargin(this: *mut ::std::os::raw::c_void, margin: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK13btSphereShape9getMarginEv"]
+    pub fn btSphereShape_getMargin(this: *mut ::std::os::raw::c_void) -> btScalar;
+}
 /// The btCapsuleShape represents a capsule around the Y axis, there is also the btCapsuleShapeX aligned around the X axis and btCapsuleShapeZ around the Z axis.
 /// The total height is height+2*radius, so the height is just the height between the center of each 'sphere' of the capsule caps.
 /// The btCapsuleShape is a convex hull of two spheres. The btMultiSphereShape is a more general collision shape that takes the convex hull of multiple sphere, so it can also represent a capsule when just using two spheres.
@@ -14205,8 +19963,34 @@ fn bindgen_test_layout_btCapsuleShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK14btCapsuleShape9getUpAxisEv"]
+    pub fn btCapsuleShape_getUpAxis(this: *const btCapsuleShape) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK14btCapsuleShape9getRadiusEv"]
+    pub fn btCapsuleShape_getRadius(this: *const btCapsuleShape) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK14btCapsuleShape13getHalfHeightEv"]
+    pub fn btCapsuleShape_getHalfHeight(this: *const btCapsuleShape) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN14btCapsuleShape16deSerializeFloatEP18btCapsuleShapeData"]
+    pub fn btCapsuleShape_deSerializeFloat(
+        this: *mut btCapsuleShape,
+        dataBuffer: *mut btCapsuleShapeData,
+    );
+}
+extern "C" {
+
+    /// only used for btCapsuleShapeZ and btCapsuleShapeX subclasses.
+
+    #[link_name = "\u{1}_ZN14btCapsuleShapeC1Ev"]
+    pub fn btCapsuleShape_btCapsuleShape(this: *mut btCapsuleShape);
+}
+extern "C" {
     #[link_name = "\u{1}_ZN14btCapsuleShapeC1Edd"]
-    pub fn btCapsuleShape_btCapsuleShape(
+    pub fn btCapsuleShape_btCapsuleShape1(
         this: *mut btCapsuleShape,
         radius: btScalar,
         height: btScalar,
@@ -14214,9 +19998,31 @@ extern "C" {
 }
 impl btCapsuleShape {
     #[inline]
-    pub unsafe fn new(radius: btScalar, height: btScalar) -> Self {
+    pub unsafe fn getUpAxis(&self) -> ::std::os::raw::c_int {
+        btCapsuleShape_getUpAxis(self)
+    }
+    #[inline]
+    pub unsafe fn getRadius(&self) -> btScalar {
+        btCapsuleShape_getRadius(self)
+    }
+    #[inline]
+    pub unsafe fn getHalfHeight(&self) -> btScalar {
+        btCapsuleShape_getHalfHeight(self)
+    }
+    #[inline]
+    pub unsafe fn deSerializeFloat(&mut self, dataBuffer: *mut btCapsuleShapeData) {
+        btCapsuleShape_deSerializeFloat(self, dataBuffer)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
-        btCapsuleShape_btCapsuleShape(&mut __bindgen_tmp, radius, height);
+        btCapsuleShape_btCapsuleShape(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(radius: btScalar, height: btScalar) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCapsuleShape_btCapsuleShape1(&mut __bindgen_tmp, radius, height);
         __bindgen_tmp
     }
 }
@@ -14249,6 +20055,38 @@ extern "C" {
         supportVerticesOut: *mut btVector3,
         numVectors: ::std::os::raw::c_int,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN14btCapsuleShape9setMarginEd"]
+    pub fn btCapsuleShape_setMargin(this: *mut ::std::os::raw::c_void, collisionMargin: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK14btCapsuleShape7getAabbERK11btTransformR9btVector3S4_"]
+    pub fn btCapsuleShape_getAabb(
+        this: *mut ::std::os::raw::c_void,
+        t: *const btTransform,
+        aabbMin: *mut btVector3,
+        aabbMax: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK14btCapsuleShape7getNameEv"]
+    pub fn btCapsuleShape_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN14btCapsuleShape15setLocalScalingERK9btVector3"]
+    pub fn btCapsuleShape_setLocalScaling(
+        this: *mut ::std::os::raw::c_void,
+        scaling: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK14btCapsuleShape38getAnisotropicRollingFrictionDirectionEv"]
+    pub fn btCapsuleShape_getAnisotropicRollingFrictionDirection(
+        this: *mut ::std::os::raw::c_void,
+    ) -> btVector3;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK14btCapsuleShape28calculateSerializeBufferSizeEv"]
@@ -14303,6 +20141,12 @@ impl btCapsuleShapeX {
         __bindgen_tmp
     }
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCapsuleShapeX7getNameEv"]
+    pub fn btCapsuleShapeX_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
+}
 /// btCapsuleShapeZ represents a capsule around the Z axis
 /// the total height is height+2*radius, so the height is just the height between the center of each 'sphere' of the capsule caps.
 #[repr(C)]
@@ -14338,6 +20182,12 @@ impl btCapsuleShapeZ {
         btCapsuleShapeZ_btCapsuleShapeZ(&mut __bindgen_tmp, radius, height);
         __bindgen_tmp
     }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCapsuleShapeZ7getNameEv"]
+    pub fn btCapsuleShapeZ_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
 }
 /// do not change those serialization structures, it requires an updated sBulletDNAstr/sBulletDNAstr64
 #[repr(C)]
@@ -14423,6 +20273,20 @@ fn bindgen_test_layout_btCylinderShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK15btCylinderShape24getHalfExtentsWithMarginEv"]
+    pub fn btCylinderShape_getHalfExtentsWithMargin(this: *const btCylinderShape) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCylinderShape27getHalfExtentsWithoutMarginEv"]
+    pub fn btCylinderShape_getHalfExtentsWithoutMargin(
+        this: *const btCylinderShape,
+    ) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCylinderShape9getUpAxisEv"]
+    pub fn btCylinderShape_getUpAxis(this: *const btCylinderShape) -> ::std::os::raw::c_int;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN15btCylinderShapeC1ERK9btVector3"]
     pub fn btCylinderShape_btCylinderShape(
         this: *mut btCylinderShape,
@@ -14430,6 +20294,18 @@ extern "C" {
     );
 }
 impl btCylinderShape {
+    #[inline]
+    pub unsafe fn getHalfExtentsWithMargin(&self) -> btVector3 {
+        btCylinderShape_getHalfExtentsWithMargin(self)
+    }
+    #[inline]
+    pub unsafe fn getHalfExtentsWithoutMargin(&self) -> *const btVector3 {
+        btCylinderShape_getHalfExtentsWithoutMargin(self)
+    }
+    #[inline]
+    pub unsafe fn getUpAxis(&self) -> ::std::os::raw::c_int {
+        btCylinderShape_getUpAxis(self)
+    }
     #[inline]
     pub unsafe fn new(halfExtents: *const btVector3) -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
@@ -14469,6 +20345,40 @@ extern "C" {
         supportVerticesOut: *mut btVector3,
         numVectors: ::std::os::raw::c_int,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btCylinderShape9setMarginEd"]
+    pub fn btCylinderShape_setMargin(this: *mut ::std::os::raw::c_void, collisionMargin: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCylinderShape24localGetSupportingVertexERK9btVector3"]
+    pub fn btCylinderShape_localGetSupportingVertex(
+        this: *mut ::std::os::raw::c_void,
+        vec: *const btVector3,
+    ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCylinderShape38getAnisotropicRollingFrictionDirectionEv"]
+    pub fn btCylinderShape_getAnisotropicRollingFrictionDirection(
+        this: *mut ::std::os::raw::c_void,
+    ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCylinderShape9getRadiusEv"]
+    pub fn btCylinderShape_getRadius(this: *mut ::std::os::raw::c_void) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btCylinderShape15setLocalScalingERK9btVector3"]
+    pub fn btCylinderShape_setLocalScaling(
+        this: *mut ::std::os::raw::c_void,
+        scaling: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCylinderShape7getNameEv"]
+    pub fn btCylinderShape_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK15btCylinderShape28calculateSerializeBufferSizeEv"]
@@ -14536,6 +20446,16 @@ extern "C" {
         numVectors: ::std::os::raw::c_int,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCylinderShapeX7getNameEv"]
+    pub fn btCylinderShapeX_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCylinderShapeX9getRadiusEv"]
+    pub fn btCylinderShapeX_getRadius(this: *mut ::std::os::raw::c_void) -> btScalar;
+}
 #[repr(C)]
 #[derive(Debug)]
 pub struct btCylinderShapeZ {
@@ -14584,6 +20504,16 @@ extern "C" {
         supportVerticesOut: *mut btVector3,
         numVectors: ::std::os::raw::c_int,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCylinderShapeZ7getNameEv"]
+    pub fn btCylinderShapeZ_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btCylinderShapeZ9getRadiusEv"]
+    pub fn btCylinderShapeZ_getRadius(this: *mut ::std::os::raw::c_void) -> btScalar;
 }
 /// do not change those serialization structures, it requires an updated sBulletDNAstr/sBulletDNAstr64
 #[repr(C)]
@@ -14702,6 +20632,22 @@ fn bindgen_test_layout_btConeShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK11btConeShape9getRadiusEv"]
+    pub fn btConeShape_getRadius(this: *const btConeShape) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btConeShape9getHeightEv"]
+    pub fn btConeShape_getHeight(this: *const btConeShape) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btConeShape9setRadiusEd"]
+    pub fn btConeShape_setRadius(this: *mut btConeShape, radius: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btConeShape9setHeightEd"]
+    pub fn btConeShape_setHeight(this: *mut btConeShape, height: btScalar);
+}
+extern "C" {
 
     /// choose upAxis index
 
@@ -14709,13 +20655,37 @@ extern "C" {
     pub fn btConeShape_setConeUpIndex(this: *mut btConeShape, upIndex: ::std::os::raw::c_int);
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK11btConeShape14getConeUpIndexEv"]
+    pub fn btConeShape_getConeUpIndex(this: *const btConeShape) -> ::std::os::raw::c_int;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN11btConeShapeC1Edd"]
     pub fn btConeShape_btConeShape(this: *mut btConeShape, radius: btScalar, height: btScalar);
 }
 impl btConeShape {
     #[inline]
+    pub unsafe fn getRadius(&self) -> btScalar {
+        btConeShape_getRadius(self)
+    }
+    #[inline]
+    pub unsafe fn getHeight(&self) -> btScalar {
+        btConeShape_getHeight(self)
+    }
+    #[inline]
+    pub unsafe fn setRadius(&mut self, radius: btScalar) {
+        btConeShape_setRadius(self, radius)
+    }
+    #[inline]
+    pub unsafe fn setHeight(&mut self, height: btScalar) {
+        btConeShape_setHeight(self, height)
+    }
+    #[inline]
     pub unsafe fn setConeUpIndex(&mut self, upIndex: ::std::os::raw::c_int) {
         btConeShape_setConeUpIndex(self, upIndex)
+    }
+    #[inline]
+    pub unsafe fn getConeUpIndex(&self) -> ::std::os::raw::c_int {
+        btConeShape_getConeUpIndex(self)
     }
     #[inline]
     pub unsafe fn new(radius: btScalar, height: btScalar) -> Self {
@@ -14746,6 +20716,24 @@ extern "C" {
         supportVerticesOut: *mut btVector3,
         numVectors: ::std::os::raw::c_int,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btConeShape21calculateLocalInertiaEdR9btVector3"]
+    pub fn btConeShape_calculateLocalInertia(
+        this: *mut ::std::os::raw::c_void,
+        mass: btScalar,
+        inertia: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btConeShape7getNameEv"]
+    pub fn btConeShape_getName(this: *mut ::std::os::raw::c_void) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btConeShape38getAnisotropicRollingFrictionDirectionEv"]
+    pub fn btConeShape_getAnisotropicRollingFrictionDirection(
+        this: *mut ::std::os::raw::c_void,
+    ) -> btVector3;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN11btConeShape15setLocalScalingERK9btVector3"]
@@ -14802,6 +20790,17 @@ impl btConeShapeX {
         __bindgen_tmp
     }
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btConeShapeX38getAnisotropicRollingFrictionDirectionEv"]
+    pub fn btConeShapeX_getAnisotropicRollingFrictionDirection(
+        this: *mut ::std::os::raw::c_void,
+    ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btConeShapeX7getNameEv"]
+    pub fn btConeShapeX_getName(this: *mut ::std::os::raw::c_void)
+        -> *const ::std::os::raw::c_char;
+}
 /// btConeShapeZ implements a Cone shape, around the Z axis
 #[repr(C)]
 #[derive(Debug)]
@@ -14832,6 +20831,17 @@ impl btConeShapeZ {
         btConeShapeZ_btConeShapeZ(&mut __bindgen_tmp, radius, height);
         __bindgen_tmp
     }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btConeShapeZ38getAnisotropicRollingFrictionDirectionEv"]
+    pub fn btConeShapeZ_getAnisotropicRollingFrictionDirection(
+        this: *mut ::std::os::raw::c_void,
+    ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btConeShapeZ7getNameEv"]
+    pub fn btConeShapeZ_getName(this: *mut ::std::os::raw::c_void)
+        -> *const ::std::os::raw::c_char;
 }
 /// do not change those serialization structures, it requires an updated sBulletDNAstr/sBulletDNAstr64
 #[repr(C)]
@@ -15017,6 +21027,14 @@ extern "C" {
         aabbMax: *const btVector3,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK14btConcaveShape9getMarginEv"]
+    pub fn btConcaveShape_getMargin(this: *mut ::std::os::raw::c_void) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN14btConcaveShape9setMarginEd"]
+    pub fn btConcaveShape_setMargin(this: *mut ::std::os::raw::c_void, collisionMargin: btScalar);
+}
 /// The btStaticPlaneShape simulates an infinite non-moving (static) collision plane.
 #[repr(C)]
 #[derive(Debug)]
@@ -15092,6 +21110,14 @@ fn bindgen_test_layout_btStaticPlaneShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK18btStaticPlaneShape14getPlaneNormalEv"]
+    pub fn btStaticPlaneShape_getPlaneNormal(this: *const btStaticPlaneShape) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btStaticPlaneShape16getPlaneConstantEv"]
+    pub fn btStaticPlaneShape_getPlaneConstant(this: *const btStaticPlaneShape) -> *const btScalar;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN18btStaticPlaneShapeC1ERK9btVector3d"]
     pub fn btStaticPlaneShape_btStaticPlaneShape(
         this: *mut btStaticPlaneShape,
@@ -15100,6 +21126,14 @@ extern "C" {
     );
 }
 impl btStaticPlaneShape {
+    #[inline]
+    pub unsafe fn getPlaneNormal(&self) -> *const btVector3 {
+        btStaticPlaneShape_getPlaneNormal(self)
+    }
+    #[inline]
+    pub unsafe fn getPlaneConstant(&self) -> *const btScalar {
+        btStaticPlaneShape_getPlaneConstant(self)
+    }
     #[inline]
     pub unsafe fn new(planeNormal: *const btVector3, planeConstant: btScalar) -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
@@ -15149,6 +21183,12 @@ extern "C" {
     pub fn btStaticPlaneShape_getLocalScaling(
         this: *mut ::std::os::raw::c_void,
     ) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btStaticPlaneShape7getNameEv"]
+    pub fn btStaticPlaneShape_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK18btStaticPlaneShape28calculateSerializeBufferSizeEv"]
@@ -15282,8 +21322,35 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN17btConvexHullShape17getUnscaledPointsEv"]
+    pub fn btConvexHullShape_getUnscaledPoints(this: *mut btConvexHullShape) -> *mut btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btConvexHullShape17getUnscaledPointsEv"]
+    pub fn btConvexHullShape_getUnscaledPoints1(this: *const btConvexHullShape)
+        -> *const btVector3;
+}
+extern "C" {
+
+    /// getPoints is obsolete, please use getUnscaledPoints
+
+    #[link_name = "\u{1}_ZNK17btConvexHullShape9getPointsEv"]
+    pub fn btConvexHullShape_getPoints(this: *const btConvexHullShape) -> *const btVector3;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN17btConvexHullShape18optimizeConvexHullEv"]
     pub fn btConvexHullShape_optimizeConvexHull(this: *mut btConvexHullShape);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btConvexHullShape14getScaledPointEi"]
+    pub fn btConvexHullShape_getScaledPoint(
+        this: *const btConvexHullShape,
+        i: ::std::os::raw::c_int,
+    ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btConvexHullShape12getNumPointsEv"]
+    pub fn btConvexHullShape_getNumPoints(this: *const btConvexHullShape) -> ::std::os::raw::c_int;
 }
 extern "C" {
 
@@ -15305,8 +21372,28 @@ impl btConvexHullShape {
         btConvexHullShape_addPoint(self, point, recalculateLocalAabb)
     }
     #[inline]
+    pub unsafe fn getUnscaledPoints(&mut self) -> *mut btVector3 {
+        btConvexHullShape_getUnscaledPoints(self)
+    }
+    #[inline]
+    pub unsafe fn getUnscaledPoints1(&self) -> *const btVector3 {
+        btConvexHullShape_getUnscaledPoints1(self)
+    }
+    #[inline]
+    pub unsafe fn getPoints(&self) -> *const btVector3 {
+        btConvexHullShape_getPoints(self)
+    }
+    #[inline]
     pub unsafe fn optimizeConvexHull(&mut self) {
         btConvexHullShape_optimizeConvexHull(self)
+    }
+    #[inline]
+    pub unsafe fn getScaledPoint(&self, i: ::std::os::raw::c_int) -> btVector3 {
+        btConvexHullShape_getScaledPoint(self, i)
+    }
+    #[inline]
+    pub unsafe fn getNumPoints(&self) -> ::std::os::raw::c_int {
+        btConvexHullShape_getNumPoints(self)
     }
     #[inline]
     pub unsafe fn new(
@@ -15353,6 +21440,12 @@ extern "C" {
         witnesPtMin: *mut btVector3,
         witnesPtMax: *mut btVector3,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btConvexHullShape7getNameEv"]
+    pub fn btConvexHullShape_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK17btConvexHullShape14getNumVerticesEv"]
@@ -15557,6 +21650,23 @@ extern "C" {
         aabbMax: *mut btVector3,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btStridingMeshInterface10getScalingEv"]
+    pub fn btStridingMeshInterface_getScaling(
+        this: *const btStridingMeshInterface,
+    ) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btStridingMeshInterface10setScalingERK9btVector3"]
+    pub fn btStridingMeshInterface_setScaling(
+        this: *mut btStridingMeshInterface,
+        scaling: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btStridingMeshInterfaceC2Ev"]
+    pub fn btStridingMeshInterface_btStridingMeshInterface(this: *mut btStridingMeshInterface);
+}
 impl btStridingMeshInterface {
     #[inline]
     pub unsafe fn calculateAabbBruteForce(
@@ -15565,6 +21675,20 @@ impl btStridingMeshInterface {
         aabbMax: *mut btVector3,
     ) {
         btStridingMeshInterface_calculateAabbBruteForce(self, aabbMin, aabbMax)
+    }
+    #[inline]
+    pub unsafe fn getScaling(&self) -> *const btVector3 {
+        btStridingMeshInterface_getScaling(self)
+    }
+    #[inline]
+    pub unsafe fn setScaling(&mut self, scaling: *const btVector3) {
+        btStridingMeshInterface_setScaling(self, scaling)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btStridingMeshInterface_btStridingMeshInterface(&mut __bindgen_tmp);
+        __bindgen_tmp
     }
 }
 extern "C" {
@@ -15659,6 +21783,26 @@ extern "C" {
     pub fn btStridingMeshInterface_preallocateIndices(
         this: *mut ::std::os::raw::c_void,
         numindices: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btStridingMeshInterface14hasPremadeAabbEv"]
+    pub fn btStridingMeshInterface_hasPremadeAabb(this: *mut ::std::os::raw::c_void) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btStridingMeshInterface14setPremadeAabbERK9btVector3S2_"]
+    pub fn btStridingMeshInterface_setPremadeAabb(
+        this: *mut ::std::os::raw::c_void,
+        aabbMin: *const btVector3,
+        aabbMax: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btStridingMeshInterface14getPremadeAabbEP9btVector3S1_"]
+    pub fn btStridingMeshInterface_getPremadeAabb(
+        this: *mut ::std::os::raw::c_void,
+        aabbMin: *mut btVector3,
+        aabbMax: *mut btVector3,
     );
 }
 extern "C" {
@@ -16102,6 +22246,18 @@ fn bindgen_test_layout_btIndexedMesh() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN13btIndexedMeshC1Ev"]
+    pub fn btIndexedMesh_btIndexedMesh(this: *mut btIndexedMesh);
+}
+impl btIndexedMesh {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btIndexedMesh_btIndexedMesh(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
 pub type IndexedMeshArray = btAlignedObjectArray<btIndexedMesh>;
 /// The btTriangleIndexVertexArray allows to access multiple triangle meshes, by indexing into existing triangle/index arrays.
 /// Additional meshes can be added using addIndexedMesh
@@ -16183,8 +22339,34 @@ fn bindgen_test_layout_btTriangleIndexVertexArray() {
     );
 }
 extern "C" {
-    #[link_name = "\u{1}_ZN26btTriangleIndexVertexArrayC1EiPiiiPdi"]
+    #[link_name = "\u{1}_ZN26btTriangleIndexVertexArray14addIndexedMeshERK13btIndexedMesh14PHY_ScalarType"]
+    pub fn btTriangleIndexVertexArray_addIndexedMesh(
+        this: *mut btTriangleIndexVertexArray,
+        mesh: *const btIndexedMesh,
+        indexType: PHY_ScalarType,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN26btTriangleIndexVertexArray19getIndexedMeshArrayEv"]
+    pub fn btTriangleIndexVertexArray_getIndexedMeshArray(
+        this: *mut btTriangleIndexVertexArray,
+    ) -> *mut IndexedMeshArray;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK26btTriangleIndexVertexArray19getIndexedMeshArrayEv"]
+    pub fn btTriangleIndexVertexArray_getIndexedMeshArray1(
+        this: *const btTriangleIndexVertexArray,
+    ) -> *const IndexedMeshArray;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN26btTriangleIndexVertexArrayC1Ev"]
     pub fn btTriangleIndexVertexArray_btTriangleIndexVertexArray(
+        this: *mut btTriangleIndexVertexArray,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN26btTriangleIndexVertexArrayC1EiPiiiPdi"]
+    pub fn btTriangleIndexVertexArray_btTriangleIndexVertexArray1(
         this: *mut btTriangleIndexVertexArray,
         numTriangles: ::std::os::raw::c_int,
         triangleIndexBase: *mut ::std::os::raw::c_int,
@@ -16196,7 +22378,25 @@ extern "C" {
 }
 impl btTriangleIndexVertexArray {
     #[inline]
-    pub unsafe fn new(
+    pub unsafe fn addIndexedMesh(&mut self, mesh: *const btIndexedMesh, indexType: PHY_ScalarType) {
+        btTriangleIndexVertexArray_addIndexedMesh(self, mesh, indexType)
+    }
+    #[inline]
+    pub unsafe fn getIndexedMeshArray(&mut self) -> *mut IndexedMeshArray {
+        btTriangleIndexVertexArray_getIndexedMeshArray(self)
+    }
+    #[inline]
+    pub unsafe fn getIndexedMeshArray1(&self) -> *const IndexedMeshArray {
+        btTriangleIndexVertexArray_getIndexedMeshArray1(self)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btTriangleIndexVertexArray_btTriangleIndexVertexArray(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(
         numTriangles: ::std::os::raw::c_int,
         triangleIndexBase: *mut ::std::os::raw::c_int,
         triangleIndexStride: ::std::os::raw::c_int,
@@ -16205,7 +22405,7 @@ impl btTriangleIndexVertexArray {
         vertexStride: ::std::os::raw::c_int,
     ) -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
-        btTriangleIndexVertexArray_btTriangleIndexVertexArray(
+        btTriangleIndexVertexArray_btTriangleIndexVertexArray1(
             &mut __bindgen_tmp,
             numTriangles,
             triangleIndexBase,
@@ -16251,6 +22451,48 @@ extern "C" {
         numfaces: *mut ::std::os::raw::c_int,
         indicestype: *mut PHY_ScalarType,
         subpart: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+
+    /// unLockVertexBase finishes the access to a subpart of the triangle mesh
+    /// /// make a call to unLockVertexBase when the read and write access (using getLockedVertexIndexBase) is finished
+
+    #[link_name = "\u{1}_ZN26btTriangleIndexVertexArray16unLockVertexBaseEi"]
+    pub fn btTriangleIndexVertexArray_unLockVertexBase(
+        this: *mut ::std::os::raw::c_void,
+        subpart: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK26btTriangleIndexVertexArray24unLockReadOnlyVertexBaseEi"]
+    pub fn btTriangleIndexVertexArray_unLockReadOnlyVertexBase(
+        this: *mut ::std::os::raw::c_void,
+        subpart: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+
+    /// getNumSubParts returns the number of seperate subparts
+    /// /// each subpart has a continuous array of vertices and indices
+
+    #[link_name = "\u{1}_ZNK26btTriangleIndexVertexArray14getNumSubPartsEv"]
+    pub fn btTriangleIndexVertexArray_getNumSubParts(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN26btTriangleIndexVertexArray19preallocateVerticesEi"]
+    pub fn btTriangleIndexVertexArray_preallocateVertices(
+        this: *mut ::std::os::raw::c_void,
+        numverts: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN26btTriangleIndexVertexArray18preallocateIndicesEi"]
+    pub fn btTriangleIndexVertexArray_preallocateIndices(
+        this: *mut ::std::os::raw::c_void,
+        numindices: ::std::os::raw::c_int,
     );
 }
 extern "C" {
@@ -16373,6 +22615,14 @@ fn bindgen_test_layout_btTriangleMesh() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK14btTriangleMesh18getUse32bitIndicesEv"]
+    pub fn btTriangleMesh_getUse32bitIndices(this: *const btTriangleMesh) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK14btTriangleMesh24getUse4componentVerticesEv"]
+    pub fn btTriangleMesh_getUse4componentVertices(this: *const btTriangleMesh) -> bool;
+}
+extern "C" {
 
     /// By default addTriangle won't search for duplicate vertices, because the search is very slow for large triangle meshes.
     /// ///In general it is better to directly use btTriangleIndexVertexArray instead.
@@ -16429,6 +22679,14 @@ extern "C" {
     );
 }
 impl btTriangleMesh {
+    #[inline]
+    pub unsafe fn getUse32bitIndices(&self) -> bool {
+        btTriangleMesh_getUse32bitIndices(self)
+    }
+    #[inline]
+    pub unsafe fn getUse4componentVertices(&self) -> bool {
+        btTriangleMesh_getUse4componentVertices(self)
+    }
     #[inline]
     pub unsafe fn addTriangle(
         &mut self,
@@ -16517,6 +22775,18 @@ fn bindgen_test_layout_btConvexTriangleMeshShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN25btConvexTriangleMeshShape16getMeshInterfaceEv"]
+    pub fn btConvexTriangleMeshShape_getMeshInterface(
+        this: *mut btConvexTriangleMeshShape,
+    ) -> *mut btStridingMeshInterface;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK25btConvexTriangleMeshShape16getMeshInterfaceEv"]
+    pub fn btConvexTriangleMeshShape_getMeshInterface1(
+        this: *const btConvexTriangleMeshShape,
+    ) -> *const btStridingMeshInterface;
+}
+extern "C" {
 
     /// computes the exact moment of inertia and the transform from the coordinate system defined by the principal axes of the moment of inertia
     /// ///and the center of mass to the current coordinate system. A mass of 1 is assumed, for other masses just multiply the computed "inertia"
@@ -16541,6 +22811,14 @@ extern "C" {
     );
 }
 impl btConvexTriangleMeshShape {
+    #[inline]
+    pub unsafe fn getMeshInterface(&mut self) -> *mut btStridingMeshInterface {
+        btConvexTriangleMeshShape_getMeshInterface(self)
+    }
+    #[inline]
+    pub unsafe fn getMeshInterface1(&self) -> *const btStridingMeshInterface {
+        btConvexTriangleMeshShape_getMeshInterface1(self)
+    }
     #[inline]
     pub unsafe fn calculatePrincipalAxisTransform(
         &self,
@@ -16583,6 +22861,12 @@ extern "C" {
         supportVerticesOut: *mut btVector3,
         numVectors: ::std::os::raw::c_int,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK25btConvexTriangleMeshShape7getNameEv"]
+    pub fn btConvexTriangleMeshShape_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK25btConvexTriangleMeshShape14getNumVerticesEv"]
@@ -16706,6 +22990,30 @@ extern "C" {
     pub fn btTriangleMeshShape_recalcLocalAabb(this: *mut btTriangleMeshShape);
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN19btTriangleMeshShape16getMeshInterfaceEv"]
+    pub fn btTriangleMeshShape_getMeshInterface(
+        this: *mut btTriangleMeshShape,
+    ) -> *mut btStridingMeshInterface;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btTriangleMeshShape16getMeshInterfaceEv"]
+    pub fn btTriangleMeshShape_getMeshInterface1(
+        this: *const btTriangleMeshShape,
+    ) -> *const btStridingMeshInterface;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btTriangleMeshShape15getLocalAabbMinEv"]
+    pub fn btTriangleMeshShape_getLocalAabbMin(
+        this: *const btTriangleMeshShape,
+    ) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btTriangleMeshShape15getLocalAabbMaxEv"]
+    pub fn btTriangleMeshShape_getLocalAabbMax(
+        this: *const btTriangleMeshShape,
+    ) -> *const btVector3;
+}
+extern "C" {
 
     /// btTriangleMeshShape constructor has been disabled/protected, so that users will not mistakenly use this class.
     /// ///Don't use btTriangleMeshShape but use btBvhTriangleMeshShape instead!
@@ -16722,6 +23030,22 @@ impl btTriangleMeshShape {
         btTriangleMeshShape_recalcLocalAabb(self)
     }
     #[inline]
+    pub unsafe fn getMeshInterface(&mut self) -> *mut btStridingMeshInterface {
+        btTriangleMeshShape_getMeshInterface(self)
+    }
+    #[inline]
+    pub unsafe fn getMeshInterface1(&self) -> *const btStridingMeshInterface {
+        btTriangleMeshShape_getMeshInterface1(self)
+    }
+    #[inline]
+    pub unsafe fn getLocalAabbMin(&self) -> *const btVector3 {
+        btTriangleMeshShape_getLocalAabbMin(self)
+    }
+    #[inline]
+    pub unsafe fn getLocalAabbMax(&self) -> *const btVector3 {
+        btTriangleMeshShape_getLocalAabbMax(self)
+    }
+    #[inline]
     pub unsafe fn new(meshInterface: *mut btStridingMeshInterface) -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
         btTriangleMeshShape_btTriangleMeshShape(&mut __bindgen_tmp, meshInterface);
@@ -16735,6 +23059,13 @@ extern "C" {
 extern "C" {
     #[link_name = "\u{1}_ZNK19btTriangleMeshShape24localGetSupportingVertexERK9btVector3"]
     pub fn btTriangleMeshShape_localGetSupportingVertex(
+        this: *mut ::std::os::raw::c_void,
+        vec: *const btVector3,
+    ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btTriangleMeshShape37localGetSupportingVertexWithoutMarginERK9btVector3"]
+    pub fn btTriangleMeshShape_localGetSupportingVertexWithoutMargin(
         this: *mut ::std::os::raw::c_void,
         vec: *const btVector3,
     ) -> btVector3;
@@ -16777,6 +23108,12 @@ extern "C" {
     pub fn btTriangleMeshShape_getLocalScaling(
         this: *mut ::std::os::raw::c_void,
     ) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btTriangleMeshShape7getNameEv"]
+    pub fn btTriangleMeshShape_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
 }
 /// btQuantizedBvhNode is a compressed aabb node, 16 bytes.
 /// Node can be used for leafnode or internal node. Leafnodes can point to 32-bit triangle index (non-negative range).
@@ -16831,6 +23168,44 @@ fn bindgen_test_layout_btQuantizedBvhNode() {
             stringify!(m_escapeIndexOrTriangleIndex)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btQuantizedBvhNode10isLeafNodeEv"]
+    pub fn btQuantizedBvhNode_isLeafNode(this: *const btQuantizedBvhNode) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btQuantizedBvhNode14getEscapeIndexEv"]
+    pub fn btQuantizedBvhNode_getEscapeIndex(
+        this: *const btQuantizedBvhNode,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btQuantizedBvhNode16getTriangleIndexEv"]
+    pub fn btQuantizedBvhNode_getTriangleIndex(
+        this: *const btQuantizedBvhNode,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btQuantizedBvhNode9getPartIdEv"]
+    pub fn btQuantizedBvhNode_getPartId(this: *const btQuantizedBvhNode) -> ::std::os::raw::c_int;
+}
+impl btQuantizedBvhNode {
+    #[inline]
+    pub unsafe fn isLeafNode(&self) -> bool {
+        btQuantizedBvhNode_isLeafNode(self)
+    }
+    #[inline]
+    pub unsafe fn getEscapeIndex(&self) -> ::std::os::raw::c_int {
+        btQuantizedBvhNode_getEscapeIndex(self)
+    }
+    #[inline]
+    pub unsafe fn getTriangleIndex(&self) -> ::std::os::raw::c_int {
+        btQuantizedBvhNode_getTriangleIndex(self)
+    }
+    #[inline]
+    pub unsafe fn getPartId(&self) -> ::std::os::raw::c_int {
+        btQuantizedBvhNode_getPartId(self)
+    }
 }
 /// btOptimizedBvhNode contains both internal and leaf node information.
 /// Total node size is 44 bytes / node. You can use the compressed version of 16 bytes.
@@ -16990,6 +23365,29 @@ fn bindgen_test_layout_btBvhSubtreeInfo() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN16btBvhSubtreeInfo23setAabbFromQuantizeNodeERK18btQuantizedBvhNode"]
+    pub fn btBvhSubtreeInfo_setAabbFromQuantizeNode(
+        this: *mut btBvhSubtreeInfo,
+        quantizedNode: *const btQuantizedBvhNode,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btBvhSubtreeInfoC1Ev"]
+    pub fn btBvhSubtreeInfo_btBvhSubtreeInfo(this: *mut btBvhSubtreeInfo);
+}
+impl btBvhSubtreeInfo {
+    #[inline]
+    pub unsafe fn setAabbFromQuantizeNode(&mut self, quantizedNode: *const btQuantizedBvhNode) {
+        btBvhSubtreeInfo_setAabbFromQuantizeNode(self, quantizedNode)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btBvhSubtreeInfo_btBvhSubtreeInfo(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
 #[repr(C)]
 pub struct btNodeOverlapCallback__bindgen_vtable(::std::os::raw::c_void);
 #[repr(C)]
@@ -17009,6 +23407,10 @@ fn bindgen_test_layout_btNodeOverlapCallback() {
         8usize,
         concat!("Alignment of ", stringify!(btNodeOverlapCallback))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btNodeOverlapCallbackD0Ev"]
+    pub fn btNodeOverlapCallback_btNodeOverlapCallback_destructor(this: *mut btNodeOverlapCallback);
 }
 extern "C" {
     #[link_name = "\u{1}_ZN21btNodeOverlapCallback11processNodeEii"]
@@ -17193,6 +23595,57 @@ fn bindgen_test_layout_btQuantizedBvh() {
     );
 }
 extern "C" {
+
+    /// two versions, one for quantized and normal nodes. This allows code-reuse while maintaining readability (no template/macro!)
+    /// ///this might be refactored into a virtual, it is usually not calculated at run-time
+
+    #[link_name = "\u{1}_ZN14btQuantizedBvh22setInternalNodeAabbMinEiRK9btVector3"]
+    pub fn btQuantizedBvh_setInternalNodeAabbMin(
+        this: *mut btQuantizedBvh,
+        nodeIndex: ::std::os::raw::c_int,
+        aabbMin: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN14btQuantizedBvh22setInternalNodeAabbMaxEiRK9btVector3"]
+    pub fn btQuantizedBvh_setInternalNodeAabbMax(
+        this: *mut btQuantizedBvh,
+        nodeIndex: ::std::os::raw::c_int,
+        aabbMax: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK14btQuantizedBvh10getAabbMinEi"]
+    pub fn btQuantizedBvh_getAabbMin(
+        this: *const btQuantizedBvh,
+        nodeIndex: ::std::os::raw::c_int,
+    ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK14btQuantizedBvh10getAabbMaxEi"]
+    pub fn btQuantizedBvh_getAabbMax(
+        this: *const btQuantizedBvh,
+        nodeIndex: ::std::os::raw::c_int,
+    ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN14btQuantizedBvh26setInternalNodeEscapeIndexEii"]
+    pub fn btQuantizedBvh_setInternalNodeEscapeIndex(
+        this: *mut btQuantizedBvh,
+        nodeIndex: ::std::os::raw::c_int,
+        escapeIndex: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN14btQuantizedBvh21mergeInternalNodeAabbEiRK9btVector3S2_"]
+    pub fn btQuantizedBvh_mergeInternalNodeAabb(
+        this: *mut btQuantizedBvh,
+        nodeIndex: ::std::os::raw::c_int,
+        newAabbMin: *const btVector3,
+        newAabbMax: *const btVector3,
+    );
+}
+extern "C" {
     #[link_name = "\u{1}_ZN14btQuantizedBvh13swapLeafNodesEii"]
     pub fn btQuantizedBvh_swapLeafNodes(
         this: *mut btQuantizedBvh,
@@ -17337,6 +23790,10 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN14btQuantizedBvh16getLeafNodeArrayEv"]
+    pub fn btQuantizedBvh_getLeafNodeArray(this: *mut btQuantizedBvh) -> *mut QuantizedNodeArray;
+}
+extern "C" {
 
     /// buildInternal is expert use only: assumes that setQuantizationValues and LeafNodeArray are initialized
 
@@ -17376,6 +23833,53 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK14btQuantizedBvh8quantizeEPtRK9btVector3i"]
+    pub fn btQuantizedBvh_quantize(
+        this: *const btQuantizedBvh,
+        out: *mut ::std::os::raw::c_ushort,
+        point: *const btVector3,
+        isMax: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK14btQuantizedBvh17quantizeWithClampEPtRK9btVector3i"]
+    pub fn btQuantizedBvh_quantizeWithClamp(
+        this: *const btQuantizedBvh,
+        out: *mut ::std::os::raw::c_ushort,
+        point2: *const btVector3,
+        isMax: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK14btQuantizedBvh10unQuantizeEPKt"]
+    pub fn btQuantizedBvh_unQuantize(
+        this: *const btQuantizedBvh,
+        vecIn: *const ::std::os::raw::c_ushort,
+    ) -> btVector3;
+}
+extern "C" {
+
+    /// setTraversalMode let's you choose between stackless, recursive or stackless cache friendly tree traversal. Note this is only implemented for quantized trees.
+
+    #[link_name = "\u{1}_ZN14btQuantizedBvh16setTraversalModeENS_15btTraversalModeE"]
+    pub fn btQuantizedBvh_setTraversalMode(
+        this: *mut btQuantizedBvh,
+        traversalMode: btQuantizedBvh_btTraversalMode,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN14btQuantizedBvh21getQuantizedNodeArrayEv"]
+    pub fn btQuantizedBvh_getQuantizedNodeArray(
+        this: *mut btQuantizedBvh,
+    ) -> *mut QuantizedNodeArray;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN14btQuantizedBvh19getSubtreeInfoArrayEv"]
+    pub fn btQuantizedBvh_getSubtreeInfoArray(
+        this: *mut btQuantizedBvh,
+    ) -> *mut BvhSubtreeInfoArray;
+}
+extern "C" {
 
     /// Calculate space needed to store BVH for serialization
 
@@ -17400,10 +23904,58 @@ extern "C" {
     pub fn btQuantizedBvh_getAlignmentSerializationPadding() -> ::std::os::raw::c_uint;
 }
 extern "C" {
+
+    ///
+
+    #[link_name = "\u{1}_ZN14btQuantizedBvh11isQuantizedEv"]
+    pub fn btQuantizedBvh_isQuantized(this: *mut btQuantizedBvh) -> bool;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN14btQuantizedBvhC1Ev"]
     pub fn btQuantizedBvh_btQuantizedBvh(this: *mut btQuantizedBvh);
 }
 impl btQuantizedBvh {
+    #[inline]
+    pub unsafe fn setInternalNodeAabbMin(
+        &mut self,
+        nodeIndex: ::std::os::raw::c_int,
+        aabbMin: *const btVector3,
+    ) {
+        btQuantizedBvh_setInternalNodeAabbMin(self, nodeIndex, aabbMin)
+    }
+    #[inline]
+    pub unsafe fn setInternalNodeAabbMax(
+        &mut self,
+        nodeIndex: ::std::os::raw::c_int,
+        aabbMax: *const btVector3,
+    ) {
+        btQuantizedBvh_setInternalNodeAabbMax(self, nodeIndex, aabbMax)
+    }
+    #[inline]
+    pub unsafe fn getAabbMin(&self, nodeIndex: ::std::os::raw::c_int) -> btVector3 {
+        btQuantizedBvh_getAabbMin(self, nodeIndex)
+    }
+    #[inline]
+    pub unsafe fn getAabbMax(&self, nodeIndex: ::std::os::raw::c_int) -> btVector3 {
+        btQuantizedBvh_getAabbMax(self, nodeIndex)
+    }
+    #[inline]
+    pub unsafe fn setInternalNodeEscapeIndex(
+        &mut self,
+        nodeIndex: ::std::os::raw::c_int,
+        escapeIndex: ::std::os::raw::c_int,
+    ) {
+        btQuantizedBvh_setInternalNodeEscapeIndex(self, nodeIndex, escapeIndex)
+    }
+    #[inline]
+    pub unsafe fn mergeInternalNodeAabb(
+        &mut self,
+        nodeIndex: ::std::os::raw::c_int,
+        newAabbMin: *const btVector3,
+        newAabbMax: *const btVector3,
+    ) {
+        btQuantizedBvh_mergeInternalNodeAabb(self, nodeIndex, newAabbMin, newAabbMax)
+    }
     #[inline]
     pub unsafe fn swapLeafNodes(
         &mut self,
@@ -17578,6 +24130,10 @@ impl btQuantizedBvh {
         btQuantizedBvh_setQuantizationValues(self, bvhAabbMin, bvhAabbMax, quantizationMargin)
     }
     #[inline]
+    pub unsafe fn getLeafNodeArray(&mut self) -> *mut QuantizedNodeArray {
+        btQuantizedBvh_getLeafNodeArray(self)
+    }
+    #[inline]
     pub unsafe fn buildInternal(&mut self) {
         btQuantizedBvh_buildInternal(self)
     }
@@ -17618,6 +24174,40 @@ impl btQuantizedBvh {
         )
     }
     #[inline]
+    pub unsafe fn quantize(
+        &self,
+        out: *mut ::std::os::raw::c_ushort,
+        point: *const btVector3,
+        isMax: ::std::os::raw::c_int,
+    ) {
+        btQuantizedBvh_quantize(self, out, point, isMax)
+    }
+    #[inline]
+    pub unsafe fn quantizeWithClamp(
+        &self,
+        out: *mut ::std::os::raw::c_ushort,
+        point2: *const btVector3,
+        isMax: ::std::os::raw::c_int,
+    ) {
+        btQuantizedBvh_quantizeWithClamp(self, out, point2, isMax)
+    }
+    #[inline]
+    pub unsafe fn unQuantize(&self, vecIn: *const ::std::os::raw::c_ushort) -> btVector3 {
+        btQuantizedBvh_unQuantize(self, vecIn)
+    }
+    #[inline]
+    pub unsafe fn setTraversalMode(&mut self, traversalMode: btQuantizedBvh_btTraversalMode) {
+        btQuantizedBvh_setTraversalMode(self, traversalMode)
+    }
+    #[inline]
+    pub unsafe fn getQuantizedNodeArray(&mut self) -> *mut QuantizedNodeArray {
+        btQuantizedBvh_getQuantizedNodeArray(self)
+    }
+    #[inline]
+    pub unsafe fn getSubtreeInfoArray(&mut self) -> *mut BvhSubtreeInfoArray {
+        btQuantizedBvh_getSubtreeInfoArray(self)
+    }
+    #[inline]
     pub unsafe fn calculateSerializeBufferSize(&self) -> ::std::os::raw::c_uint {
         btQuantizedBvh_calculateSerializeBufferSize(self)
     }
@@ -17632,6 +24222,10 @@ impl btQuantizedBvh {
     #[inline]
     pub unsafe fn getAlignmentSerializationPadding() -> ::std::os::raw::c_uint {
         btQuantizedBvh_getAlignmentSerializationPadding()
+    }
+    #[inline]
+    pub unsafe fn isQuantized(&mut self) -> bool {
+        btQuantizedBvh_isQuantized(self)
     }
     #[inline]
     pub unsafe fn new() -> Self {
@@ -18438,6 +25032,18 @@ extern "C" {
     #[link_name = "\u{1}_ZN14btOptimizedBvhD0Ev"]
     pub fn btOptimizedBvh_btOptimizedBvh_destructor(this: *mut btOptimizedBvh);
 }
+extern "C" {
+
+    /// Data buffer MUST be 16 byte aligned
+
+    #[link_name = "\u{1}_ZNK14btOptimizedBvh16serializeInPlaceEPvjb"]
+    pub fn btOptimizedBvh_serializeInPlace(
+        this: *mut ::std::os::raw::c_void,
+        o_alignedDataBuffer: *mut ::std::os::raw::c_void,
+        i_dataBufferSize: ::std::os::raw::c_uint,
+        i_swapEndian: bool,
+    ) -> bool;
+}
 /// very basic hashable string implementation, compatible with btHashMap
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -18478,6 +25084,50 @@ fn bindgen_test_layout_btHashString() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btHashString7getHashEv"]
+    pub fn btHashString_getHash(this: *const btHashString) -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btHashString21portableStringCompareEPKcS1_"]
+    pub fn btHashString_portableStringCompare(
+        this: *const btHashString,
+        src: *const ::std::os::raw::c_char,
+        dst: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btHashString6equalsERKS_"]
+    pub fn btHashString_equals(this: *const btHashString, other: *const btHashString) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btHashStringC1EPKc"]
+    pub fn btHashString_btHashString(this: *mut btHashString, name: *const ::std::os::raw::c_char);
+}
+impl btHashString {
+    #[inline]
+    pub unsafe fn getHash(&self) -> ::std::os::raw::c_uint {
+        btHashString_getHash(self)
+    }
+    #[inline]
+    pub unsafe fn portableStringCompare(
+        &self,
+        src: *const ::std::os::raw::c_char,
+        dst: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int {
+        btHashString_portableStringCompare(self, src, dst)
+    }
+    #[inline]
+    pub unsafe fn equals(&self, other: *const btHashString) -> bool {
+        btHashString_equals(self, other)
+    }
+    #[inline]
+    pub unsafe fn new(name: *const ::std::os::raw::c_char) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btHashString_btHashString(&mut __bindgen_tmp, name);
+        __bindgen_tmp
+    }
+}
 pub const BT_HASH_NULL: ::std::os::raw::c_int = -1;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -18506,6 +25156,60 @@ fn bindgen_test_layout_btHashInt() {
             stringify!(m_uid)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btHashInt7getUid1Ev"]
+    pub fn btHashInt_getUid1(this: *const btHashInt) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btHashInt7setUid1Ei"]
+    pub fn btHashInt_setUid1(this: *mut btHashInt, uid: ::std::os::raw::c_int);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btHashInt6equalsERKS_"]
+    pub fn btHashInt_equals(this: *const btHashInt, other: *const btHashInt) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btHashInt7getHashEv"]
+    pub fn btHashInt_getHash(this: *const btHashInt) -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btHashIntC1Ev"]
+    pub fn btHashInt_btHashInt(this: *mut btHashInt);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btHashIntC1Ei"]
+    pub fn btHashInt_btHashInt1(this: *mut btHashInt, uid: ::std::os::raw::c_int);
+}
+impl btHashInt {
+    #[inline]
+    pub unsafe fn getUid1(&self) -> ::std::os::raw::c_int {
+        btHashInt_getUid1(self)
+    }
+    #[inline]
+    pub unsafe fn setUid1(&mut self, uid: ::std::os::raw::c_int) {
+        btHashInt_setUid1(self, uid)
+    }
+    #[inline]
+    pub unsafe fn equals(&self, other: *const btHashInt) -> bool {
+        btHashInt_equals(self, other)
+    }
+    #[inline]
+    pub unsafe fn getHash(&self) -> ::std::os::raw::c_uint {
+        btHashInt_getHash(self)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btHashInt_btHashInt(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(uid: ::std::os::raw::c_int) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btHashInt_btHashInt1(&mut __bindgen_tmp, uid);
+        __bindgen_tmp
+    }
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -18564,6 +25268,42 @@ fn bindgen_test_layout_btHashPtr() {
         8usize,
         concat!("Alignment of ", stringify!(btHashPtr))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btHashPtr10getPointerEv"]
+    pub fn btHashPtr_getPointer(this: *const btHashPtr) -> *const ::std::os::raw::c_void;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btHashPtr6equalsERKS_"]
+    pub fn btHashPtr_equals(this: *const btHashPtr, other: *const btHashPtr) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK9btHashPtr7getHashEv"]
+    pub fn btHashPtr_getHash(this: *const btHashPtr) -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN9btHashPtrC1EPKv"]
+    pub fn btHashPtr_btHashPtr(this: *mut btHashPtr, ptr: *const ::std::os::raw::c_void);
+}
+impl btHashPtr {
+    #[inline]
+    pub unsafe fn getPointer(&self) -> *const ::std::os::raw::c_void {
+        btHashPtr_getPointer(self)
+    }
+    #[inline]
+    pub unsafe fn equals(&self, other: *const btHashPtr) -> bool {
+        btHashPtr_equals(self, other)
+    }
+    #[inline]
+    pub unsafe fn getHash(&self) -> ::std::os::raw::c_uint {
+        btHashPtr_getHash(self)
+    }
+    #[inline]
+    pub unsafe fn new(ptr: *const ::std::os::raw::c_void) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btHashPtr_btHashPtr(&mut __bindgen_tmp, ptr);
+        __bindgen_tmp
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -18969,6 +25709,10 @@ extern "C" {
     #[link_name = "\u{1}sBulletDNAlen64"]
     pub static mut sBulletDNAlen64: ::std::os::raw::c_int;
 }
+extern "C" {
+    #[link_name = "\u{1}_Z8btStrLenPKc"]
+    pub fn btStrLen(str: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct btChunk {
@@ -19064,6 +25808,10 @@ fn bindgen_test_layout_btSerializer() {
         8usize,
         concat!("Alignment of ", stringify!(btSerializer))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btSerializerD0Ev"]
+    pub fn btSerializer_btSerializer_destructor(this: *mut btSerializer);
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK12btSerializer16getBufferPointerEv"]
@@ -19416,6 +26164,18 @@ fn bindgen_test_layout_btBulletSerializedArrays() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN24btBulletSerializedArraysC1Ev"]
+    pub fn btBulletSerializedArrays_btBulletSerializedArrays(this: *mut btBulletSerializedArrays);
+}
+impl btBulletSerializedArrays {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btBulletSerializedArrays_btBulletSerializedArrays(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
 /// The btDefaultSerializer is the main Bullet serialization class.
 /// The constructor takes an optional argument for backwards compatibility, it is recommended to leave this empty/zero.
 #[repr(C)]
@@ -19633,6 +26393,205 @@ fn bindgen_test_layout_btDefaultSerializer() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btDefaultSerializer14getReverseTypeEPKc"]
+    pub fn btDefaultSerializer_getReverseType(
+        this: *const btDefaultSerializer,
+        type_: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer7initDNAEPKci"]
+    pub fn btDefaultSerializer_initDNA(
+        this: *mut btDefaultSerializer,
+        bdnaOrg: *const ::std::os::raw::c_char,
+        dnalen: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer23getMemoryDnaSizeInBytesEv"]
+    pub fn btDefaultSerializer_getMemoryDnaSizeInBytes() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer12getMemoryDnaEv"]
+    pub fn btDefaultSerializer_getMemoryDna() -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer12insertHeaderEv"]
+    pub fn btDefaultSerializer_insertHeader(this: *mut btDefaultSerializer);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btDefaultSerializer11writeHeaderEPh"]
+    pub fn btDefaultSerializer_writeHeader(
+        this: *const btDefaultSerializer,
+        buffer: *mut ::std::os::raw::c_uchar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializerC1EiPh"]
+    pub fn btDefaultSerializer_btDefaultSerializer(
+        this: *mut btDefaultSerializer,
+        totalSize: ::std::os::raw::c_int,
+        buffer: *mut ::std::os::raw::c_uchar,
+    );
+}
+impl btDefaultSerializer {
+    #[inline]
+    pub unsafe fn getReverseType(
+        &self,
+        type_: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int {
+        btDefaultSerializer_getReverseType(self, type_)
+    }
+    #[inline]
+    pub unsafe fn initDNA(
+        &mut self,
+        bdnaOrg: *const ::std::os::raw::c_char,
+        dnalen: ::std::os::raw::c_int,
+    ) {
+        btDefaultSerializer_initDNA(self, bdnaOrg, dnalen)
+    }
+    #[inline]
+    pub unsafe fn getMemoryDnaSizeInBytes() -> ::std::os::raw::c_int {
+        btDefaultSerializer_getMemoryDnaSizeInBytes()
+    }
+    #[inline]
+    pub unsafe fn getMemoryDna() -> *const ::std::os::raw::c_char {
+        btDefaultSerializer_getMemoryDna()
+    }
+    #[inline]
+    pub unsafe fn insertHeader(&mut self) {
+        btDefaultSerializer_insertHeader(self)
+    }
+    #[inline]
+    pub unsafe fn writeHeader(&self, buffer: *mut ::std::os::raw::c_uchar) {
+        btDefaultSerializer_writeHeader(self, buffer)
+    }
+    #[inline]
+    pub unsafe fn new(
+        totalSize: ::std::os::raw::c_int,
+        buffer: *mut ::std::os::raw::c_uchar,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDefaultSerializer_btDefaultSerializer(&mut __bindgen_tmp, totalSize, buffer);
+        __bindgen_tmp
+    }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer11findPointerEPv"]
+    pub fn btDefaultSerializer_findPointer(
+        this: *mut ::std::os::raw::c_void,
+        oldPtr: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer8writeDNAEv"]
+    pub fn btDefaultSerializer_writeDNA(this: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializerD0Ev"]
+    pub fn btDefaultSerializer_btDefaultSerializer_destructor(this: *mut btDefaultSerializer);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer18startSerializationEv"]
+    pub fn btDefaultSerializer_startSerialization(this: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer19finishSerializationEv"]
+    pub fn btDefaultSerializer_finishSerialization(this: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer16getUniquePointerEPv"]
+    pub fn btDefaultSerializer_getUniquePointer(
+        this: *mut ::std::os::raw::c_void,
+        oldPtr: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btDefaultSerializer16getBufferPointerEv"]
+    pub fn btDefaultSerializer_getBufferPointer(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_uchar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btDefaultSerializer20getCurrentBufferSizeEv"]
+    pub fn btDefaultSerializer_getCurrentBufferSize(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer13finalizeChunkEP7btChunkPKciPv"]
+    pub fn btDefaultSerializer_finalizeChunk(
+        this: *mut ::std::os::raw::c_void,
+        chunk: *mut btChunk,
+        structType: *const ::std::os::raw::c_char,
+        chunkCode: ::std::os::raw::c_int,
+        oldPtr: *mut ::std::os::raw::c_void,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer13internalAllocEm"]
+    pub fn btDefaultSerializer_internalAlloc(
+        this: *mut ::std::os::raw::c_void,
+        size: usize,
+    ) -> *mut ::std::os::raw::c_uchar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer8allocateEmi"]
+    pub fn btDefaultSerializer_allocate(
+        this: *mut ::std::os::raw::c_void,
+        size: usize,
+        numElements: ::std::os::raw::c_int,
+    ) -> *mut btChunk;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btDefaultSerializer18findNameForPointerEPKv"]
+    pub fn btDefaultSerializer_findNameForPointer(
+        this: *mut ::std::os::raw::c_void,
+        ptr: *const ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer22registerNameForPointerEPKvPKc"]
+    pub fn btDefaultSerializer_registerNameForPointer(
+        this: *mut ::std::os::raw::c_void,
+        ptr: *const ::std::os::raw::c_void,
+        name: *const ::std::os::raw::c_char,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer13serializeNameEPKc"]
+    pub fn btDefaultSerializer_serializeName(
+        this: *mut ::std::os::raw::c_void,
+        name: *const ::std::os::raw::c_char,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btDefaultSerializer21getSerializationFlagsEv"]
+    pub fn btDefaultSerializer_getSerializationFlags(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btDefaultSerializer21setSerializationFlagsEi"]
+    pub fn btDefaultSerializer_setSerializationFlags(
+        this: *mut ::std::os::raw::c_void,
+        flags: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btDefaultSerializer12getNumChunksEv"]
+    pub fn btDefaultSerializer_getNumChunks(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK19btDefaultSerializer8getChunkEi"]
+    pub fn btDefaultSerializer_getChunk(
+        this: *mut ::std::os::raw::c_void,
+        chunkIndex: ::std::os::raw::c_int,
+    ) -> *const btChunk;
+}
 /// The btTriangleInfo structure stores information to adjust collision normals to avoid collisions against internal edges
 /// it can be generated using
 #[repr(C)]
@@ -19695,6 +26654,18 @@ fn bindgen_test_layout_btTriangleInfo() {
             stringify!(m_edgeV2V0Angle)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN14btTriangleInfoC1Ev"]
+    pub fn btTriangleInfo_btTriangleInfo(this: *mut btTriangleInfo);
+}
+impl btTriangleInfo {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btTriangleInfo_btTriangleInfo(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
 }
 pub type btInternalTriangleInfoMap = btHashMap<btHashInt, btTriangleInfo>;
 #[repr(C)]
@@ -19799,11 +26770,28 @@ extern "C" {
         data: *mut btTriangleInfoMapData,
     );
 }
+extern "C" {
+
+    /// used to determine if a triangle is degenerate (length squared of cross product of 2 triangle edges < threshold)
+
+    #[link_name = "\u{1}_ZN17btTriangleInfoMapC1Ev"]
+    pub fn btTriangleInfoMap_btTriangleInfoMap(this: *mut btTriangleInfoMap);
+}
 impl btTriangleInfoMap {
     #[inline]
     pub unsafe fn deSerialize(&mut self, data: *mut btTriangleInfoMapData) {
         btTriangleInfoMap_deSerialize(self, data)
     }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btTriangleInfoMap_btTriangleInfoMap(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTriangleInfoMapD0Ev"]
+    pub fn btTriangleInfoMap_btTriangleInfoMap_destructor(this: *mut btTriangleInfoMap);
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK17btTriangleInfoMap28calculateSerializeBufferSizeEv"]
@@ -20146,6 +27134,10 @@ fn bindgen_test_layout_btBvhTriangleMeshShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK22btBvhTriangleMeshShape10getOwnsBvhEv"]
+    pub fn btBvhTriangleMeshShape_getOwnsBvh(this: *const btBvhTriangleMeshShape) -> bool;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN22btBvhTriangleMeshShape14performRaycastEP18btTriangleCallbackRK9btVector3S4_"]
     pub fn btBvhTriangleMeshShape_performRaycast(
         this: *mut btBvhTriangleMeshShape,
@@ -20185,6 +27177,12 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN22btBvhTriangleMeshShape15getOptimizedBvhEv"]
+    pub fn btBvhTriangleMeshShape_getOptimizedBvh(
+        this: *mut btBvhTriangleMeshShape,
+    ) -> *mut btOptimizedBvh;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN22btBvhTriangleMeshShape15setOptimizedBvhEP14btOptimizedBvhRK9btVector3"]
     pub fn btBvhTriangleMeshShape_setOptimizedBvh(
         this: *mut btBvhTriangleMeshShape,
@@ -20195,6 +27193,31 @@ extern "C" {
 extern "C" {
     #[link_name = "\u{1}_ZN22btBvhTriangleMeshShape17buildOptimizedBvhEv"]
     pub fn btBvhTriangleMeshShape_buildOptimizedBvh(this: *mut btBvhTriangleMeshShape);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK22btBvhTriangleMeshShape28usesQuantizedAabbCompressionEv"]
+    pub fn btBvhTriangleMeshShape_usesQuantizedAabbCompression(
+        this: *const btBvhTriangleMeshShape,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN22btBvhTriangleMeshShape18setTriangleInfoMapEP17btTriangleInfoMap"]
+    pub fn btBvhTriangleMeshShape_setTriangleInfoMap(
+        this: *mut btBvhTriangleMeshShape,
+        triangleInfoMap: *mut btTriangleInfoMap,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK22btBvhTriangleMeshShape18getTriangleInfoMapEv"]
+    pub fn btBvhTriangleMeshShape_getTriangleInfoMap(
+        this: *const btBvhTriangleMeshShape,
+    ) -> *const btTriangleInfoMap;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN22btBvhTriangleMeshShape18getTriangleInfoMapEv"]
+    pub fn btBvhTriangleMeshShape_getTriangleInfoMap1(
+        this: *mut btBvhTriangleMeshShape,
+    ) -> *mut btTriangleInfoMap;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN22btBvhTriangleMeshShapeC1EP23btStridingMeshInterfacebb"]
@@ -20220,6 +27243,10 @@ extern "C" {
     );
 }
 impl btBvhTriangleMeshShape {
+    #[inline]
+    pub unsafe fn getOwnsBvh(&self) -> bool {
+        btBvhTriangleMeshShape_getOwnsBvh(self)
+    }
     #[inline]
     pub unsafe fn performRaycast(
         &mut self,
@@ -20260,6 +27287,10 @@ impl btBvhTriangleMeshShape {
         btBvhTriangleMeshShape_partialRefitTree(self, aabbMin, aabbMax)
     }
     #[inline]
+    pub unsafe fn getOptimizedBvh(&mut self) -> *mut btOptimizedBvh {
+        btBvhTriangleMeshShape_getOptimizedBvh(self)
+    }
+    #[inline]
     pub unsafe fn setOptimizedBvh(
         &mut self,
         bvh: *mut btOptimizedBvh,
@@ -20270,6 +27301,22 @@ impl btBvhTriangleMeshShape {
     #[inline]
     pub unsafe fn buildOptimizedBvh(&mut self) {
         btBvhTriangleMeshShape_buildOptimizedBvh(self)
+    }
+    #[inline]
+    pub unsafe fn usesQuantizedAabbCompression(&self) -> bool {
+        btBvhTriangleMeshShape_usesQuantizedAabbCompression(self)
+    }
+    #[inline]
+    pub unsafe fn setTriangleInfoMap(&mut self, triangleInfoMap: *mut btTriangleInfoMap) {
+        btBvhTriangleMeshShape_setTriangleInfoMap(self, triangleInfoMap)
+    }
+    #[inline]
+    pub unsafe fn getTriangleInfoMap(&self) -> *const btTriangleInfoMap {
+        btBvhTriangleMeshShape_getTriangleInfoMap(self)
+    }
+    #[inline]
+    pub unsafe fn getTriangleInfoMap1(&mut self) -> *mut btTriangleInfoMap {
+        btBvhTriangleMeshShape_getTriangleInfoMap1(self)
     }
     #[inline]
     pub unsafe fn new(
@@ -20320,6 +27367,12 @@ extern "C" {
         aabbMin: *const btVector3,
         aabbMax: *const btVector3,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK22btBvhTriangleMeshShape7getNameEv"]
+    pub fn btBvhTriangleMeshShape_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN22btBvhTriangleMeshShape15setLocalScalingERK9btVector3"]
@@ -20507,6 +27560,18 @@ fn bindgen_test_layout_btScaledBvhTriangleMeshShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN28btScaledBvhTriangleMeshShape13getChildShapeEv"]
+    pub fn btScaledBvhTriangleMeshShape_getChildShape(
+        this: *mut btScaledBvhTriangleMeshShape,
+    ) -> *mut btBvhTriangleMeshShape;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK28btScaledBvhTriangleMeshShape13getChildShapeEv"]
+    pub fn btScaledBvhTriangleMeshShape_getChildShape1(
+        this: *const btScaledBvhTriangleMeshShape,
+    ) -> *const btBvhTriangleMeshShape;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN28btScaledBvhTriangleMeshShapeC1EP22btBvhTriangleMeshShapeRK9btVector3"]
     pub fn btScaledBvhTriangleMeshShape_btScaledBvhTriangleMeshShape(
         this: *mut btScaledBvhTriangleMeshShape,
@@ -20515,6 +27580,14 @@ extern "C" {
     );
 }
 impl btScaledBvhTriangleMeshShape {
+    #[inline]
+    pub unsafe fn getChildShape(&mut self) -> *mut btBvhTriangleMeshShape {
+        btScaledBvhTriangleMeshShape_getChildShape(self)
+    }
+    #[inline]
+    pub unsafe fn getChildShape1(&self) -> *const btBvhTriangleMeshShape {
+        btScaledBvhTriangleMeshShape_getChildShape1(self)
+    }
     #[inline]
     pub unsafe fn new(
         childShape: *mut btBvhTriangleMeshShape,
@@ -20573,6 +27646,12 @@ extern "C" {
         aabbMin: *const btVector3,
         aabbMax: *const btVector3,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK28btScaledBvhTriangleMeshShape7getNameEv"]
+    pub fn btScaledBvhTriangleMeshShape_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK28btScaledBvhTriangleMeshShape28calculateSerializeBufferSizeEv"]
@@ -20824,6 +27903,39 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK15btCompoundShape17getNumChildShapesEv"]
+    pub fn btCompoundShape_getNumChildShapes(this: *const btCompoundShape)
+        -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btCompoundShape13getChildShapeEi"]
+    pub fn btCompoundShape_getChildShape(
+        this: *mut btCompoundShape,
+        index: ::std::os::raw::c_int,
+    ) -> *mut btCollisionShape;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCompoundShape13getChildShapeEi"]
+    pub fn btCompoundShape_getChildShape1(
+        this: *const btCompoundShape,
+        index: ::std::os::raw::c_int,
+    ) -> *const btCollisionShape;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btCompoundShape17getChildTransformEi"]
+    pub fn btCompoundShape_getChildTransform(
+        this: *mut btCompoundShape,
+        index: ::std::os::raw::c_int,
+    ) -> *mut btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCompoundShape17getChildTransformEi"]
+    pub fn btCompoundShape_getChildTransform1(
+        this: *const btCompoundShape,
+        index: ::std::os::raw::c_int,
+    ) -> *const btTransform;
+}
+extern "C" {
 
     /// set a new transform for a child, and update internal data structures (local aabb and dynamic tree)
 
@@ -20834,6 +27946,18 @@ extern "C" {
         newChildTransform: *const btTransform,
         shouldRecalculateLocalAabb: bool,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btCompoundShape12getChildListEv"]
+    pub fn btCompoundShape_getChildList(this: *mut btCompoundShape) -> *mut btCompoundShapeChild;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCompoundShape18getDynamicAabbTreeEv"]
+    pub fn btCompoundShape_getDynamicAabbTree(this: *const btCompoundShape) -> *const btDbvt;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btCompoundShape18getDynamicAabbTreeEv"]
+    pub fn btCompoundShape_getDynamicAabbTree1(this: *mut btCompoundShape) -> *mut btDbvt;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN15btCompoundShape26createAabbTreeFromChildrenEv"]
@@ -20854,6 +27978,11 @@ extern "C" {
         principal: *mut btTransform,
         inertia: *mut btVector3,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCompoundShape17getUpdateRevisionEv"]
+    pub fn btCompoundShape_getUpdateRevision(this: *const btCompoundShape)
+        -> ::std::os::raw::c_int;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN15btCompoundShapeC1Ebi"]
@@ -20877,6 +28006,26 @@ impl btCompoundShape {
         btCompoundShape_removeChildShapeByIndex(self, childShapeindex)
     }
     #[inline]
+    pub unsafe fn getNumChildShapes(&self) -> ::std::os::raw::c_int {
+        btCompoundShape_getNumChildShapes(self)
+    }
+    #[inline]
+    pub unsafe fn getChildShape(&mut self, index: ::std::os::raw::c_int) -> *mut btCollisionShape {
+        btCompoundShape_getChildShape(self, index)
+    }
+    #[inline]
+    pub unsafe fn getChildShape1(&self, index: ::std::os::raw::c_int) -> *const btCollisionShape {
+        btCompoundShape_getChildShape1(self, index)
+    }
+    #[inline]
+    pub unsafe fn getChildTransform(&mut self, index: ::std::os::raw::c_int) -> *mut btTransform {
+        btCompoundShape_getChildTransform(self, index)
+    }
+    #[inline]
+    pub unsafe fn getChildTransform1(&self, index: ::std::os::raw::c_int) -> *const btTransform {
+        btCompoundShape_getChildTransform1(self, index)
+    }
+    #[inline]
     pub unsafe fn updateChildTransform(
         &mut self,
         childIndex: ::std::os::raw::c_int,
@@ -20891,6 +28040,18 @@ impl btCompoundShape {
         )
     }
     #[inline]
+    pub unsafe fn getChildList(&mut self) -> *mut btCompoundShapeChild {
+        btCompoundShape_getChildList(self)
+    }
+    #[inline]
+    pub unsafe fn getDynamicAabbTree(&self) -> *const btDbvt {
+        btCompoundShape_getDynamicAabbTree(self)
+    }
+    #[inline]
+    pub unsafe fn getDynamicAabbTree1(&mut self) -> *mut btDbvt {
+        btCompoundShape_getDynamicAabbTree1(self)
+    }
+    #[inline]
     pub unsafe fn createAabbTreeFromChildren(&mut self) {
         btCompoundShape_createAabbTreeFromChildren(self)
     }
@@ -20902,6 +28063,10 @@ impl btCompoundShape {
         inertia: *mut btVector3,
     ) {
         btCompoundShape_calculatePrincipalAxisTransform(self, masses, principal, inertia)
+    }
+    #[inline]
+    pub unsafe fn getUpdateRevision(&self) -> ::std::os::raw::c_int {
+        btCompoundShape_getUpdateRevision(self)
     }
     #[inline]
     pub unsafe fn new(
@@ -20959,12 +28124,30 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK15btCompoundShape15getLocalScalingEv"]
+    pub fn btCompoundShape_getLocalScaling(this: *mut ::std::os::raw::c_void) -> *const btVector3;
+}
+extern "C" {
     #[link_name = "\u{1}_ZNK15btCompoundShape21calculateLocalInertiaEdR9btVector3"]
     pub fn btCompoundShape_calculateLocalInertia(
         this: *mut ::std::os::raw::c_void,
         mass: btScalar,
         inertia: *mut btVector3,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btCompoundShape9setMarginEd"]
+    pub fn btCompoundShape_setMargin(this: *mut ::std::os::raw::c_void, margin: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCompoundShape9getMarginEv"]
+    pub fn btCompoundShape_getMargin(this: *mut ::std::os::raw::c_void) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btCompoundShape7getNameEv"]
+    pub fn btCompoundShape_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK15btCompoundShape28calculateSerializeBufferSizeEv"]
@@ -21152,6 +28335,10 @@ fn bindgen_test_layout_btBU_Simplex1to4() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN16btBU_Simplex1to45resetEv"]
+    pub fn btBU_Simplex1to4_reset(this: *mut btBU_Simplex1to4);
+}
+extern "C" {
     #[link_name = "\u{1}_ZN16btBU_Simplex1to49addVertexERK9btVector3"]
     pub fn btBU_Simplex1to4_addVertex(this: *mut btBU_Simplex1to4, pt: *const btVector3);
 }
@@ -21191,6 +28378,10 @@ extern "C" {
     );
 }
 impl btBU_Simplex1to4 {
+    #[inline]
+    pub unsafe fn reset(&mut self) {
+        btBU_Simplex1to4_reset(self)
+    }
     #[inline]
     pub unsafe fn addVertex(&mut self, pt: *const btVector3) {
         btBU_Simplex1to4_addVertex(self, pt)
@@ -21302,6 +28493,15 @@ extern "C" {
         tolerance: btScalar,
     ) -> bool;
 }
+extern "C" {
+
+    /// getName is for debugging
+
+    #[link_name = "\u{1}_ZNK16btBU_Simplex1to47getNameEv"]
+    pub fn btBU_Simplex1to4_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
+}
 /// The btEmptyShape is a collision shape without actual collision detection shape, so most users should ignore this class.
 /// It can be replaced by another shape during runtime, but the inertia tensor should be recomputed.
 #[repr(C)]
@@ -21362,11 +28562,36 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN12btEmptyShape15setLocalScalingERK9btVector3"]
+    pub fn btEmptyShape_setLocalScaling(
+        this: *mut ::std::os::raw::c_void,
+        scaling: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btEmptyShape15getLocalScalingEv"]
+    pub fn btEmptyShape_getLocalScaling(this: *mut ::std::os::raw::c_void) -> *const btVector3;
+}
+extern "C" {
     #[link_name = "\u{1}_ZNK12btEmptyShape21calculateLocalInertiaEdR9btVector3"]
     pub fn btEmptyShape_calculateLocalInertia(
         this: *mut ::std::os::raw::c_void,
         mass: btScalar,
         inertia: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btEmptyShape7getNameEv"]
+    pub fn btEmptyShape_getName(this: *mut ::std::os::raw::c_void)
+        -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btEmptyShape19processAllTrianglesEP18btTriangleCallbackRK9btVector3S4_"]
+    pub fn btEmptyShape_processAllTriangles(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *mut btTriangleCallback,
+        arg2: *const btVector3,
+        arg3: *const btVector3,
     );
 }
 /// The btMultiSphereShape represents the convex hull of a collection of spheres. You can create special capsules or other smooth volumes.
@@ -21412,6 +28637,26 @@ fn bindgen_test_layout_btMultiSphereShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK18btMultiSphereShape14getSphereCountEv"]
+    pub fn btMultiSphereShape_getSphereCount(
+        this: *const btMultiSphereShape,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btMultiSphereShape17getSpherePositionEi"]
+    pub fn btMultiSphereShape_getSpherePosition(
+        this: *const btMultiSphereShape,
+        index: ::std::os::raw::c_int,
+    ) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btMultiSphereShape15getSphereRadiusEi"]
+    pub fn btMultiSphereShape_getSphereRadius(
+        this: *const btMultiSphereShape,
+        index: ::std::os::raw::c_int,
+    ) -> btScalar;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN18btMultiSphereShapeC1EPK9btVector3PKdi"]
     pub fn btMultiSphereShape_btMultiSphereShape(
         this: *mut btMultiSphereShape,
@@ -21421,6 +28666,18 @@ extern "C" {
     );
 }
 impl btMultiSphereShape {
+    #[inline]
+    pub unsafe fn getSphereCount(&self) -> ::std::os::raw::c_int {
+        btMultiSphereShape_getSphereCount(self)
+    }
+    #[inline]
+    pub unsafe fn getSpherePosition(&self, index: ::std::os::raw::c_int) -> *const btVector3 {
+        btMultiSphereShape_getSpherePosition(self, index)
+    }
+    #[inline]
+    pub unsafe fn getSphereRadius(&self, index: ::std::os::raw::c_int) -> btScalar {
+        btMultiSphereShape_getSphereRadius(self, index)
+    }
     #[inline]
     pub unsafe fn new(
         positions: *const btVector3,
@@ -21461,6 +28718,12 @@ extern "C" {
         supportVerticesOut: *mut btVector3,
         numVectors: ::std::os::raw::c_int,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btMultiSphereShape7getNameEv"]
+    pub fn btMultiSphereShape_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK18btMultiSphereShape28calculateSerializeBufferSizeEv"]
@@ -21630,6 +28893,24 @@ fn bindgen_test_layout_btUniformScalingShape() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK21btUniformScalingShape23getUniformScalingFactorEv"]
+    pub fn btUniformScalingShape_getUniformScalingFactor(
+        this: *const btUniformScalingShape,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btUniformScalingShape13getChildShapeEv"]
+    pub fn btUniformScalingShape_getChildShape(
+        this: *mut btUniformScalingShape,
+    ) -> *mut btConvexShape;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btUniformScalingShape13getChildShapeEv"]
+    pub fn btUniformScalingShape_getChildShape1(
+        this: *const btUniformScalingShape,
+    ) -> *const btConvexShape;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN21btUniformScalingShapeC1EP13btConvexShaped"]
     pub fn btUniformScalingShape_btUniformScalingShape(
         this: *mut btUniformScalingShape,
@@ -21638,6 +28919,18 @@ extern "C" {
     );
 }
 impl btUniformScalingShape {
+    #[inline]
+    pub unsafe fn getUniformScalingFactor(&self) -> btScalar {
+        btUniformScalingShape_getUniformScalingFactor(self)
+    }
+    #[inline]
+    pub unsafe fn getChildShape(&mut self) -> *mut btConvexShape {
+        btUniformScalingShape_getChildShape(self)
+    }
+    #[inline]
+    pub unsafe fn getChildShape1(&self) -> *const btConvexShape {
+        btUniformScalingShape_getChildShape1(self)
+    }
     #[inline]
     pub unsafe fn new(
         convexChildShape: *mut btConvexShape,
@@ -21686,6 +28979,12 @@ extern "C" {
         mass: btScalar,
         inertia: *mut btVector3,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btUniformScalingShape7getNameEv"]
+    pub fn btUniformScalingShape_getName(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
 
@@ -21794,6 +29093,40 @@ fn bindgen_test_layout_btCollisionAlgorithmConstructionInfo() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN36btCollisionAlgorithmConstructionInfoC1Ev"]
+    pub fn btCollisionAlgorithmConstructionInfo_btCollisionAlgorithmConstructionInfo(
+        this: *mut btCollisionAlgorithmConstructionInfo,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN36btCollisionAlgorithmConstructionInfoC1EP12btDispatcheri"]
+    pub fn btCollisionAlgorithmConstructionInfo_btCollisionAlgorithmConstructionInfo1(
+        this: *mut btCollisionAlgorithmConstructionInfo,
+        dispatcher: *mut btDispatcher,
+        temp: ::std::os::raw::c_int,
+    );
+}
+impl btCollisionAlgorithmConstructionInfo {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionAlgorithmConstructionInfo_btCollisionAlgorithmConstructionInfo(
+            &mut __bindgen_tmp,
+        );
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(dispatcher: *mut btDispatcher, temp: ::std::os::raw::c_int) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionAlgorithmConstructionInfo_btCollisionAlgorithmConstructionInfo1(
+            &mut __bindgen_tmp,
+            dispatcher,
+            temp,
+        );
+        __bindgen_tmp
+    }
+}
 #[repr(C)]
 pub struct btCollisionAlgorithm__bindgen_vtable(::std::os::raw::c_void);
 /// btCollisionAlgorithm is an collision interface that is compatible with the Broadphase and btDispatcher.
@@ -21828,19 +29161,33 @@ fn bindgen_test_layout_btCollisionAlgorithm() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN20btCollisionAlgorithmC2Ev"]
+    pub fn btCollisionAlgorithm_btCollisionAlgorithm(this: *mut btCollisionAlgorithm);
+}
+extern "C" {
     #[link_name = "\u{1}_ZN20btCollisionAlgorithmC2ERK36btCollisionAlgorithmConstructionInfo"]
-    pub fn btCollisionAlgorithm_btCollisionAlgorithm(
+    pub fn btCollisionAlgorithm_btCollisionAlgorithm1(
         this: *mut btCollisionAlgorithm,
         ci: *const btCollisionAlgorithmConstructionInfo,
     );
 }
 impl btCollisionAlgorithm {
     #[inline]
-    pub unsafe fn new(ci: *const btCollisionAlgorithmConstructionInfo) -> Self {
+    pub unsafe fn new() -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
-        btCollisionAlgorithm_btCollisionAlgorithm(&mut __bindgen_tmp, ci);
+        btCollisionAlgorithm_btCollisionAlgorithm(&mut __bindgen_tmp);
         __bindgen_tmp
     }
+    #[inline]
+    pub unsafe fn new1(ci: *const btCollisionAlgorithmConstructionInfo) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btCollisionAlgorithm_btCollisionAlgorithm1(&mut __bindgen_tmp, ci);
+        __bindgen_tmp
+    }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN20btCollisionAlgorithmD0Ev"]
+    pub fn btCollisionAlgorithm_btCollisionAlgorithm_destructor(this: *mut btCollisionAlgorithm);
 }
 extern "C" {
     #[link_name = "\u{1}_ZN20btCollisionAlgorithm16processCollisionEPK24btCollisionObjectWrapperS2_RK16btDispatcherInfoP16btManifoldResult"]
@@ -22017,6 +29364,13 @@ extern "C" {
         col1Wrap: *const btCollisionObjectWrapper,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN32btSphereSphereCollisionAlgorithmC1ERK36btCollisionAlgorithmConstructionInfo"]
+    pub fn btSphereSphereCollisionAlgorithm_btSphereSphereCollisionAlgorithm1(
+        this: *mut btSphereSphereCollisionAlgorithm,
+        ci: *const btCollisionAlgorithmConstructionInfo,
+    );
+}
 impl btSphereSphereCollisionAlgorithm {
     #[inline]
     pub unsafe fn new(
@@ -22033,6 +29387,12 @@ impl btSphereSphereCollisionAlgorithm {
             col0Wrap,
             col1Wrap,
         );
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(ci: *const btCollisionAlgorithmConstructionInfo) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btSphereSphereCollisionAlgorithm_btSphereSphereCollisionAlgorithm1(&mut __bindgen_tmp, ci);
         __bindgen_tmp
     }
 }
@@ -22057,10 +29417,26 @@ extern "C" {
     ) -> btScalar;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN32btSphereSphereCollisionAlgorithm22getAllContactManifoldsER20btAlignedObjectArrayIP20btPersistentManifoldE"]
+    pub fn btSphereSphereCollisionAlgorithm_getAllContactManifolds(
+        this: *mut ::std::os::raw::c_void,
+        manifoldArray: *mut btManifoldArray,
+    );
+}
+extern "C" {
     #[link_name = "\u{1}_ZN32btSphereSphereCollisionAlgorithmD0Ev"]
     pub fn btSphereSphereCollisionAlgorithm_btSphereSphereCollisionAlgorithm_destructor(
         this: *mut btSphereSphereCollisionAlgorithm,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN32btSphereSphereCollisionAlgorithm10CreateFunc24CreateCollisionAlgorithmER36btCollisionAlgorithmConstructionInfoPK24btCollisionObjectWrapperS5_"]
+    pub fn btSphereSphereCollisionAlgorithm_CreateFunc_CreateCollisionAlgorithm(
+        this: *mut ::std::os::raw::c_void,
+        ci: *mut btCollisionAlgorithmConstructionInfo,
+        col0Wrap: *const btCollisionObjectWrapper,
+        col1Wrap: *const btCollisionObjectWrapper,
+    ) -> *mut btCollisionAlgorithm;
 }
 #[repr(C)]
 pub struct btCollisionConfiguration__bindgen_vtable(::std::os::raw::c_void);
@@ -22083,6 +29459,12 @@ fn bindgen_test_layout_btCollisionConfiguration() {
         ::std::mem::align_of::<btCollisionConfiguration>(),
         8usize,
         concat!("Alignment of ", stringify!(btCollisionConfiguration))
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN24btCollisionConfigurationD0Ev"]
+    pub fn btCollisionConfiguration_btCollisionConfiguration_destructor(
+        this: *mut btCollisionConfiguration,
     );
 }
 extern "C" {
@@ -22229,6 +29611,20 @@ fn bindgen_test_layout_btDefaultCollisionConstructionInfo() {
             stringify!(m_useEpaPenetrationAlgorithm)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN34btDefaultCollisionConstructionInfoC1Ev"]
+    pub fn btDefaultCollisionConstructionInfo_btDefaultCollisionConstructionInfo(
+        this: *mut btDefaultCollisionConstructionInfo,
+    );
+}
+impl btDefaultCollisionConstructionInfo {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDefaultCollisionConstructionInfo_btDefaultCollisionConstructionInfo(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
 }
 /// btCollisionConfiguration allows to configure Bullet collision detection
 /// stack allocator, pool memory allocators
@@ -22611,6 +30007,21 @@ extern "C" {
     );
 }
 extern "C" {
+
+    /// memory pools
+
+    #[link_name = "\u{1}_ZN31btDefaultCollisionConfiguration25getPersistentManifoldPoolEv"]
+    pub fn btDefaultCollisionConfiguration_getPersistentManifoldPool(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *mut btPoolAllocator;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN31btDefaultCollisionConfiguration25getCollisionAlgorithmPoolEv"]
+    pub fn btDefaultCollisionConfiguration_getCollisionAlgorithmPool(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *mut btPoolAllocator;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN31btDefaultCollisionConfiguration31getCollisionAlgorithmCreateFuncEii"]
     pub fn btDefaultCollisionConfiguration_getCollisionAlgorithmCreateFunc(
         this: *mut ::std::os::raw::c_void,
@@ -22654,6 +30065,72 @@ fn bindgen_test_layout_btSimpleBroadphaseProxy() {
             stringify!(m_nextFree)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btSimpleBroadphaseProxy11SetNextFreeEi"]
+    pub fn btSimpleBroadphaseProxy_SetNextFree(
+        this: *mut btSimpleBroadphaseProxy,
+        next: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btSimpleBroadphaseProxy11GetNextFreeEv"]
+    pub fn btSimpleBroadphaseProxy_GetNextFree(
+        this: *const btSimpleBroadphaseProxy,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btSimpleBroadphaseProxyC1Ev"]
+    pub fn btSimpleBroadphaseProxy_btSimpleBroadphaseProxy(this: *mut btSimpleBroadphaseProxy);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btSimpleBroadphaseProxyC1ERK9btVector3S2_iPvii"]
+    pub fn btSimpleBroadphaseProxy_btSimpleBroadphaseProxy1(
+        this: *mut btSimpleBroadphaseProxy,
+        minpt: *const btVector3,
+        maxpt: *const btVector3,
+        shapeType: ::std::os::raw::c_int,
+        userPtr: *mut ::std::os::raw::c_void,
+        collisionFilterGroup: ::std::os::raw::c_int,
+        collisionFilterMask: ::std::os::raw::c_int,
+    );
+}
+impl btSimpleBroadphaseProxy {
+    #[inline]
+    pub unsafe fn SetNextFree(&mut self, next: ::std::os::raw::c_int) {
+        btSimpleBroadphaseProxy_SetNextFree(self, next)
+    }
+    #[inline]
+    pub unsafe fn GetNextFree(&self) -> ::std::os::raw::c_int {
+        btSimpleBroadphaseProxy_GetNextFree(self)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btSimpleBroadphaseProxy_btSimpleBroadphaseProxy(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(
+        minpt: *const btVector3,
+        maxpt: *const btVector3,
+        shapeType: ::std::os::raw::c_int,
+        userPtr: *mut ::std::os::raw::c_void,
+        collisionFilterGroup: ::std::os::raw::c_int,
+        collisionFilterMask: ::std::os::raw::c_int,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btSimpleBroadphaseProxy_btSimpleBroadphaseProxy1(
+            &mut __bindgen_tmp,
+            minpt,
+            maxpt,
+            shapeType,
+            userPtr,
+            collisionFilterGroup,
+            collisionFilterMask,
+        );
+        __bindgen_tmp
+    }
 }
 /// The SimpleBroadphase is just a unit-test for btAxisSweep3, bt32BitAxisSweep3, or btDbvtBroadphase, so use those classes instead.
 /// It is a brute force aabb culling broadphase based on O(n^2) aabb checks
@@ -22775,6 +30252,31 @@ fn bindgen_test_layout_btSimpleBroadphase() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN18btSimpleBroadphase11allocHandleEv"]
+    pub fn btSimpleBroadphase_allocHandle(this: *mut btSimpleBroadphase) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSimpleBroadphase10freeHandleEP23btSimpleBroadphaseProxy"]
+    pub fn btSimpleBroadphase_freeHandle(
+        this: *mut btSimpleBroadphase,
+        proxy: *mut btSimpleBroadphaseProxy,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSimpleBroadphase23getSimpleProxyFromProxyEP17btBroadphaseProxy"]
+    pub fn btSimpleBroadphase_getSimpleProxyFromProxy(
+        this: *mut btSimpleBroadphase,
+        proxy: *mut btBroadphaseProxy,
+    ) -> *mut btSimpleBroadphaseProxy;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btSimpleBroadphase23getSimpleProxyFromProxyEP17btBroadphaseProxy"]
+    pub fn btSimpleBroadphase_getSimpleProxyFromProxy1(
+        this: *const btSimpleBroadphase,
+        proxy: *mut btBroadphaseProxy,
+    ) -> *const btSimpleBroadphaseProxy;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN18btSimpleBroadphase8validateEv"]
     pub fn btSimpleBroadphase_validate(this: *mut btSimpleBroadphase);
 }
@@ -22802,6 +30304,28 @@ extern "C" {
     );
 }
 impl btSimpleBroadphase {
+    #[inline]
+    pub unsafe fn allocHandle(&mut self) -> ::std::os::raw::c_int {
+        btSimpleBroadphase_allocHandle(self)
+    }
+    #[inline]
+    pub unsafe fn freeHandle(&mut self, proxy: *mut btSimpleBroadphaseProxy) {
+        btSimpleBroadphase_freeHandle(self, proxy)
+    }
+    #[inline]
+    pub unsafe fn getSimpleProxyFromProxy(
+        &mut self,
+        proxy: *mut btBroadphaseProxy,
+    ) -> *mut btSimpleBroadphaseProxy {
+        btSimpleBroadphase_getSimpleProxyFromProxy(self, proxy)
+    }
+    #[inline]
+    pub unsafe fn getSimpleProxyFromProxy1(
+        &self,
+        proxy: *mut btBroadphaseProxy,
+    ) -> *const btSimpleBroadphaseProxy {
+        btSimpleBroadphase_getSimpleProxyFromProxy1(self, proxy)
+    }
     #[inline]
     pub unsafe fn validate(&mut self) {
         btSimpleBroadphase_validate(self)
@@ -22912,6 +30436,34 @@ extern "C" {
         callback: *mut btBroadphaseAabbCallback,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSimpleBroadphase23getOverlappingPairCacheEv"]
+    pub fn btSimpleBroadphase_getOverlappingPairCache(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *mut btOverlappingPairCache;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btSimpleBroadphase23getOverlappingPairCacheEv"]
+    pub fn btSimpleBroadphase_getOverlappingPairCache1(
+        this: *mut ::std::os::raw::c_void,
+    ) -> *const btOverlappingPairCache;
+}
+extern "C" {
+
+    /// getAabb returns the axis aligned bounding box in the 'global' coordinate frame
+    /// ///will add some transform later
+
+    #[link_name = "\u{1}_ZNK18btSimpleBroadphase17getBroadphaseAabbER9btVector3S1_"]
+    pub fn btSimpleBroadphase_getBroadphaseAabb(
+        this: *mut ::std::os::raw::c_void,
+        aabbMin: *mut btVector3,
+        aabbMax: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSimpleBroadphase10printStatsEv"]
+    pub fn btSimpleBroadphase_printStats(this: *mut ::std::os::raw::c_void);
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct btDbvtAabbMm {
@@ -22950,6 +30502,169 @@ fn bindgen_test_layout_btDbvtAabbMm() {
             stringify!(mx)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btDbvtAabbMm6CenterEv"]
+    pub fn btDbvtAabbMm_Center(this: *const btDbvtAabbMm) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btDbvtAabbMm7LengthsEv"]
+    pub fn btDbvtAabbMm_Lengths(this: *const btDbvtAabbMm) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btDbvtAabbMm7ExtentsEv"]
+    pub fn btDbvtAabbMm_Extents(this: *const btDbvtAabbMm) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btDbvtAabbMm4MinsEv"]
+    pub fn btDbvtAabbMm_Mins(this: *const btDbvtAabbMm) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btDbvtAabbMm4MaxsEv"]
+    pub fn btDbvtAabbMm_Maxs(this: *const btDbvtAabbMm) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btDbvtAabbMm6FromCEERK9btVector3S2_"]
+    pub fn btDbvtAabbMm_FromCE(c: *const btVector3, e: *const btVector3) -> btDbvtAabbMm;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btDbvtAabbMm6FromCRERK9btVector3d"]
+    pub fn btDbvtAabbMm_FromCR(c: *const btVector3, r: btScalar) -> btDbvtAabbMm;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btDbvtAabbMm6FromMMERK9btVector3S2_"]
+    pub fn btDbvtAabbMm_FromMM(mi: *const btVector3, mx: *const btVector3) -> btDbvtAabbMm;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btDbvtAabbMm10FromPointsEPK9btVector3i"]
+    pub fn btDbvtAabbMm_FromPoints(pts: *const btVector3, n: ::std::os::raw::c_int)
+        -> btDbvtAabbMm;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btDbvtAabbMm10FromPointsEPPK9btVector3i"]
+    pub fn btDbvtAabbMm_FromPoints1(
+        ppts: *mut *const btVector3,
+        n: ::std::os::raw::c_int,
+    ) -> btDbvtAabbMm;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btDbvtAabbMm6ExpandERK9btVector3"]
+    pub fn btDbvtAabbMm_Expand(this: *mut btDbvtAabbMm, e: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btDbvtAabbMm12SignedExpandERK9btVector3"]
+    pub fn btDbvtAabbMm_SignedExpand(this: *mut btDbvtAabbMm, e: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btDbvtAabbMm7ContainERKS_"]
+    pub fn btDbvtAabbMm_Contain(this: *const btDbvtAabbMm, a: *const btDbvtAabbMm) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btDbvtAabbMm8ClassifyERK9btVector3di"]
+    pub fn btDbvtAabbMm_Classify(
+        this: *const btDbvtAabbMm,
+        n: *const btVector3,
+        o: btScalar,
+        s: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btDbvtAabbMm14ProjectMinimumERK9btVector3j"]
+    pub fn btDbvtAabbMm_ProjectMinimum(
+        this: *const btDbvtAabbMm,
+        v: *const btVector3,
+        signs: ::std::os::raw::c_uint,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btDbvtAabbMm5tMinsEv"]
+    pub fn btDbvtAabbMm_tMins(this: *mut btDbvtAabbMm) -> *mut btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btDbvtAabbMm5tMaxsEv"]
+    pub fn btDbvtAabbMm_tMaxs(this: *mut btDbvtAabbMm) -> *mut btVector3;
+}
+impl btDbvtAabbMm {
+    #[inline]
+    pub unsafe fn Center(&self) -> btVector3 {
+        btDbvtAabbMm_Center(self)
+    }
+    #[inline]
+    pub unsafe fn Lengths(&self) -> btVector3 {
+        btDbvtAabbMm_Lengths(self)
+    }
+    #[inline]
+    pub unsafe fn Extents(&self) -> btVector3 {
+        btDbvtAabbMm_Extents(self)
+    }
+    #[inline]
+    pub unsafe fn Mins(&self) -> *const btVector3 {
+        btDbvtAabbMm_Mins(self)
+    }
+    #[inline]
+    pub unsafe fn Maxs(&self) -> *const btVector3 {
+        btDbvtAabbMm_Maxs(self)
+    }
+    #[inline]
+    pub unsafe fn FromCE(c: *const btVector3, e: *const btVector3) -> btDbvtAabbMm {
+        btDbvtAabbMm_FromCE(c, e)
+    }
+    #[inline]
+    pub unsafe fn FromCR(c: *const btVector3, r: btScalar) -> btDbvtAabbMm {
+        btDbvtAabbMm_FromCR(c, r)
+    }
+    #[inline]
+    pub unsafe fn FromMM(mi: *const btVector3, mx: *const btVector3) -> btDbvtAabbMm {
+        btDbvtAabbMm_FromMM(mi, mx)
+    }
+    #[inline]
+    pub unsafe fn FromPoints(pts: *const btVector3, n: ::std::os::raw::c_int) -> btDbvtAabbMm {
+        btDbvtAabbMm_FromPoints(pts, n)
+    }
+    #[inline]
+    pub unsafe fn FromPoints1(
+        ppts: *mut *const btVector3,
+        n: ::std::os::raw::c_int,
+    ) -> btDbvtAabbMm {
+        btDbvtAabbMm_FromPoints1(ppts, n)
+    }
+    #[inline]
+    pub unsafe fn Expand(&mut self, e: *const btVector3) {
+        btDbvtAabbMm_Expand(self, e)
+    }
+    #[inline]
+    pub unsafe fn SignedExpand(&mut self, e: *const btVector3) {
+        btDbvtAabbMm_SignedExpand(self, e)
+    }
+    #[inline]
+    pub unsafe fn Contain(&self, a: *const btDbvtAabbMm) -> bool {
+        btDbvtAabbMm_Contain(self, a)
+    }
+    #[inline]
+    pub unsafe fn Classify(
+        &self,
+        n: *const btVector3,
+        o: btScalar,
+        s: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int {
+        btDbvtAabbMm_Classify(self, n, o, s)
+    }
+    #[inline]
+    pub unsafe fn ProjectMinimum(
+        &self,
+        v: *const btVector3,
+        signs: ::std::os::raw::c_uint,
+    ) -> btScalar {
+        btDbvtAabbMm_ProjectMinimum(self, v, signs)
+    }
+    #[inline]
+    pub unsafe fn tMins(&mut self) -> *mut btVector3 {
+        btDbvtAabbMm_tMins(self)
+    }
+    #[inline]
+    pub unsafe fn tMaxs(&mut self) -> *mut btVector3 {
+        btDbvtAabbMm_tMaxs(self)
+    }
 }
 pub type btDbvtVolume = btDbvtAabbMm;
 #[repr(C)]
@@ -23043,6 +30758,24 @@ fn bindgen_test_layout_btDbvtNode() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btDbvtNode6isleafEv"]
+    pub fn btDbvtNode_isleaf(this: *const btDbvtNode) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK10btDbvtNode10isinternalEv"]
+    pub fn btDbvtNode_isinternal(this: *const btDbvtNode) -> bool;
+}
+impl btDbvtNode {
+    #[inline]
+    pub unsafe fn isleaf(&self) -> bool {
+        btDbvtNode_isleaf(self)
+    }
+    #[inline]
+    pub unsafe fn isinternal(&self) -> bool {
+        btDbvtNode_isinternal(self)
+    }
+}
 pub type btNodeStack = btAlignedObjectArray<*const btDbvtNode>;
 /// The btDbvt class implements a fast dynamic bounding volume tree based on axis aligned bounding boxes (aabb tree).
 /// This btDbvt is used for soft body collision detection and for the btDbvtBroadphase. It has a fast insert, remove and update of nodes.
@@ -23096,6 +30829,32 @@ fn bindgen_test_layout_btDbvt_sStkNN() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt6sStkNNC1Ev"]
+    pub fn btDbvt_sStkNN_sStkNN(this: *mut btDbvt_sStkNN);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt6sStkNNC1EPK10btDbvtNodeS3_"]
+    pub fn btDbvt_sStkNN_sStkNN1(
+        this: *mut btDbvt_sStkNN,
+        na: *const btDbvtNode,
+        nb: *const btDbvtNode,
+    );
+}
+impl btDbvt_sStkNN {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDbvt_sStkNN_sStkNN(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(na: *const btDbvtNode, nb: *const btDbvtNode) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDbvt_sStkNN_sStkNN1(&mut __bindgen_tmp, na, nb);
+        __bindgen_tmp
+    }
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct btDbvt_sStkNP {
@@ -23134,6 +30893,22 @@ fn bindgen_test_layout_btDbvt_sStkNP() {
             stringify!(mask)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt6sStkNPC1EPK10btDbvtNodej"]
+    pub fn btDbvt_sStkNP_sStkNP(
+        this: *mut btDbvt_sStkNP,
+        n: *const btDbvtNode,
+        m: ::std::os::raw::c_uint,
+    );
+}
+impl btDbvt_sStkNP {
+    #[inline]
+    pub unsafe fn new(n: *const btDbvtNode, m: ::std::os::raw::c_uint) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDbvt_sStkNP_sStkNP(&mut __bindgen_tmp, n, m);
+        __bindgen_tmp
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -23185,6 +30960,33 @@ fn bindgen_test_layout_btDbvt_sStkNPS() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt7sStkNPSC1Ev"]
+    pub fn btDbvt_sStkNPS_sStkNPS(this: *mut btDbvt_sStkNPS);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt7sStkNPSC1EPK10btDbvtNodejd"]
+    pub fn btDbvt_sStkNPS_sStkNPS1(
+        this: *mut btDbvt_sStkNPS,
+        n: *const btDbvtNode,
+        m: ::std::os::raw::c_uint,
+        v: btScalar,
+    );
+}
+impl btDbvt_sStkNPS {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDbvt_sStkNPS_sStkNPS(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(n: *const btDbvtNode, m: ::std::os::raw::c_uint, v: btScalar) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDbvt_sStkNPS_sStkNPS1(&mut __bindgen_tmp, n, m, v);
+        __bindgen_tmp
+    }
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct btDbvt_sStkCLN {
@@ -23223,6 +31025,22 @@ fn bindgen_test_layout_btDbvt_sStkCLN() {
             stringify!(parent)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt7sStkCLNC1EPK10btDbvtNodePS1_"]
+    pub fn btDbvt_sStkCLN_sStkCLN(
+        this: *mut btDbvt_sStkCLN,
+        n: *const btDbvtNode,
+        p: *mut btDbvtNode,
+    );
+}
+impl btDbvt_sStkCLN {
+    #[inline]
+    pub unsafe fn new(n: *const btDbvtNode, p: *mut btDbvtNode) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDbvt_sStkCLN_sStkCLN(&mut __bindgen_tmp, n, p);
+        __bindgen_tmp
+    }
 }
 #[repr(C)]
 pub struct btDbvt_ICollide__bindgen_vtable(::std::os::raw::c_void);
@@ -23365,6 +31183,10 @@ extern "C" {
     pub fn btDbvt_clear(this: *mut btDbvt);
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK6btDbvt5emptyEv"]
+    pub fn btDbvt_empty(this: *const btDbvt) -> bool;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN6btDbvt16optimizeBottomUpEv"]
     pub fn btDbvt_optimizeBottomUp(this: *mut btDbvt);
 }
@@ -23450,6 +31272,10 @@ extern "C" {
         node: *const btDbvtNode,
         leaves: *mut btAlignedObjectArray<*const btDbvtNode>,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt9benchmarkEv"]
+    pub fn btDbvt_benchmark();
 }
 extern "C" {
     #[link_name = "\u{1}_ZN6btDbvt9enumNodesEPK10btDbvtNodeRNS_8ICollideE"]
@@ -23556,6 +31382,24 @@ extern "C" {
     pub fn btDbvt_collideTU(root: *const btDbvtNode, policy: *mut btDbvt_ICollide);
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt7nearestEPKiPKNS_7sStkNPSEdii"]
+    pub fn btDbvt_nearest(
+        i: *const ::std::os::raw::c_int,
+        a: *const btDbvt_sStkNPS,
+        v: btScalar,
+        l: ::std::os::raw::c_int,
+        h: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt8allocateER20btAlignedObjectArrayIiERS0_INS_7sStkNPSEERKS3_"]
+    pub fn btDbvt_allocate(
+        ifree: *mut btAlignedObjectArray<::std::os::raw::c_int>,
+        stock: *mut btAlignedObjectArray<btDbvt_sStkNPS>,
+        value: *const btDbvt_sStkNPS,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN6btDbvtC1Ev"]
     pub fn btDbvt_btDbvt(this: *mut btDbvt);
 }
@@ -23567,6 +31411,10 @@ impl btDbvt {
     #[inline]
     pub unsafe fn clear(&mut self) {
         btDbvt_clear(self)
+    }
+    #[inline]
+    pub unsafe fn empty(&self) -> bool {
+        btDbvt_empty(self)
     }
     #[inline]
     pub unsafe fn optimizeBottomUp(&mut self) {
@@ -23650,6 +31498,10 @@ impl btDbvt {
         leaves: *mut btAlignedObjectArray<*const btDbvtNode>,
     ) {
         btDbvt_extractLeaves(node, leaves)
+    }
+    #[inline]
+    pub unsafe fn benchmark() {
+        btDbvt_benchmark()
     }
     #[inline]
     pub unsafe fn enumNodes(root: *const btDbvtNode, policy: *mut btDbvt_ICollide) {
@@ -23760,6 +31612,24 @@ impl btDbvt {
         btDbvt_collideTU(root, policy)
     }
     #[inline]
+    pub unsafe fn nearest(
+        i: *const ::std::os::raw::c_int,
+        a: *const btDbvt_sStkNPS,
+        v: btScalar,
+        l: ::std::os::raw::c_int,
+        h: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int {
+        btDbvt_nearest(i, a, v, l, h)
+    }
+    #[inline]
+    pub unsafe fn allocate(
+        ifree: *mut btAlignedObjectArray<::std::os::raw::c_int>,
+        stock: *mut btAlignedObjectArray<btDbvt_sStkNPS>,
+        value: *const btDbvt_sStkNPS,
+    ) -> ::std::os::raw::c_int {
+        btDbvt_allocate(ifree, stock, value)
+    }
+    #[inline]
     pub unsafe fn new() -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
         btDbvt_btDbvt(&mut __bindgen_tmp);
@@ -23769,6 +31639,48 @@ impl btDbvt {
     pub unsafe fn destruct(&mut self) {
         btDbvt_btDbvt_destructor(self)
     }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt8ICollideD0Ev"]
+    pub fn btDbvt_ICollide_ICollide_destructor(this: *mut btDbvt_ICollide);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt8ICollide7ProcessEPK10btDbvtNodeS3_"]
+    pub fn btDbvt_ICollide_Process(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *const btDbvtNode,
+        arg2: *const btDbvtNode,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt8ICollide7ProcessEPK10btDbvtNode"]
+    pub fn btDbvt_ICollide_Process1(this: *mut ::std::os::raw::c_void, arg1: *const btDbvtNode);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt8ICollide7ProcessEPK10btDbvtNoded"]
+    pub fn btDbvt_ICollide_Process2(
+        this: *mut ::std::os::raw::c_void,
+        n: *const btDbvtNode,
+        arg1: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt8ICollide7DescentEPK10btDbvtNode"]
+    pub fn btDbvt_ICollide_Descent(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *const btDbvtNode,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt8ICollide9AllLeavesEPK10btDbvtNode"]
+    pub fn btDbvt_ICollide_AllLeaves(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *const btDbvtNode,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt7IWriterD0Ev"]
+    pub fn btDbvt_IWriter_IWriter_destructor(this: *mut btDbvt_IWriter);
 }
 extern "C" {
     #[link_name = "\u{1}_ZN6btDbvt7IWriter7PrepareEPK10btDbvtNodei"]
@@ -23797,6 +31709,45 @@ extern "C" {
         index: ::std::os::raw::c_int,
         parent: ::std::os::raw::c_int,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt6ICloneD0Ev"]
+    pub fn btDbvt_IClone_IClone_destructor(this: *mut btDbvt_IClone);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN6btDbvt6IClone9CloneLeafEP10btDbvtNode"]
+    pub fn btDbvt_IClone_CloneLeaf(this: *mut ::std::os::raw::c_void, arg1: *mut btDbvtNode);
+}
+extern "C" {
+    #[link_name = "\u{1}_Z9IntersectRK12btDbvtAabbMmS1_"]
+    pub fn Intersect(a: *const btDbvtAabbMm, b: *const btDbvtAabbMm) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z9IntersectRK12btDbvtAabbMmRK9btVector3"]
+    pub fn Intersect1(a: *const btDbvtAabbMm, b: *const btVector3) -> bool;
+}
+extern "C" {
+
+    ///
+
+    #[link_name = "\u{1}_Z9ProximityRK12btDbvtAabbMmS1_"]
+    pub fn Proximity(a: *const btDbvtAabbMm, b: *const btDbvtAabbMm) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z6SelectRK12btDbvtAabbMmS1_S1_"]
+    pub fn Select(
+        o: *const btDbvtAabbMm,
+        a: *const btDbvtAabbMm,
+        b: *const btDbvtAabbMm,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z5MergeRK12btDbvtAabbMmS1_RS_"]
+    pub fn Merge(a: *const btDbvtAabbMm, b: *const btDbvtAabbMm, r: *mut btDbvtAabbMm);
+}
+extern "C" {
+    #[link_name = "\u{1}_Z8NotEqualRK12btDbvtAabbMmS1_"]
+    pub fn NotEqual(a: *const btDbvtAabbMm, b: *const btDbvtAabbMm) -> bool;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -23848,6 +31799,38 @@ fn bindgen_test_layout_btDbvtProxy() {
             stringify!(stage)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btDbvtProxyC1ERK9btVector3S2_Pvii"]
+    pub fn btDbvtProxy_btDbvtProxy(
+        this: *mut btDbvtProxy,
+        aabbMin: *const btVector3,
+        aabbMax: *const btVector3,
+        userPtr: *mut ::std::os::raw::c_void,
+        collisionFilterGroup: ::std::os::raw::c_int,
+        collisionFilterMask: ::std::os::raw::c_int,
+    );
+}
+impl btDbvtProxy {
+    #[inline]
+    pub unsafe fn new(
+        aabbMin: *const btVector3,
+        aabbMax: *const btVector3,
+        userPtr: *mut ::std::os::raw::c_void,
+        collisionFilterGroup: ::std::os::raw::c_int,
+        collisionFilterMask: ::std::os::raw::c_int,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDbvtProxy_btDbvtProxy(
+            &mut __bindgen_tmp,
+            aabbMin,
+            aabbMax,
+            userPtr,
+            collisionFilterGroup,
+            collisionFilterMask,
+        );
+        __bindgen_tmp
+    }
 }
 pub type btDbvtProxyArray = btAlignedObjectArray<*mut btDbvtProxy>;
 /// The btDbvtBroadphase implements a broadphase using two dynamic AABB bounding volume hierarchies/trees (see btDbvt).
@@ -24111,6 +32094,17 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN16btDbvtBroadphase21setVelocityPredictionEd"]
+    pub fn btDbvtBroadphase_setVelocityPrediction(
+        this: *mut btDbvtBroadphase,
+        prediction: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btDbvtBroadphase21getVelocityPredictionEv"]
+    pub fn btDbvtBroadphase_getVelocityPrediction(this: *const btDbvtBroadphase) -> btScalar;
+}
+extern "C" {
 
     /// this setAabbForceUpdate is similar to setAabb but always forces the aabb update.
     /// ///it is not part of the btBroadphaseInterface but specific to btDbvtBroadphase.
@@ -24149,6 +32143,14 @@ impl btDbvtBroadphase {
     #[inline]
     pub unsafe fn performDeferredRemoval(&mut self, dispatcher: *mut btDispatcher) {
         btDbvtBroadphase_performDeferredRemoval(self, dispatcher)
+    }
+    #[inline]
+    pub unsafe fn setVelocityPrediction(&mut self, prediction: btScalar) {
+        btDbvtBroadphase_setVelocityPrediction(self, prediction)
+    }
+    #[inline]
+    pub unsafe fn getVelocityPrediction(&self) -> btScalar {
+        btDbvtBroadphase_getVelocityPrediction(self)
     }
     #[inline]
     pub unsafe fn setAabbForceUpdate(
@@ -24494,6 +32496,50 @@ fn bindgen_test_layout_btDefaultMotionState() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN20btDefaultMotionStateC1ERK11btTransformS2_"]
+    pub fn btDefaultMotionState_btDefaultMotionState(
+        this: *mut btDefaultMotionState,
+        startTrans: *const btTransform,
+        centerOfMassOffset: *const btTransform,
+    );
+}
+impl btDefaultMotionState {
+    #[inline]
+    pub unsafe fn new(
+        startTrans: *const btTransform,
+        centerOfMassOffset: *const btTransform,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDefaultMotionState_btDefaultMotionState(
+            &mut __bindgen_tmp,
+            startTrans,
+            centerOfMassOffset,
+        );
+        __bindgen_tmp
+    }
+}
+extern "C" {
+
+    /// synchronizes world transform from user to physics
+
+    #[link_name = "\u{1}_ZNK20btDefaultMotionState17getWorldTransformER11btTransform"]
+    pub fn btDefaultMotionState_getWorldTransform(
+        this: *mut ::std::os::raw::c_void,
+        centerOfMassWorldTrans: *mut btTransform,
+    );
+}
+extern "C" {
+
+    /// synchronizes world transform from physics to user
+    /// ///Bullet only calls the update of worldtransform for active objects
+
+    #[link_name = "\u{1}_ZN20btDefaultMotionState17setWorldTransformERK11btTransform"]
+    pub fn btDefaultMotionState_setWorldTransform(
+        this: *mut ::std::os::raw::c_void,
+        centerOfMassWorldTrans: *const btTransform,
+    );
+}
 /// The btClock is a portable basic clock that measures accurate time in seconds, use for profiling.
 #[repr(C)]
 #[derive(Debug)]
@@ -24758,6 +32804,18 @@ extern "C" {
     ) -> *mut CProfileNode;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN12CProfileNode10Get_ParentEv"]
+    pub fn CProfileNode_Get_Parent(this: *mut CProfileNode) -> *mut CProfileNode;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12CProfileNode11Get_SiblingEv"]
+    pub fn CProfileNode_Get_Sibling(this: *mut CProfileNode) -> *mut CProfileNode;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12CProfileNode9Get_ChildEv"]
+    pub fn CProfileNode_Get_Child(this: *mut CProfileNode) -> *mut CProfileNode;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN12CProfileNode13CleanupMemoryEv"]
     pub fn CProfileNode_CleanupMemory(this: *mut CProfileNode);
 }
@@ -24772,6 +32830,26 @@ extern "C" {
 extern "C" {
     #[link_name = "\u{1}_ZN12CProfileNode6ReturnEv"]
     pub fn CProfileNode_Return(this: *mut CProfileNode) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12CProfileNode8Get_NameEv"]
+    pub fn CProfileNode_Get_Name(this: *mut CProfileNode) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12CProfileNode15Get_Total_CallsEv"]
+    pub fn CProfileNode_Get_Total_Calls(this: *mut CProfileNode) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12CProfileNode14Get_Total_TimeEv"]
+    pub fn CProfileNode_Get_Total_Time(this: *mut CProfileNode) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12CProfileNode14GetUserPointerEv"]
+    pub fn CProfileNode_GetUserPointer(this: *const CProfileNode) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12CProfileNode14SetUserPointerEPv"]
+    pub fn CProfileNode_SetUserPointer(this: *mut CProfileNode, ptr: *mut ::std::os::raw::c_void);
 }
 extern "C" {
     #[link_name = "\u{1}_ZN12CProfileNodeC1EPKcPS_"]
@@ -24794,6 +32872,18 @@ impl CProfileNode {
         CProfileNode_Get_Sub_Node(self, name)
     }
     #[inline]
+    pub unsafe fn Get_Parent(&mut self) -> *mut CProfileNode {
+        CProfileNode_Get_Parent(self)
+    }
+    #[inline]
+    pub unsafe fn Get_Sibling(&mut self) -> *mut CProfileNode {
+        CProfileNode_Get_Sibling(self)
+    }
+    #[inline]
+    pub unsafe fn Get_Child(&mut self) -> *mut CProfileNode {
+        CProfileNode_Get_Child(self)
+    }
+    #[inline]
     pub unsafe fn CleanupMemory(&mut self) {
         CProfileNode_CleanupMemory(self)
     }
@@ -24808,6 +32898,26 @@ impl CProfileNode {
     #[inline]
     pub unsafe fn Return(&mut self) -> bool {
         CProfileNode_Return(self)
+    }
+    #[inline]
+    pub unsafe fn Get_Name(&mut self) -> *const ::std::os::raw::c_char {
+        CProfileNode_Get_Name(self)
+    }
+    #[inline]
+    pub unsafe fn Get_Total_Calls(&mut self) -> ::std::os::raw::c_int {
+        CProfileNode_Get_Total_Calls(self)
+    }
+    #[inline]
+    pub unsafe fn Get_Total_Time(&mut self) -> f32 {
+        CProfileNode_Get_Total_Time(self)
+    }
+    #[inline]
+    pub unsafe fn GetUserPointer(&self) -> *mut ::std::os::raw::c_void {
+        CProfileNode_GetUserPointer(self)
+    }
+    #[inline]
+    pub unsafe fn SetUserPointer(&mut self, ptr: *mut ::std::os::raw::c_void) {
+        CProfileNode_SetUserPointer(self, ptr)
     }
     #[inline]
     pub unsafe fn new(name: *const ::std::os::raw::c_char, parent: *mut CProfileNode) -> Self {
@@ -24873,6 +32983,10 @@ extern "C" {
     pub fn CProfileIterator_Is_Done(this: *mut CProfileIterator) -> bool;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN16CProfileIterator7Is_RootEv"]
+    pub fn CProfileIterator_Is_Root(this: *mut CProfileIterator) -> bool;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN16CProfileIterator11Enter_ChildEi"]
     pub fn CProfileIterator_Enter_Child(this: *mut CProfileIterator, index: ::std::os::raw::c_int);
 }
@@ -24883,6 +32997,51 @@ extern "C" {
 extern "C" {
     #[link_name = "\u{1}_ZN16CProfileIterator12Enter_ParentEv"]
     pub fn CProfileIterator_Enter_Parent(this: *mut CProfileIterator);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16CProfileIterator16Get_Current_NameEv"]
+    pub fn CProfileIterator_Get_Current_Name(
+        this: *mut CProfileIterator,
+    ) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16CProfileIterator23Get_Current_Total_CallsEv"]
+    pub fn CProfileIterator_Get_Current_Total_Calls(
+        this: *mut CProfileIterator,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16CProfileIterator22Get_Current_Total_TimeEv"]
+    pub fn CProfileIterator_Get_Current_Total_Time(this: *mut CProfileIterator) -> f32;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16CProfileIterator23Get_Current_UserPointerEv"]
+    pub fn CProfileIterator_Get_Current_UserPointer(
+        this: *mut CProfileIterator,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16CProfileIterator23Set_Current_UserPointerEPv"]
+    pub fn CProfileIterator_Set_Current_UserPointer(
+        this: *mut CProfileIterator,
+        ptr: *mut ::std::os::raw::c_void,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16CProfileIterator23Get_Current_Parent_NameEv"]
+    pub fn CProfileIterator_Get_Current_Parent_Name(
+        this: *mut CProfileIterator,
+    ) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16CProfileIterator30Get_Current_Parent_Total_CallsEv"]
+    pub fn CProfileIterator_Get_Current_Parent_Total_Calls(
+        this: *mut CProfileIterator,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16CProfileIterator29Get_Current_Parent_Total_TimeEv"]
+    pub fn CProfileIterator_Get_Current_Parent_Total_Time(this: *mut CProfileIterator) -> f32;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN16CProfileIteratorC1EP12CProfileNode"]
@@ -24902,6 +33061,10 @@ impl CProfileIterator {
         CProfileIterator_Is_Done(self)
     }
     #[inline]
+    pub unsafe fn Is_Root(&mut self) -> bool {
+        CProfileIterator_Is_Root(self)
+    }
+    #[inline]
     pub unsafe fn Enter_Child(&mut self, index: ::std::os::raw::c_int) {
         CProfileIterator_Enter_Child(self, index)
     }
@@ -24912,6 +33075,38 @@ impl CProfileIterator {
     #[inline]
     pub unsafe fn Enter_Parent(&mut self) {
         CProfileIterator_Enter_Parent(self)
+    }
+    #[inline]
+    pub unsafe fn Get_Current_Name(&mut self) -> *const ::std::os::raw::c_char {
+        CProfileIterator_Get_Current_Name(self)
+    }
+    #[inline]
+    pub unsafe fn Get_Current_Total_Calls(&mut self) -> ::std::os::raw::c_int {
+        CProfileIterator_Get_Current_Total_Calls(self)
+    }
+    #[inline]
+    pub unsafe fn Get_Current_Total_Time(&mut self) -> f32 {
+        CProfileIterator_Get_Current_Total_Time(self)
+    }
+    #[inline]
+    pub unsafe fn Get_Current_UserPointer(&mut self) -> *mut ::std::os::raw::c_void {
+        CProfileIterator_Get_Current_UserPointer(self)
+    }
+    #[inline]
+    pub unsafe fn Set_Current_UserPointer(&mut self, ptr: *mut ::std::os::raw::c_void) {
+        CProfileIterator_Set_Current_UserPointer(self, ptr)
+    }
+    #[inline]
+    pub unsafe fn Get_Current_Parent_Name(&mut self) -> *const ::std::os::raw::c_char {
+        CProfileIterator_Get_Current_Parent_Name(self)
+    }
+    #[inline]
+    pub unsafe fn Get_Current_Parent_Total_Calls(&mut self) -> ::std::os::raw::c_int {
+        CProfileIterator_Get_Current_Parent_Total_Calls(self)
+    }
+    #[inline]
+    pub unsafe fn Get_Current_Parent_Total_Time(&mut self) -> f32 {
+        CProfileIterator_Get_Current_Parent_Total_Time(self)
     }
     #[inline]
     pub unsafe fn new(start: *mut CProfileNode) -> Self {
@@ -24968,12 +33163,20 @@ extern "C" {
     pub fn CProfileManager_Increment_Frame_Counter();
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN15CProfileManager27Get_Frame_Count_Since_ResetEv"]
+    pub fn CProfileManager_Get_Frame_Count_Since_Reset() -> ::std::os::raw::c_int;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN15CProfileManager20Get_Time_Since_ResetEv"]
     pub fn CProfileManager_Get_Time_Since_Reset() -> f32;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN15CProfileManager12Get_IteratorEv"]
     pub fn CProfileManager_Get_Iterator() -> *mut CProfileIterator;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15CProfileManager16Release_IteratorEP16CProfileIterator"]
+    pub fn CProfileManager_Release_Iterator(iterator: *mut CProfileIterator);
 }
 extern "C" {
     #[link_name = "\u{1}_ZN15CProfileManager13dumpRecursiveEP16CProfileIteratori"]
@@ -25008,12 +33211,20 @@ impl CProfileManager {
         CProfileManager_Increment_Frame_Counter()
     }
     #[inline]
+    pub unsafe fn Get_Frame_Count_Since_Reset() -> ::std::os::raw::c_int {
+        CProfileManager_Get_Frame_Count_Since_Reset()
+    }
+    #[inline]
     pub unsafe fn Get_Time_Since_Reset() -> f32 {
         CProfileManager_Get_Time_Since_Reset()
     }
     #[inline]
     pub unsafe fn Get_Iterator() -> *mut CProfileIterator {
         CProfileManager_Get_Iterator()
+    }
+    #[inline]
+    pub unsafe fn Release_Iterator(iterator: *mut CProfileIterator) {
+        CProfileManager_Release_Iterator(iterator)
     }
     #[inline]
     pub unsafe fn dumpRecursive(
@@ -25186,6 +33397,18 @@ fn bindgen_test_layout_btIDebugDraw_DefaultColors() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw13DefaultColorsC1Ev"]
+    pub fn btIDebugDraw_DefaultColors_DefaultColors(this: *mut btIDebugDraw_DefaultColors);
+}
+impl btIDebugDraw_DefaultColors {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btIDebugDraw_DefaultColors_DefaultColors(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
 pub const btIDebugDraw_DebugDrawModes_DBG_NoDebug: btIDebugDraw_DebugDrawModes = 0;
 pub const btIDebugDraw_DebugDrawModes_DBG_DrawWireframe: btIDebugDraw_DebugDrawModes = 1;
 pub const btIDebugDraw_DebugDrawModes_DBG_DrawAabb: btIDebugDraw_DebugDrawModes = 2;
@@ -25219,12 +33442,85 @@ fn bindgen_test_layout_btIDebugDraw() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDrawD0Ev"]
+    pub fn btIDebugDraw_btIDebugDraw_destructor(this: *mut btIDebugDraw);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btIDebugDraw16getDefaultColorsEv"]
+    pub fn btIDebugDraw_getDefaultColors(
+        this: *mut ::std::os::raw::c_void,
+    ) -> btIDebugDraw_DefaultColors;
+}
+extern "C" {
+
+    /// the default implementation for setDefaultColors has no effect. A derived class can implement it and store the colors.
+
+    #[link_name = "\u{1}_ZN12btIDebugDraw16setDefaultColorsERKNS_13DefaultColorsE"]
+    pub fn btIDebugDraw_setDefaultColors(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *const btIDebugDraw_DefaultColors,
+    );
+}
+extern "C" {
     #[link_name = "\u{1}_ZN12btIDebugDraw8drawLineERK9btVector3S2_S2_"]
     pub fn btIDebugDraw_drawLine(
         this: *mut ::std::os::raw::c_void,
         from: *const btVector3,
         to: *const btVector3,
         color: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw8drawLineERK9btVector3S2_S2_S2_"]
+    pub fn btIDebugDraw_drawLine1(
+        this: *mut ::std::os::raw::c_void,
+        from: *const btVector3,
+        to: *const btVector3,
+        fromColor: *const btVector3,
+        toColor: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw10drawSphereEdRK11btTransformRK9btVector3"]
+    pub fn btIDebugDraw_drawSphere(
+        this: *mut ::std::os::raw::c_void,
+        radius: btScalar,
+        transform: *const btTransform,
+        color: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw10drawSphereERK9btVector3dS2_"]
+    pub fn btIDebugDraw_drawSphere1(
+        this: *mut ::std::os::raw::c_void,
+        p: *const btVector3,
+        radius: btScalar,
+        color: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw12drawTriangleERK9btVector3S2_S2_S2_S2_S2_S2_d"]
+    pub fn btIDebugDraw_drawTriangle(
+        this: *mut ::std::os::raw::c_void,
+        v0: *const btVector3,
+        v1: *const btVector3,
+        v2: *const btVector3,
+        arg1: *const btVector3,
+        arg2: *const btVector3,
+        arg3: *const btVector3,
+        color: *const btVector3,
+        alpha: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw12drawTriangleERK9btVector3S2_S2_S2_d"]
+    pub fn btIDebugDraw_drawTriangle1(
+        this: *mut ::std::os::raw::c_void,
+        v0: *const btVector3,
+        v1: *const btVector3,
+        v2: *const btVector3,
+        color: *const btVector3,
+        arg1: btScalar,
     );
 }
 extern "C" {
@@ -25263,6 +33559,126 @@ extern "C" {
 extern "C" {
     #[link_name = "\u{1}_ZNK12btIDebugDraw12getDebugModeEv"]
     pub fn btIDebugDraw_getDebugMode(this: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw8drawAabbERK9btVector3S2_S2_"]
+    pub fn btIDebugDraw_drawAabb(
+        this: *mut ::std::os::raw::c_void,
+        from: *const btVector3,
+        to: *const btVector3,
+        color: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw13drawTransformERK11btTransformd"]
+    pub fn btIDebugDraw_drawTransform(
+        this: *mut ::std::os::raw::c_void,
+        transform: *const btTransform,
+        orthoLen: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw7drawArcERK9btVector3S2_S2_ddddS2_bd"]
+    pub fn btIDebugDraw_drawArc(
+        this: *mut ::std::os::raw::c_void,
+        center: *const btVector3,
+        normal: *const btVector3,
+        axis: *const btVector3,
+        radiusA: btScalar,
+        radiusB: btScalar,
+        minAngle: btScalar,
+        maxAngle: btScalar,
+        color: *const btVector3,
+        drawSect: bool,
+        stepDegrees: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw15drawSpherePatchERK9btVector3S2_S2_dddddS2_db"]
+    pub fn btIDebugDraw_drawSpherePatch(
+        this: *mut ::std::os::raw::c_void,
+        center: *const btVector3,
+        up: *const btVector3,
+        axis: *const btVector3,
+        radius: btScalar,
+        minTh: btScalar,
+        maxTh: btScalar,
+        minPs: btScalar,
+        maxPs: btScalar,
+        color: *const btVector3,
+        stepDegrees: btScalar,
+        drawCenter: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw7drawBoxERK9btVector3S2_S2_"]
+    pub fn btIDebugDraw_drawBox(
+        this: *mut ::std::os::raw::c_void,
+        bbMin: *const btVector3,
+        bbMax: *const btVector3,
+        color: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw7drawBoxERK9btVector3S2_RK11btTransformS2_"]
+    pub fn btIDebugDraw_drawBox1(
+        this: *mut ::std::os::raw::c_void,
+        bbMin: *const btVector3,
+        bbMax: *const btVector3,
+        trans: *const btTransform,
+        color: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw11drawCapsuleEddiRK11btTransformRK9btVector3"]
+    pub fn btIDebugDraw_drawCapsule(
+        this: *mut ::std::os::raw::c_void,
+        radius: btScalar,
+        halfHeight: btScalar,
+        upAxis: ::std::os::raw::c_int,
+        transform: *const btTransform,
+        color: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw12drawCylinderEddiRK11btTransformRK9btVector3"]
+    pub fn btIDebugDraw_drawCylinder(
+        this: *mut ::std::os::raw::c_void,
+        radius: btScalar,
+        halfHeight: btScalar,
+        upAxis: ::std::os::raw::c_int,
+        transform: *const btTransform,
+        color: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw8drawConeEddiRK11btTransformRK9btVector3"]
+    pub fn btIDebugDraw_drawCone(
+        this: *mut ::std::os::raw::c_void,
+        radius: btScalar,
+        height: btScalar,
+        upAxis: ::std::os::raw::c_int,
+        transform: *const btTransform,
+        color: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw9drawPlaneERK9btVector3dRK11btTransformS2_"]
+    pub fn btIDebugDraw_drawPlane(
+        this: *mut ::std::os::raw::c_void,
+        planeNormal: *const btVector3,
+        planeConst: btScalar,
+        transform: *const btTransform,
+        color: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw10clearLinesEv"]
+    pub fn btIDebugDraw_clearLines(this: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btIDebugDraw10flushLinesEv"]
+    pub fn btIDebugDraw_flushLines(this: *mut ::std::os::raw::c_void);
 }
 pub const btSolverMode_SOLVER_RANDMIZE_ORDER: btSolverMode = 1;
 pub const btSolverMode_SOLVER_FRICTION_SEPARATE: btSolverMode = 2;
@@ -25609,6 +34025,18 @@ fn bindgen_test_layout_btContactSolverInfo() {
         8usize,
         concat!("Alignment of ", stringify!(btContactSolverInfo))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btContactSolverInfoC1Ev"]
+    pub fn btContactSolverInfo_btContactSolverInfo(this: *mut btContactSolverInfo);
+}
+impl btContactSolverInfo {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btContactSolverInfo_btContactSolverInfo(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
 }
 /// do not change those serialization structures, it requires an updated sBulletDNAstr/sBulletDNAstr64
 #[repr(C)]
@@ -26267,6 +34695,96 @@ fn bindgen_test_layout_btDynamicsWorld() {
 }
 extern "C" {
 
+    /// Set the callback for when an internal tick (simulation substep) happens, optional user info
+
+    #[link_name = "\u{1}_ZN15btDynamicsWorld23setInternalTickCallbackEPFvPS_dEPvb"]
+    pub fn btDynamicsWorld_setInternalTickCallback(
+        this: *mut btDynamicsWorld,
+        cb: btInternalTickCallback,
+        worldUserInfo: *mut ::std::os::raw::c_void,
+        isPreTick: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btDynamicsWorld16setWorldUserInfoEPv"]
+    pub fn btDynamicsWorld_setWorldUserInfo(
+        this: *mut btDynamicsWorld,
+        worldUserInfo: *mut ::std::os::raw::c_void,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btDynamicsWorld16getWorldUserInfoEv"]
+    pub fn btDynamicsWorld_getWorldUserInfo(
+        this: *const btDynamicsWorld,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btDynamicsWorld13getSolverInfoEv"]
+    pub fn btDynamicsWorld_getSolverInfo(this: *mut btDynamicsWorld) -> *mut btContactSolverInfo;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btDynamicsWorld13getSolverInfoEv"]
+    pub fn btDynamicsWorld_getSolverInfo1(
+        this: *const btDynamicsWorld,
+    ) -> *const btContactSolverInfo;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btDynamicsWorldC2EP12btDispatcherP21btBroadphaseInterfaceP24btCollisionConfiguration"]
+    pub fn btDynamicsWorld_btDynamicsWorld(
+        this: *mut btDynamicsWorld,
+        dispatcher: *mut btDispatcher,
+        broadphase: *mut btBroadphaseInterface,
+        collisionConfiguration: *mut btCollisionConfiguration,
+    );
+}
+impl btDynamicsWorld {
+    #[inline]
+    pub unsafe fn setInternalTickCallback(
+        &mut self,
+        cb: btInternalTickCallback,
+        worldUserInfo: *mut ::std::os::raw::c_void,
+        isPreTick: bool,
+    ) {
+        btDynamicsWorld_setInternalTickCallback(self, cb, worldUserInfo, isPreTick)
+    }
+    #[inline]
+    pub unsafe fn setWorldUserInfo(&mut self, worldUserInfo: *mut ::std::os::raw::c_void) {
+        btDynamicsWorld_setWorldUserInfo(self, worldUserInfo)
+    }
+    #[inline]
+    pub unsafe fn getWorldUserInfo(&self) -> *mut ::std::os::raw::c_void {
+        btDynamicsWorld_getWorldUserInfo(self)
+    }
+    #[inline]
+    pub unsafe fn getSolverInfo(&mut self) -> *mut btContactSolverInfo {
+        btDynamicsWorld_getSolverInfo(self)
+    }
+    #[inline]
+    pub unsafe fn getSolverInfo1(&self) -> *const btContactSolverInfo {
+        btDynamicsWorld_getSolverInfo1(self)
+    }
+    #[inline]
+    pub unsafe fn new(
+        dispatcher: *mut btDispatcher,
+        broadphase: *mut btBroadphaseInterface,
+        collisionConfiguration: *mut btCollisionConfiguration,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDynamicsWorld_btDynamicsWorld(
+            &mut __bindgen_tmp,
+            dispatcher,
+            broadphase,
+            collisionConfiguration,
+        );
+        __bindgen_tmp
+    }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btDynamicsWorldD0Ev"]
+    pub fn btDynamicsWorld_btDynamicsWorld_destructor(this: *mut btDynamicsWorld);
+}
+extern "C" {
+
     /// stepSimulation proceeds the simulation over 'timeStep', units in preferably in seconds.
     /// ///By default, Bullet will subdivide the timestep in constant substeps of each 'fixedTimeStep'.
     /// ///in order to keep the simulation real-time, the maximum number of substeps can be clamped to 'maxSubSteps'.
@@ -26283,6 +34801,21 @@ extern "C" {
 extern "C" {
     #[link_name = "\u{1}_ZN15btDynamicsWorld14debugDrawWorldEv"]
     pub fn btDynamicsWorld_debugDrawWorld(this: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btDynamicsWorld13addConstraintEP17btTypedConstraintb"]
+    pub fn btDynamicsWorld_addConstraint(
+        this: *mut ::std::os::raw::c_void,
+        constraint: *mut btTypedConstraint,
+        disableCollisionsBetweenLinkedBodies: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btDynamicsWorld16removeConstraintEP17btTypedConstraint"]
+    pub fn btDynamicsWorld_removeConstraint(
+        this: *mut ::std::os::raw::c_void,
+        constraint: *mut btTypedConstraint,
+    );
 }
 extern "C" {
     #[link_name = "\u{1}_ZN15btDynamicsWorld9addActionEP17btActionInterface"]
@@ -26344,12 +34877,72 @@ extern "C" {
     ) -> *mut btConstraintSolver;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK15btDynamicsWorld17getNumConstraintsEv"]
+    pub fn btDynamicsWorld_getNumConstraints(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btDynamicsWorld13getConstraintEi"]
+    pub fn btDynamicsWorld_getConstraint(
+        this: *mut ::std::os::raw::c_void,
+        index: ::std::os::raw::c_int,
+    ) -> *mut btTypedConstraint;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btDynamicsWorld13getConstraintEi"]
+    pub fn btDynamicsWorld_getConstraint1(
+        this: *mut ::std::os::raw::c_void,
+        index: ::std::os::raw::c_int,
+    ) -> *const btTypedConstraint;
+}
+extern "C" {
     #[link_name = "\u{1}_ZNK15btDynamicsWorld12getWorldTypeEv"]
     pub fn btDynamicsWorld_getWorldType(this: *mut ::std::os::raw::c_void) -> btDynamicsWorldType;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN15btDynamicsWorld11clearForcesEv"]
     pub fn btDynamicsWorld_clearForces(this: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+
+    /// obsolete, use addAction instead.
+
+    #[link_name = "\u{1}_ZN15btDynamicsWorld10addVehicleEP17btActionInterface"]
+    pub fn btDynamicsWorld_addVehicle(
+        this: *mut ::std::os::raw::c_void,
+        vehicle: *mut btActionInterface,
+    );
+}
+extern "C" {
+
+    /// obsolete, use removeAction instead
+
+    #[link_name = "\u{1}_ZN15btDynamicsWorld13removeVehicleEP17btActionInterface"]
+    pub fn btDynamicsWorld_removeVehicle(
+        this: *mut ::std::os::raw::c_void,
+        vehicle: *mut btActionInterface,
+    );
+}
+extern "C" {
+
+    /// obsolete, use addAction instead.
+
+    #[link_name = "\u{1}_ZN15btDynamicsWorld12addCharacterEP17btActionInterface"]
+    pub fn btDynamicsWorld_addCharacter(
+        this: *mut ::std::os::raw::c_void,
+        character: *mut btActionInterface,
+    );
+}
+extern "C" {
+
+    /// obsolete, use removeAction instead
+
+    #[link_name = "\u{1}_ZN15btDynamicsWorld15removeCharacterEP17btActionInterface"]
+    pub fn btDynamicsWorld_removeCharacter(
+        this: *mut ::std::os::raw::c_void,
+        character: *mut btActionInterface,
+    );
 }
 /// do not change those serialization structures, it requires an updated sBulletDNAstr/sBulletDNAstr64
 #[repr(C)]
@@ -26504,6 +35097,10 @@ extern "C" {
     #[link_name = "\u{1}_ZN11btSpinMutex7tryLockEv"]
     pub fn btSpinMutex_tryLock(this: *mut btSpinMutex) -> bool;
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN11btSpinMutexC1Ev"]
+    pub fn btSpinMutex_btSpinMutex(this: *mut btSpinMutex);
+}
 impl btSpinMutex {
     #[inline]
     pub unsafe fn lock(&mut self) {
@@ -26517,6 +35114,24 @@ impl btSpinMutex {
     pub unsafe fn tryLock(&mut self) -> bool {
         btSpinMutex_tryLock(self)
     }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btSpinMutex_btSpinMutex(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
+extern "C" {
+    #[link_name = "\u{1}_Z11btMutexLockP11btSpinMutex"]
+    pub fn btMutexLock(mutex: *mut btSpinMutex);
+}
+extern "C" {
+    #[link_name = "\u{1}_Z13btMutexUnlockP11btSpinMutex"]
+    pub fn btMutexUnlock(mutex: *mut btSpinMutex);
+}
+extern "C" {
+    #[link_name = "\u{1}_Z14btMutexTryLockP11btSpinMutex"]
+    pub fn btMutexTryLock(mutex: *mut btSpinMutex) -> bool;
 }
 #[repr(C)]
 pub struct btIParallelForBody__bindgen_vtable(::std::os::raw::c_void);
@@ -26537,6 +35152,10 @@ fn bindgen_test_layout_btIParallelForBody() {
         8usize,
         concat!("Alignment of ", stringify!(btIParallelForBody))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btIParallelForBodyD0Ev"]
+    pub fn btIParallelForBody_btIParallelForBody_destructor(this: *mut btIParallelForBody);
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK18btIParallelForBody7forLoopEii"]
@@ -26600,6 +35219,11 @@ fn bindgen_test_layout_btITaskScheduler() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK16btITaskScheduler7getNameEv"]
+    pub fn btITaskScheduler_getName(this: *const btITaskScheduler)
+        -> *const ::std::os::raw::c_char;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN16btITaskSchedulerC2EPKc"]
     pub fn btITaskScheduler_btITaskScheduler(
         this: *mut btITaskScheduler,
@@ -26608,11 +35232,19 @@ extern "C" {
 }
 impl btITaskScheduler {
     #[inline]
+    pub unsafe fn getName(&self) -> *const ::std::os::raw::c_char {
+        btITaskScheduler_getName(self)
+    }
+    #[inline]
     pub unsafe fn new(name: *const ::std::os::raw::c_char) -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
         btITaskScheduler_btITaskScheduler(&mut __bindgen_tmp, name);
         __bindgen_tmp
     }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btITaskSchedulerD0Ev"]
+    pub fn btITaskScheduler_btITaskScheduler_destructor(this: *mut btITaskScheduler);
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK16btITaskScheduler16getMaxNumThreadsEv"]
@@ -26989,6 +35621,67 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN23btDiscreteDynamicsWorld26getSimulationIslandManagerEv"]
+    pub fn btDiscreteDynamicsWorld_getSimulationIslandManager(
+        this: *mut btDiscreteDynamicsWorld,
+    ) -> *mut btSimulationIslandManager;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btDiscreteDynamicsWorld26getSimulationIslandManagerEv"]
+    pub fn btDiscreteDynamicsWorld_getSimulationIslandManager1(
+        this: *const btDiscreteDynamicsWorld,
+    ) -> *const btSimulationIslandManager;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btDiscreteDynamicsWorld17getCollisionWorldEv"]
+    pub fn btDiscreteDynamicsWorld_getCollisionWorld(
+        this: *mut btDiscreteDynamicsWorld,
+    ) -> *mut btCollisionWorld;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btDiscreteDynamicsWorld29setSynchronizeAllMotionStatesEb"]
+    pub fn btDiscreteDynamicsWorld_setSynchronizeAllMotionStates(
+        this: *mut btDiscreteDynamicsWorld,
+        synchronizeAll: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btDiscreteDynamicsWorld29getSynchronizeAllMotionStatesEv"]
+    pub fn btDiscreteDynamicsWorld_getSynchronizeAllMotionStates(
+        this: *const btDiscreteDynamicsWorld,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btDiscreteDynamicsWorld37setApplySpeculativeContactRestitutionEb"]
+    pub fn btDiscreteDynamicsWorld_setApplySpeculativeContactRestitution(
+        this: *mut btDiscreteDynamicsWorld,
+        enable: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btDiscreteDynamicsWorld37getApplySpeculativeContactRestitutionEv"]
+    pub fn btDiscreteDynamicsWorld_getApplySpeculativeContactRestitution(
+        this: *const btDiscreteDynamicsWorld,
+    ) -> bool;
+}
+extern "C" {
+
+    /// Interpolate motion state between previous and current transform, instead of current and next transform.
+    /// ///This can relieve discontinuities in the rendering, due to penetrations
+
+    #[link_name = "\u{1}_ZN23btDiscreteDynamicsWorld34setLatencyMotionStateInterpolationEb"]
+    pub fn btDiscreteDynamicsWorld_setLatencyMotionStateInterpolation(
+        this: *mut btDiscreteDynamicsWorld,
+        latencyInterpolation: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btDiscreteDynamicsWorld34getLatencyMotionStateInterpolationEv"]
+    pub fn btDiscreteDynamicsWorld_getLatencyMotionStateInterpolation(
+        this: *const btDiscreteDynamicsWorld,
+    ) -> bool;
+}
+extern "C" {
 
     /// this btDiscreteDynamicsWorld constructor gets created objects from the user, and will not delete those
 
@@ -27043,6 +35736,42 @@ impl btDiscreteDynamicsWorld {
     #[inline]
     pub unsafe fn synchronizeSingleMotionState(&mut self, body: *mut btRigidBody) {
         btDiscreteDynamicsWorld_synchronizeSingleMotionState(self, body)
+    }
+    #[inline]
+    pub unsafe fn getSimulationIslandManager(&mut self) -> *mut btSimulationIslandManager {
+        btDiscreteDynamicsWorld_getSimulationIslandManager(self)
+    }
+    #[inline]
+    pub unsafe fn getSimulationIslandManager1(&self) -> *const btSimulationIslandManager {
+        btDiscreteDynamicsWorld_getSimulationIslandManager1(self)
+    }
+    #[inline]
+    pub unsafe fn getCollisionWorld(&mut self) -> *mut btCollisionWorld {
+        btDiscreteDynamicsWorld_getCollisionWorld(self)
+    }
+    #[inline]
+    pub unsafe fn setSynchronizeAllMotionStates(&mut self, synchronizeAll: bool) {
+        btDiscreteDynamicsWorld_setSynchronizeAllMotionStates(self, synchronizeAll)
+    }
+    #[inline]
+    pub unsafe fn getSynchronizeAllMotionStates(&self) -> bool {
+        btDiscreteDynamicsWorld_getSynchronizeAllMotionStates(self)
+    }
+    #[inline]
+    pub unsafe fn setApplySpeculativeContactRestitution(&mut self, enable: bool) {
+        btDiscreteDynamicsWorld_setApplySpeculativeContactRestitution(self, enable)
+    }
+    #[inline]
+    pub unsafe fn getApplySpeculativeContactRestitution(&self) -> bool {
+        btDiscreteDynamicsWorld_getApplySpeculativeContactRestitution(self)
+    }
+    #[inline]
+    pub unsafe fn setLatencyMotionStateInterpolation(&mut self, latencyInterpolation: bool) {
+        btDiscreteDynamicsWorld_setLatencyMotionStateInterpolation(self, latencyInterpolation)
+    }
+    #[inline]
+    pub unsafe fn getLatencyMotionStateInterpolation(&self) -> bool {
+        btDiscreteDynamicsWorld_getLatencyMotionStateInterpolation(self)
     }
     #[inline]
     pub unsafe fn new(
@@ -27264,6 +35993,12 @@ extern "C" {
     ) -> *const btTypedConstraint;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK23btDiscreteDynamicsWorld12getWorldTypeEv"]
+    pub fn btDiscreteDynamicsWorld_getWorldType(
+        this: *mut ::std::os::raw::c_void,
+    ) -> btDynamicsWorldType;
+}
+extern "C" {
 
     /// the forces on each rigidbody is accumulating together with gravity. clear this after each timestep.
 
@@ -27276,6 +36011,23 @@ extern "C" {
 
     #[link_name = "\u{1}_ZN23btDiscreteDynamicsWorld12applyGravityEv"]
     pub fn btDiscreteDynamicsWorld_applyGravity(this: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btDiscreteDynamicsWorld11setNumTasksEi"]
+    pub fn btDiscreteDynamicsWorld_setNumTasks(
+        this: *mut ::std::os::raw::c_void,
+        numTasks: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+
+    /// obsolete, use updateActions instead
+
+    #[link_name = "\u{1}_ZN23btDiscreteDynamicsWorld14updateVehiclesEd"]
+    pub fn btDiscreteDynamicsWorld_updateVehicles(
+        this: *mut ::std::os::raw::c_void,
+        timeStep: btScalar,
+    );
 }
 extern "C" {
 
@@ -27534,6 +36286,12 @@ extern "C" {
     pub fn btSimpleDynamicsWorld_getConstraintSolver(
         this: *mut ::std::os::raw::c_void,
     ) -> *mut btConstraintSolver;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btSimpleDynamicsWorld12getWorldTypeEv"]
+    pub fn btSimpleDynamicsWorld_getWorldType(
+        this: *mut ::std::os::raw::c_void,
+    ) -> btDynamicsWorldType;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN21btSimpleDynamicsWorld11clearForcesEv"]
@@ -27882,6 +36640,35 @@ fn bindgen_test_layout_btRigidBody_btRigidBodyConstructionInfo() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody27btRigidBodyConstructionInfoC1EdP13btMotionStateP16btCollisionShapeRK9btVector3"]
+    pub fn btRigidBody_btRigidBodyConstructionInfo_btRigidBodyConstructionInfo(
+        this: *mut btRigidBody_btRigidBodyConstructionInfo,
+        mass: btScalar,
+        motionState: *mut btMotionState,
+        collisionShape: *mut btCollisionShape,
+        localInertia: *const btVector3,
+    );
+}
+impl btRigidBody_btRigidBodyConstructionInfo {
+    #[inline]
+    pub unsafe fn new(
+        mass: btScalar,
+        motionState: *mut btMotionState,
+        collisionShape: *mut btCollisionShape,
+        localInertia: *const btVector3,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btRigidBody_btRigidBodyConstructionInfo_btRigidBodyConstructionInfo(
+            &mut __bindgen_tmp,
+            mass,
+            motionState,
+            collisionShape,
+            localInertia,
+        );
+        __bindgen_tmp
+    }
+}
 #[test]
 fn bindgen_test_layout_btRigidBody() {
     assert_eq!(
@@ -28228,6 +37015,18 @@ extern "C" {
 }
 extern "C" {
 
+    /// to keep collision detection and dynamics separate we don't store a rigidbody pointer
+    /// ///but a rigidbody is derived from btCollisionObject, so we can safely perform an upcast
+
+    #[link_name = "\u{1}_ZN11btRigidBody6upcastEPK17btCollisionObject"]
+    pub fn btRigidBody_upcast(colObj: *const btCollisionObject) -> *const btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody6upcastEP17btCollisionObject"]
+    pub fn btRigidBody_upcast1(colObj: *mut btCollisionObject) -> *mut btRigidBody;
+}
+extern "C" {
+
     /// continuous collision detection needs prediction
 
     #[link_name = "\u{1}_ZN11btRigidBody26predictIntegratedTransformEdR11btTransform"]
@@ -28250,6 +37049,10 @@ extern "C" {
     pub fn btRigidBody_setGravity(this: *mut btRigidBody, acceleration: *const btVector3);
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody10getGravityEv"]
+    pub fn btRigidBody_getGravity(this: *const btRigidBody) -> *const btVector3;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN11btRigidBody10setDampingEdd"]
     pub fn btRigidBody_setDamping(
         this: *mut btRigidBody,
@@ -28258,8 +37061,32 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody16getLinearDampingEv"]
+    pub fn btRigidBody_getLinearDamping(this: *const btRigidBody) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody17getAngularDampingEv"]
+    pub fn btRigidBody_getAngularDamping(this: *const btRigidBody) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody26getLinearSleepingThresholdEv"]
+    pub fn btRigidBody_getLinearSleepingThreshold(this: *const btRigidBody) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody27getAngularSleepingThresholdEv"]
+    pub fn btRigidBody_getAngularSleepingThreshold(this: *const btRigidBody) -> btScalar;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN11btRigidBody12applyDampingEd"]
     pub fn btRigidBody_applyDamping(this: *mut btRigidBody, timeStep: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody17getCollisionShapeEv"]
+    pub fn btRigidBody_getCollisionShape(this: *const btRigidBody) -> *const btCollisionShape;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody17getCollisionShapeEv"]
+    pub fn btRigidBody_getCollisionShape1(this: *mut btRigidBody) -> *mut btCollisionShape;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN11btRigidBody12setMassPropsEdRK9btVector3"]
@@ -28270,6 +37097,22 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody15getLinearFactorEv"]
+    pub fn btRigidBody_getLinearFactor(this: *const btRigidBody) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody15setLinearFactorERK9btVector3"]
+    pub fn btRigidBody_setLinearFactor(this: *mut btRigidBody, linearFactor: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody10getInvMassEv"]
+    pub fn btRigidBody_getInvMass(this: *const btRigidBody) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody24getInvInertiaTensorWorldEv"]
+    pub fn btRigidBody_getInvInertiaTensorWorld(this: *const btRigidBody) -> *const btMatrix3x3;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN11btRigidBody19integrateVelocitiesEd"]
     pub fn btRigidBody_integrateVelocities(this: *mut btRigidBody, step: btScalar);
 }
@@ -28278,12 +37121,110 @@ extern "C" {
     pub fn btRigidBody_setCenterOfMassTransform(this: *mut btRigidBody, xform: *const btTransform);
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody17applyCentralForceERK9btVector3"]
+    pub fn btRigidBody_applyCentralForce(this: *mut btRigidBody, force: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody13getTotalForceEv"]
+    pub fn btRigidBody_getTotalForce(this: *const btRigidBody) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody14getTotalTorqueEv"]
+    pub fn btRigidBody_getTotalTorque(this: *const btRigidBody) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody22getInvInertiaDiagLocalEv"]
+    pub fn btRigidBody_getInvInertiaDiagLocal(this: *const btRigidBody) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody22setInvInertiaDiagLocalERK9btVector3"]
+    pub fn btRigidBody_setInvInertiaDiagLocal(
+        this: *mut btRigidBody,
+        diagInvInertia: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody21setSleepingThresholdsEdd"]
+    pub fn btRigidBody_setSleepingThresholds(
+        this: *mut btRigidBody,
+        linear: btScalar,
+        angular: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody11applyTorqueERK9btVector3"]
+    pub fn btRigidBody_applyTorque(this: *mut btRigidBody, torque: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody10applyForceERK9btVector3S2_"]
+    pub fn btRigidBody_applyForce(
+        this: *mut btRigidBody,
+        force: *const btVector3,
+        rel_pos: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody19applyCentralImpulseERK9btVector3"]
+    pub fn btRigidBody_applyCentralImpulse(this: *mut btRigidBody, impulse: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody18applyTorqueImpulseERK9btVector3"]
+    pub fn btRigidBody_applyTorqueImpulse(this: *mut btRigidBody, torque: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody12applyImpulseERK9btVector3S2_"]
+    pub fn btRigidBody_applyImpulse(
+        this: *mut btRigidBody,
+        impulse: *const btVector3,
+        rel_pos: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody11clearForcesEv"]
+    pub fn btRigidBody_clearForces(this: *mut btRigidBody);
+}
+extern "C" {
     #[link_name = "\u{1}_ZN11btRigidBody19updateInertiaTensorEv"]
     pub fn btRigidBody_updateInertiaTensor(this: *mut btRigidBody);
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody23getCenterOfMassPositionEv"]
+    pub fn btRigidBody_getCenterOfMassPosition(this: *const btRigidBody) -> *const btVector3;
+}
+extern "C" {
     #[link_name = "\u{1}_ZNK11btRigidBody14getOrientationEv"]
     pub fn btRigidBody_getOrientation(this: *const btRigidBody) -> btQuaternion;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody24getCenterOfMassTransformEv"]
+    pub fn btRigidBody_getCenterOfMassTransform(this: *const btRigidBody) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody17getLinearVelocityEv"]
+    pub fn btRigidBody_getLinearVelocity(this: *const btRigidBody) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody18getAngularVelocityEv"]
+    pub fn btRigidBody_getAngularVelocity(this: *const btRigidBody) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody17setLinearVelocityERK9btVector3"]
+    pub fn btRigidBody_setLinearVelocity(this: *mut btRigidBody, lin_vel: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody18setAngularVelocityERK9btVector3"]
+    pub fn btRigidBody_setAngularVelocity(this: *mut btRigidBody, ang_vel: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody23getVelocityInLocalPointERK9btVector3"]
+    pub fn btRigidBody_getVelocityInLocalPoint(
+        this: *const btRigidBody,
+        rel_pos: *const btVector3,
+    ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody9translateERK9btVector3"]
+    pub fn btRigidBody_translate(this: *mut btRigidBody, v: *const btVector3);
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK11btRigidBody7getAabbER9btVector3S1_"]
@@ -28294,12 +37235,97 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody25computeImpulseDenominatorERK9btVector3S2_"]
+    pub fn btRigidBody_computeImpulseDenominator(
+        this: *const btRigidBody,
+        pos: *const btVector3,
+        normal: *const btVector3,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody32computeAngularImpulseDenominatorERK9btVector3"]
+    pub fn btRigidBody_computeAngularImpulseDenominator(
+        this: *const btRigidBody,
+        axis: *const btVector3,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody18updateDeactivationEd"]
+    pub fn btRigidBody_updateDeactivation(this: *mut btRigidBody, timeStep: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody13wantsSleepingEv"]
+    pub fn btRigidBody_wantsSleeping(this: *mut btRigidBody) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody18getBroadphaseProxyEv"]
+    pub fn btRigidBody_getBroadphaseProxy(this: *const btRigidBody) -> *const btBroadphaseProxy;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody18getBroadphaseProxyEv"]
+    pub fn btRigidBody_getBroadphaseProxy1(this: *mut btRigidBody) -> *mut btBroadphaseProxy;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody21setNewBroadphaseProxyEP17btBroadphaseProxy"]
+    pub fn btRigidBody_setNewBroadphaseProxy(
+        this: *mut btRigidBody,
+        broadphaseProxy: *mut btBroadphaseProxy,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody14getMotionStateEv"]
+    pub fn btRigidBody_getMotionState(this: *mut btRigidBody) -> *mut btMotionState;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody14getMotionStateEv"]
+    pub fn btRigidBody_getMotionState1(this: *const btRigidBody) -> *const btMotionState;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody14setMotionStateEP13btMotionState"]
+    pub fn btRigidBody_setMotionState(this: *mut btRigidBody, motionState: *mut btMotionState);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody16setAngularFactorERK9btVector3"]
+    pub fn btRigidBody_setAngularFactor(this: *mut btRigidBody, angFac: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody16setAngularFactorEd"]
+    pub fn btRigidBody_setAngularFactor1(this: *mut btRigidBody, angFac: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody16getAngularFactorEv"]
+    pub fn btRigidBody_getAngularFactor(this: *const btRigidBody) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody9isInWorldEv"]
+    pub fn btRigidBody_isInWorld(this: *const btRigidBody) -> bool;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN11btRigidBody16addConstraintRefEP17btTypedConstraint"]
     pub fn btRigidBody_addConstraintRef(this: *mut btRigidBody, c: *mut btTypedConstraint);
 }
 extern "C" {
     #[link_name = "\u{1}_ZN11btRigidBody19removeConstraintRefEP17btTypedConstraint"]
     pub fn btRigidBody_removeConstraintRef(this: *mut btRigidBody, c: *mut btTypedConstraint);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody16getConstraintRefEi"]
+    pub fn btRigidBody_getConstraintRef(
+        this: *mut btRigidBody,
+        index: ::std::os::raw::c_int,
+    ) -> *mut btTypedConstraint;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody20getNumConstraintRefsEv"]
+    pub fn btRigidBody_getNumConstraintRefs(this: *const btRigidBody) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBody8setFlagsEi"]
+    pub fn btRigidBody_setFlags(this: *mut btRigidBody, flags: ::std::os::raw::c_int);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK11btRigidBody8getFlagsEv"]
+    pub fn btRigidBody_getFlags(this: *const btRigidBody) -> ::std::os::raw::c_int;
 }
 extern "C" {
 
@@ -28372,6 +37398,14 @@ impl btRigidBody {
         btRigidBody_proceedToTransform(self, newTrans)
     }
     #[inline]
+    pub unsafe fn upcast(colObj: *const btCollisionObject) -> *const btRigidBody {
+        btRigidBody_upcast(colObj)
+    }
+    #[inline]
+    pub unsafe fn upcast1(colObj: *mut btCollisionObject) -> *mut btRigidBody {
+        btRigidBody_upcast1(colObj)
+    }
+    #[inline]
     pub unsafe fn predictIntegratedTransform(
         &mut self,
         step: btScalar,
@@ -28392,16 +37426,60 @@ impl btRigidBody {
         btRigidBody_setGravity(self, acceleration)
     }
     #[inline]
+    pub unsafe fn getGravity(&self) -> *const btVector3 {
+        btRigidBody_getGravity(self)
+    }
+    #[inline]
     pub unsafe fn setDamping(&mut self, lin_damping: btScalar, ang_damping: btScalar) {
         btRigidBody_setDamping(self, lin_damping, ang_damping)
+    }
+    #[inline]
+    pub unsafe fn getLinearDamping(&self) -> btScalar {
+        btRigidBody_getLinearDamping(self)
+    }
+    #[inline]
+    pub unsafe fn getAngularDamping(&self) -> btScalar {
+        btRigidBody_getAngularDamping(self)
+    }
+    #[inline]
+    pub unsafe fn getLinearSleepingThreshold(&self) -> btScalar {
+        btRigidBody_getLinearSleepingThreshold(self)
+    }
+    #[inline]
+    pub unsafe fn getAngularSleepingThreshold(&self) -> btScalar {
+        btRigidBody_getAngularSleepingThreshold(self)
     }
     #[inline]
     pub unsafe fn applyDamping(&mut self, timeStep: btScalar) {
         btRigidBody_applyDamping(self, timeStep)
     }
     #[inline]
+    pub unsafe fn getCollisionShape(&self) -> *const btCollisionShape {
+        btRigidBody_getCollisionShape(self)
+    }
+    #[inline]
+    pub unsafe fn getCollisionShape1(&mut self) -> *mut btCollisionShape {
+        btRigidBody_getCollisionShape1(self)
+    }
+    #[inline]
     pub unsafe fn setMassProps(&mut self, mass: btScalar, inertia: *const btVector3) {
         btRigidBody_setMassProps(self, mass, inertia)
+    }
+    #[inline]
+    pub unsafe fn getLinearFactor(&self) -> *const btVector3 {
+        btRigidBody_getLinearFactor(self)
+    }
+    #[inline]
+    pub unsafe fn setLinearFactor(&mut self, linearFactor: *const btVector3) {
+        btRigidBody_setLinearFactor(self, linearFactor)
+    }
+    #[inline]
+    pub unsafe fn getInvMass(&self) -> btScalar {
+        btRigidBody_getInvMass(self)
+    }
+    #[inline]
+    pub unsafe fn getInvInertiaTensorWorld(&self) -> *const btMatrix3x3 {
+        btRigidBody_getInvInertiaTensorWorld(self)
     }
     #[inline]
     pub unsafe fn integrateVelocities(&mut self, step: btScalar) {
@@ -28412,16 +37490,156 @@ impl btRigidBody {
         btRigidBody_setCenterOfMassTransform(self, xform)
     }
     #[inline]
+    pub unsafe fn applyCentralForce(&mut self, force: *const btVector3) {
+        btRigidBody_applyCentralForce(self, force)
+    }
+    #[inline]
+    pub unsafe fn getTotalForce(&self) -> *const btVector3 {
+        btRigidBody_getTotalForce(self)
+    }
+    #[inline]
+    pub unsafe fn getTotalTorque(&self) -> *const btVector3 {
+        btRigidBody_getTotalTorque(self)
+    }
+    #[inline]
+    pub unsafe fn getInvInertiaDiagLocal(&self) -> *const btVector3 {
+        btRigidBody_getInvInertiaDiagLocal(self)
+    }
+    #[inline]
+    pub unsafe fn setInvInertiaDiagLocal(&mut self, diagInvInertia: *const btVector3) {
+        btRigidBody_setInvInertiaDiagLocal(self, diagInvInertia)
+    }
+    #[inline]
+    pub unsafe fn setSleepingThresholds(&mut self, linear: btScalar, angular: btScalar) {
+        btRigidBody_setSleepingThresholds(self, linear, angular)
+    }
+    #[inline]
+    pub unsafe fn applyTorque(&mut self, torque: *const btVector3) {
+        btRigidBody_applyTorque(self, torque)
+    }
+    #[inline]
+    pub unsafe fn applyForce(&mut self, force: *const btVector3, rel_pos: *const btVector3) {
+        btRigidBody_applyForce(self, force, rel_pos)
+    }
+    #[inline]
+    pub unsafe fn applyCentralImpulse(&mut self, impulse: *const btVector3) {
+        btRigidBody_applyCentralImpulse(self, impulse)
+    }
+    #[inline]
+    pub unsafe fn applyTorqueImpulse(&mut self, torque: *const btVector3) {
+        btRigidBody_applyTorqueImpulse(self, torque)
+    }
+    #[inline]
+    pub unsafe fn applyImpulse(&mut self, impulse: *const btVector3, rel_pos: *const btVector3) {
+        btRigidBody_applyImpulse(self, impulse, rel_pos)
+    }
+    #[inline]
+    pub unsafe fn clearForces(&mut self) {
+        btRigidBody_clearForces(self)
+    }
+    #[inline]
     pub unsafe fn updateInertiaTensor(&mut self) {
         btRigidBody_updateInertiaTensor(self)
+    }
+    #[inline]
+    pub unsafe fn getCenterOfMassPosition(&self) -> *const btVector3 {
+        btRigidBody_getCenterOfMassPosition(self)
     }
     #[inline]
     pub unsafe fn getOrientation(&self) -> btQuaternion {
         btRigidBody_getOrientation(self)
     }
     #[inline]
+    pub unsafe fn getCenterOfMassTransform(&self) -> *const btTransform {
+        btRigidBody_getCenterOfMassTransform(self)
+    }
+    #[inline]
+    pub unsafe fn getLinearVelocity(&self) -> *const btVector3 {
+        btRigidBody_getLinearVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn getAngularVelocity(&self) -> *const btVector3 {
+        btRigidBody_getAngularVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn setLinearVelocity(&mut self, lin_vel: *const btVector3) {
+        btRigidBody_setLinearVelocity(self, lin_vel)
+    }
+    #[inline]
+    pub unsafe fn setAngularVelocity(&mut self, ang_vel: *const btVector3) {
+        btRigidBody_setAngularVelocity(self, ang_vel)
+    }
+    #[inline]
+    pub unsafe fn getVelocityInLocalPoint(&self, rel_pos: *const btVector3) -> btVector3 {
+        btRigidBody_getVelocityInLocalPoint(self, rel_pos)
+    }
+    #[inline]
+    pub unsafe fn translate(&mut self, v: *const btVector3) {
+        btRigidBody_translate(self, v)
+    }
+    #[inline]
     pub unsafe fn getAabb(&self, aabbMin: *mut btVector3, aabbMax: *mut btVector3) {
         btRigidBody_getAabb(self, aabbMin, aabbMax)
+    }
+    #[inline]
+    pub unsafe fn computeImpulseDenominator(
+        &self,
+        pos: *const btVector3,
+        normal: *const btVector3,
+    ) -> btScalar {
+        btRigidBody_computeImpulseDenominator(self, pos, normal)
+    }
+    #[inline]
+    pub unsafe fn computeAngularImpulseDenominator(&self, axis: *const btVector3) -> btScalar {
+        btRigidBody_computeAngularImpulseDenominator(self, axis)
+    }
+    #[inline]
+    pub unsafe fn updateDeactivation(&mut self, timeStep: btScalar) {
+        btRigidBody_updateDeactivation(self, timeStep)
+    }
+    #[inline]
+    pub unsafe fn wantsSleeping(&mut self) -> bool {
+        btRigidBody_wantsSleeping(self)
+    }
+    #[inline]
+    pub unsafe fn getBroadphaseProxy(&self) -> *const btBroadphaseProxy {
+        btRigidBody_getBroadphaseProxy(self)
+    }
+    #[inline]
+    pub unsafe fn getBroadphaseProxy1(&mut self) -> *mut btBroadphaseProxy {
+        btRigidBody_getBroadphaseProxy1(self)
+    }
+    #[inline]
+    pub unsafe fn setNewBroadphaseProxy(&mut self, broadphaseProxy: *mut btBroadphaseProxy) {
+        btRigidBody_setNewBroadphaseProxy(self, broadphaseProxy)
+    }
+    #[inline]
+    pub unsafe fn getMotionState(&mut self) -> *mut btMotionState {
+        btRigidBody_getMotionState(self)
+    }
+    #[inline]
+    pub unsafe fn getMotionState1(&self) -> *const btMotionState {
+        btRigidBody_getMotionState1(self)
+    }
+    #[inline]
+    pub unsafe fn setMotionState(&mut self, motionState: *mut btMotionState) {
+        btRigidBody_setMotionState(self, motionState)
+    }
+    #[inline]
+    pub unsafe fn setAngularFactor(&mut self, angFac: *const btVector3) {
+        btRigidBody_setAngularFactor(self, angFac)
+    }
+    #[inline]
+    pub unsafe fn setAngularFactor1(&mut self, angFac: btScalar) {
+        btRigidBody_setAngularFactor1(self, angFac)
+    }
+    #[inline]
+    pub unsafe fn getAngularFactor(&self) -> *const btVector3 {
+        btRigidBody_getAngularFactor(self)
+    }
+    #[inline]
+    pub unsafe fn isInWorld(&self) -> bool {
+        btRigidBody_isInWorld(self)
     }
     #[inline]
     pub unsafe fn addConstraintRef(&mut self, c: *mut btTypedConstraint) {
@@ -28430,6 +37648,25 @@ impl btRigidBody {
     #[inline]
     pub unsafe fn removeConstraintRef(&mut self, c: *mut btTypedConstraint) {
         btRigidBody_removeConstraintRef(self, c)
+    }
+    #[inline]
+    pub unsafe fn getConstraintRef(
+        &mut self,
+        index: ::std::os::raw::c_int,
+    ) -> *mut btTypedConstraint {
+        btRigidBody_getConstraintRef(self, index)
+    }
+    #[inline]
+    pub unsafe fn getNumConstraintRefs(&self) -> ::std::os::raw::c_int {
+        btRigidBody_getNumConstraintRefs(self)
+    }
+    #[inline]
+    pub unsafe fn setFlags(&mut self, flags: ::std::os::raw::c_int) {
+        btRigidBody_setFlags(self, flags)
+    }
+    #[inline]
+    pub unsafe fn getFlags(&self) -> ::std::os::raw::c_int {
+        btRigidBody_getFlags(self)
     }
     #[inline]
     pub unsafe fn computeGyroscopicImpulseImplicit_World(&self, dt: btScalar) -> btVector3 {
@@ -28470,6 +37707,10 @@ impl btRigidBody {
         );
         __bindgen_tmp
     }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btRigidBodyD0Ev"]
+    pub fn btRigidBody_btRigidBody_destructor(this: *mut btRigidBody);
 }
 extern "C" {
 
@@ -29135,6 +38376,212 @@ fn bindgen_test_layout_btJacobianEntry() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btJacobianEntry11getDiagonalEv"]
+    pub fn btJacobianEntry_getDiagonal(this: *const btJacobianEntry) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btJacobianEntry14getNonDiagonalERKS_d"]
+    pub fn btJacobianEntry_getNonDiagonal(
+        this: *const btJacobianEntry,
+        jacB: *const btJacobianEntry,
+        massInvA: btScalar,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK15btJacobianEntry14getNonDiagonalERKS_dd"]
+    pub fn btJacobianEntry_getNonDiagonal1(
+        this: *const btJacobianEntry,
+        jacB: *const btJacobianEntry,
+        massInvA: btScalar,
+        massInvB: btScalar,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btJacobianEntry19getRelativeVelocityERK9btVector3S2_S2_S2_"]
+    pub fn btJacobianEntry_getRelativeVelocity(
+        this: *mut btJacobianEntry,
+        linvelA: *const btVector3,
+        angvelA: *const btVector3,
+        linvelB: *const btVector3,
+        angvelB: *const btVector3,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btJacobianEntryC1Ev"]
+    pub fn btJacobianEntry_btJacobianEntry(this: *mut btJacobianEntry);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btJacobianEntryC1ERK11btMatrix3x3S2_RK9btVector3S5_S5_S5_dS5_d"]
+    pub fn btJacobianEntry_btJacobianEntry1(
+        this: *mut btJacobianEntry,
+        world2A: *const btMatrix3x3,
+        world2B: *const btMatrix3x3,
+        rel_pos1: *const btVector3,
+        rel_pos2: *const btVector3,
+        jointAxis: *const btVector3,
+        inertiaInvA: *const btVector3,
+        massInvA: btScalar,
+        inertiaInvB: *const btVector3,
+        massInvB: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btJacobianEntryC1ERK9btVector3RK11btMatrix3x3S5_S2_S2_"]
+    pub fn btJacobianEntry_btJacobianEntry2(
+        this: *mut btJacobianEntry,
+        jointAxis: *const btVector3,
+        world2A: *const btMatrix3x3,
+        world2B: *const btMatrix3x3,
+        inertiaInvA: *const btVector3,
+        inertiaInvB: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btJacobianEntryC1ERK9btVector3S2_S2_S2_"]
+    pub fn btJacobianEntry_btJacobianEntry3(
+        this: *mut btJacobianEntry,
+        axisInA: *const btVector3,
+        axisInB: *const btVector3,
+        inertiaInvA: *const btVector3,
+        inertiaInvB: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN15btJacobianEntryC1ERK11btMatrix3x3RK9btVector3S5_S5_S5_d"]
+    pub fn btJacobianEntry_btJacobianEntry4(
+        this: *mut btJacobianEntry,
+        world2A: *const btMatrix3x3,
+        rel_pos1: *const btVector3,
+        rel_pos2: *const btVector3,
+        jointAxis: *const btVector3,
+        inertiaInvA: *const btVector3,
+        massInvA: btScalar,
+    );
+}
+impl btJacobianEntry {
+    #[inline]
+    pub unsafe fn getDiagonal(&self) -> btScalar {
+        btJacobianEntry_getDiagonal(self)
+    }
+    #[inline]
+    pub unsafe fn getNonDiagonal(
+        &self,
+        jacB: *const btJacobianEntry,
+        massInvA: btScalar,
+    ) -> btScalar {
+        btJacobianEntry_getNonDiagonal(self, jacB, massInvA)
+    }
+    #[inline]
+    pub unsafe fn getNonDiagonal1(
+        &self,
+        jacB: *const btJacobianEntry,
+        massInvA: btScalar,
+        massInvB: btScalar,
+    ) -> btScalar {
+        btJacobianEntry_getNonDiagonal1(self, jacB, massInvA, massInvB)
+    }
+    #[inline]
+    pub unsafe fn getRelativeVelocity(
+        &mut self,
+        linvelA: *const btVector3,
+        angvelA: *const btVector3,
+        linvelB: *const btVector3,
+        angvelB: *const btVector3,
+    ) -> btScalar {
+        btJacobianEntry_getRelativeVelocity(self, linvelA, angvelA, linvelB, angvelB)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btJacobianEntry_btJacobianEntry(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(
+        world2A: *const btMatrix3x3,
+        world2B: *const btMatrix3x3,
+        rel_pos1: *const btVector3,
+        rel_pos2: *const btVector3,
+        jointAxis: *const btVector3,
+        inertiaInvA: *const btVector3,
+        massInvA: btScalar,
+        inertiaInvB: *const btVector3,
+        massInvB: btScalar,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btJacobianEntry_btJacobianEntry1(
+            &mut __bindgen_tmp,
+            world2A,
+            world2B,
+            rel_pos1,
+            rel_pos2,
+            jointAxis,
+            inertiaInvA,
+            massInvA,
+            inertiaInvB,
+            massInvB,
+        );
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new2(
+        jointAxis: *const btVector3,
+        world2A: *const btMatrix3x3,
+        world2B: *const btMatrix3x3,
+        inertiaInvA: *const btVector3,
+        inertiaInvB: *const btVector3,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btJacobianEntry_btJacobianEntry2(
+            &mut __bindgen_tmp,
+            jointAxis,
+            world2A,
+            world2B,
+            inertiaInvA,
+            inertiaInvB,
+        );
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new3(
+        axisInA: *const btVector3,
+        axisInB: *const btVector3,
+        inertiaInvA: *const btVector3,
+        inertiaInvB: *const btVector3,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btJacobianEntry_btJacobianEntry3(
+            &mut __bindgen_tmp,
+            axisInA,
+            axisInB,
+            inertiaInvA,
+            inertiaInvB,
+        );
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new4(
+        world2A: *const btMatrix3x3,
+        rel_pos1: *const btVector3,
+        rel_pos2: *const btVector3,
+        jointAxis: *const btVector3,
+        inertiaInvA: *const btVector3,
+        massInvA: btScalar,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btJacobianEntry_btJacobianEntry4(
+            &mut __bindgen_tmp,
+            world2A,
+            rel_pos1,
+            rel_pos2,
+            jointAxis,
+            inertiaInvA,
+            massInvA,
+        );
+        __bindgen_tmp
+    }
+}
 /// The btSolverBody is an internal datastructure for the constraint solver. Only necessary data is packed to increase cache coherence/performance.
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -29295,6 +38742,269 @@ fn bindgen_test_layout_btSolverBody() {
             stringify!(m_originalBody)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btSolverBody17setWorldTransformERK11btTransform"]
+    pub fn btSolverBody_setWorldTransform(
+        this: *mut btSolverBody,
+        worldTransform: *const btTransform,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btSolverBody17getWorldTransformEv"]
+    pub fn btSolverBody_getWorldTransform(this: *const btSolverBody) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btSolverBody30getVelocityInLocalPointNoDeltaERK9btVector3RS0_"]
+    pub fn btSolverBody_getVelocityInLocalPointNoDelta(
+        this: *const btSolverBody,
+        rel_pos: *const btVector3,
+        velocity: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btSolverBody31getVelocityInLocalPointObsoleteERK9btVector3RS0_"]
+    pub fn btSolverBody_getVelocityInLocalPointObsolete(
+        this: *const btSolverBody,
+        rel_pos: *const btVector3,
+        velocity: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btSolverBody18getAngularVelocityER9btVector3"]
+    pub fn btSolverBody_getAngularVelocity(this: *const btSolverBody, angVel: *mut btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btSolverBody12applyImpulseERK9btVector3S2_d"]
+    pub fn btSolverBody_applyImpulse(
+        this: *mut btSolverBody,
+        linearComponent: *const btVector3,
+        angularComponent: *const btVector3,
+        impulseMagnitude: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btSolverBody24internalApplyPushImpulseERK9btVector3S2_d"]
+    pub fn btSolverBody_internalApplyPushImpulse(
+        this: *mut btSolverBody,
+        linearComponent: *const btVector3,
+        angularComponent: *const btVector3,
+        impulseMagnitude: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btSolverBody22getDeltaLinearVelocityEv"]
+    pub fn btSolverBody_getDeltaLinearVelocity(this: *const btSolverBody) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btSolverBody23getDeltaAngularVelocityEv"]
+    pub fn btSolverBody_getDeltaAngularVelocity(this: *const btSolverBody) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btSolverBody15getPushVelocityEv"]
+    pub fn btSolverBody_getPushVelocity(this: *const btSolverBody) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btSolverBody15getTurnVelocityEv"]
+    pub fn btSolverBody_getTurnVelocity(this: *const btSolverBody) -> *const btVector3;
+}
+extern "C" {
+
+    ///
+    /// ///some internal methods, don't use them
+
+    #[link_name = "\u{1}_ZN12btSolverBody30internalGetDeltaLinearVelocityEv"]
+    pub fn btSolverBody_internalGetDeltaLinearVelocity(this: *mut btSolverBody) -> *mut btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btSolverBody31internalGetDeltaAngularVelocityEv"]
+    pub fn btSolverBody_internalGetDeltaAngularVelocity(this: *mut btSolverBody) -> *mut btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btSolverBody24internalGetAngularFactorEv"]
+    pub fn btSolverBody_internalGetAngularFactor(this: *const btSolverBody) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btSolverBody18internalGetInvMassEv"]
+    pub fn btSolverBody_internalGetInvMass(this: *const btSolverBody) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btSolverBody18internalSetInvMassERK9btVector3"]
+    pub fn btSolverBody_internalSetInvMass(this: *mut btSolverBody, invMass: *const btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btSolverBody23internalGetPushVelocityEv"]
+    pub fn btSolverBody_internalGetPushVelocity(this: *mut btSolverBody) -> *mut btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btSolverBody23internalGetTurnVelocityEv"]
+    pub fn btSolverBody_internalGetTurnVelocity(this: *mut btSolverBody) -> *mut btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btSolverBody39internalGetVelocityInLocalPointObsoleteERK9btVector3RS0_"]
+    pub fn btSolverBody_internalGetVelocityInLocalPointObsolete(
+        this: *const btSolverBody,
+        rel_pos: *const btVector3,
+        velocity: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK12btSolverBody26internalGetAngularVelocityER9btVector3"]
+    pub fn btSolverBody_internalGetAngularVelocity(
+        this: *const btSolverBody,
+        angVel: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btSolverBody20internalApplyImpulseERK9btVector3S2_d"]
+    pub fn btSolverBody_internalApplyImpulse(
+        this: *mut btSolverBody,
+        linearComponent: *const btVector3,
+        angularComponent: *const btVector3,
+        impulseMagnitude: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btSolverBody17writebackVelocityEv"]
+    pub fn btSolverBody_writebackVelocity(this: *mut btSolverBody);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN12btSolverBody29writebackVelocityAndTransformEdd"]
+    pub fn btSolverBody_writebackVelocityAndTransform(
+        this: *mut btSolverBody,
+        timeStep: btScalar,
+        splitImpulseTurnErp: btScalar,
+    );
+}
+impl btSolverBody {
+    #[inline]
+    pub unsafe fn setWorldTransform(&mut self, worldTransform: *const btTransform) {
+        btSolverBody_setWorldTransform(self, worldTransform)
+    }
+    #[inline]
+    pub unsafe fn getWorldTransform(&self) -> *const btTransform {
+        btSolverBody_getWorldTransform(self)
+    }
+    #[inline]
+    pub unsafe fn getVelocityInLocalPointNoDelta(
+        &self,
+        rel_pos: *const btVector3,
+        velocity: *mut btVector3,
+    ) {
+        btSolverBody_getVelocityInLocalPointNoDelta(self, rel_pos, velocity)
+    }
+    #[inline]
+    pub unsafe fn getVelocityInLocalPointObsolete(
+        &self,
+        rel_pos: *const btVector3,
+        velocity: *mut btVector3,
+    ) {
+        btSolverBody_getVelocityInLocalPointObsolete(self, rel_pos, velocity)
+    }
+    #[inline]
+    pub unsafe fn getAngularVelocity(&self, angVel: *mut btVector3) {
+        btSolverBody_getAngularVelocity(self, angVel)
+    }
+    #[inline]
+    pub unsafe fn applyImpulse(
+        &mut self,
+        linearComponent: *const btVector3,
+        angularComponent: *const btVector3,
+        impulseMagnitude: btScalar,
+    ) {
+        btSolverBody_applyImpulse(self, linearComponent, angularComponent, impulseMagnitude)
+    }
+    #[inline]
+    pub unsafe fn internalApplyPushImpulse(
+        &mut self,
+        linearComponent: *const btVector3,
+        angularComponent: *const btVector3,
+        impulseMagnitude: btScalar,
+    ) {
+        btSolverBody_internalApplyPushImpulse(
+            self,
+            linearComponent,
+            angularComponent,
+            impulseMagnitude,
+        )
+    }
+    #[inline]
+    pub unsafe fn getDeltaLinearVelocity(&self) -> *const btVector3 {
+        btSolverBody_getDeltaLinearVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn getDeltaAngularVelocity(&self) -> *const btVector3 {
+        btSolverBody_getDeltaAngularVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn getPushVelocity(&self) -> *const btVector3 {
+        btSolverBody_getPushVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn getTurnVelocity(&self) -> *const btVector3 {
+        btSolverBody_getTurnVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn internalGetDeltaLinearVelocity(&mut self) -> *mut btVector3 {
+        btSolverBody_internalGetDeltaLinearVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn internalGetDeltaAngularVelocity(&mut self) -> *mut btVector3 {
+        btSolverBody_internalGetDeltaAngularVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn internalGetAngularFactor(&self) -> *const btVector3 {
+        btSolverBody_internalGetAngularFactor(self)
+    }
+    #[inline]
+    pub unsafe fn internalGetInvMass(&self) -> *const btVector3 {
+        btSolverBody_internalGetInvMass(self)
+    }
+    #[inline]
+    pub unsafe fn internalSetInvMass(&mut self, invMass: *const btVector3) {
+        btSolverBody_internalSetInvMass(self, invMass)
+    }
+    #[inline]
+    pub unsafe fn internalGetPushVelocity(&mut self) -> *mut btVector3 {
+        btSolverBody_internalGetPushVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn internalGetTurnVelocity(&mut self) -> *mut btVector3 {
+        btSolverBody_internalGetTurnVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn internalGetVelocityInLocalPointObsolete(
+        &self,
+        rel_pos: *const btVector3,
+        velocity: *mut btVector3,
+    ) {
+        btSolverBody_internalGetVelocityInLocalPointObsolete(self, rel_pos, velocity)
+    }
+    #[inline]
+    pub unsafe fn internalGetAngularVelocity(&self, angVel: *mut btVector3) {
+        btSolverBody_internalGetAngularVelocity(self, angVel)
+    }
+    #[inline]
+    pub unsafe fn internalApplyImpulse(
+        &mut self,
+        linearComponent: *const btVector3,
+        angularComponent: *const btVector3,
+        impulseMagnitude: btScalar,
+    ) {
+        btSolverBody_internalApplyImpulse(self, linearComponent, angularComponent, impulseMagnitude)
+    }
+    #[inline]
+    pub unsafe fn writebackVelocity(&mut self) {
+        btSolverBody_writebackVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn writebackVelocityAndTransform(
+        &mut self,
+        timeStep: btScalar,
+        splitImpulseTurnErp: btScalar,
+    ) {
+        btSolverBody_writebackVelocityAndTransform(self, timeStep, splitImpulseTurnErp)
+    }
 }
 /// 1D constraint along a normal axis between bodyA and bodyB. It can be combined to solve contact and friction constraints.
 #[repr(C)]
@@ -30105,6 +39815,173 @@ extern "C" {
     pub fn btTypedConstraint_getFixedBody() -> *mut btRigidBody;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK17btTypedConstraint30getOverrideNumSolverIterationsEv"]
+    pub fn btTypedConstraint_getOverrideNumSolverIterations(
+        this: *const btTypedConstraint,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+
+    /// override the number of constraint solver iterations used to solve this constraint
+    /// ///-1 will use the default number of iterations, as specified in SolverInfo.m_numIterations
+
+    #[link_name = "\u{1}_ZN17btTypedConstraint30setOverrideNumSolverIterationsEi"]
+    pub fn btTypedConstraint_setOverrideNumSolverIterations(
+        this: *mut btTypedConstraint,
+        overideNumIterations: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+
+    /// internal method used by the constraint solver, don't use them directly
+
+    #[link_name = "\u{1}_ZN17btTypedConstraint25internalSetAppliedImpulseEd"]
+    pub fn btTypedConstraint_internalSetAppliedImpulse(
+        this: *mut btTypedConstraint,
+        appliedImpulse: btScalar,
+    );
+}
+extern "C" {
+
+    /// internal method used by the constraint solver, don't use them directly
+
+    #[link_name = "\u{1}_ZN17btTypedConstraint25internalGetAppliedImpulseEv"]
+    pub fn btTypedConstraint_internalGetAppliedImpulse(this: *mut btTypedConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btTypedConstraint27getBreakingImpulseThresholdEv"]
+    pub fn btTypedConstraint_getBreakingImpulseThreshold(
+        this: *const btTypedConstraint,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraint27setBreakingImpulseThresholdEd"]
+    pub fn btTypedConstraint_setBreakingImpulseThreshold(
+        this: *mut btTypedConstraint,
+        threshold: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btTypedConstraint9isEnabledEv"]
+    pub fn btTypedConstraint_isEnabled(this: *const btTypedConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraint10setEnabledEb"]
+    pub fn btTypedConstraint_setEnabled(this: *mut btTypedConstraint, enabled: bool);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btTypedConstraint13getRigidBodyAEv"]
+    pub fn btTypedConstraint_getRigidBodyA(this: *const btTypedConstraint) -> *const btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btTypedConstraint13getRigidBodyBEv"]
+    pub fn btTypedConstraint_getRigidBodyB(this: *const btTypedConstraint) -> *const btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraint13getRigidBodyAEv"]
+    pub fn btTypedConstraint_getRigidBodyA1(this: *mut btTypedConstraint) -> *mut btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraint13getRigidBodyBEv"]
+    pub fn btTypedConstraint_getRigidBodyB1(this: *mut btTypedConstraint) -> *mut btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btTypedConstraint21getUserConstraintTypeEv"]
+    pub fn btTypedConstraint_getUserConstraintType(
+        this: *const btTypedConstraint,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraint21setUserConstraintTypeEi"]
+    pub fn btTypedConstraint_setUserConstraintType(
+        this: *mut btTypedConstraint,
+        userConstraintType: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraint19setUserConstraintIdEi"]
+    pub fn btTypedConstraint_setUserConstraintId(
+        this: *mut btTypedConstraint,
+        uid: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btTypedConstraint19getUserConstraintIdEv"]
+    pub fn btTypedConstraint_getUserConstraintId(
+        this: *const btTypedConstraint,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraint20setUserConstraintPtrEPv"]
+    pub fn btTypedConstraint_setUserConstraintPtr(
+        this: *mut btTypedConstraint,
+        ptr: *mut ::std::os::raw::c_void,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraint20getUserConstraintPtrEv"]
+    pub fn btTypedConstraint_getUserConstraintPtr(
+        this: *mut btTypedConstraint,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraint16setJointFeedbackEP15btJointFeedback"]
+    pub fn btTypedConstraint_setJointFeedback(
+        this: *mut btTypedConstraint,
+        jointFeedback: *mut btJointFeedback,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btTypedConstraint16getJointFeedbackEv"]
+    pub fn btTypedConstraint_getJointFeedback(
+        this: *const btTypedConstraint,
+    ) -> *const btJointFeedback;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraint16getJointFeedbackEv"]
+    pub fn btTypedConstraint_getJointFeedback1(
+        this: *mut btTypedConstraint,
+    ) -> *mut btJointFeedback;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btTypedConstraint6getUidEv"]
+    pub fn btTypedConstraint_getUid(this: *const btTypedConstraint) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btTypedConstraint13needsFeedbackEv"]
+    pub fn btTypedConstraint_needsFeedback(this: *const btTypedConstraint) -> bool;
+}
+extern "C" {
+
+    /// enableFeedback will allow to read the applied linear and angular impulse
+    /// ///use getAppliedImpulse, getAppliedLinearImpulse and getAppliedAngularImpulse to read feedback information
+
+    #[link_name = "\u{1}_ZN17btTypedConstraint14enableFeedbackEb"]
+    pub fn btTypedConstraint_enableFeedback(this: *mut btTypedConstraint, needsFeedback: bool);
+}
+extern "C" {
+
+    /// getAppliedImpulse is an estimated total applied impulse.
+    /// ///This feedback could be used to determine breaking constraints or playing sounds.
+
+    #[link_name = "\u{1}_ZNK17btTypedConstraint17getAppliedImpulseEv"]
+    pub fn btTypedConstraint_getAppliedImpulse(this: *const btTypedConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btTypedConstraint17getConstraintTypeEv"]
+    pub fn btTypedConstraint_getConstraintType(
+        this: *const btTypedConstraint,
+    ) -> btTypedConstraintType;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraint14setDbgDrawSizeEd"]
+    pub fn btTypedConstraint_setDbgDrawSize(this: *mut btTypedConstraint, dbgDrawSize: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraint14getDbgDrawSizeEv"]
+    pub fn btTypedConstraint_getDbgDrawSize(this: *mut btTypedConstraint) -> btScalar;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN17btTypedConstraintC2E21btTypedConstraintTypeR11btRigidBody"]
     pub fn btTypedConstraint_btTypedConstraint(
         this: *mut btTypedConstraint,
@@ -30138,6 +40015,121 @@ impl btTypedConstraint {
         btTypedConstraint_getFixedBody()
     }
     #[inline]
+    pub unsafe fn getOverrideNumSolverIterations(&self) -> ::std::os::raw::c_int {
+        btTypedConstraint_getOverrideNumSolverIterations(self)
+    }
+    #[inline]
+    pub unsafe fn setOverrideNumSolverIterations(
+        &mut self,
+        overideNumIterations: ::std::os::raw::c_int,
+    ) {
+        btTypedConstraint_setOverrideNumSolverIterations(self, overideNumIterations)
+    }
+    #[inline]
+    pub unsafe fn internalSetAppliedImpulse(&mut self, appliedImpulse: btScalar) {
+        btTypedConstraint_internalSetAppliedImpulse(self, appliedImpulse)
+    }
+    #[inline]
+    pub unsafe fn internalGetAppliedImpulse(&mut self) -> btScalar {
+        btTypedConstraint_internalGetAppliedImpulse(self)
+    }
+    #[inline]
+    pub unsafe fn getBreakingImpulseThreshold(&self) -> btScalar {
+        btTypedConstraint_getBreakingImpulseThreshold(self)
+    }
+    #[inline]
+    pub unsafe fn setBreakingImpulseThreshold(&mut self, threshold: btScalar) {
+        btTypedConstraint_setBreakingImpulseThreshold(self, threshold)
+    }
+    #[inline]
+    pub unsafe fn isEnabled(&self) -> bool {
+        btTypedConstraint_isEnabled(self)
+    }
+    #[inline]
+    pub unsafe fn setEnabled(&mut self, enabled: bool) {
+        btTypedConstraint_setEnabled(self, enabled)
+    }
+    #[inline]
+    pub unsafe fn getRigidBodyA(&self) -> *const btRigidBody {
+        btTypedConstraint_getRigidBodyA(self)
+    }
+    #[inline]
+    pub unsafe fn getRigidBodyB(&self) -> *const btRigidBody {
+        btTypedConstraint_getRigidBodyB(self)
+    }
+    #[inline]
+    pub unsafe fn getRigidBodyA1(&mut self) -> *mut btRigidBody {
+        btTypedConstraint_getRigidBodyA1(self)
+    }
+    #[inline]
+    pub unsafe fn getRigidBodyB1(&mut self) -> *mut btRigidBody {
+        btTypedConstraint_getRigidBodyB1(self)
+    }
+    #[inline]
+    pub unsafe fn getUserConstraintType(&self) -> ::std::os::raw::c_int {
+        btTypedConstraint_getUserConstraintType(self)
+    }
+    #[inline]
+    pub unsafe fn setUserConstraintType(&mut self, userConstraintType: ::std::os::raw::c_int) {
+        btTypedConstraint_setUserConstraintType(self, userConstraintType)
+    }
+    #[inline]
+    pub unsafe fn setUserConstraintId(&mut self, uid: ::std::os::raw::c_int) {
+        btTypedConstraint_setUserConstraintId(self, uid)
+    }
+    #[inline]
+    pub unsafe fn getUserConstraintId(&self) -> ::std::os::raw::c_int {
+        btTypedConstraint_getUserConstraintId(self)
+    }
+    #[inline]
+    pub unsafe fn setUserConstraintPtr(&mut self, ptr: *mut ::std::os::raw::c_void) {
+        btTypedConstraint_setUserConstraintPtr(self, ptr)
+    }
+    #[inline]
+    pub unsafe fn getUserConstraintPtr(&mut self) -> *mut ::std::os::raw::c_void {
+        btTypedConstraint_getUserConstraintPtr(self)
+    }
+    #[inline]
+    pub unsafe fn setJointFeedback(&mut self, jointFeedback: *mut btJointFeedback) {
+        btTypedConstraint_setJointFeedback(self, jointFeedback)
+    }
+    #[inline]
+    pub unsafe fn getJointFeedback(&self) -> *const btJointFeedback {
+        btTypedConstraint_getJointFeedback(self)
+    }
+    #[inline]
+    pub unsafe fn getJointFeedback1(&mut self) -> *mut btJointFeedback {
+        btTypedConstraint_getJointFeedback1(self)
+    }
+    #[inline]
+    pub unsafe fn getUid(&self) -> ::std::os::raw::c_int {
+        btTypedConstraint_getUid(self)
+    }
+    #[inline]
+    pub unsafe fn needsFeedback(&self) -> bool {
+        btTypedConstraint_needsFeedback(self)
+    }
+    #[inline]
+    pub unsafe fn enableFeedback(&mut self, needsFeedback: bool) {
+        btTypedConstraint_enableFeedback(self, needsFeedback)
+    }
+    #[inline]
+    pub unsafe fn getAppliedImpulse(&self) -> btScalar {
+        btTypedConstraint_getAppliedImpulse(self)
+    }
+    #[inline]
+    pub unsafe fn getConstraintType(&self) -> btTypedConstraintType {
+        btTypedConstraint_getConstraintType(self)
+    }
+    #[inline]
+    pub unsafe fn setDbgDrawSize(&mut self, dbgDrawSize: btScalar) {
+        btTypedConstraint_setDbgDrawSize(self, dbgDrawSize)
+    }
+    #[inline]
+    pub unsafe fn getDbgDrawSize(&mut self) -> btScalar {
+        btTypedConstraint_getDbgDrawSize(self)
+    }
+    #[inline]
     pub unsafe fn new(type_: btTypedConstraintType, rbA: *mut btRigidBody) -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
         btTypedConstraint_btTypedConstraint(&mut __bindgen_tmp, type_, rbA);
@@ -30153,6 +40145,30 @@ impl btTypedConstraint {
         btTypedConstraint_btTypedConstraint1(&mut __bindgen_tmp, type_, rbA, rbB);
         __bindgen_tmp
     }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btTypedConstraintD0Ev"]
+    pub fn btTypedConstraint_btTypedConstraint_destructor(this: *mut btTypedConstraint);
+}
+extern "C" {
+
+    /// internal method used by the constraint solver, don't use them directly
+
+    #[link_name = "\u{1}_ZN17btTypedConstraint13buildJacobianEv"]
+    pub fn btTypedConstraint_buildJacobian(this: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+
+    /// internal method used by the constraint solver, don't use them directly
+
+    #[link_name = "\u{1}_ZN17btTypedConstraint21setupSolverConstraintER20btAlignedObjectArrayI18btSolverConstraintEiid"]
+    pub fn btTypedConstraint_setupSolverConstraint(
+        this: *mut ::std::os::raw::c_void,
+        ca: *mut btConstraintArray,
+        solverBodyA: ::std::os::raw::c_int,
+        solverBodyB: ::std::os::raw::c_int,
+        timeStep: btScalar,
+    );
 }
 extern "C" {
 
@@ -30172,6 +40188,18 @@ extern "C" {
     pub fn btTypedConstraint_getInfo2(
         this: *mut ::std::os::raw::c_void,
         info: *mut btTypedConstraint_btConstraintInfo2,
+    );
+}
+extern "C" {
+
+    /// internal method used by the constraint solver, don't use them directly
+
+    #[link_name = "\u{1}_ZN17btTypedConstraint23solveConstraintObsoleteER12btSolverBodyS1_d"]
+    pub fn btTypedConstraint_solveConstraintObsolete(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *mut btSolverBody,
+        arg2: *mut btSolverBody,
+        arg3: btScalar,
     );
 }
 extern "C" {
@@ -30214,6 +40242,14 @@ extern "C" {
         dataBuffer: *mut ::std::os::raw::c_void,
         serializer: *mut btSerializer,
     ) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}_Z21btAdjustAngleToLimitsddd"]
+    pub fn btAdjustAngleToLimits(
+        angleInRadians: btScalar,
+        angleLowerLimitInRadians: btScalar,
+        angleUpperLimitInRadians: btScalar,
+    ) -> btScalar;
 }
 /// do not change those serialization structures, it requires an updated sBulletDNAstr/sBulletDNAstr64
 #[repr(C)]
@@ -30883,6 +40919,55 @@ extern "C" {
 }
 extern "C" {
 
+    /// Returns limit's softness
+
+    #[link_name = "\u{1}_ZNK14btAngularLimit11getSoftnessEv"]
+    pub fn btAngularLimit_getSoftness(this: *const btAngularLimit) -> btScalar;
+}
+extern "C" {
+
+    /// Returns limit's bias factor
+
+    #[link_name = "\u{1}_ZNK14btAngularLimit13getBiasFactorEv"]
+    pub fn btAngularLimit_getBiasFactor(this: *const btAngularLimit) -> btScalar;
+}
+extern "C" {
+
+    /// Returns limit's relaxation factor
+
+    #[link_name = "\u{1}_ZNK14btAngularLimit19getRelaxationFactorEv"]
+    pub fn btAngularLimit_getRelaxationFactor(this: *const btAngularLimit) -> btScalar;
+}
+extern "C" {
+
+    /// Returns correction value evaluated when test() was invoked
+
+    #[link_name = "\u{1}_ZNK14btAngularLimit13getCorrectionEv"]
+    pub fn btAngularLimit_getCorrection(this: *const btAngularLimit) -> btScalar;
+}
+extern "C" {
+
+    /// Returns sign value evaluated when test() was invoked
+
+    #[link_name = "\u{1}_ZNK14btAngularLimit7getSignEv"]
+    pub fn btAngularLimit_getSign(this: *const btAngularLimit) -> btScalar;
+}
+extern "C" {
+
+    /// Gives half of the distance between min and max limit angle
+
+    #[link_name = "\u{1}_ZNK14btAngularLimit12getHalfRangeEv"]
+    pub fn btAngularLimit_getHalfRange(this: *const btAngularLimit) -> btScalar;
+}
+extern "C" {
+
+    /// Returns true when the last test() invocation recognized limit violation
+
+    #[link_name = "\u{1}_ZNK14btAngularLimit7isLimitEv"]
+    pub fn btAngularLimit_isLimit(this: *const btAngularLimit) -> bool;
+}
+extern "C" {
+
     /// Checks given angle against limit. If limit is active and angle doesn't fit it, the angle
     /// /// returned is modified so it equals to the limit closest to given angle.
 
@@ -30904,6 +40989,13 @@ extern "C" {
     #[link_name = "\u{1}_ZNK14btAngularLimit7getHighEv"]
     pub fn btAngularLimit_getHigh(this: *const btAngularLimit) -> btScalar;
 }
+extern "C" {
+
+    /// Default constructor initializes limit as inactive, allowing free constraint movement
+
+    #[link_name = "\u{1}_ZN14btAngularLimitC1Ev"]
+    pub fn btAngularLimit_btAngularLimit(this: *mut btAngularLimit);
+}
 impl btAngularLimit {
     #[inline]
     pub unsafe fn set(
@@ -30921,6 +41013,34 @@ impl btAngularLimit {
         btAngularLimit_test(self, angle)
     }
     #[inline]
+    pub unsafe fn getSoftness(&self) -> btScalar {
+        btAngularLimit_getSoftness(self)
+    }
+    #[inline]
+    pub unsafe fn getBiasFactor(&self) -> btScalar {
+        btAngularLimit_getBiasFactor(self)
+    }
+    #[inline]
+    pub unsafe fn getRelaxationFactor(&self) -> btScalar {
+        btAngularLimit_getRelaxationFactor(self)
+    }
+    #[inline]
+    pub unsafe fn getCorrection(&self) -> btScalar {
+        btAngularLimit_getCorrection(self)
+    }
+    #[inline]
+    pub unsafe fn getSign(&self) -> btScalar {
+        btAngularLimit_getSign(self)
+    }
+    #[inline]
+    pub unsafe fn getHalfRange(&self) -> btScalar {
+        btAngularLimit_getHalfRange(self)
+    }
+    #[inline]
+    pub unsafe fn isLimit(&self) -> bool {
+        btAngularLimit_isLimit(self)
+    }
+    #[inline]
     pub unsafe fn fit(&self, angle: *mut btScalar) {
         btAngularLimit_fit(self, angle)
     }
@@ -30935,6 +41055,12 @@ impl btAngularLimit {
     #[inline]
     pub unsafe fn getHigh(&self) -> btScalar {
         btAngularLimit_getHigh(self)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btAngularLimit_btAngularLimit(&mut __bindgen_tmp);
+        __bindgen_tmp
     }
 }
 #[repr(C)]
@@ -30986,6 +41112,18 @@ fn bindgen_test_layout_btConstraintSetting() {
             stringify!(m_impulseClamp)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN19btConstraintSettingC1Ev"]
+    pub fn btConstraintSetting_btConstraintSetting(this: *mut btConstraintSetting);
+}
+impl btConstraintSetting {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btConstraintSetting_btConstraintSetting(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
 }
 pub const btPoint2PointFlags_BT_P2P_FLAGS_ERP: btPoint2PointFlags = 1;
 pub const btPoint2PointFlags_BT_P2P_FLAGS_CFM: btPoint2PointFlags = 2;
@@ -31124,6 +41262,32 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN23btPoint2PointConstraint9setPivotAERK9btVector3"]
+    pub fn btPoint2PointConstraint_setPivotA(
+        this: *mut btPoint2PointConstraint,
+        pivotA: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btPoint2PointConstraint9setPivotBERK9btVector3"]
+    pub fn btPoint2PointConstraint_setPivotB(
+        this: *mut btPoint2PointConstraint,
+        pivotB: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btPoint2PointConstraint11getPivotInAEv"]
+    pub fn btPoint2PointConstraint_getPivotInA(
+        this: *const btPoint2PointConstraint,
+    ) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btPoint2PointConstraint11getPivotInBEv"]
+    pub fn btPoint2PointConstraint_getPivotInB(
+        this: *const btPoint2PointConstraint,
+    ) -> *const btVector3;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN23btPoint2PointConstraintC1ER11btRigidBodyS1_RK9btVector3S4_"]
     pub fn btPoint2PointConstraint_btPoint2PointConstraint(
         this: *mut btPoint2PointConstraint,
@@ -31158,6 +41322,22 @@ impl btPoint2PointConstraint {
     #[inline]
     pub unsafe fn updateRHS(&mut self, timeStep: btScalar) {
         btPoint2PointConstraint_updateRHS(self, timeStep)
+    }
+    #[inline]
+    pub unsafe fn setPivotA(&mut self, pivotA: *const btVector3) {
+        btPoint2PointConstraint_setPivotA(self, pivotA)
+    }
+    #[inline]
+    pub unsafe fn setPivotB(&mut self, pivotB: *const btVector3) {
+        btPoint2PointConstraint_setPivotB(self, pivotB)
+    }
+    #[inline]
+    pub unsafe fn getPivotInA(&self) -> *const btVector3 {
+        btPoint2PointConstraint_getPivotInA(self)
+    }
+    #[inline]
+    pub unsafe fn getPivotInB(&self) -> *const btVector3 {
+        btPoint2PointConstraint_getPivotInB(self)
     }
     #[inline]
     pub unsafe fn new(
@@ -31224,6 +41404,12 @@ extern "C" {
         num: ::std::os::raw::c_int,
         axis: ::std::os::raw::c_int,
     ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btPoint2PointConstraint8getFlagsEv"]
+    pub fn btPoint2PointConstraint_getFlags(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK23btPoint2PointConstraint28calculateSerializeBufferSizeEv"]
@@ -31742,11 +41928,66 @@ extern "C" {
     pub fn btHingeConstraint_updateRHS(this: *mut btHingeConstraint, timeStep: btScalar);
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK17btHingeConstraint13getRigidBodyAEv"]
+    pub fn btHingeConstraint_getRigidBodyA(this: *const btHingeConstraint) -> *const btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btHingeConstraint13getRigidBodyBEv"]
+    pub fn btHingeConstraint_getRigidBodyB(this: *const btHingeConstraint) -> *const btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint13getRigidBodyAEv"]
+    pub fn btHingeConstraint_getRigidBodyA1(this: *mut btHingeConstraint) -> *mut btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint13getRigidBodyBEv"]
+    pub fn btHingeConstraint_getRigidBodyB1(this: *mut btHingeConstraint) -> *mut btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint15getFrameOffsetAEv"]
+    pub fn btHingeConstraint_getFrameOffsetA(this: *mut btHingeConstraint) -> *mut btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint15getFrameOffsetBEv"]
+    pub fn btHingeConstraint_getFrameOffsetB(this: *mut btHingeConstraint) -> *mut btTransform;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN17btHingeConstraint9setFramesERK11btTransformS2_"]
     pub fn btHingeConstraint_setFrames(
         this: *mut btHingeConstraint,
         frameA: *const btTransform,
         frameB: *const btTransform,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint14setAngularOnlyEb"]
+    pub fn btHingeConstraint_setAngularOnly(this: *mut btHingeConstraint, angularOnly: bool);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint18enableAngularMotorEbdd"]
+    pub fn btHingeConstraint_enableAngularMotor(
+        this: *mut btHingeConstraint,
+        enableMotor: bool,
+        targetVelocity: btScalar,
+        maxMotorImpulse: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint11enableMotorEb"]
+    pub fn btHingeConstraint_enableMotor(this: *mut btHingeConstraint, enableMotor: bool);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint18setMaxMotorImpulseEd"]
+    pub fn btHingeConstraint_setMaxMotorImpulse(
+        this: *mut btHingeConstraint,
+        maxMotorImpulse: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint22setMotorTargetVelocityEd"]
+    pub fn btHingeConstraint_setMotorTargetVelocity(
+        this: *mut btHingeConstraint,
+        motorTargetVelocity: btScalar,
     );
 }
 extern "C" {
@@ -31764,6 +42005,45 @@ extern "C" {
         targetAngle: btScalar,
         dt: btScalar,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint8setLimitEddddd"]
+    pub fn btHingeConstraint_setLimit(
+        this: *mut btHingeConstraint,
+        low: btScalar,
+        high: btScalar,
+        _softness: btScalar,
+        _biasFactor: btScalar,
+        _relaxationFactor: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btHingeConstraint16getLimitSoftnessEv"]
+    pub fn btHingeConstraint_getLimitSoftness(this: *const btHingeConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btHingeConstraint18getLimitBiasFactorEv"]
+    pub fn btHingeConstraint_getLimitBiasFactor(this: *const btHingeConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btHingeConstraint24getLimitRelaxationFactorEv"]
+    pub fn btHingeConstraint_getLimitRelaxationFactor(this: *const btHingeConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint7setAxisER9btVector3"]
+    pub fn btHingeConstraint_setAxis(this: *mut btHingeConstraint, axisInA: *mut btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btHingeConstraint8hasLimitEv"]
+    pub fn btHingeConstraint_hasLimit(this: *const btHingeConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btHingeConstraint13getLowerLimitEv"]
+    pub fn btHingeConstraint_getLowerLimit(this: *const btHingeConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btHingeConstraint13getUpperLimitEv"]
+    pub fn btHingeConstraint_getUpperLimit(this: *const btHingeConstraint) -> btScalar;
 }
 extern "C" {
 
@@ -31786,6 +42066,68 @@ extern "C" {
         this: *mut btHingeConstraint,
         transA: *const btTransform,
         transB: *const btTransform,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btHingeConstraint9getAFrameEv"]
+    pub fn btHingeConstraint_getAFrame(this: *const btHingeConstraint) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btHingeConstraint9getBFrameEv"]
+    pub fn btHingeConstraint_getBFrame(this: *const btHingeConstraint) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint9getAFrameEv"]
+    pub fn btHingeConstraint_getAFrame1(this: *mut btHingeConstraint) -> *mut btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint9getBFrameEv"]
+    pub fn btHingeConstraint_getBFrame1(this: *mut btHingeConstraint) -> *mut btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint13getSolveLimitEv"]
+    pub fn btHingeConstraint_getSolveLimit(this: *mut btHingeConstraint) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint12getLimitSignEv"]
+    pub fn btHingeConstraint_getLimitSign(this: *mut btHingeConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint14getAngularOnlyEv"]
+    pub fn btHingeConstraint_getAngularOnly(this: *mut btHingeConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint21getEnableAngularMotorEv"]
+    pub fn btHingeConstraint_getEnableAngularMotor(this: *mut btHingeConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint22getMotorTargetVelocityEv"]
+    pub fn btHingeConstraint_getMotorTargetVelocity(this: *mut btHingeConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint18getMaxMotorImpulseEv"]
+    pub fn btHingeConstraint_getMaxMotorImpulse(this: *mut btHingeConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint17getUseFrameOffsetEv"]
+    pub fn btHingeConstraint_getUseFrameOffset(this: *mut btHingeConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint17setUseFrameOffsetEb"]
+    pub fn btHingeConstraint_setUseFrameOffset(
+        this: *mut btHingeConstraint,
+        frameOffsetOnOff: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btHingeConstraint21getUseReferenceFrameAEv"]
+    pub fn btHingeConstraint_getUseReferenceFrameA(this: *const btHingeConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btHingeConstraint21setUseReferenceFrameAEb"]
+    pub fn btHingeConstraint_setUseReferenceFrameA(
+        this: *mut btHingeConstraint,
+        useReferenceFrameA: bool,
     );
 }
 extern "C" {
@@ -31881,8 +42223,57 @@ impl btHingeConstraint {
         btHingeConstraint_updateRHS(self, timeStep)
     }
     #[inline]
+    pub unsafe fn getRigidBodyA(&self) -> *const btRigidBody {
+        btHingeConstraint_getRigidBodyA(self)
+    }
+    #[inline]
+    pub unsafe fn getRigidBodyB(&self) -> *const btRigidBody {
+        btHingeConstraint_getRigidBodyB(self)
+    }
+    #[inline]
+    pub unsafe fn getRigidBodyA1(&mut self) -> *mut btRigidBody {
+        btHingeConstraint_getRigidBodyA1(self)
+    }
+    #[inline]
+    pub unsafe fn getRigidBodyB1(&mut self) -> *mut btRigidBody {
+        btHingeConstraint_getRigidBodyB1(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetA(&mut self) -> *mut btTransform {
+        btHingeConstraint_getFrameOffsetA(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetB(&mut self) -> *mut btTransform {
+        btHingeConstraint_getFrameOffsetB(self)
+    }
+    #[inline]
     pub unsafe fn setFrames(&mut self, frameA: *const btTransform, frameB: *const btTransform) {
         btHingeConstraint_setFrames(self, frameA, frameB)
+    }
+    #[inline]
+    pub unsafe fn setAngularOnly(&mut self, angularOnly: bool) {
+        btHingeConstraint_setAngularOnly(self, angularOnly)
+    }
+    #[inline]
+    pub unsafe fn enableAngularMotor(
+        &mut self,
+        enableMotor: bool,
+        targetVelocity: btScalar,
+        maxMotorImpulse: btScalar,
+    ) {
+        btHingeConstraint_enableAngularMotor(self, enableMotor, targetVelocity, maxMotorImpulse)
+    }
+    #[inline]
+    pub unsafe fn enableMotor(&mut self, enableMotor: bool) {
+        btHingeConstraint_enableMotor(self, enableMotor)
+    }
+    #[inline]
+    pub unsafe fn setMaxMotorImpulse(&mut self, maxMotorImpulse: btScalar) {
+        btHingeConstraint_setMaxMotorImpulse(self, maxMotorImpulse)
+    }
+    #[inline]
+    pub unsafe fn setMotorTargetVelocity(&mut self, motorTargetVelocity: btScalar) {
+        btHingeConstraint_setMotorTargetVelocity(self, motorTargetVelocity)
     }
     #[inline]
     pub unsafe fn setMotorTarget(&mut self, qAinB: *const btQuaternion, dt: btScalar) {
@@ -31891,6 +42282,45 @@ impl btHingeConstraint {
     #[inline]
     pub unsafe fn setMotorTarget1(&mut self, targetAngle: btScalar, dt: btScalar) {
         btHingeConstraint_setMotorTarget1(self, targetAngle, dt)
+    }
+    #[inline]
+    pub unsafe fn setLimit(
+        &mut self,
+        low: btScalar,
+        high: btScalar,
+        _softness: btScalar,
+        _biasFactor: btScalar,
+        _relaxationFactor: btScalar,
+    ) {
+        btHingeConstraint_setLimit(self, low, high, _softness, _biasFactor, _relaxationFactor)
+    }
+    #[inline]
+    pub unsafe fn getLimitSoftness(&self) -> btScalar {
+        btHingeConstraint_getLimitSoftness(self)
+    }
+    #[inline]
+    pub unsafe fn getLimitBiasFactor(&self) -> btScalar {
+        btHingeConstraint_getLimitBiasFactor(self)
+    }
+    #[inline]
+    pub unsafe fn getLimitRelaxationFactor(&self) -> btScalar {
+        btHingeConstraint_getLimitRelaxationFactor(self)
+    }
+    #[inline]
+    pub unsafe fn setAxis(&mut self, axisInA: *mut btVector3) {
+        btHingeConstraint_setAxis(self, axisInA)
+    }
+    #[inline]
+    pub unsafe fn hasLimit(&self) -> bool {
+        btHingeConstraint_hasLimit(self)
+    }
+    #[inline]
+    pub unsafe fn getLowerLimit(&self) -> btScalar {
+        btHingeConstraint_getLowerLimit(self)
+    }
+    #[inline]
+    pub unsafe fn getUpperLimit(&self) -> btScalar {
+        btHingeConstraint_getUpperLimit(self)
     }
     #[inline]
     pub unsafe fn getHingeAngle(&mut self) -> btScalar {
@@ -31907,6 +42337,62 @@ impl btHingeConstraint {
     #[inline]
     pub unsafe fn testLimit(&mut self, transA: *const btTransform, transB: *const btTransform) {
         btHingeConstraint_testLimit(self, transA, transB)
+    }
+    #[inline]
+    pub unsafe fn getAFrame(&self) -> *const btTransform {
+        btHingeConstraint_getAFrame(self)
+    }
+    #[inline]
+    pub unsafe fn getBFrame(&self) -> *const btTransform {
+        btHingeConstraint_getBFrame(self)
+    }
+    #[inline]
+    pub unsafe fn getAFrame1(&mut self) -> *mut btTransform {
+        btHingeConstraint_getAFrame1(self)
+    }
+    #[inline]
+    pub unsafe fn getBFrame1(&mut self) -> *mut btTransform {
+        btHingeConstraint_getBFrame1(self)
+    }
+    #[inline]
+    pub unsafe fn getSolveLimit(&mut self) -> ::std::os::raw::c_int {
+        btHingeConstraint_getSolveLimit(self)
+    }
+    #[inline]
+    pub unsafe fn getLimitSign(&mut self) -> btScalar {
+        btHingeConstraint_getLimitSign(self)
+    }
+    #[inline]
+    pub unsafe fn getAngularOnly(&mut self) -> bool {
+        btHingeConstraint_getAngularOnly(self)
+    }
+    #[inline]
+    pub unsafe fn getEnableAngularMotor(&mut self) -> bool {
+        btHingeConstraint_getEnableAngularMotor(self)
+    }
+    #[inline]
+    pub unsafe fn getMotorTargetVelocity(&mut self) -> btScalar {
+        btHingeConstraint_getMotorTargetVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn getMaxMotorImpulse(&mut self) -> btScalar {
+        btHingeConstraint_getMaxMotorImpulse(self)
+    }
+    #[inline]
+    pub unsafe fn getUseFrameOffset(&mut self) -> bool {
+        btHingeConstraint_getUseFrameOffset(self)
+    }
+    #[inline]
+    pub unsafe fn setUseFrameOffset(&mut self, frameOffsetOnOff: bool) {
+        btHingeConstraint_setUseFrameOffset(self, frameOffsetOnOff)
+    }
+    #[inline]
+    pub unsafe fn getUseReferenceFrameA(&self) -> bool {
+        btHingeConstraint_getUseReferenceFrameA(self)
+    }
+    #[inline]
+    pub unsafe fn setUseReferenceFrameA(&mut self, useReferenceFrameA: bool) {
+        btHingeConstraint_setUseReferenceFrameA(self, useReferenceFrameA)
     }
     #[inline]
     pub unsafe fn new(
@@ -32019,6 +42505,10 @@ extern "C" {
         num: ::std::os::raw::c_int,
         axis: ::std::os::raw::c_int,
     ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK17btHingeConstraint8getFlagsEv"]
+    pub fn btHingeConstraint_getFlags(this: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK17btHingeConstraint28calculateSerializeBufferSizeEv"]
@@ -32260,6 +42750,49 @@ extern "C" {
         accAngle: btScalar,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN33btHingeAccumulatedAngleConstraintC1ER11btRigidBodyS1_RK9btVector3S4_S4_S4_b"]
+    pub fn btHingeAccumulatedAngleConstraint_btHingeAccumulatedAngleConstraint(
+        this: *mut btHingeAccumulatedAngleConstraint,
+        rbA: *mut btRigidBody,
+        rbB: *mut btRigidBody,
+        pivotInA: *const btVector3,
+        pivotInB: *const btVector3,
+        axisInA: *const btVector3,
+        axisInB: *const btVector3,
+        useReferenceFrameA: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN33btHingeAccumulatedAngleConstraintC1ER11btRigidBodyRK9btVector3S4_b"]
+    pub fn btHingeAccumulatedAngleConstraint_btHingeAccumulatedAngleConstraint1(
+        this: *mut btHingeAccumulatedAngleConstraint,
+        rbA: *mut btRigidBody,
+        pivotInA: *const btVector3,
+        axisInA: *const btVector3,
+        useReferenceFrameA: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN33btHingeAccumulatedAngleConstraintC1ER11btRigidBodyS1_RK11btTransformS4_b"]
+    pub fn btHingeAccumulatedAngleConstraint_btHingeAccumulatedAngleConstraint2(
+        this: *mut btHingeAccumulatedAngleConstraint,
+        rbA: *mut btRigidBody,
+        rbB: *mut btRigidBody,
+        rbAFrame: *const btTransform,
+        rbBFrame: *const btTransform,
+        useReferenceFrameA: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN33btHingeAccumulatedAngleConstraintC1ER11btRigidBodyRK11btTransformb"]
+    pub fn btHingeAccumulatedAngleConstraint_btHingeAccumulatedAngleConstraint3(
+        this: *mut btHingeAccumulatedAngleConstraint,
+        rbA: *mut btRigidBody,
+        rbAFrame: *const btTransform,
+        useReferenceFrameA: bool,
+    );
+}
 impl btHingeAccumulatedAngleConstraint {
     #[inline]
     pub unsafe fn getAccumulatedHingeAngle(&mut self) -> btScalar {
@@ -32268,6 +42801,80 @@ impl btHingeAccumulatedAngleConstraint {
     #[inline]
     pub unsafe fn setAccumulatedHingeAngle(&mut self, accAngle: btScalar) {
         btHingeAccumulatedAngleConstraint_setAccumulatedHingeAngle(self, accAngle)
+    }
+    #[inline]
+    pub unsafe fn new(
+        rbA: *mut btRigidBody,
+        rbB: *mut btRigidBody,
+        pivotInA: *const btVector3,
+        pivotInB: *const btVector3,
+        axisInA: *const btVector3,
+        axisInB: *const btVector3,
+        useReferenceFrameA: bool,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btHingeAccumulatedAngleConstraint_btHingeAccumulatedAngleConstraint(
+            &mut __bindgen_tmp,
+            rbA,
+            rbB,
+            pivotInA,
+            pivotInB,
+            axisInA,
+            axisInB,
+            useReferenceFrameA,
+        );
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(
+        rbA: *mut btRigidBody,
+        pivotInA: *const btVector3,
+        axisInA: *const btVector3,
+        useReferenceFrameA: bool,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btHingeAccumulatedAngleConstraint_btHingeAccumulatedAngleConstraint1(
+            &mut __bindgen_tmp,
+            rbA,
+            pivotInA,
+            axisInA,
+            useReferenceFrameA,
+        );
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new2(
+        rbA: *mut btRigidBody,
+        rbB: *mut btRigidBody,
+        rbAFrame: *const btTransform,
+        rbBFrame: *const btTransform,
+        useReferenceFrameA: bool,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btHingeAccumulatedAngleConstraint_btHingeAccumulatedAngleConstraint2(
+            &mut __bindgen_tmp,
+            rbA,
+            rbB,
+            rbAFrame,
+            rbBFrame,
+            useReferenceFrameA,
+        );
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new3(
+        rbA: *mut btRigidBody,
+        rbAFrame: *const btTransform,
+        useReferenceFrameA: bool,
+    ) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btHingeAccumulatedAngleConstraint_btHingeAccumulatedAngleConstraint3(
+            &mut __bindgen_tmp,
+            rbA,
+            rbAFrame,
+            useReferenceFrameA,
+        );
+        __bindgen_tmp
     }
 }
 extern "C" {
@@ -33131,6 +43738,84 @@ extern "C" {
     pub fn btConeTwistConstraint_updateRHS(this: *mut btConeTwistConstraint, timeStep: btScalar);
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint13getRigidBodyAEv"]
+    pub fn btConeTwistConstraint_getRigidBodyA(
+        this: *const btConeTwistConstraint,
+    ) -> *const btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint13getRigidBodyBEv"]
+    pub fn btConeTwistConstraint_getRigidBodyB(
+        this: *const btConeTwistConstraint,
+    ) -> *const btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint14setAngularOnlyEb"]
+    pub fn btConeTwistConstraint_setAngularOnly(
+        this: *mut btConeTwistConstraint,
+        angularOnly: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint14getAngularOnlyEv"]
+    pub fn btConeTwistConstraint_getAngularOnly(this: *const btConeTwistConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint8setLimitEid"]
+    pub fn btConeTwistConstraint_setLimit(
+        this: *mut btConeTwistConstraint,
+        limitIndex: ::std::os::raw::c_int,
+        limitValue: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint8getLimitEi"]
+    pub fn btConeTwistConstraint_getLimit(
+        this: *const btConeTwistConstraint,
+        limitIndex: ::std::os::raw::c_int,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint8setLimitEdddddd"]
+    pub fn btConeTwistConstraint_setLimit1(
+        this: *mut btConeTwistConstraint,
+        _swingSpan1: btScalar,
+        _swingSpan2: btScalar,
+        _twistSpan: btScalar,
+        _softness: btScalar,
+        _biasFactor: btScalar,
+        _relaxationFactor: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint9getAFrameEv"]
+    pub fn btConeTwistConstraint_getAFrame(
+        this: *const btConeTwistConstraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint9getBFrameEv"]
+    pub fn btConeTwistConstraint_getBFrame(
+        this: *const btConeTwistConstraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint18getSolveTwistLimitEv"]
+    pub fn btConeTwistConstraint_getSolveTwistLimit(
+        this: *mut btConeTwistConstraint,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint18getSolveSwingLimitEv"]
+    pub fn btConeTwistConstraint_getSolveSwingLimit(
+        this: *mut btConeTwistConstraint,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint17getTwistLimitSignEv"]
+    pub fn btConeTwistConstraint_getTwistLimitSign(this: *mut btConeTwistConstraint) -> btScalar;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN21btConeTwistConstraint13calcAngleInfoEv"]
     pub fn btConeTwistConstraint_calcAngleInfo(this: *mut btConeTwistConstraint);
 }
@@ -33145,11 +43830,103 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint13getSwingSpan1Ev"]
+    pub fn btConeTwistConstraint_getSwingSpan1(this: *const btConeTwistConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint13getSwingSpan2Ev"]
+    pub fn btConeTwistConstraint_getSwingSpan2(this: *const btConeTwistConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint12getTwistSpanEv"]
+    pub fn btConeTwistConstraint_getTwistSpan(this: *const btConeTwistConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint16getLimitSoftnessEv"]
+    pub fn btConeTwistConstraint_getLimitSoftness(this: *const btConeTwistConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint13getBiasFactorEv"]
+    pub fn btConeTwistConstraint_getBiasFactor(this: *const btConeTwistConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint19getRelaxationFactorEv"]
+    pub fn btConeTwistConstraint_getRelaxationFactor(
+        this: *const btConeTwistConstraint,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint13getTwistAngleEv"]
+    pub fn btConeTwistConstraint_getTwistAngle(this: *const btConeTwistConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint16isPastSwingLimitEv"]
+    pub fn btConeTwistConstraint_isPastSwingLimit(this: *mut btConeTwistConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint10getDampingEv"]
+    pub fn btConeTwistConstraint_getDamping(this: *const btConeTwistConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint10setDampingEd"]
+    pub fn btConeTwistConstraint_setDamping(this: *mut btConeTwistConstraint, damping: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint11enableMotorEb"]
+    pub fn btConeTwistConstraint_enableMotor(this: *mut btConeTwistConstraint, b: bool);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint14isMotorEnabledEv"]
+    pub fn btConeTwistConstraint_isMotorEnabled(this: *const btConeTwistConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint18getMaxMotorImpulseEv"]
+    pub fn btConeTwistConstraint_getMaxMotorImpulse(this: *const btConeTwistConstraint)
+        -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint27isMaxMotorImpulseNormalizedEv"]
+    pub fn btConeTwistConstraint_isMaxMotorImpulseNormalized(
+        this: *const btConeTwistConstraint,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint18setMaxMotorImpulseEd"]
+    pub fn btConeTwistConstraint_setMaxMotorImpulse(
+        this: *mut btConeTwistConstraint,
+        maxMotorImpulse: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint28setMaxMotorImpulseNormalizedEd"]
+    pub fn btConeTwistConstraint_setMaxMotorImpulseNormalized(
+        this: *mut btConeTwistConstraint,
+        maxMotorImpulse: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint12getFixThreshEv"]
+    pub fn btConeTwistConstraint_getFixThresh(this: *mut btConeTwistConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btConeTwistConstraint12setFixThreshEd"]
+    pub fn btConeTwistConstraint_setFixThresh(
+        this: *mut btConeTwistConstraint,
+        fixThresh: btScalar,
+    );
+}
+extern "C" {
     #[link_name = "\u{1}_ZN21btConeTwistConstraint14setMotorTargetERK12btQuaternion"]
     pub fn btConeTwistConstraint_setMotorTarget(
         this: *mut btConeTwistConstraint,
         q: *const btQuaternion,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint14getMotorTargetEv"]
+    pub fn btConeTwistConstraint_getMotorTarget(
+        this: *const btConeTwistConstraint,
+    ) -> *const btQuaternion;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN21btConeTwistConstraint31setMotorTargetInConstraintSpaceERK12btQuaternion"]
@@ -33165,6 +43942,24 @@ extern "C" {
         fAngleInRadians: btScalar,
         fLength: btScalar,
     ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint15getFrameOffsetAEv"]
+    pub fn btConeTwistConstraint_getFrameOffsetA(
+        this: *const btConeTwistConstraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint15getFrameOffsetBEv"]
+    pub fn btConeTwistConstraint_getFrameOffsetB(
+        this: *const btConeTwistConstraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK21btConeTwistConstraint8getFlagsEv"]
+    pub fn btConeTwistConstraint_getFlags(
+        this: *const btConeTwistConstraint,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN21btConeTwistConstraintC1ER11btRigidBodyS1_RK11btTransformS4_"]
@@ -33239,6 +44034,70 @@ impl btConeTwistConstraint {
         btConeTwistConstraint_updateRHS(self, timeStep)
     }
     #[inline]
+    pub unsafe fn getRigidBodyA(&self) -> *const btRigidBody {
+        btConeTwistConstraint_getRigidBodyA(self)
+    }
+    #[inline]
+    pub unsafe fn getRigidBodyB(&self) -> *const btRigidBody {
+        btConeTwistConstraint_getRigidBodyB(self)
+    }
+    #[inline]
+    pub unsafe fn setAngularOnly(&mut self, angularOnly: bool) {
+        btConeTwistConstraint_setAngularOnly(self, angularOnly)
+    }
+    #[inline]
+    pub unsafe fn getAngularOnly(&self) -> bool {
+        btConeTwistConstraint_getAngularOnly(self)
+    }
+    #[inline]
+    pub unsafe fn setLimit(&mut self, limitIndex: ::std::os::raw::c_int, limitValue: btScalar) {
+        btConeTwistConstraint_setLimit(self, limitIndex, limitValue)
+    }
+    #[inline]
+    pub unsafe fn getLimit(&self, limitIndex: ::std::os::raw::c_int) -> btScalar {
+        btConeTwistConstraint_getLimit(self, limitIndex)
+    }
+    #[inline]
+    pub unsafe fn setLimit1(
+        &mut self,
+        _swingSpan1: btScalar,
+        _swingSpan2: btScalar,
+        _twistSpan: btScalar,
+        _softness: btScalar,
+        _biasFactor: btScalar,
+        _relaxationFactor: btScalar,
+    ) {
+        btConeTwistConstraint_setLimit1(
+            self,
+            _swingSpan1,
+            _swingSpan2,
+            _twistSpan,
+            _softness,
+            _biasFactor,
+            _relaxationFactor,
+        )
+    }
+    #[inline]
+    pub unsafe fn getAFrame(&self) -> *const btTransform {
+        btConeTwistConstraint_getAFrame(self)
+    }
+    #[inline]
+    pub unsafe fn getBFrame(&self) -> *const btTransform {
+        btConeTwistConstraint_getBFrame(self)
+    }
+    #[inline]
+    pub unsafe fn getSolveTwistLimit(&mut self) -> ::std::os::raw::c_int {
+        btConeTwistConstraint_getSolveTwistLimit(self)
+    }
+    #[inline]
+    pub unsafe fn getSolveSwingLimit(&mut self) -> ::std::os::raw::c_int {
+        btConeTwistConstraint_getSolveSwingLimit(self)
+    }
+    #[inline]
+    pub unsafe fn getTwistLimitSign(&mut self) -> btScalar {
+        btConeTwistConstraint_getTwistLimitSign(self)
+    }
+    #[inline]
     pub unsafe fn calcAngleInfo(&mut self) {
         btConeTwistConstraint_calcAngleInfo(self)
     }
@@ -33259,8 +44118,84 @@ impl btConeTwistConstraint {
         )
     }
     #[inline]
+    pub unsafe fn getSwingSpan1(&self) -> btScalar {
+        btConeTwistConstraint_getSwingSpan1(self)
+    }
+    #[inline]
+    pub unsafe fn getSwingSpan2(&self) -> btScalar {
+        btConeTwistConstraint_getSwingSpan2(self)
+    }
+    #[inline]
+    pub unsafe fn getTwistSpan(&self) -> btScalar {
+        btConeTwistConstraint_getTwistSpan(self)
+    }
+    #[inline]
+    pub unsafe fn getLimitSoftness(&self) -> btScalar {
+        btConeTwistConstraint_getLimitSoftness(self)
+    }
+    #[inline]
+    pub unsafe fn getBiasFactor(&self) -> btScalar {
+        btConeTwistConstraint_getBiasFactor(self)
+    }
+    #[inline]
+    pub unsafe fn getRelaxationFactor(&self) -> btScalar {
+        btConeTwistConstraint_getRelaxationFactor(self)
+    }
+    #[inline]
+    pub unsafe fn getTwistAngle(&self) -> btScalar {
+        btConeTwistConstraint_getTwistAngle(self)
+    }
+    #[inline]
+    pub unsafe fn isPastSwingLimit(&mut self) -> bool {
+        btConeTwistConstraint_isPastSwingLimit(self)
+    }
+    #[inline]
+    pub unsafe fn getDamping(&self) -> btScalar {
+        btConeTwistConstraint_getDamping(self)
+    }
+    #[inline]
+    pub unsafe fn setDamping(&mut self, damping: btScalar) {
+        btConeTwistConstraint_setDamping(self, damping)
+    }
+    #[inline]
+    pub unsafe fn enableMotor(&mut self, b: bool) {
+        btConeTwistConstraint_enableMotor(self, b)
+    }
+    #[inline]
+    pub unsafe fn isMotorEnabled(&self) -> bool {
+        btConeTwistConstraint_isMotorEnabled(self)
+    }
+    #[inline]
+    pub unsafe fn getMaxMotorImpulse(&self) -> btScalar {
+        btConeTwistConstraint_getMaxMotorImpulse(self)
+    }
+    #[inline]
+    pub unsafe fn isMaxMotorImpulseNormalized(&self) -> bool {
+        btConeTwistConstraint_isMaxMotorImpulseNormalized(self)
+    }
+    #[inline]
+    pub unsafe fn setMaxMotorImpulse(&mut self, maxMotorImpulse: btScalar) {
+        btConeTwistConstraint_setMaxMotorImpulse(self, maxMotorImpulse)
+    }
+    #[inline]
+    pub unsafe fn setMaxMotorImpulseNormalized(&mut self, maxMotorImpulse: btScalar) {
+        btConeTwistConstraint_setMaxMotorImpulseNormalized(self, maxMotorImpulse)
+    }
+    #[inline]
+    pub unsafe fn getFixThresh(&mut self) -> btScalar {
+        btConeTwistConstraint_getFixThresh(self)
+    }
+    #[inline]
+    pub unsafe fn setFixThresh(&mut self, fixThresh: btScalar) {
+        btConeTwistConstraint_setFixThresh(self, fixThresh)
+    }
+    #[inline]
     pub unsafe fn setMotorTarget(&mut self, q: *const btQuaternion) {
         btConeTwistConstraint_setMotorTarget(self, q)
+    }
+    #[inline]
+    pub unsafe fn getMotorTarget(&self) -> *const btQuaternion {
+        btConeTwistConstraint_getMotorTarget(self)
     }
     #[inline]
     pub unsafe fn setMotorTargetInConstraintSpace(&mut self, q: *const btQuaternion) {
@@ -33273,6 +44208,18 @@ impl btConeTwistConstraint {
         fLength: btScalar,
     ) -> btVector3 {
         btConeTwistConstraint_GetPointForAngle(self, fAngleInRadians, fLength)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetA(&self) -> *const btTransform {
+        btConeTwistConstraint_getFrameOffsetA(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetB(&self) -> *const btTransform {
+        btConeTwistConstraint_getFrameOffsetB(self)
+    }
+    #[inline]
+    pub unsafe fn getFlags(&self) -> ::std::os::raw::c_int {
+        btConeTwistConstraint_getFlags(self)
     }
     #[inline]
     pub unsafe fn new(
@@ -33878,6 +44825,20 @@ fn bindgen_test_layout_btRotationalLimitMotor() {
 }
 extern "C" {
 
+    /// ! Is limited
+
+    #[link_name = "\u{1}_ZNK22btRotationalLimitMotor9isLimitedEv"]
+    pub fn btRotationalLimitMotor_isLimited(this: *const btRotationalLimitMotor) -> bool;
+}
+extern "C" {
+
+    /// ! Need apply correction
+
+    #[link_name = "\u{1}_ZNK22btRotationalLimitMotor16needApplyTorquesEv"]
+    pub fn btRotationalLimitMotor_needApplyTorques(this: *const btRotationalLimitMotor) -> bool;
+}
+extern "C" {
+
     /// ! calculates  error
     /// /*!
     /// calculates m_currentLimit and m_currentLimitError.
@@ -33903,7 +44864,29 @@ extern "C" {
         body1: *mut btRigidBody,
     ) -> btScalar;
 }
+extern "C" {
+
+    /// !@}
+
+    #[link_name = "\u{1}_ZN22btRotationalLimitMotorC1Ev"]
+    pub fn btRotationalLimitMotor_btRotationalLimitMotor(this: *mut btRotationalLimitMotor);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN22btRotationalLimitMotorC1ERKS_"]
+    pub fn btRotationalLimitMotor_btRotationalLimitMotor1(
+        this: *mut btRotationalLimitMotor,
+        limot: *const btRotationalLimitMotor,
+    );
+}
 impl btRotationalLimitMotor {
+    #[inline]
+    pub unsafe fn isLimited(&self) -> bool {
+        btRotationalLimitMotor_isLimited(self)
+    }
+    #[inline]
+    pub unsafe fn needApplyTorques(&self) -> bool {
+        btRotationalLimitMotor_needApplyTorques(self)
+    }
     #[inline]
     pub unsafe fn testLimitValue(&mut self, test_value: btScalar) -> ::std::os::raw::c_int {
         btRotationalLimitMotor_testLimitValue(self, test_value)
@@ -33918,6 +44901,18 @@ impl btRotationalLimitMotor {
         body1: *mut btRigidBody,
     ) -> btScalar {
         btRotationalLimitMotor_solveAngularLimits(self, timeStep, axis, jacDiagABInv, body0, body1)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btRotationalLimitMotor_btRotationalLimitMotor(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(limot: *const btRotationalLimitMotor) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btRotationalLimitMotor_btRotationalLimitMotor1(&mut __bindgen_tmp, limot);
+        __bindgen_tmp
     }
 }
 #[repr(C)]
@@ -34123,6 +45118,29 @@ fn bindgen_test_layout_btTranslationalLimitMotor() {
     );
 }
 extern "C" {
+
+    /// ! Test limit
+    /// /*!
+    /// - free means upper < lower,
+    /// - locked means upper == lower
+    /// - limited means upper > lower
+    /// - limitIndex: first 3 are linear, next 3 are angular
+    /// */
+
+    #[link_name = "\u{1}_ZNK25btTranslationalLimitMotor9isLimitedEi"]
+    pub fn btTranslationalLimitMotor_isLimited(
+        this: *const btTranslationalLimitMotor,
+        limitIndex: ::std::os::raw::c_int,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK25btTranslationalLimitMotor14needApplyForceEi"]
+    pub fn btTranslationalLimitMotor_needApplyForce(
+        this: *const btTranslationalLimitMotor,
+        limitIndex: ::std::os::raw::c_int,
+    ) -> bool;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN25btTranslationalLimitMotor14testLimitValueEid"]
     pub fn btTranslationalLimitMotor_testLimitValue(
         this: *mut btTranslationalLimitMotor,
@@ -34145,7 +45163,28 @@ extern "C" {
         anchorPos: *const btVector3,
     ) -> btScalar;
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN25btTranslationalLimitMotorC1Ev"]
+    pub fn btTranslationalLimitMotor_btTranslationalLimitMotor(
+        this: *mut btTranslationalLimitMotor,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN25btTranslationalLimitMotorC1ERKS_"]
+    pub fn btTranslationalLimitMotor_btTranslationalLimitMotor1(
+        this: *mut btTranslationalLimitMotor,
+        other: *const btTranslationalLimitMotor,
+    );
+}
 impl btTranslationalLimitMotor {
+    #[inline]
+    pub unsafe fn isLimited(&self, limitIndex: ::std::os::raw::c_int) -> bool {
+        btTranslationalLimitMotor_isLimited(self, limitIndex)
+    }
+    #[inline]
+    pub unsafe fn needApplyForce(&self, limitIndex: ::std::os::raw::c_int) -> bool {
+        btTranslationalLimitMotor_needApplyForce(self, limitIndex)
+    }
     #[inline]
     pub unsafe fn testLimitValue(
         &mut self,
@@ -34179,6 +45218,18 @@ impl btTranslationalLimitMotor {
             axis_normal_on_a,
             anchorPos,
         )
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btTranslationalLimitMotor_btTranslationalLimitMotor(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(other: *const btTranslationalLimitMotor) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btTranslationalLimitMotor_btTranslationalLimitMotor1(&mut __bindgen_tmp, other);
+        __bindgen_tmp
     }
 }
 pub const bt6DofFlags_BT_6DOF_FLAGS_CFM_NORM: bt6DofFlags = 1;
@@ -34563,6 +45614,54 @@ extern "C" {
     pub fn btGeneric6DofConstraint_calculateTransforms1(this: *mut btGeneric6DofConstraint);
 }
 extern "C" {
+
+    /// ! Gets the global transform of the offset for body A
+    /// /*!
+    /// \sa btGeneric6DofConstraint.getFrameOffsetA, btGeneric6DofConstraint.getFrameOffsetB, btGeneric6DofConstraint.calculateAngleInfo.
+    /// */
+
+    #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint23getCalculatedTransformAEv"]
+    pub fn btGeneric6DofConstraint_getCalculatedTransformA(
+        this: *const btGeneric6DofConstraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+
+    /// ! Gets the global transform of the offset for body B
+    /// /*!
+    /// \sa btGeneric6DofConstraint.getFrameOffsetA, btGeneric6DofConstraint.getFrameOffsetB, btGeneric6DofConstraint.calculateAngleInfo.
+    /// */
+
+    #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint23getCalculatedTransformBEv"]
+    pub fn btGeneric6DofConstraint_getCalculatedTransformB(
+        this: *const btGeneric6DofConstraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint15getFrameOffsetAEv"]
+    pub fn btGeneric6DofConstraint_getFrameOffsetA(
+        this: *const btGeneric6DofConstraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint15getFrameOffsetBEv"]
+    pub fn btGeneric6DofConstraint_getFrameOffsetB(
+        this: *const btGeneric6DofConstraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btGeneric6DofConstraint15getFrameOffsetAEv"]
+    pub fn btGeneric6DofConstraint_getFrameOffsetA1(
+        this: *mut btGeneric6DofConstraint,
+    ) -> *mut btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btGeneric6DofConstraint15getFrameOffsetBEv"]
+    pub fn btGeneric6DofConstraint_getFrameOffsetB1(
+        this: *mut btGeneric6DofConstraint,
+    ) -> *mut btTransform;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN23btGeneric6DofConstraint18getInfo1NonVirtualEPN17btTypedConstraint17btConstraintInfo1E"]
     pub fn btGeneric6DofConstraint_getInfo1NonVirtual(
         this: *mut btGeneric6DofConstraint,
@@ -34651,6 +45750,106 @@ extern "C" {
     ) -> bool;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN23btGeneric6DofConstraint19setLinearLowerLimitERK9btVector3"]
+    pub fn btGeneric6DofConstraint_setLinearLowerLimit(
+        this: *mut btGeneric6DofConstraint,
+        linearLower: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint19getLinearLowerLimitER9btVector3"]
+    pub fn btGeneric6DofConstraint_getLinearLowerLimit(
+        this: *const btGeneric6DofConstraint,
+        linearLower: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btGeneric6DofConstraint19setLinearUpperLimitERK9btVector3"]
+    pub fn btGeneric6DofConstraint_setLinearUpperLimit(
+        this: *mut btGeneric6DofConstraint,
+        linearUpper: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint19getLinearUpperLimitER9btVector3"]
+    pub fn btGeneric6DofConstraint_getLinearUpperLimit(
+        this: *const btGeneric6DofConstraint,
+        linearUpper: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btGeneric6DofConstraint20setAngularLowerLimitERK9btVector3"]
+    pub fn btGeneric6DofConstraint_setAngularLowerLimit(
+        this: *mut btGeneric6DofConstraint,
+        angularLower: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint20getAngularLowerLimitER9btVector3"]
+    pub fn btGeneric6DofConstraint_getAngularLowerLimit(
+        this: *const btGeneric6DofConstraint,
+        angularLower: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btGeneric6DofConstraint20setAngularUpperLimitERK9btVector3"]
+    pub fn btGeneric6DofConstraint_setAngularUpperLimit(
+        this: *mut btGeneric6DofConstraint,
+        angularUpper: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint20getAngularUpperLimitER9btVector3"]
+    pub fn btGeneric6DofConstraint_getAngularUpperLimit(
+        this: *const btGeneric6DofConstraint,
+        angularUpper: *mut btVector3,
+    );
+}
+extern "C" {
+
+    /// ! Retrieves the angular limit informacion
+
+    #[link_name = "\u{1}_ZN23btGeneric6DofConstraint23getRotationalLimitMotorEi"]
+    pub fn btGeneric6DofConstraint_getRotationalLimitMotor(
+        this: *mut btGeneric6DofConstraint,
+        index: ::std::os::raw::c_int,
+    ) -> *mut btRotationalLimitMotor;
+}
+extern "C" {
+
+    /// ! Retrieves the  limit informacion
+
+    #[link_name = "\u{1}_ZN23btGeneric6DofConstraint26getTranslationalLimitMotorEv"]
+    pub fn btGeneric6DofConstraint_getTranslationalLimitMotor(
+        this: *mut btGeneric6DofConstraint,
+    ) -> *mut btTranslationalLimitMotor;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btGeneric6DofConstraint8setLimitEidd"]
+    pub fn btGeneric6DofConstraint_setLimit(
+        this: *mut btGeneric6DofConstraint,
+        axis: ::std::os::raw::c_int,
+        lo: btScalar,
+        hi: btScalar,
+    );
+}
+extern "C" {
+
+    /// ! Test limit
+    /// /*!
+    /// - free means upper < lower,
+    /// - locked means upper == lower
+    /// - limited means upper > lower
+    /// - limitIndex: first 3 are linear, next 3 are angular
+    /// */
+
+    #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint9isLimitedEi"]
+    pub fn btGeneric6DofConstraint_isLimited(
+        this: *const btGeneric6DofConstraint,
+        limitIndex: ::std::os::raw::c_int,
+    ) -> bool;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN23btGeneric6DofConstraint21get_limit_motor_info2EP22btRotationalLimitMotorRK11btTransformS4_RK9btVector3S7_S7_S7_PN17btTypedConstraint17btConstraintInfo2EiRS5_ii"]
     pub fn btGeneric6DofConstraint_get_limit_motor_info2(
         this: *mut btGeneric6DofConstraint,
@@ -34667,6 +45866,30 @@ extern "C" {
         rotational: ::std::os::raw::c_int,
         rotAllowed: ::std::os::raw::c_int,
     ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint17getUseFrameOffsetEv"]
+    pub fn btGeneric6DofConstraint_getUseFrameOffset(this: *const btGeneric6DofConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btGeneric6DofConstraint17setUseFrameOffsetEb"]
+    pub fn btGeneric6DofConstraint_setUseFrameOffset(
+        this: *mut btGeneric6DofConstraint,
+        frameOffsetOnOff: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint27getUseLinearReferenceFrameAEv"]
+    pub fn btGeneric6DofConstraint_getUseLinearReferenceFrameA(
+        this: *const btGeneric6DofConstraint,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btGeneric6DofConstraint27setUseLinearReferenceFrameAEb"]
+    pub fn btGeneric6DofConstraint_setUseLinearReferenceFrameA(
+        this: *mut btGeneric6DofConstraint,
+        linearReferenceFrameA: bool,
+    );
 }
 extern "C" {
     #[link_name = "\u{1}_ZN23btGeneric6DofConstraint7setAxisERK9btVector3S2_"]
@@ -34790,6 +46013,30 @@ impl btGeneric6DofConstraint {
         btGeneric6DofConstraint_calculateTransforms1(self)
     }
     #[inline]
+    pub unsafe fn getCalculatedTransformA(&self) -> *const btTransform {
+        btGeneric6DofConstraint_getCalculatedTransformA(self)
+    }
+    #[inline]
+    pub unsafe fn getCalculatedTransformB(&self) -> *const btTransform {
+        btGeneric6DofConstraint_getCalculatedTransformB(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetA(&self) -> *const btTransform {
+        btGeneric6DofConstraint_getFrameOffsetA(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetB(&self) -> *const btTransform {
+        btGeneric6DofConstraint_getFrameOffsetB(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetA1(&mut self) -> *mut btTransform {
+        btGeneric6DofConstraint_getFrameOffsetA1(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetB1(&mut self) -> *mut btTransform {
+        btGeneric6DofConstraint_getFrameOffsetB1(self)
+    }
+    #[inline]
     pub unsafe fn getInfo1NonVirtual(&mut self, info: *mut btTypedConstraint_btConstraintInfo1) {
         btGeneric6DofConstraint_getInfo1NonVirtual(self, info)
     }
@@ -34840,6 +46087,57 @@ impl btGeneric6DofConstraint {
         btGeneric6DofConstraint_testAngularLimitMotor(self, axis_index)
     }
     #[inline]
+    pub unsafe fn setLinearLowerLimit(&mut self, linearLower: *const btVector3) {
+        btGeneric6DofConstraint_setLinearLowerLimit(self, linearLower)
+    }
+    #[inline]
+    pub unsafe fn getLinearLowerLimit(&self, linearLower: *mut btVector3) {
+        btGeneric6DofConstraint_getLinearLowerLimit(self, linearLower)
+    }
+    #[inline]
+    pub unsafe fn setLinearUpperLimit(&mut self, linearUpper: *const btVector3) {
+        btGeneric6DofConstraint_setLinearUpperLimit(self, linearUpper)
+    }
+    #[inline]
+    pub unsafe fn getLinearUpperLimit(&self, linearUpper: *mut btVector3) {
+        btGeneric6DofConstraint_getLinearUpperLimit(self, linearUpper)
+    }
+    #[inline]
+    pub unsafe fn setAngularLowerLimit(&mut self, angularLower: *const btVector3) {
+        btGeneric6DofConstraint_setAngularLowerLimit(self, angularLower)
+    }
+    #[inline]
+    pub unsafe fn getAngularLowerLimit(&self, angularLower: *mut btVector3) {
+        btGeneric6DofConstraint_getAngularLowerLimit(self, angularLower)
+    }
+    #[inline]
+    pub unsafe fn setAngularUpperLimit(&mut self, angularUpper: *const btVector3) {
+        btGeneric6DofConstraint_setAngularUpperLimit(self, angularUpper)
+    }
+    #[inline]
+    pub unsafe fn getAngularUpperLimit(&self, angularUpper: *mut btVector3) {
+        btGeneric6DofConstraint_getAngularUpperLimit(self, angularUpper)
+    }
+    #[inline]
+    pub unsafe fn getRotationalLimitMotor(
+        &mut self,
+        index: ::std::os::raw::c_int,
+    ) -> *mut btRotationalLimitMotor {
+        btGeneric6DofConstraint_getRotationalLimitMotor(self, index)
+    }
+    #[inline]
+    pub unsafe fn getTranslationalLimitMotor(&mut self) -> *mut btTranslationalLimitMotor {
+        btGeneric6DofConstraint_getTranslationalLimitMotor(self)
+    }
+    #[inline]
+    pub unsafe fn setLimit(&mut self, axis: ::std::os::raw::c_int, lo: btScalar, hi: btScalar) {
+        btGeneric6DofConstraint_setLimit(self, axis, lo, hi)
+    }
+    #[inline]
+    pub unsafe fn isLimited(&self, limitIndex: ::std::os::raw::c_int) -> bool {
+        btGeneric6DofConstraint_isLimited(self, limitIndex)
+    }
+    #[inline]
     pub unsafe fn get_limit_motor_info2(
         &mut self,
         limot: *mut btRotationalLimitMotor,
@@ -34870,6 +46168,22 @@ impl btGeneric6DofConstraint {
             rotational,
             rotAllowed,
         )
+    }
+    #[inline]
+    pub unsafe fn getUseFrameOffset(&self) -> bool {
+        btGeneric6DofConstraint_getUseFrameOffset(self)
+    }
+    #[inline]
+    pub unsafe fn setUseFrameOffset(&mut self, frameOffsetOnOff: bool) {
+        btGeneric6DofConstraint_setUseFrameOffset(self, frameOffsetOnOff)
+    }
+    #[inline]
+    pub unsafe fn getUseLinearReferenceFrameA(&self) -> bool {
+        btGeneric6DofConstraint_getUseLinearReferenceFrameA(self)
+    }
+    #[inline]
+    pub unsafe fn setUseLinearReferenceFrameA(&mut self, linearReferenceFrameA: bool) {
+        btGeneric6DofConstraint_setUseLinearReferenceFrameA(self, linearReferenceFrameA)
     }
     #[inline]
     pub unsafe fn setAxis(&mut self, axis1: *const btVector3, axis2: *const btVector3) {
@@ -34958,6 +46272,12 @@ extern "C" {
         num: ::std::os::raw::c_int,
         axis: ::std::os::raw::c_int,
     ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint8getFlagsEv"]
+    pub fn btGeneric6DofConstraint_getFlags(
+        this: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK23btGeneric6DofConstraint28calculateSerializeBufferSizeEv"]
@@ -36004,6 +47324,364 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK18btSliderConstraint13getRigidBodyAEv"]
+    pub fn btSliderConstraint_getRigidBodyA(this: *const btSliderConstraint) -> *const btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btSliderConstraint13getRigidBodyBEv"]
+    pub fn btSliderConstraint_getRigidBodyB(this: *const btSliderConstraint) -> *const btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btSliderConstraint23getCalculatedTransformAEv"]
+    pub fn btSliderConstraint_getCalculatedTransformA(
+        this: *const btSliderConstraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btSliderConstraint23getCalculatedTransformBEv"]
+    pub fn btSliderConstraint_getCalculatedTransformB(
+        this: *const btSliderConstraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btSliderConstraint15getFrameOffsetAEv"]
+    pub fn btSliderConstraint_getFrameOffsetA(
+        this: *const btSliderConstraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btSliderConstraint15getFrameOffsetBEv"]
+    pub fn btSliderConstraint_getFrameOffsetB(
+        this: *const btSliderConstraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint15getFrameOffsetAEv"]
+    pub fn btSliderConstraint_getFrameOffsetA1(this: *mut btSliderConstraint) -> *mut btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint15getFrameOffsetBEv"]
+    pub fn btSliderConstraint_getFrameOffsetB1(this: *mut btSliderConstraint) -> *mut btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16getLowerLinLimitEv"]
+    pub fn btSliderConstraint_getLowerLinLimit(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16setLowerLinLimitEd"]
+    pub fn btSliderConstraint_setLowerLinLimit(this: *mut btSliderConstraint, lowerLimit: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16getUpperLinLimitEv"]
+    pub fn btSliderConstraint_getUpperLinLimit(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16setUpperLinLimitEd"]
+    pub fn btSliderConstraint_setUpperLinLimit(this: *mut btSliderConstraint, upperLimit: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16getLowerAngLimitEv"]
+    pub fn btSliderConstraint_getLowerAngLimit(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16setLowerAngLimitEd"]
+    pub fn btSliderConstraint_setLowerAngLimit(this: *mut btSliderConstraint, lowerLimit: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16getUpperAngLimitEv"]
+    pub fn btSliderConstraint_getUpperAngLimit(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16setUpperAngLimitEd"]
+    pub fn btSliderConstraint_setUpperAngLimit(this: *mut btSliderConstraint, upperLimit: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint27getUseLinearReferenceFrameAEv"]
+    pub fn btSliderConstraint_getUseLinearReferenceFrameA(this: *mut btSliderConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint17getSoftnessDirLinEv"]
+    pub fn btSliderConstraint_getSoftnessDirLin(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint20getRestitutionDirLinEv"]
+    pub fn btSliderConstraint_getRestitutionDirLin(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16getDampingDirLinEv"]
+    pub fn btSliderConstraint_getDampingDirLin(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint17getSoftnessDirAngEv"]
+    pub fn btSliderConstraint_getSoftnessDirAng(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint20getRestitutionDirAngEv"]
+    pub fn btSliderConstraint_getRestitutionDirAng(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16getDampingDirAngEv"]
+    pub fn btSliderConstraint_getDampingDirAng(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint17getSoftnessLimLinEv"]
+    pub fn btSliderConstraint_getSoftnessLimLin(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint20getRestitutionLimLinEv"]
+    pub fn btSliderConstraint_getRestitutionLimLin(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16getDampingLimLinEv"]
+    pub fn btSliderConstraint_getDampingLimLin(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint17getSoftnessLimAngEv"]
+    pub fn btSliderConstraint_getSoftnessLimAng(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint20getRestitutionLimAngEv"]
+    pub fn btSliderConstraint_getRestitutionLimAng(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16getDampingLimAngEv"]
+    pub fn btSliderConstraint_getDampingLimAng(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint19getSoftnessOrthoLinEv"]
+    pub fn btSliderConstraint_getSoftnessOrthoLin(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint22getRestitutionOrthoLinEv"]
+    pub fn btSliderConstraint_getRestitutionOrthoLin(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint18getDampingOrthoLinEv"]
+    pub fn btSliderConstraint_getDampingOrthoLin(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint19getSoftnessOrthoAngEv"]
+    pub fn btSliderConstraint_getSoftnessOrthoAng(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint22getRestitutionOrthoAngEv"]
+    pub fn btSliderConstraint_getRestitutionOrthoAng(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint18getDampingOrthoAngEv"]
+    pub fn btSliderConstraint_getDampingOrthoAng(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint17setSoftnessDirLinEd"]
+    pub fn btSliderConstraint_setSoftnessDirLin(
+        this: *mut btSliderConstraint,
+        softnessDirLin: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint20setRestitutionDirLinEd"]
+    pub fn btSliderConstraint_setRestitutionDirLin(
+        this: *mut btSliderConstraint,
+        restitutionDirLin: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16setDampingDirLinEd"]
+    pub fn btSliderConstraint_setDampingDirLin(
+        this: *mut btSliderConstraint,
+        dampingDirLin: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint17setSoftnessDirAngEd"]
+    pub fn btSliderConstraint_setSoftnessDirAng(
+        this: *mut btSliderConstraint,
+        softnessDirAng: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint20setRestitutionDirAngEd"]
+    pub fn btSliderConstraint_setRestitutionDirAng(
+        this: *mut btSliderConstraint,
+        restitutionDirAng: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16setDampingDirAngEd"]
+    pub fn btSliderConstraint_setDampingDirAng(
+        this: *mut btSliderConstraint,
+        dampingDirAng: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint17setSoftnessLimLinEd"]
+    pub fn btSliderConstraint_setSoftnessLimLin(
+        this: *mut btSliderConstraint,
+        softnessLimLin: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint20setRestitutionLimLinEd"]
+    pub fn btSliderConstraint_setRestitutionLimLin(
+        this: *mut btSliderConstraint,
+        restitutionLimLin: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16setDampingLimLinEd"]
+    pub fn btSliderConstraint_setDampingLimLin(
+        this: *mut btSliderConstraint,
+        dampingLimLin: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint17setSoftnessLimAngEd"]
+    pub fn btSliderConstraint_setSoftnessLimAng(
+        this: *mut btSliderConstraint,
+        softnessLimAng: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint20setRestitutionLimAngEd"]
+    pub fn btSliderConstraint_setRestitutionLimAng(
+        this: *mut btSliderConstraint,
+        restitutionLimAng: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16setDampingLimAngEd"]
+    pub fn btSliderConstraint_setDampingLimAng(
+        this: *mut btSliderConstraint,
+        dampingLimAng: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint19setSoftnessOrthoLinEd"]
+    pub fn btSliderConstraint_setSoftnessOrthoLin(
+        this: *mut btSliderConstraint,
+        softnessOrthoLin: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint22setRestitutionOrthoLinEd"]
+    pub fn btSliderConstraint_setRestitutionOrthoLin(
+        this: *mut btSliderConstraint,
+        restitutionOrthoLin: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint18setDampingOrthoLinEd"]
+    pub fn btSliderConstraint_setDampingOrthoLin(
+        this: *mut btSliderConstraint,
+        dampingOrthoLin: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint19setSoftnessOrthoAngEd"]
+    pub fn btSliderConstraint_setSoftnessOrthoAng(
+        this: *mut btSliderConstraint,
+        softnessOrthoAng: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint22setRestitutionOrthoAngEd"]
+    pub fn btSliderConstraint_setRestitutionOrthoAng(
+        this: *mut btSliderConstraint,
+        restitutionOrthoAng: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint18setDampingOrthoAngEd"]
+    pub fn btSliderConstraint_setDampingOrthoAng(
+        this: *mut btSliderConstraint,
+        dampingOrthoAng: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint18setPoweredLinMotorEb"]
+    pub fn btSliderConstraint_setPoweredLinMotor(this: *mut btSliderConstraint, onOff: bool);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint18getPoweredLinMotorEv"]
+    pub fn btSliderConstraint_getPoweredLinMotor(this: *mut btSliderConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint25setTargetLinMotorVelocityEd"]
+    pub fn btSliderConstraint_setTargetLinMotorVelocity(
+        this: *mut btSliderConstraint,
+        targetLinMotorVelocity: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint25getTargetLinMotorVelocityEv"]
+    pub fn btSliderConstraint_getTargetLinMotorVelocity(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint19setMaxLinMotorForceEd"]
+    pub fn btSliderConstraint_setMaxLinMotorForce(
+        this: *mut btSliderConstraint,
+        maxLinMotorForce: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint19getMaxLinMotorForceEv"]
+    pub fn btSliderConstraint_getMaxLinMotorForce(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint18setPoweredAngMotorEb"]
+    pub fn btSliderConstraint_setPoweredAngMotor(this: *mut btSliderConstraint, onOff: bool);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint18getPoweredAngMotorEv"]
+    pub fn btSliderConstraint_getPoweredAngMotor(this: *mut btSliderConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint25setTargetAngMotorVelocityEd"]
+    pub fn btSliderConstraint_setTargetAngMotorVelocity(
+        this: *mut btSliderConstraint,
+        targetAngMotorVelocity: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint25getTargetAngMotorVelocityEv"]
+    pub fn btSliderConstraint_getTargetAngMotorVelocity(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint19setMaxAngMotorForceEd"]
+    pub fn btSliderConstraint_setMaxAngMotorForce(
+        this: *mut btSliderConstraint,
+        maxAngMotorForce: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint19getMaxAngMotorForceEv"]
+    pub fn btSliderConstraint_getMaxAngMotorForce(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btSliderConstraint12getLinearPosEv"]
+    pub fn btSliderConstraint_getLinearPos(this: *const btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btSliderConstraint13getAngularPosEv"]
+    pub fn btSliderConstraint_getAngularPos(this: *const btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16getSolveLinLimitEv"]
+    pub fn btSliderConstraint_getSolveLinLimit(this: *mut btSliderConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint11getLinDepthEv"]
+    pub fn btSliderConstraint_getLinDepth(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint16getSolveAngLimitEv"]
+    pub fn btSliderConstraint_getSolveAngLimit(this: *mut btSliderConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint11getAngDepthEv"]
+    pub fn btSliderConstraint_getAngDepth(this: *mut btSliderConstraint) -> btScalar;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN18btSliderConstraint19calculateTransformsERK11btTransformS2_"]
     pub fn btSliderConstraint_calculateTransforms(
         this: *mut btSliderConstraint,
@@ -36026,6 +47704,25 @@ extern "C" {
 extern "C" {
     #[link_name = "\u{1}_ZN18btSliderConstraint11getAncorInBEv"]
     pub fn btSliderConstraint_getAncorInB(this: *mut btSliderConstraint) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint17getUseFrameOffsetEv"]
+    pub fn btSliderConstraint_getUseFrameOffset(this: *mut btSliderConstraint) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint17setUseFrameOffsetEb"]
+    pub fn btSliderConstraint_setUseFrameOffset(
+        this: *mut btSliderConstraint,
+        frameOffsetOnOff: bool,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btSliderConstraint9setFramesERK11btTransformS2_"]
+    pub fn btSliderConstraint_setFrames(
+        this: *mut btSliderConstraint,
+        frameA: *const btTransform,
+        frameB: *const btTransform,
+    );
 }
 extern "C" {
     #[link_name = "\u{1}_ZN18btSliderConstraintC1ER11btRigidBodyS1_RK11btTransformS4_b"]
@@ -36079,6 +47776,290 @@ impl btSliderConstraint {
         )
     }
     #[inline]
+    pub unsafe fn getRigidBodyA(&self) -> *const btRigidBody {
+        btSliderConstraint_getRigidBodyA(self)
+    }
+    #[inline]
+    pub unsafe fn getRigidBodyB(&self) -> *const btRigidBody {
+        btSliderConstraint_getRigidBodyB(self)
+    }
+    #[inline]
+    pub unsafe fn getCalculatedTransformA(&self) -> *const btTransform {
+        btSliderConstraint_getCalculatedTransformA(self)
+    }
+    #[inline]
+    pub unsafe fn getCalculatedTransformB(&self) -> *const btTransform {
+        btSliderConstraint_getCalculatedTransformB(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetA(&self) -> *const btTransform {
+        btSliderConstraint_getFrameOffsetA(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetB(&self) -> *const btTransform {
+        btSliderConstraint_getFrameOffsetB(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetA1(&mut self) -> *mut btTransform {
+        btSliderConstraint_getFrameOffsetA1(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetB1(&mut self) -> *mut btTransform {
+        btSliderConstraint_getFrameOffsetB1(self)
+    }
+    #[inline]
+    pub unsafe fn getLowerLinLimit(&mut self) -> btScalar {
+        btSliderConstraint_getLowerLinLimit(self)
+    }
+    #[inline]
+    pub unsafe fn setLowerLinLimit(&mut self, lowerLimit: btScalar) {
+        btSliderConstraint_setLowerLinLimit(self, lowerLimit)
+    }
+    #[inline]
+    pub unsafe fn getUpperLinLimit(&mut self) -> btScalar {
+        btSliderConstraint_getUpperLinLimit(self)
+    }
+    #[inline]
+    pub unsafe fn setUpperLinLimit(&mut self, upperLimit: btScalar) {
+        btSliderConstraint_setUpperLinLimit(self, upperLimit)
+    }
+    #[inline]
+    pub unsafe fn getLowerAngLimit(&mut self) -> btScalar {
+        btSliderConstraint_getLowerAngLimit(self)
+    }
+    #[inline]
+    pub unsafe fn setLowerAngLimit(&mut self, lowerLimit: btScalar) {
+        btSliderConstraint_setLowerAngLimit(self, lowerLimit)
+    }
+    #[inline]
+    pub unsafe fn getUpperAngLimit(&mut self) -> btScalar {
+        btSliderConstraint_getUpperAngLimit(self)
+    }
+    #[inline]
+    pub unsafe fn setUpperAngLimit(&mut self, upperLimit: btScalar) {
+        btSliderConstraint_setUpperAngLimit(self, upperLimit)
+    }
+    #[inline]
+    pub unsafe fn getUseLinearReferenceFrameA(&mut self) -> bool {
+        btSliderConstraint_getUseLinearReferenceFrameA(self)
+    }
+    #[inline]
+    pub unsafe fn getSoftnessDirLin(&mut self) -> btScalar {
+        btSliderConstraint_getSoftnessDirLin(self)
+    }
+    #[inline]
+    pub unsafe fn getRestitutionDirLin(&mut self) -> btScalar {
+        btSliderConstraint_getRestitutionDirLin(self)
+    }
+    #[inline]
+    pub unsafe fn getDampingDirLin(&mut self) -> btScalar {
+        btSliderConstraint_getDampingDirLin(self)
+    }
+    #[inline]
+    pub unsafe fn getSoftnessDirAng(&mut self) -> btScalar {
+        btSliderConstraint_getSoftnessDirAng(self)
+    }
+    #[inline]
+    pub unsafe fn getRestitutionDirAng(&mut self) -> btScalar {
+        btSliderConstraint_getRestitutionDirAng(self)
+    }
+    #[inline]
+    pub unsafe fn getDampingDirAng(&mut self) -> btScalar {
+        btSliderConstraint_getDampingDirAng(self)
+    }
+    #[inline]
+    pub unsafe fn getSoftnessLimLin(&mut self) -> btScalar {
+        btSliderConstraint_getSoftnessLimLin(self)
+    }
+    #[inline]
+    pub unsafe fn getRestitutionLimLin(&mut self) -> btScalar {
+        btSliderConstraint_getRestitutionLimLin(self)
+    }
+    #[inline]
+    pub unsafe fn getDampingLimLin(&mut self) -> btScalar {
+        btSliderConstraint_getDampingLimLin(self)
+    }
+    #[inline]
+    pub unsafe fn getSoftnessLimAng(&mut self) -> btScalar {
+        btSliderConstraint_getSoftnessLimAng(self)
+    }
+    #[inline]
+    pub unsafe fn getRestitutionLimAng(&mut self) -> btScalar {
+        btSliderConstraint_getRestitutionLimAng(self)
+    }
+    #[inline]
+    pub unsafe fn getDampingLimAng(&mut self) -> btScalar {
+        btSliderConstraint_getDampingLimAng(self)
+    }
+    #[inline]
+    pub unsafe fn getSoftnessOrthoLin(&mut self) -> btScalar {
+        btSliderConstraint_getSoftnessOrthoLin(self)
+    }
+    #[inline]
+    pub unsafe fn getRestitutionOrthoLin(&mut self) -> btScalar {
+        btSliderConstraint_getRestitutionOrthoLin(self)
+    }
+    #[inline]
+    pub unsafe fn getDampingOrthoLin(&mut self) -> btScalar {
+        btSliderConstraint_getDampingOrthoLin(self)
+    }
+    #[inline]
+    pub unsafe fn getSoftnessOrthoAng(&mut self) -> btScalar {
+        btSliderConstraint_getSoftnessOrthoAng(self)
+    }
+    #[inline]
+    pub unsafe fn getRestitutionOrthoAng(&mut self) -> btScalar {
+        btSliderConstraint_getRestitutionOrthoAng(self)
+    }
+    #[inline]
+    pub unsafe fn getDampingOrthoAng(&mut self) -> btScalar {
+        btSliderConstraint_getDampingOrthoAng(self)
+    }
+    #[inline]
+    pub unsafe fn setSoftnessDirLin(&mut self, softnessDirLin: btScalar) {
+        btSliderConstraint_setSoftnessDirLin(self, softnessDirLin)
+    }
+    #[inline]
+    pub unsafe fn setRestitutionDirLin(&mut self, restitutionDirLin: btScalar) {
+        btSliderConstraint_setRestitutionDirLin(self, restitutionDirLin)
+    }
+    #[inline]
+    pub unsafe fn setDampingDirLin(&mut self, dampingDirLin: btScalar) {
+        btSliderConstraint_setDampingDirLin(self, dampingDirLin)
+    }
+    #[inline]
+    pub unsafe fn setSoftnessDirAng(&mut self, softnessDirAng: btScalar) {
+        btSliderConstraint_setSoftnessDirAng(self, softnessDirAng)
+    }
+    #[inline]
+    pub unsafe fn setRestitutionDirAng(&mut self, restitutionDirAng: btScalar) {
+        btSliderConstraint_setRestitutionDirAng(self, restitutionDirAng)
+    }
+    #[inline]
+    pub unsafe fn setDampingDirAng(&mut self, dampingDirAng: btScalar) {
+        btSliderConstraint_setDampingDirAng(self, dampingDirAng)
+    }
+    #[inline]
+    pub unsafe fn setSoftnessLimLin(&mut self, softnessLimLin: btScalar) {
+        btSliderConstraint_setSoftnessLimLin(self, softnessLimLin)
+    }
+    #[inline]
+    pub unsafe fn setRestitutionLimLin(&mut self, restitutionLimLin: btScalar) {
+        btSliderConstraint_setRestitutionLimLin(self, restitutionLimLin)
+    }
+    #[inline]
+    pub unsafe fn setDampingLimLin(&mut self, dampingLimLin: btScalar) {
+        btSliderConstraint_setDampingLimLin(self, dampingLimLin)
+    }
+    #[inline]
+    pub unsafe fn setSoftnessLimAng(&mut self, softnessLimAng: btScalar) {
+        btSliderConstraint_setSoftnessLimAng(self, softnessLimAng)
+    }
+    #[inline]
+    pub unsafe fn setRestitutionLimAng(&mut self, restitutionLimAng: btScalar) {
+        btSliderConstraint_setRestitutionLimAng(self, restitutionLimAng)
+    }
+    #[inline]
+    pub unsafe fn setDampingLimAng(&mut self, dampingLimAng: btScalar) {
+        btSliderConstraint_setDampingLimAng(self, dampingLimAng)
+    }
+    #[inline]
+    pub unsafe fn setSoftnessOrthoLin(&mut self, softnessOrthoLin: btScalar) {
+        btSliderConstraint_setSoftnessOrthoLin(self, softnessOrthoLin)
+    }
+    #[inline]
+    pub unsafe fn setRestitutionOrthoLin(&mut self, restitutionOrthoLin: btScalar) {
+        btSliderConstraint_setRestitutionOrthoLin(self, restitutionOrthoLin)
+    }
+    #[inline]
+    pub unsafe fn setDampingOrthoLin(&mut self, dampingOrthoLin: btScalar) {
+        btSliderConstraint_setDampingOrthoLin(self, dampingOrthoLin)
+    }
+    #[inline]
+    pub unsafe fn setSoftnessOrthoAng(&mut self, softnessOrthoAng: btScalar) {
+        btSliderConstraint_setSoftnessOrthoAng(self, softnessOrthoAng)
+    }
+    #[inline]
+    pub unsafe fn setRestitutionOrthoAng(&mut self, restitutionOrthoAng: btScalar) {
+        btSliderConstraint_setRestitutionOrthoAng(self, restitutionOrthoAng)
+    }
+    #[inline]
+    pub unsafe fn setDampingOrthoAng(&mut self, dampingOrthoAng: btScalar) {
+        btSliderConstraint_setDampingOrthoAng(self, dampingOrthoAng)
+    }
+    #[inline]
+    pub unsafe fn setPoweredLinMotor(&mut self, onOff: bool) {
+        btSliderConstraint_setPoweredLinMotor(self, onOff)
+    }
+    #[inline]
+    pub unsafe fn getPoweredLinMotor(&mut self) -> bool {
+        btSliderConstraint_getPoweredLinMotor(self)
+    }
+    #[inline]
+    pub unsafe fn setTargetLinMotorVelocity(&mut self, targetLinMotorVelocity: btScalar) {
+        btSliderConstraint_setTargetLinMotorVelocity(self, targetLinMotorVelocity)
+    }
+    #[inline]
+    pub unsafe fn getTargetLinMotorVelocity(&mut self) -> btScalar {
+        btSliderConstraint_getTargetLinMotorVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn setMaxLinMotorForce(&mut self, maxLinMotorForce: btScalar) {
+        btSliderConstraint_setMaxLinMotorForce(self, maxLinMotorForce)
+    }
+    #[inline]
+    pub unsafe fn getMaxLinMotorForce(&mut self) -> btScalar {
+        btSliderConstraint_getMaxLinMotorForce(self)
+    }
+    #[inline]
+    pub unsafe fn setPoweredAngMotor(&mut self, onOff: bool) {
+        btSliderConstraint_setPoweredAngMotor(self, onOff)
+    }
+    #[inline]
+    pub unsafe fn getPoweredAngMotor(&mut self) -> bool {
+        btSliderConstraint_getPoweredAngMotor(self)
+    }
+    #[inline]
+    pub unsafe fn setTargetAngMotorVelocity(&mut self, targetAngMotorVelocity: btScalar) {
+        btSliderConstraint_setTargetAngMotorVelocity(self, targetAngMotorVelocity)
+    }
+    #[inline]
+    pub unsafe fn getTargetAngMotorVelocity(&mut self) -> btScalar {
+        btSliderConstraint_getTargetAngMotorVelocity(self)
+    }
+    #[inline]
+    pub unsafe fn setMaxAngMotorForce(&mut self, maxAngMotorForce: btScalar) {
+        btSliderConstraint_setMaxAngMotorForce(self, maxAngMotorForce)
+    }
+    #[inline]
+    pub unsafe fn getMaxAngMotorForce(&mut self) -> btScalar {
+        btSliderConstraint_getMaxAngMotorForce(self)
+    }
+    #[inline]
+    pub unsafe fn getLinearPos(&self) -> btScalar {
+        btSliderConstraint_getLinearPos(self)
+    }
+    #[inline]
+    pub unsafe fn getAngularPos(&self) -> btScalar {
+        btSliderConstraint_getAngularPos(self)
+    }
+    #[inline]
+    pub unsafe fn getSolveLinLimit(&mut self) -> bool {
+        btSliderConstraint_getSolveLinLimit(self)
+    }
+    #[inline]
+    pub unsafe fn getLinDepth(&mut self) -> btScalar {
+        btSliderConstraint_getLinDepth(self)
+    }
+    #[inline]
+    pub unsafe fn getSolveAngLimit(&mut self) -> bool {
+        btSliderConstraint_getSolveAngLimit(self)
+    }
+    #[inline]
+    pub unsafe fn getAngDepth(&mut self) -> btScalar {
+        btSliderConstraint_getAngDepth(self)
+    }
+    #[inline]
     pub unsafe fn calculateTransforms(
         &mut self,
         transA: *const btTransform,
@@ -36101,6 +48082,18 @@ impl btSliderConstraint {
     #[inline]
     pub unsafe fn getAncorInB(&mut self) -> btVector3 {
         btSliderConstraint_getAncorInB(self)
+    }
+    #[inline]
+    pub unsafe fn getUseFrameOffset(&mut self) -> bool {
+        btSliderConstraint_getUseFrameOffset(self)
+    }
+    #[inline]
+    pub unsafe fn setUseFrameOffset(&mut self, frameOffsetOnOff: bool) {
+        btSliderConstraint_setUseFrameOffset(self, frameOffsetOnOff)
+    }
+    #[inline]
+    pub unsafe fn setFrames(&mut self, frameA: *const btTransform, frameB: *const btTransform) {
+        btSliderConstraint_setFrames(self, frameA, frameB)
     }
     #[inline]
     pub unsafe fn new(
@@ -36174,6 +48167,10 @@ extern "C" {
         num: ::std::os::raw::c_int,
         axis: ::std::os::raw::c_int,
     ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK18btSliderConstraint8getFlagsEv"]
+    pub fn btSliderConstraint_getFlags(this: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK18btSliderConstraint28calculateSerializeBufferSizeEv"]
@@ -36617,6 +48614,34 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK29btGeneric6DofSpringConstraint15isSpringEnabledEi"]
+    pub fn btGeneric6DofSpringConstraint_isSpringEnabled(
+        this: *const btGeneric6DofSpringConstraint,
+        index: ::std::os::raw::c_int,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK29btGeneric6DofSpringConstraint12getStiffnessEi"]
+    pub fn btGeneric6DofSpringConstraint_getStiffness(
+        this: *const btGeneric6DofSpringConstraint,
+        index: ::std::os::raw::c_int,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK29btGeneric6DofSpringConstraint10getDampingEi"]
+    pub fn btGeneric6DofSpringConstraint_getDamping(
+        this: *const btGeneric6DofSpringConstraint,
+        index: ::std::os::raw::c_int,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK29btGeneric6DofSpringConstraint19getEquilibriumPointEi"]
+    pub fn btGeneric6DofSpringConstraint_getEquilibriumPoint(
+        this: *const btGeneric6DofSpringConstraint,
+        index: ::std::os::raw::c_int,
+    ) -> btScalar;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN29btGeneric6DofSpringConstraintC1ER11btRigidBodyS1_RK11btTransformS4_b"]
     pub fn btGeneric6DofSpringConstraint_btGeneric6DofSpringConstraint(
         this: *mut btGeneric6DofSpringConstraint,
@@ -36668,6 +48693,22 @@ impl btGeneric6DofSpringConstraint {
     #[inline]
     pub unsafe fn setEquilibriumPoint2(&mut self, index: ::std::os::raw::c_int, val: btScalar) {
         btGeneric6DofSpringConstraint_setEquilibriumPoint2(self, index, val)
+    }
+    #[inline]
+    pub unsafe fn isSpringEnabled(&self, index: ::std::os::raw::c_int) -> bool {
+        btGeneric6DofSpringConstraint_isSpringEnabled(self, index)
+    }
+    #[inline]
+    pub unsafe fn getStiffness(&self, index: ::std::os::raw::c_int) -> btScalar {
+        btGeneric6DofSpringConstraint_getStiffness(self, index)
+    }
+    #[inline]
+    pub unsafe fn getDamping(&self, index: ::std::os::raw::c_int) -> btScalar {
+        btGeneric6DofSpringConstraint_getDamping(self, index)
+    }
+    #[inline]
+    pub unsafe fn getEquilibriumPoint(&self, index: ::std::os::raw::c_int) -> btScalar {
+        btGeneric6DofSpringConstraint_getEquilibriumPoint(self, index)
     }
     #[inline]
     pub unsafe fn new(
@@ -36973,6 +49014,46 @@ fn bindgen_test_layout_btUniversalConstraint() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN21btUniversalConstraint9getAnchorEv"]
+    pub fn btUniversalConstraint_getAnchor(this: *mut btUniversalConstraint) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btUniversalConstraint10getAnchor2Ev"]
+    pub fn btUniversalConstraint_getAnchor2(this: *mut btUniversalConstraint) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btUniversalConstraint8getAxis1Ev"]
+    pub fn btUniversalConstraint_getAxis1(this: *mut btUniversalConstraint) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btUniversalConstraint8getAxis2Ev"]
+    pub fn btUniversalConstraint_getAxis2(this: *mut btUniversalConstraint) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btUniversalConstraint9getAngle1Ev"]
+    pub fn btUniversalConstraint_getAngle1(this: *mut btUniversalConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btUniversalConstraint9getAngle2Ev"]
+    pub fn btUniversalConstraint_getAngle2(this: *mut btUniversalConstraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btUniversalConstraint13setUpperLimitEdd"]
+    pub fn btUniversalConstraint_setUpperLimit(
+        this: *mut btUniversalConstraint,
+        ang1max: btScalar,
+        ang2max: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN21btUniversalConstraint13setLowerLimitEdd"]
+    pub fn btUniversalConstraint_setLowerLimit(
+        this: *mut btUniversalConstraint,
+        ang1min: btScalar,
+        ang2min: btScalar,
+    );
+}
+extern "C" {
     #[link_name = "\u{1}_ZN21btUniversalConstraint7setAxisERK9btVector3S2_"]
     pub fn btUniversalConstraint_setAxis(
         this: *mut btUniversalConstraint,
@@ -36992,6 +49073,38 @@ extern "C" {
     );
 }
 impl btUniversalConstraint {
+    #[inline]
+    pub unsafe fn getAnchor(&mut self) -> *const btVector3 {
+        btUniversalConstraint_getAnchor(self)
+    }
+    #[inline]
+    pub unsafe fn getAnchor2(&mut self) -> *const btVector3 {
+        btUniversalConstraint_getAnchor2(self)
+    }
+    #[inline]
+    pub unsafe fn getAxis1(&mut self) -> *const btVector3 {
+        btUniversalConstraint_getAxis1(self)
+    }
+    #[inline]
+    pub unsafe fn getAxis2(&mut self) -> *const btVector3 {
+        btUniversalConstraint_getAxis2(self)
+    }
+    #[inline]
+    pub unsafe fn getAngle1(&mut self) -> btScalar {
+        btUniversalConstraint_getAngle1(self)
+    }
+    #[inline]
+    pub unsafe fn getAngle2(&mut self) -> btScalar {
+        btUniversalConstraint_getAngle2(self)
+    }
+    #[inline]
+    pub unsafe fn setUpperLimit(&mut self, ang1max: btScalar, ang2max: btScalar) {
+        btUniversalConstraint_setUpperLimit(self, ang1max, ang2max)
+    }
+    #[inline]
+    pub unsafe fn setLowerLimit(&mut self, ang1min: btScalar, ang2min: btScalar) {
+        btUniversalConstraint_setLowerLimit(self, ang1min, ang2min)
+    }
     #[inline]
     pub unsafe fn setAxis(&mut self, axis1: *const btVector3, axis2: *const btVector3) {
         btUniversalConstraint_setAxis(self, axis1, axis2)
@@ -37293,16 +49406,47 @@ fn bindgen_test_layout_btRotationalLimitMotor2() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN23btRotationalLimitMotor29isLimitedEv"]
+    pub fn btRotationalLimitMotor2_isLimited(this: *mut btRotationalLimitMotor2) -> bool;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN23btRotationalLimitMotor214testLimitValueEd"]
     pub fn btRotationalLimitMotor2_testLimitValue(
         this: *mut btRotationalLimitMotor2,
         test_value: btScalar,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN23btRotationalLimitMotor2C1Ev"]
+    pub fn btRotationalLimitMotor2_btRotationalLimitMotor2(this: *mut btRotationalLimitMotor2);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN23btRotationalLimitMotor2C1ERKS_"]
+    pub fn btRotationalLimitMotor2_btRotationalLimitMotor21(
+        this: *mut btRotationalLimitMotor2,
+        limot: *const btRotationalLimitMotor2,
+    );
+}
 impl btRotationalLimitMotor2 {
+    #[inline]
+    pub unsafe fn isLimited(&mut self) -> bool {
+        btRotationalLimitMotor2_isLimited(self)
+    }
     #[inline]
     pub unsafe fn testLimitValue(&mut self, test_value: btScalar) {
         btRotationalLimitMotor2_testLimitValue(self, test_value)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btRotationalLimitMotor2_btRotationalLimitMotor2(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(limot: *const btRotationalLimitMotor2) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btRotationalLimitMotor2_btRotationalLimitMotor21(&mut __bindgen_tmp, limot);
+        __bindgen_tmp
     }
 }
 #[repr(C)]
@@ -37586,6 +49730,13 @@ fn bindgen_test_layout_btTranslationalLimitMotor2() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN26btTranslationalLimitMotor29isLimitedEi"]
+    pub fn btTranslationalLimitMotor2_isLimited(
+        this: *mut btTranslationalLimitMotor2,
+        limitIndex: ::std::os::raw::c_int,
+    ) -> bool;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN26btTranslationalLimitMotor214testLimitValueEid"]
     pub fn btTranslationalLimitMotor2_testLimitValue(
         this: *mut btTranslationalLimitMotor2,
@@ -37593,7 +49744,24 @@ extern "C" {
         test_value: btScalar,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN26btTranslationalLimitMotor2C1Ev"]
+    pub fn btTranslationalLimitMotor2_btTranslationalLimitMotor2(
+        this: *mut btTranslationalLimitMotor2,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN26btTranslationalLimitMotor2C1ERKS_"]
+    pub fn btTranslationalLimitMotor2_btTranslationalLimitMotor21(
+        this: *mut btTranslationalLimitMotor2,
+        other: *const btTranslationalLimitMotor2,
+    );
+}
 impl btTranslationalLimitMotor2 {
+    #[inline]
+    pub unsafe fn isLimited(&mut self, limitIndex: ::std::os::raw::c_int) -> bool {
+        btTranslationalLimitMotor2_isLimited(self, limitIndex)
+    }
     #[inline]
     pub unsafe fn testLimitValue(
         &mut self,
@@ -37601,6 +49769,18 @@ impl btTranslationalLimitMotor2 {
         test_value: btScalar,
     ) {
         btTranslationalLimitMotor2_testLimitValue(self, limitIndex, test_value)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btTranslationalLimitMotor2_btTranslationalLimitMotor2(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(other: *const btTranslationalLimitMotor2) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btTranslationalLimitMotor2_btTranslationalLimitMotor21(&mut __bindgen_tmp, other);
+        __bindgen_tmp
     }
 }
 pub const bt6DofFlags2_BT_6DOF_FLAGS_CFM_STOP2: bt6DofFlags2 = 1;
@@ -37905,6 +50085,19 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint23getRotationalLimitMotorEi"]
+    pub fn btGeneric6DofSpring2Constraint_getRotationalLimitMotor(
+        this: *mut btGeneric6DofSpring2Constraint,
+        index: ::std::os::raw::c_int,
+    ) -> *mut btRotationalLimitMotor2;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint26getTranslationalLimitMotorEv"]
+    pub fn btGeneric6DofSpring2Constraint_getTranslationalLimitMotor(
+        this: *mut btGeneric6DofSpring2Constraint,
+    ) -> *mut btTranslationalLimitMotor2;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint19calculateTransformsERK11btTransformS2_"]
     pub fn btGeneric6DofSpring2Constraint_calculateTransforms(
         this: *mut btGeneric6DofSpring2Constraint,
@@ -37919,12 +50112,191 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK30btGeneric6DofSpring2Constraint23getCalculatedTransformAEv"]
+    pub fn btGeneric6DofSpring2Constraint_getCalculatedTransformA(
+        this: *const btGeneric6DofSpring2Constraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK30btGeneric6DofSpring2Constraint23getCalculatedTransformBEv"]
+    pub fn btGeneric6DofSpring2Constraint_getCalculatedTransformB(
+        this: *const btGeneric6DofSpring2Constraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK30btGeneric6DofSpring2Constraint15getFrameOffsetAEv"]
+    pub fn btGeneric6DofSpring2Constraint_getFrameOffsetA(
+        this: *const btGeneric6DofSpring2Constraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK30btGeneric6DofSpring2Constraint15getFrameOffsetBEv"]
+    pub fn btGeneric6DofSpring2Constraint_getFrameOffsetB(
+        this: *const btGeneric6DofSpring2Constraint,
+    ) -> *const btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint15getFrameOffsetAEv"]
+    pub fn btGeneric6DofSpring2Constraint_getFrameOffsetA1(
+        this: *mut btGeneric6DofSpring2Constraint,
+    ) -> *mut btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint15getFrameOffsetBEv"]
+    pub fn btGeneric6DofSpring2Constraint_getFrameOffsetB1(
+        this: *mut btGeneric6DofSpring2Constraint,
+    ) -> *mut btTransform;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK30btGeneric6DofSpring2Constraint7getAxisEi"]
+    pub fn btGeneric6DofSpring2Constraint_getAxis(
+        this: *const btGeneric6DofSpring2Constraint,
+        axis_index: ::std::os::raw::c_int,
+    ) -> btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK30btGeneric6DofSpring2Constraint8getAngleEi"]
+    pub fn btGeneric6DofSpring2Constraint_getAngle(
+        this: *const btGeneric6DofSpring2Constraint,
+        axis_index: ::std::os::raw::c_int,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK30btGeneric6DofSpring2Constraint24getRelativePivotPositionEi"]
+    pub fn btGeneric6DofSpring2Constraint_getRelativePivotPosition(
+        this: *const btGeneric6DofSpring2Constraint,
+        axis_index: ::std::os::raw::c_int,
+    ) -> btScalar;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint9setFramesERK11btTransformS2_"]
     pub fn btGeneric6DofSpring2Constraint_setFrames(
         this: *mut btGeneric6DofSpring2Constraint,
         frameA: *const btTransform,
         frameB: *const btTransform,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint19setLinearLowerLimitERK9btVector3"]
+    pub fn btGeneric6DofSpring2Constraint_setLinearLowerLimit(
+        this: *mut btGeneric6DofSpring2Constraint,
+        linearLower: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint19getLinearLowerLimitER9btVector3"]
+    pub fn btGeneric6DofSpring2Constraint_getLinearLowerLimit(
+        this: *mut btGeneric6DofSpring2Constraint,
+        linearLower: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint19setLinearUpperLimitERK9btVector3"]
+    pub fn btGeneric6DofSpring2Constraint_setLinearUpperLimit(
+        this: *mut btGeneric6DofSpring2Constraint,
+        linearUpper: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint19getLinearUpperLimitER9btVector3"]
+    pub fn btGeneric6DofSpring2Constraint_getLinearUpperLimit(
+        this: *mut btGeneric6DofSpring2Constraint,
+        linearUpper: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint20setAngularLowerLimitERK9btVector3"]
+    pub fn btGeneric6DofSpring2Constraint_setAngularLowerLimit(
+        this: *mut btGeneric6DofSpring2Constraint,
+        angularLower: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint28setAngularLowerLimitReversedERK9btVector3"]
+    pub fn btGeneric6DofSpring2Constraint_setAngularLowerLimitReversed(
+        this: *mut btGeneric6DofSpring2Constraint,
+        angularLower: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint20getAngularLowerLimitER9btVector3"]
+    pub fn btGeneric6DofSpring2Constraint_getAngularLowerLimit(
+        this: *mut btGeneric6DofSpring2Constraint,
+        angularLower: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint28getAngularLowerLimitReversedER9btVector3"]
+    pub fn btGeneric6DofSpring2Constraint_getAngularLowerLimitReversed(
+        this: *mut btGeneric6DofSpring2Constraint,
+        angularLower: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint20setAngularUpperLimitERK9btVector3"]
+    pub fn btGeneric6DofSpring2Constraint_setAngularUpperLimit(
+        this: *mut btGeneric6DofSpring2Constraint,
+        angularUpper: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint28setAngularUpperLimitReversedERK9btVector3"]
+    pub fn btGeneric6DofSpring2Constraint_setAngularUpperLimitReversed(
+        this: *mut btGeneric6DofSpring2Constraint,
+        angularUpper: *const btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint20getAngularUpperLimitER9btVector3"]
+    pub fn btGeneric6DofSpring2Constraint_getAngularUpperLimit(
+        this: *mut btGeneric6DofSpring2Constraint,
+        angularUpper: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint28getAngularUpperLimitReversedER9btVector3"]
+    pub fn btGeneric6DofSpring2Constraint_getAngularUpperLimitReversed(
+        this: *mut btGeneric6DofSpring2Constraint,
+        angularUpper: *mut btVector3,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint8setLimitEidd"]
+    pub fn btGeneric6DofSpring2Constraint_setLimit(
+        this: *mut btGeneric6DofSpring2Constraint,
+        axis: ::std::os::raw::c_int,
+        lo: btScalar,
+        hi: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint16setLimitReversedEidd"]
+    pub fn btGeneric6DofSpring2Constraint_setLimitReversed(
+        this: *mut btGeneric6DofSpring2Constraint,
+        axis: ::std::os::raw::c_int,
+        lo: btScalar,
+        hi: btScalar,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint9isLimitedEi"]
+    pub fn btGeneric6DofSpring2Constraint_isLimited(
+        this: *mut btGeneric6DofSpring2Constraint,
+        limitIndex: ::std::os::raw::c_int,
+    ) -> bool;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint16setRotationOrderE11RotateOrder"]
+    pub fn btGeneric6DofSpring2Constraint_setRotationOrder(
+        this: *mut btGeneric6DofSpring2Constraint,
+        order: RotateOrder,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint16getRotationOrderEv"]
+    pub fn btGeneric6DofSpring2Constraint_getRotationOrder(
+        this: *mut btGeneric6DofSpring2Constraint,
+    ) -> RotateOrder;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint7setAxisERK9btVector3S2_"]
@@ -38216,6 +50588,17 @@ impl btGeneric6DofSpring2Constraint {
         )
     }
     #[inline]
+    pub unsafe fn getRotationalLimitMotor(
+        &mut self,
+        index: ::std::os::raw::c_int,
+    ) -> *mut btRotationalLimitMotor2 {
+        btGeneric6DofSpring2Constraint_getRotationalLimitMotor(self, index)
+    }
+    #[inline]
+    pub unsafe fn getTranslationalLimitMotor(&mut self) -> *mut btTranslationalLimitMotor2 {
+        btGeneric6DofSpring2Constraint_getTranslationalLimitMotor(self)
+    }
+    #[inline]
     pub unsafe fn calculateTransforms(
         &mut self,
         transA: *const btTransform,
@@ -38228,8 +50611,117 @@ impl btGeneric6DofSpring2Constraint {
         btGeneric6DofSpring2Constraint_calculateTransforms1(self)
     }
     #[inline]
+    pub unsafe fn getCalculatedTransformA(&self) -> *const btTransform {
+        btGeneric6DofSpring2Constraint_getCalculatedTransformA(self)
+    }
+    #[inline]
+    pub unsafe fn getCalculatedTransformB(&self) -> *const btTransform {
+        btGeneric6DofSpring2Constraint_getCalculatedTransformB(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetA(&self) -> *const btTransform {
+        btGeneric6DofSpring2Constraint_getFrameOffsetA(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetB(&self) -> *const btTransform {
+        btGeneric6DofSpring2Constraint_getFrameOffsetB(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetA1(&mut self) -> *mut btTransform {
+        btGeneric6DofSpring2Constraint_getFrameOffsetA1(self)
+    }
+    #[inline]
+    pub unsafe fn getFrameOffsetB1(&mut self) -> *mut btTransform {
+        btGeneric6DofSpring2Constraint_getFrameOffsetB1(self)
+    }
+    #[inline]
+    pub unsafe fn getAxis(&self, axis_index: ::std::os::raw::c_int) -> btVector3 {
+        btGeneric6DofSpring2Constraint_getAxis(self, axis_index)
+    }
+    #[inline]
+    pub unsafe fn getAngle(&self, axis_index: ::std::os::raw::c_int) -> btScalar {
+        btGeneric6DofSpring2Constraint_getAngle(self, axis_index)
+    }
+    #[inline]
+    pub unsafe fn getRelativePivotPosition(&self, axis_index: ::std::os::raw::c_int) -> btScalar {
+        btGeneric6DofSpring2Constraint_getRelativePivotPosition(self, axis_index)
+    }
+    #[inline]
     pub unsafe fn setFrames(&mut self, frameA: *const btTransform, frameB: *const btTransform) {
         btGeneric6DofSpring2Constraint_setFrames(self, frameA, frameB)
+    }
+    #[inline]
+    pub unsafe fn setLinearLowerLimit(&mut self, linearLower: *const btVector3) {
+        btGeneric6DofSpring2Constraint_setLinearLowerLimit(self, linearLower)
+    }
+    #[inline]
+    pub unsafe fn getLinearLowerLimit(&mut self, linearLower: *mut btVector3) {
+        btGeneric6DofSpring2Constraint_getLinearLowerLimit(self, linearLower)
+    }
+    #[inline]
+    pub unsafe fn setLinearUpperLimit(&mut self, linearUpper: *const btVector3) {
+        btGeneric6DofSpring2Constraint_setLinearUpperLimit(self, linearUpper)
+    }
+    #[inline]
+    pub unsafe fn getLinearUpperLimit(&mut self, linearUpper: *mut btVector3) {
+        btGeneric6DofSpring2Constraint_getLinearUpperLimit(self, linearUpper)
+    }
+    #[inline]
+    pub unsafe fn setAngularLowerLimit(&mut self, angularLower: *const btVector3) {
+        btGeneric6DofSpring2Constraint_setAngularLowerLimit(self, angularLower)
+    }
+    #[inline]
+    pub unsafe fn setAngularLowerLimitReversed(&mut self, angularLower: *const btVector3) {
+        btGeneric6DofSpring2Constraint_setAngularLowerLimitReversed(self, angularLower)
+    }
+    #[inline]
+    pub unsafe fn getAngularLowerLimit(&mut self, angularLower: *mut btVector3) {
+        btGeneric6DofSpring2Constraint_getAngularLowerLimit(self, angularLower)
+    }
+    #[inline]
+    pub unsafe fn getAngularLowerLimitReversed(&mut self, angularLower: *mut btVector3) {
+        btGeneric6DofSpring2Constraint_getAngularLowerLimitReversed(self, angularLower)
+    }
+    #[inline]
+    pub unsafe fn setAngularUpperLimit(&mut self, angularUpper: *const btVector3) {
+        btGeneric6DofSpring2Constraint_setAngularUpperLimit(self, angularUpper)
+    }
+    #[inline]
+    pub unsafe fn setAngularUpperLimitReversed(&mut self, angularUpper: *const btVector3) {
+        btGeneric6DofSpring2Constraint_setAngularUpperLimitReversed(self, angularUpper)
+    }
+    #[inline]
+    pub unsafe fn getAngularUpperLimit(&mut self, angularUpper: *mut btVector3) {
+        btGeneric6DofSpring2Constraint_getAngularUpperLimit(self, angularUpper)
+    }
+    #[inline]
+    pub unsafe fn getAngularUpperLimitReversed(&mut self, angularUpper: *mut btVector3) {
+        btGeneric6DofSpring2Constraint_getAngularUpperLimitReversed(self, angularUpper)
+    }
+    #[inline]
+    pub unsafe fn setLimit(&mut self, axis: ::std::os::raw::c_int, lo: btScalar, hi: btScalar) {
+        btGeneric6DofSpring2Constraint_setLimit(self, axis, lo, hi)
+    }
+    #[inline]
+    pub unsafe fn setLimitReversed(
+        &mut self,
+        axis: ::std::os::raw::c_int,
+        lo: btScalar,
+        hi: btScalar,
+    ) {
+        btGeneric6DofSpring2Constraint_setLimitReversed(self, axis, lo, hi)
+    }
+    #[inline]
+    pub unsafe fn isLimited(&mut self, limitIndex: ::std::os::raw::c_int) -> bool {
+        btGeneric6DofSpring2Constraint_isLimited(self, limitIndex)
+    }
+    #[inline]
+    pub unsafe fn setRotationOrder(&mut self, order: RotateOrder) {
+        btGeneric6DofSpring2Constraint_setRotationOrder(self, order)
+    }
+    #[inline]
+    pub unsafe fn getRotationOrder(&mut self) -> RotateOrder {
+        btGeneric6DofSpring2Constraint_getRotationOrder(self)
     }
     #[inline]
     pub unsafe fn setAxis(&mut self, axis1: *const btVector3, axis2: *const btVector3) {
@@ -38358,6 +50850,10 @@ impl btGeneric6DofSpring2Constraint {
         );
         __bindgen_tmp
     }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint13buildJacobianEv"]
+    pub fn btGeneric6DofSpring2Constraint_buildJacobian(this: *mut ::std::os::raw::c_void);
 }
 extern "C" {
     #[link_name = "\u{1}_ZN30btGeneric6DofSpring2Constraint8getInfo1EPN17btTypedConstraint17btConstraintInfo1E"]
@@ -39641,6 +52137,38 @@ fn bindgen_test_layout_btHinge2Constraint() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN18btHinge2Constraint9getAnchorEv"]
+    pub fn btHinge2Constraint_getAnchor(this: *mut btHinge2Constraint) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btHinge2Constraint10getAnchor2Ev"]
+    pub fn btHinge2Constraint_getAnchor2(this: *mut btHinge2Constraint) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btHinge2Constraint8getAxis1Ev"]
+    pub fn btHinge2Constraint_getAxis1(this: *mut btHinge2Constraint) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btHinge2Constraint8getAxis2Ev"]
+    pub fn btHinge2Constraint_getAxis2(this: *mut btHinge2Constraint) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btHinge2Constraint9getAngle1Ev"]
+    pub fn btHinge2Constraint_getAngle1(this: *mut btHinge2Constraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btHinge2Constraint9getAngle2Ev"]
+    pub fn btHinge2Constraint_getAngle2(this: *mut btHinge2Constraint) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btHinge2Constraint13setUpperLimitEd"]
+    pub fn btHinge2Constraint_setUpperLimit(this: *mut btHinge2Constraint, ang1max: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btHinge2Constraint13setLowerLimitEd"]
+    pub fn btHinge2Constraint_setLowerLimit(this: *mut btHinge2Constraint, ang1min: btScalar);
+}
+extern "C" {
     #[link_name = "\u{1}_ZN18btHinge2ConstraintC1ER11btRigidBodyS1_R9btVector3S3_S3_"]
     pub fn btHinge2Constraint_btHinge2Constraint(
         this: *mut btHinge2Constraint,
@@ -39652,6 +52180,38 @@ extern "C" {
     );
 }
 impl btHinge2Constraint {
+    #[inline]
+    pub unsafe fn getAnchor(&mut self) -> *const btVector3 {
+        btHinge2Constraint_getAnchor(self)
+    }
+    #[inline]
+    pub unsafe fn getAnchor2(&mut self) -> *const btVector3 {
+        btHinge2Constraint_getAnchor2(self)
+    }
+    #[inline]
+    pub unsafe fn getAxis1(&mut self) -> *const btVector3 {
+        btHinge2Constraint_getAxis1(self)
+    }
+    #[inline]
+    pub unsafe fn getAxis2(&mut self) -> *const btVector3 {
+        btHinge2Constraint_getAxis2(self)
+    }
+    #[inline]
+    pub unsafe fn getAngle1(&mut self) -> btScalar {
+        btHinge2Constraint_getAngle1(self)
+    }
+    #[inline]
+    pub unsafe fn getAngle2(&mut self) -> btScalar {
+        btHinge2Constraint_getAngle2(self)
+    }
+    #[inline]
+    pub unsafe fn setUpperLimit(&mut self, ang1max: btScalar) {
+        btHinge2Constraint_setUpperLimit(self, ang1max)
+    }
+    #[inline]
+    pub unsafe fn setLowerLimit(&mut self, ang1min: btScalar) {
+        btHinge2Constraint_setLowerLimit(self, ang1min)
+    }
     #[inline]
     pub unsafe fn new(
         rbA: *mut btRigidBody,
@@ -39729,6 +52289,30 @@ fn bindgen_test_layout_btGearConstraint() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN16btGearConstraint8setAxisAER9btVector3"]
+    pub fn btGearConstraint_setAxisA(this: *mut btGearConstraint, axisA: *mut btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btGearConstraint8setAxisBER9btVector3"]
+    pub fn btGearConstraint_setAxisB(this: *mut btGearConstraint, axisB: *mut btVector3);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btGearConstraint8setRatioEd"]
+    pub fn btGearConstraint_setRatio(this: *mut btGearConstraint, ratio: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btGearConstraint8getAxisAEv"]
+    pub fn btGearConstraint_getAxisA(this: *const btGearConstraint) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btGearConstraint8getAxisBEv"]
+    pub fn btGearConstraint_getAxisB(this: *const btGearConstraint) -> *const btVector3;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btGearConstraint8getRatioEv"]
+    pub fn btGearConstraint_getRatio(this: *const btGearConstraint) -> btScalar;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN16btGearConstraintC1ER11btRigidBodyS1_RK9btVector3S4_d"]
     pub fn btGearConstraint_btGearConstraint(
         this: *mut btGearConstraint,
@@ -39740,6 +52324,30 @@ extern "C" {
     );
 }
 impl btGearConstraint {
+    #[inline]
+    pub unsafe fn setAxisA(&mut self, axisA: *mut btVector3) {
+        btGearConstraint_setAxisA(self, axisA)
+    }
+    #[inline]
+    pub unsafe fn setAxisB(&mut self, axisB: *mut btVector3) {
+        btGearConstraint_setAxisB(self, axisB)
+    }
+    #[inline]
+    pub unsafe fn setRatio(&mut self, ratio: btScalar) {
+        btGearConstraint_setRatio(self, ratio)
+    }
+    #[inline]
+    pub unsafe fn getAxisA(&self) -> *const btVector3 {
+        btGearConstraint_getAxisA(self)
+    }
+    #[inline]
+    pub unsafe fn getAxisB(&self) -> *const btVector3 {
+        btGearConstraint_getAxisB(self)
+    }
+    #[inline]
+    pub unsafe fn getRatio(&self) -> btScalar {
+        btGearConstraint_getRatio(self)
+    }
     #[inline]
     pub unsafe fn new(
         rbA: *mut btRigidBody,
@@ -39776,6 +52384,26 @@ extern "C" {
         this: *mut ::std::os::raw::c_void,
         info: *mut btTypedConstraint_btConstraintInfo2,
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btGearConstraint8setParamEidi"]
+    pub fn btGearConstraint_setParam(
+        this: *mut ::std::os::raw::c_void,
+        num: ::std::os::raw::c_int,
+        value: btScalar,
+        axis: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+
+    /// return the local value of parameter
+
+    #[link_name = "\u{1}_ZNK16btGearConstraint8getParamEii"]
+    pub fn btGearConstraint_getParam(
+        this: *mut ::std::os::raw::c_void,
+        num: ::std::os::raw::c_int,
+        axis: ::std::os::raw::c_int,
+    ) -> btScalar;
 }
 extern "C" {
     #[link_name = "\u{1}_ZNK16btGearConstraint28calculateSerializeBufferSizeEv"]
@@ -40006,6 +52634,18 @@ fn bindgen_test_layout_btConstraintSolver() {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN18btConstraintSolverD0Ev"]
+    pub fn btConstraintSolver_btConstraintSolver_destructor(this: *mut btConstraintSolver);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btConstraintSolver12prepareSolveEii"]
+    pub fn btConstraintSolver_prepareSolve(
+        this: *mut ::std::os::raw::c_void,
+        arg1: ::std::os::raw::c_int,
+        arg2: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
 
     /// solve a group of constraints
 
@@ -40022,6 +52662,14 @@ extern "C" {
         debugDrawer: *mut btIDebugDraw,
         dispatcher: *mut btDispatcher,
     ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btConstraintSolver9allSolvedERK19btContactSolverInfoP12btIDebugDraw"]
+    pub fn btConstraintSolver_allSolved(
+        this: *mut ::std::os::raw::c_void,
+        arg1: *const btContactSolverInfo,
+        arg2: *mut btIDebugDraw,
+    );
 }
 extern "C" {
 
@@ -40449,6 +53097,24 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolver27resolveSplitPenetrationSIMDER12btSolverBodyS1_RK18btSolverConstraint"]
+    pub fn btSequentialImpulseConstraintSolver_resolveSplitPenetrationSIMD(
+        this: *mut btSequentialImpulseConstraintSolver,
+        bodyA: *mut btSolverBody,
+        bodyB: *mut btSolverBody,
+        contactConstraint: *const btSolverConstraint,
+    ) -> btScalar;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolver43resolveSplitPenetrationImpulseCacheFriendlyER12btSolverBodyS1_RK18btSolverConstraint"]
+    pub fn btSequentialImpulseConstraintSolver_resolveSplitPenetrationImpulseCacheFriendly(
+        this: *mut btSequentialImpulseConstraintSolver,
+        bodyA: *mut btSolverBody,
+        bodyB: *mut btSolverBody,
+        contactConstraint: *const btSolverConstraint,
+    ) -> btScalar;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolver19getOrInitSolverBodyER17btCollisionObjectd"]
     pub fn btSequentialImpulseConstraintSolver_getOrInitSolverBody(
         this: *mut btSequentialImpulseConstraintSolver,
@@ -40502,6 +53168,15 @@ extern "C" {
     ) -> btScalar;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolver30resolveSplitPenetrationImpulseER12btSolverBodyS1_RK18btSolverConstraint"]
+    pub fn btSequentialImpulseConstraintSolver_resolveSplitPenetrationImpulse(
+        this: *mut btSequentialImpulseConstraintSolver,
+        bodyA: *mut btSolverBody,
+        bodyB: *mut btSolverBody,
+        contactConstraint: *const btSolverConstraint,
+    ) -> btScalar;
+}
+extern "C" {
     #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolver7btRand2Ev"]
     pub fn btSequentialImpulseConstraintSolver_btRand2(
         this: *mut btSequentialImpulseConstraintSolver,
@@ -40513,6 +53188,45 @@ extern "C" {
         this: *mut btSequentialImpulseConstraintSolver,
         n: ::std::os::raw::c_int,
     ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolver11setRandSeedEm"]
+    pub fn btSequentialImpulseConstraintSolver_setRandSeed(
+        this: *mut btSequentialImpulseConstraintSolver,
+        seed: ::std::os::raw::c_ulong,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK35btSequentialImpulseConstraintSolver11getRandSeedEv"]
+    pub fn btSequentialImpulseConstraintSolver_getRandSeed(
+        this: *const btSequentialImpulseConstraintSolver,
+    ) -> ::std::os::raw::c_ulong;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolver35getActiveConstraintRowSolverGenericEv"]
+    pub fn btSequentialImpulseConstraintSolver_getActiveConstraintRowSolverGeneric(
+        this: *mut btSequentialImpulseConstraintSolver,
+    ) -> btSingleConstraintRowSolver;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolver29setConstraintRowSolverGenericEPFdR12btSolverBodyS1_RK18btSolverConstraintE"]
+    pub fn btSequentialImpulseConstraintSolver_setConstraintRowSolverGeneric(
+        this: *mut btSequentialImpulseConstraintSolver,
+        rowSolver: btSingleConstraintRowSolver,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolver38getActiveConstraintRowSolverLowerLimitEv"]
+    pub fn btSequentialImpulseConstraintSolver_getActiveConstraintRowSolverLowerLimit(
+        this: *mut btSequentialImpulseConstraintSolver,
+    ) -> btSingleConstraintRowSolver;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolver32setConstraintRowSolverLowerLimitEPFdR12btSolverBodyS1_RK18btSolverConstraintE"]
+    pub fn btSequentialImpulseConstraintSolver_setConstraintRowSolverLowerLimit(
+        this: *mut btSequentialImpulseConstraintSolver,
+        rowSolver: btSingleConstraintRowSolver,
+    );
 }
 extern "C" {
 
@@ -40780,6 +53494,34 @@ impl btSequentialImpulseConstraintSolver {
         btSequentialImpulseConstraintSolver_convertContact(self, manifold, infoGlobal)
     }
     #[inline]
+    pub unsafe fn resolveSplitPenetrationSIMD(
+        &mut self,
+        bodyA: *mut btSolverBody,
+        bodyB: *mut btSolverBody,
+        contactConstraint: *const btSolverConstraint,
+    ) -> btScalar {
+        btSequentialImpulseConstraintSolver_resolveSplitPenetrationSIMD(
+            self,
+            bodyA,
+            bodyB,
+            contactConstraint,
+        )
+    }
+    #[inline]
+    pub unsafe fn resolveSplitPenetrationImpulseCacheFriendly(
+        &mut self,
+        bodyA: *mut btSolverBody,
+        bodyB: *mut btSolverBody,
+        contactConstraint: *const btSolverConstraint,
+    ) -> btScalar {
+        btSequentialImpulseConstraintSolver_resolveSplitPenetrationImpulseCacheFriendly(
+            self,
+            bodyA,
+            bodyB,
+            contactConstraint,
+        )
+    }
+    #[inline]
     pub unsafe fn getOrInitSolverBody(
         &mut self,
         body: *mut btCollisionObject,
@@ -40858,12 +53600,53 @@ impl btSequentialImpulseConstraintSolver {
         )
     }
     #[inline]
+    pub unsafe fn resolveSplitPenetrationImpulse(
+        &mut self,
+        bodyA: *mut btSolverBody,
+        bodyB: *mut btSolverBody,
+        contactConstraint: *const btSolverConstraint,
+    ) -> btScalar {
+        btSequentialImpulseConstraintSolver_resolveSplitPenetrationImpulse(
+            self,
+            bodyA,
+            bodyB,
+            contactConstraint,
+        )
+    }
+    #[inline]
     pub unsafe fn btRand2(&mut self) -> ::std::os::raw::c_ulong {
         btSequentialImpulseConstraintSolver_btRand2(self)
     }
     #[inline]
     pub unsafe fn btRandInt2(&mut self, n: ::std::os::raw::c_int) -> ::std::os::raw::c_int {
         btSequentialImpulseConstraintSolver_btRandInt2(self, n)
+    }
+    #[inline]
+    pub unsafe fn setRandSeed(&mut self, seed: ::std::os::raw::c_ulong) {
+        btSequentialImpulseConstraintSolver_setRandSeed(self, seed)
+    }
+    #[inline]
+    pub unsafe fn getRandSeed(&self) -> ::std::os::raw::c_ulong {
+        btSequentialImpulseConstraintSolver_getRandSeed(self)
+    }
+    #[inline]
+    pub unsafe fn getActiveConstraintRowSolverGeneric(&mut self) -> btSingleConstraintRowSolver {
+        btSequentialImpulseConstraintSolver_getActiveConstraintRowSolverGeneric(self)
+    }
+    #[inline]
+    pub unsafe fn setConstraintRowSolverGeneric(&mut self, rowSolver: btSingleConstraintRowSolver) {
+        btSequentialImpulseConstraintSolver_setConstraintRowSolverGeneric(self, rowSolver)
+    }
+    #[inline]
+    pub unsafe fn getActiveConstraintRowSolverLowerLimit(&mut self) -> btSingleConstraintRowSolver {
+        btSequentialImpulseConstraintSolver_getActiveConstraintRowSolverLowerLimit(self)
+    }
+    #[inline]
+    pub unsafe fn setConstraintRowSolverLowerLimit(
+        &mut self,
+        rowSolver: btSingleConstraintRowSolver,
+    ) {
+        btSequentialImpulseConstraintSolver_setConstraintRowSolverLowerLimit(self, rowSolver)
     }
     #[inline]
     pub unsafe fn getScalarConstraintRowSolverGeneric(&mut self) -> btSingleConstraintRowSolver {
@@ -40999,6 +53782,12 @@ extern "C" {
     #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolver5resetEv"]
     pub fn btSequentialImpulseConstraintSolver_reset(this: *mut ::std::os::raw::c_void);
 }
+extern "C" {
+    #[link_name = "\u{1}_ZNK35btSequentialImpulseConstraintSolver13getSolverTypeEv"]
+    pub fn btSequentialImpulseConstraintSolver_getSolverType(
+        this: *mut ::std::os::raw::c_void,
+    ) -> btConstraintSolverType;
+}
 #[repr(C)]
 pub struct btVehicleRaycaster__bindgen_vtable(::std::os::raw::c_void);
 /// btVehicleRaycaster is provides interface for between vehicle simulation and raycasting
@@ -41072,6 +53861,20 @@ fn bindgen_test_layout_btVehicleRaycaster_btVehicleRaycasterResult() {
         )
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN18btVehicleRaycaster24btVehicleRaycasterResultC1Ev"]
+    pub fn btVehicleRaycaster_btVehicleRaycasterResult_btVehicleRaycasterResult(
+        this: *mut btVehicleRaycaster_btVehicleRaycasterResult,
+    );
+}
+impl btVehicleRaycaster_btVehicleRaycasterResult {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btVehicleRaycaster_btVehicleRaycasterResult_btVehicleRaycasterResult(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+}
 #[test]
 fn bindgen_test_layout_btVehicleRaycaster() {
     assert_eq!(
@@ -41084,6 +53887,10 @@ fn bindgen_test_layout_btVehicleRaycaster() {
         8usize,
         concat!("Alignment of ", stringify!(btVehicleRaycaster))
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN18btVehicleRaycasterD0Ev"]
+    pub fn btVehicleRaycaster_btVehicleRaycaster_destructor(this: *mut btVehicleRaycaster);
 }
 extern "C" {
     #[link_name = "\u{1}_ZN18btVehicleRaycaster7castRayERK9btVector3S2_RNS_24btVehicleRaycasterResultE"]
@@ -41683,6 +54490,14 @@ extern "C" {
         raycastInfo: *mut btWheelInfo_RaycastInfo,
     );
 }
+extern "C" {
+    #[link_name = "\u{1}_ZN11btWheelInfoC1Ev"]
+    pub fn btWheelInfo_btWheelInfo(this: *mut btWheelInfo);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN11btWheelInfoC1ER27btWheelInfoConstructionInfo"]
+    pub fn btWheelInfo_btWheelInfo1(this: *mut btWheelInfo, ci: *mut btWheelInfoConstructionInfo);
+}
 impl btWheelInfo {
     #[inline]
     pub unsafe fn getSuspensionRestLength(&self) -> btScalar {
@@ -41695,6 +54510,18 @@ impl btWheelInfo {
         raycastInfo: *mut btWheelInfo_RaycastInfo,
     ) {
         btWheelInfo_updateWheel(self, chassis, raycastInfo)
+    }
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btWheelInfo_btWheelInfo(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(ci: *mut btWheelInfoConstructionInfo) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btWheelInfo_btWheelInfo1(&mut __bindgen_tmp, ci);
+        __bindgen_tmp
     }
 }
 #[repr(C)]
@@ -41727,6 +54554,10 @@ impl btActionInterface {
     pub unsafe fn getFixedBody() -> *mut btRigidBody {
         btActionInterface_getFixedBody()
     }
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN17btActionInterfaceD0Ev"]
+    pub fn btActionInterface_btActionInterface_destructor(this: *mut btActionInterface);
 }
 extern "C" {
     #[link_name = "\u{1}_ZN17btActionInterface12updateActionEP16btCollisionWorldd"]
@@ -41867,6 +54698,20 @@ fn bindgen_test_layout_btRaycastVehicle_btVehicleTuning() {
             stringify!(m_maxSuspensionForce)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btRaycastVehicle15btVehicleTuningC1Ev"]
+    pub fn btRaycastVehicle_btVehicleTuning_btVehicleTuning(
+        this: *mut btRaycastVehicle_btVehicleTuning,
+    );
+}
+impl btRaycastVehicle_btVehicleTuning {
+    #[inline]
+    pub unsafe fn new() -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btRaycastVehicle_btVehicleTuning_btVehicleTuning(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
 }
 #[test]
 fn bindgen_test_layout_btRaycastVehicle() {
@@ -42102,6 +54947,10 @@ extern "C" {
     ) -> *mut btWheelInfo;
 }
 extern "C" {
+    #[link_name = "\u{1}_ZNK16btRaycastVehicle12getNumWheelsEv"]
+    pub fn btRaycastVehicle_getNumWheels(this: *const btRaycastVehicle) -> ::std::os::raw::c_int;
+}
+extern "C" {
     #[link_name = "\u{1}_ZNK16btRaycastVehicle12getWheelInfoEi"]
     pub fn btRaycastVehicle_getWheelInfo(
         this: *const btRaycastVehicle,
@@ -42132,8 +54981,75 @@ extern "C" {
     );
 }
 extern "C" {
+    #[link_name = "\u{1}_ZN16btRaycastVehicle15setPitchControlEd"]
+    pub fn btRaycastVehicle_setPitchControl(this: *mut btRaycastVehicle, pitch: btScalar);
+}
+extern "C" {
     #[link_name = "\u{1}_ZN16btRaycastVehicle16updateSuspensionEd"]
     pub fn btRaycastVehicle_updateSuspension(this: *mut btRaycastVehicle, deltaTime: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btRaycastVehicle12getRigidBodyEv"]
+    pub fn btRaycastVehicle_getRigidBody(this: *mut btRaycastVehicle) -> *mut btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btRaycastVehicle12getRigidBodyEv"]
+    pub fn btRaycastVehicle_getRigidBody1(this: *const btRaycastVehicle) -> *const btRigidBody;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btRaycastVehicle12getRightAxisEv"]
+    pub fn btRaycastVehicle_getRightAxis(this: *const btRaycastVehicle) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btRaycastVehicle9getUpAxisEv"]
+    pub fn btRaycastVehicle_getUpAxis(this: *const btRaycastVehicle) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btRaycastVehicle14getForwardAxisEv"]
+    pub fn btRaycastVehicle_getForwardAxis(this: *const btRaycastVehicle) -> ::std::os::raw::c_int;
+}
+extern "C" {
+
+    /// Worldspace forward vector
+
+    #[link_name = "\u{1}_ZNK16btRaycastVehicle16getForwardVectorEv"]
+    pub fn btRaycastVehicle_getForwardVector(this: *const btRaycastVehicle) -> btVector3;
+}
+extern "C" {
+
+    /// Velocity of vehicle (positive if velocity vector has same direction as foward vector)
+
+    #[link_name = "\u{1}_ZNK16btRaycastVehicle21getCurrentSpeedKmHourEv"]
+    pub fn btRaycastVehicle_getCurrentSpeedKmHour(this: *const btRaycastVehicle) -> btScalar;
+}
+extern "C" {
+
+    /// backwards compatibility
+
+    #[link_name = "\u{1}_ZNK16btRaycastVehicle21getUserConstraintTypeEv"]
+    pub fn btRaycastVehicle_getUserConstraintType(
+        this: *const btRaycastVehicle,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btRaycastVehicle21setUserConstraintTypeEi"]
+    pub fn btRaycastVehicle_setUserConstraintType(
+        this: *mut btRaycastVehicle,
+        userConstraintType: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btRaycastVehicle19setUserConstraintIdEi"]
+    pub fn btRaycastVehicle_setUserConstraintId(
+        this: *mut btRaycastVehicle,
+        uid: ::std::os::raw::c_int,
+    );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZNK16btRaycastVehicle19getUserConstraintIdEv"]
+    pub fn btRaycastVehicle_getUserConstraintId(
+        this: *const btRaycastVehicle,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN16btRaycastVehicleC1ERKNS_15btVehicleTuningEP11btRigidBodyP18btVehicleRaycaster"]
@@ -42207,6 +55123,10 @@ impl btRaycastVehicle {
         )
     }
     #[inline]
+    pub unsafe fn getNumWheels(&self) -> ::std::os::raw::c_int {
+        btRaycastVehicle_getNumWheels(self)
+    }
+    #[inline]
     pub unsafe fn getWheelInfo(&self, index: ::std::os::raw::c_int) -> *const btWheelInfo {
         btRaycastVehicle_getWheelInfo(self, index)
     }
@@ -42227,8 +55147,56 @@ impl btRaycastVehicle {
         btRaycastVehicle_setBrake(self, brake, wheelIndex)
     }
     #[inline]
+    pub unsafe fn setPitchControl(&mut self, pitch: btScalar) {
+        btRaycastVehicle_setPitchControl(self, pitch)
+    }
+    #[inline]
     pub unsafe fn updateSuspension(&mut self, deltaTime: btScalar) {
         btRaycastVehicle_updateSuspension(self, deltaTime)
+    }
+    #[inline]
+    pub unsafe fn getRigidBody(&mut self) -> *mut btRigidBody {
+        btRaycastVehicle_getRigidBody(self)
+    }
+    #[inline]
+    pub unsafe fn getRigidBody1(&self) -> *const btRigidBody {
+        btRaycastVehicle_getRigidBody1(self)
+    }
+    #[inline]
+    pub unsafe fn getRightAxis(&self) -> ::std::os::raw::c_int {
+        btRaycastVehicle_getRightAxis(self)
+    }
+    #[inline]
+    pub unsafe fn getUpAxis(&self) -> ::std::os::raw::c_int {
+        btRaycastVehicle_getUpAxis(self)
+    }
+    #[inline]
+    pub unsafe fn getForwardAxis(&self) -> ::std::os::raw::c_int {
+        btRaycastVehicle_getForwardAxis(self)
+    }
+    #[inline]
+    pub unsafe fn getForwardVector(&self) -> btVector3 {
+        btRaycastVehicle_getForwardVector(self)
+    }
+    #[inline]
+    pub unsafe fn getCurrentSpeedKmHour(&self) -> btScalar {
+        btRaycastVehicle_getCurrentSpeedKmHour(self)
+    }
+    #[inline]
+    pub unsafe fn getUserConstraintType(&self) -> ::std::os::raw::c_int {
+        btRaycastVehicle_getUserConstraintType(self)
+    }
+    #[inline]
+    pub unsafe fn setUserConstraintType(&mut self, userConstraintType: ::std::os::raw::c_int) {
+        btRaycastVehicle_setUserConstraintType(self, userConstraintType)
+    }
+    #[inline]
+    pub unsafe fn setUserConstraintId(&mut self, uid: ::std::os::raw::c_int) {
+        btRaycastVehicle_setUserConstraintId(self, uid)
+    }
+    #[inline]
+    pub unsafe fn getUserConstraintId(&self) -> ::std::os::raw::c_int {
+        btRaycastVehicle_getUserConstraintId(self)
     }
     #[inline]
     pub unsafe fn new(
@@ -42249,6 +55217,17 @@ extern "C" {
 
     /// btActionInterface interface
 
+    #[link_name = "\u{1}_ZN16btRaycastVehicle12updateActionEP16btCollisionWorldd"]
+    pub fn btRaycastVehicle_updateAction(
+        this: *mut ::std::os::raw::c_void,
+        collisionWorld: *mut btCollisionWorld,
+        step: btScalar,
+    );
+}
+extern "C" {
+
+    /// btActionInterface interface
+
     #[link_name = "\u{1}_ZN16btRaycastVehicle9debugDrawEP12btIDebugDraw"]
     pub fn btRaycastVehicle_debugDraw(
         this: *mut ::std::os::raw::c_void,
@@ -42262,6 +55241,15 @@ extern "C" {
 extern "C" {
     #[link_name = "\u{1}_ZN16btRaycastVehicle14updateFrictionEd"]
     pub fn btRaycastVehicle_updateFriction(this: *mut ::std::os::raw::c_void, timeStep: btScalar);
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN16btRaycastVehicle19setCoordinateSystemEiii"]
+    pub fn btRaycastVehicle_setCoordinateSystem(
+        this: *mut ::std::os::raw::c_void,
+        rightIndex: ::std::os::raw::c_int,
+        upIndex: ::std::os::raw::c_int,
+        forwardIndex: ::std::os::raw::c_int,
+    );
 }
 #[repr(C)]
 #[derive(Debug)]
@@ -42291,6 +55279,21 @@ fn bindgen_test_layout_btDefaultVehicleRaycaster() {
             stringify!(m_dynamicsWorld)
         )
     );
+}
+extern "C" {
+    #[link_name = "\u{1}_ZN25btDefaultVehicleRaycasterC1EP15btDynamicsWorld"]
+    pub fn btDefaultVehicleRaycaster_btDefaultVehicleRaycaster(
+        this: *mut btDefaultVehicleRaycaster,
+        world: *mut btDynamicsWorld,
+    );
+}
+impl btDefaultVehicleRaycaster {
+    #[inline]
+    pub unsafe fn new(world: *mut btDynamicsWorld) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        btDefaultVehicleRaycaster_btDefaultVehicleRaycaster(&mut __bindgen_tmp, world);
+        __bindgen_tmp
+    }
 }
 extern "C" {
     #[link_name = "\u{1}_ZN25btDefaultVehicleRaycaster7castRayERK9btVector3S2_RN18btVehicleRaycaster24btVehicleRaycasterResultE"]
@@ -43499,6 +56502,25 @@ fn __bindgen_test_layout_btAlignedObjectArray_open0_ptr_const_btDbvtNode_close0_
     );
 }
 #[test]
+fn __bindgen_test_layout_btAlignedObjectArray_open0_ptr_const_btDbvtNode_close0_instantiation_4() {
+    assert_eq!(
+        ::std::mem::size_of::<btAlignedObjectArray<*const btDbvtNode>>(),
+        32usize,
+        concat!(
+            "Size of template specialization: ",
+            stringify!(btAlignedObjectArray<*const btDbvtNode>)
+        )
+    );
+    assert_eq!(
+        ::std::mem::align_of::<btAlignedObjectArray<*const btDbvtNode>>(),
+        8usize,
+        concat!(
+            "Alignment of template specialization: ",
+            stringify!(btAlignedObjectArray<*const btDbvtNode>)
+        )
+    );
+}
+#[test]
 fn __bindgen_test_layout_btAlignedObjectArray_open0_btAlignedObjectArray_open1_ptr_const_btDbvtNode_close1_close0_instantiation(
 ) {
     assert_eq!(
@@ -43523,7 +56545,7 @@ fn __bindgen_test_layout_btAlignedObjectArray_open0_btAlignedObjectArray_open1_p
     );
 }
 #[test]
-fn __bindgen_test_layout_btAlignedObjectArray_open0_ptr_const_btDbvtNode_close0_instantiation_4() {
+fn __bindgen_test_layout_btAlignedObjectArray_open0_ptr_const_btDbvtNode_close0_instantiation_5() {
     assert_eq!(
         ::std::mem::size_of::<btAlignedObjectArray<*const btDbvtNode>>(),
         32usize,

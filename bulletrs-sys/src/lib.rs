@@ -3,8 +3,6 @@
 // #![feature(attr_literals)]
 
 pub mod shared_memory;
-pub mod bt_rigid_body;
 pub mod bt_bullet_dynamics_common;
-pub mod rust_helpers;
 
 pub use shared_memory::*;

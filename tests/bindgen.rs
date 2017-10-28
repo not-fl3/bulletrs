@@ -1,7 +1,6 @@
 extern crate bulletrs;
 
 use bulletrs::sys::bt_bullet_dynamics_common as bt;
-use bulletrs::sys::rust_helpers::*;
 
 #[test]
 fn bindged_generated_test() {
@@ -36,7 +35,7 @@ fn bindged_generated_test() {
         );
 
 
-        let mut fall_shape = newSphereShape(2.0);
+        let mut fall_shape = bt::btSphereShape::new(2.0);
         let sphere_rotation = bt::btMatrix3x3 {
             m_el: [
                 bt::btVector3 {
@@ -57,7 +56,7 @@ fn bindged_generated_test() {
             },
         };
 
-        let mut fall_motion_state = newDefaultMotionState(&sphere_transform as *const _);
+        let mut fall_motion_state = bt::btDefaultMotionState::new(&sphere_transform as *const _, bt::btTransform_getIdentity());
 
         let mass = 1.0;
         let mut fall_inertia = bt::btVector3 {
