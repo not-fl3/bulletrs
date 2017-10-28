@@ -519,5 +519,19 @@ pub fn build_linux() {
         .file("bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.cpp")
         .file("bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.cpp")
         .compile("pybullet");
+
+    cc::Build::new()
+        .include("bullet3/src")
+        .define("Bullet3Common_EXPORTS", None)
+        .define("NDEBUG", None)
+        .define("USE_GRAPHICAL_BENCHMARK", None)
+        .define("BT_USE_DOUBLE_PRECISION", None)
+        .opt_level(3)
+        .cpp(true)
+        .warnings(false)
+
+        .file("bullet3/src/rust_helpers.cpp")
+        .compile("Bullet3RustHelpers");
+
 }
  
