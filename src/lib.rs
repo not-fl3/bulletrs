@@ -1,4 +1,4 @@
-extern crate bulletrs_sys as sys;
+pub extern crate bulletrs_sys as sys;
 extern crate mint;
 
 mod bullet;
