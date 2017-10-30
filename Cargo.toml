@@ -4,8 +4,11 @@ version = "0.2.0"
 
 [dependencies]
 bulletrs-sys = { path = "./bulletrs-sys" }
-mint = "0.4.2"
+mint = "0.5.0"
 
-[replace]
-"cc:1.0.2" = { path = "../cc-rs" }
+[dev-dependencies]
+cgmath = { version = "0.15.0", features = ["mint"] }
+
+[patch.crates-io]
+"mint" = { git = "https://github.com/not-fl3/mint.git" }
 

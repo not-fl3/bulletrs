@@ -1,19 +1,12 @@
 extern crate bulletrs;
 
-use bulletrs::sys::bt_bullet_dynamics_common as bt;
+use bulletrs::sys as bt;
 
 #[test]
 fn bindged_generated_test() {
     unsafe {
         let mut broadphase = bt::btDbvtBroadphase::new(std::ptr::null_mut());
-        let info = bt::btDefaultCollisionConstructionInfo {
-            m_persistentManifoldPool: std::ptr::null_mut(),
-            m_collisionAlgorithmPool: std::ptr::null_mut(),
-            m_defaultMaxPersistentManifoldPoolSize: 4096,
-            m_defaultMaxCollisionAlgorithmPoolSize: 4096,
-            m_customCollisionAlgorithmMaxElementSize: 0,
-            m_useEpaPenetrationAlgorithm: 1,
-        };
+        let info = bt::btDefaultCollisionConstructionInfo::new();
         let mut collision_configuration =
             bt::btDefaultCollisionConfiguration::new(&info as *const _);
         let mut dispatcher =
@@ -120,10 +113,6 @@ fn bindged_generated_test() {
             let sphere_y = graphics_world_trans.m_origin.m_floats[1];
             assert!(old_y > sphere_y);
             old_y = sphere_y;
-
-            // wow sphere is actually falling down!
-            println!("{:?}", sphere_y);
-
         }
     }
 }
