@@ -14,13 +14,13 @@ pub struct RigidBody {
 impl RigidBody {
     pub fn new<T1: Into<Vector3<f64>>, T2: Into<Vector3<f64>>, T3: Into<Vector4<f64>>>(
         mass: f64,
-        shape: Shape,
         inertia: T1,
+        shape: Shape,
         translation: T2,
         orientation: T3,
     ) -> RigidBody {
         let mut inertia: BulletVector3 = inertia.into().into();
-        let mut shape_box = Box::new(shape);
+        let shape_box = Box::new(shape);
         let translation: BulletVector3 = translation.into().into();
         let orientation: [f64; 4] = orientation.into().into();
         let transform = unsafe {
@@ -37,7 +37,7 @@ impl RigidBody {
             sys::btRigidBody_btRigidBodyConstructionInfo::new(
                 mass,
                 &mut *motion_state_box as *mut _ as *mut _,
-                &mut *shape_box as *mut _ as *mut _,
+                shape_box.as_ptr(),
                 inertia.0.as_mut_ptr() as *mut _,
             )
         });
@@ -52,10 +52,13 @@ impl RigidBody {
         }
     }
 
-    pub fn as_ptr(&self) -> *mut sys::btRigidBody {
+    pub(crate) unsafe fn as_ptr(&self) -> *mut sys::btRigidBody {
         &*self.rigid_body as *const _ as *mut _
     }
 
+    pub fn set_restitution(&self, restitution : f64) {
+        unsafe { sys::btCollisionObject_setRestitution(self.as_ptr() as *mut _, restitution); }
+    }
 
     pub fn get_world_transform(&self) -> Vector3<f64> {
         unsafe {
