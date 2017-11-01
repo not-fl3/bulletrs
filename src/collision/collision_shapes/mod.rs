@@ -6,6 +6,7 @@ use mint::{Vector3, Vector4};
 pub enum Shape {
     Sphere(sys::btSphereShape),
     Plane(sys::btStaticPlaneShape),
+    ConvexHull(sys::btConvexHullShape),
     Compound {
         shape: sys::btCompoundShape,
         child_shapes: Vec<Box<Shape>>,
@@ -22,6 +23,15 @@ impl Shape {
         Shape::Plane(unsafe {
             sys::btStaticPlaneShape::new(up.0.as_ptr() as *const _, plane_const)
         })
+    }
+
+    pub fn new_convex_hull<T : Into<Vector3<f64>> + Clone>(vertices: &[T]) -> Shape {
+        let mut shape = unsafe { sys::btConvexHullShape::new(::std::ptr::null(), 0, 8 * 4) };
+        for vertex in vertices.iter() {
+            let vertex : BulletVector3 = vertex.clone().into().into();
+            unsafe { shape.addPoint(&vertex as *const _ as *const _, true); }
+        }
+        Shape::ConvexHull(shape)
     }
 
     pub fn new_compound<T, T1>(shapes: Vec<(Shape, T, T1)>) -> Shape
@@ -57,6 +67,7 @@ impl Shape {
         match self {
             &Shape::Sphere(ref sphere) => sphere as *const _ as *mut _,
             &Shape::Plane(ref plane) => plane as *const _ as *mut _,
+            &Shape::ConvexHull(ref shape) => shape as *const _ as *mut _,
             &Shape::Compound { ref shape, .. } => shape as *const _ as *mut _,
         }
     }
@@ -78,6 +89,16 @@ impl Shape {
                 unsafe {
                     sys::btStaticPlaneShape_calculateLocalInertia(
                         sphere as *const _ as *mut _,
+                        mass,
+                        inertia.as_mut_ptr() as *mut _,
+                    );
+                }
+                Vector3::from_slice(&inertia[0..3])
+            }
+            &Shape::ConvexHull(ref shape) => {
+                unsafe {
+                    sys::btPolyhedralConvexShape_calculateLocalInertia(
+                        shape as *const _ as *mut _,
                         mass,
                         inertia.as_mut_ptr() as *mut _,
                     );
