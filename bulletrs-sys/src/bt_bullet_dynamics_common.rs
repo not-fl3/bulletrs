@@ -15507,7 +15507,7 @@ extern "C" {
     ) -> *mut btPersistentManifold;
 }
 extern "C" {
-    #[link_name = "\u{1}_ZN21btCollisionDispatcherD0Ev"]
+    #[link_name = "\u{1}_ZN21btCollisionDispatcherD1Ev"]
     pub fn btCollisionDispatcher_btCollisionDispatcher_destructor(this: *mut btCollisionDispatcher);
 }
 extern "C" {
@@ -32174,7 +32174,7 @@ impl btDbvtBroadphase {
     }
 }
 extern "C" {
-    #[link_name = "\u{1}_ZN16btDbvtBroadphaseD0Ev"]
+    #[link_name = "\u{1}_ZN16btDbvtBroadphaseD1Ev"]
     pub fn btDbvtBroadphase_btDbvtBroadphase_destructor(this: *mut btDbvtBroadphase);
 }
 extern "C" {
@@ -37709,7 +37709,7 @@ impl btRigidBody {
     }
 }
 extern "C" {
-    #[link_name = "\u{1}_ZN11btRigidBodyD0Ev"]
+    #[link_name = "\u{1}_ZN11btRigidBodyD1Ev"]
     pub fn btRigidBody_btRigidBody_destructor(this: *mut btRigidBody);
 }
 extern "C" {
@@ -53755,7 +53755,7 @@ extern "C" {
     ) -> btScalar;
 }
 extern "C" {
-    #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolverD0Ev"]
+    #[link_name = "\u{1}_ZN35btSequentialImpulseConstraintSolverD1Ev"]
     pub fn btSequentialImpulseConstraintSolver_btSequentialImpulseConstraintSolver_destructor(
         this: *mut btSequentialImpulseConstraintSolver,
     );

@@ -43,6 +43,6 @@ fn main() {
 
     for _ in 0 .. 100 {
         dynamics_world.step(0.1, 0, 0.0);
-        println!("{:?}", fall_rigid_body.get_world_transform());
+        println!("{:?}", fall_rigid_body.get_world_position_and_orientation());
     }
 }

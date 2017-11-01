@@ -3,7 +3,14 @@ extern crate bulletrs;
 use bulletrs::sys as bt;
 
 #[test]
-fn bindged_generated_test() {
+fn broadphase_destcutor() {
+    unsafe {
+        let mut broadphase = bt::btDbvtBroadphase::new(std::ptr::null_mut());
+        bt::btDbvtBroadphase_btDbvtBroadphase_destructor(&mut broadphase as *mut _);
+    }
+}
+#[test]
+fn bindgen_generated_test() {
     unsafe {
         let mut broadphase = bt::btDbvtBroadphase::new(std::ptr::null_mut());
         let info = bt::btDefaultCollisionConstructionInfo::new();
