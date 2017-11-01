@@ -1,11 +1,15 @@
 use sys;
 use std::mem;
 use bullet_vector3::BulletVector3;
-use mint::Vector3;
+use mint::{Vector3, Vector4};
 
 pub enum Shape {
     Sphere(sys::btSphereShape),
     Plane(sys::btStaticPlaneShape),
+    Compound {
+        shape: sys::btCompoundShape,
+        child_shapes: Vec<Box<Shape>>,
+    },
 }
 
 impl Shape {
@@ -13,15 +17,47 @@ impl Shape {
         Shape::Sphere(unsafe { sys::btSphereShape::new(radius) })
     }
 
-    pub fn new_plane<T : Into<Vector3<f64>>>(normal : T, plane_const: f64) -> Shape {
+    pub fn new_plane<T: Into<Vector3<f64>>>(normal: T, plane_const: f64) -> Shape {
         let up: BulletVector3 = normal.into().into();
-        Shape::Plane(unsafe { sys::btStaticPlaneShape::new(up.0.as_ptr() as *const _, plane_const) })
+        Shape::Plane(unsafe {
+            sys::btStaticPlaneShape::new(up.0.as_ptr() as *const _, plane_const)
+        })
     }
 
-    pub fn as_ptr(&self) -> *mut sys::btCollisionShape {
+    pub fn new_compound<T, T1>(shapes: Vec<(Shape, T, T1)>) -> Shape
+    where
+        T: Into<Vector3<f64>>,
+        T1: Into<Vector4<f64>>,
+    {
+        let mut child_shapes = vec![];
+        let mut compound_shape = unsafe { sys::btCompoundShape::new(true, 0) };
+        for (shape, position, orientation) in shapes.into_iter() {
+            let shape_box = Box::new(shape);
+            let orientation: [f64; 4] = orientation.into().into();
+            let position: BulletVector3 = position.into().into();
+            let transform = unsafe {
+                sys::btTransform::new1(
+                    &orientation as *const _ as *const _,
+                    &position as *const _ as *const _,
+                )
+            };
+            unsafe {
+                compound_shape
+                    .addChildShape(&transform as *const _, shape_box.as_ptr());
+            }
+            child_shapes.push(shape_box);
+        }
+        Shape::Compound {
+            shape: compound_shape,
+            child_shapes,
+        }
+    }
+
+    pub(crate) fn as_ptr(&self) -> *mut sys::btCollisionShape {
         match self {
             &Shape::Sphere(ref sphere) => sphere as *const _ as *mut _,
             &Shape::Plane(ref plane) => plane as *const _ as *mut _,
+            &Shape::Compound { ref shape, .. } => shape as *const _ as *mut _,
         }
     }
 
@@ -37,11 +73,21 @@ impl Shape {
                     );
                 }
                 Vector3::from_slice(&inertia[0..3])
-            },
+            }
             &Shape::Plane(ref sphere) => {
                 unsafe {
                     sys::btStaticPlaneShape_calculateLocalInertia(
                         sphere as *const _ as *mut _,
+                        mass,
+                        inertia.as_mut_ptr() as *mut _,
+                    );
+                }
+                Vector3::from_slice(&inertia[0..3])
+            }
+            &Shape::Compound { ref shape, .. } => {
+                unsafe {
+                    sys::btCompoundShape_calculateLocalInertia(
+                        shape as *const _ as *mut _,
                         mass,
                         inertia.as_mut_ptr() as *mut _,
                     );
