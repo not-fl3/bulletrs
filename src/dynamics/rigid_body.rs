@@ -56,11 +56,20 @@ impl RigidBody {
         &*self.rigid_body as *const _ as *mut _
     }
 
-    pub fn set_restitution(&self, restitution : f64) {
-        unsafe { sys::btCollisionObject_setRestitution(self.as_ptr() as *mut _, restitution); }
+    pub fn set_restitution(&self, restitution: f64) {
+        unsafe {
+            sys::btCollisionObject_setRestitution(self.as_ptr() as *mut _, restitution);
+        }
     }
 
-    pub fn get_world_transform(&self) -> Vector3<f64> {
+    pub fn set_gravity<T: Into<Vector3<f64>>>(&self, gravity: T) {
+        let gravity: BulletVector3 = gravity.into().into();
+        unsafe {
+            sys::btRigidBody_setGravity(self.as_ptr() as *mut _, gravity.0.as_ptr() as *const _);
+        }
+    }
+
+    pub fn get_world_position_and_orientation(&self) -> (Vector3<f64>, Vector4<f64>) {
         unsafe {
             sys::btDefaultMotionState_getWorldTransform(
                 &*self.motion_state as *const _ as *mut _,
@@ -69,6 +78,11 @@ impl RigidBody {
         }
         let origin = unsafe { self.temp_transform.getOrigin1().as_ref().unwrap() };
 
-        Vector3::from_slice(&origin.m_floats[0..3])
+        let rotation = unsafe { self.temp_transform.getRotation() };
+
+        (
+            Vector3::from_slice(&origin.m_floats[0..3]),
+            Vector4::from_slice(&rotation._base.m_floats),
+        )
     }
 }

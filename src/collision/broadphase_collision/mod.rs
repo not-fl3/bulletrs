@@ -8,7 +8,7 @@ pub enum BroadphaseInterface {
 }
 
 pub enum Broadphase {
-    DbvtBroadphase(Box<::sys::btDbvtBroadphase>),
+    DbvtBroadphase(Box<sys::btDbvtBroadphase>),
 }
 
 impl Broadphase {
@@ -33,7 +33,8 @@ impl Drop for Broadphase {
     fn drop(&mut self) {
         match self {
             &mut Broadphase::DbvtBroadphase(ref mut broadphase) => unsafe {
-                ::sys::btDbvtBroadphase_btDbvtBroadphase_destructor(&mut **broadphase as *mut _)
+                let broadphase : &mut sys::btDbvtBroadphase = &mut **broadphase;
+                ::sys::btDbvtBroadphase_btDbvtBroadphase_destructor(broadphase as *mut _);
             },
         }
     }
