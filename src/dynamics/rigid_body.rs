@@ -62,10 +62,17 @@ impl RigidBody {
         }
     }
 
-    pub fn set_gravity<T: Into<Vector3<f64>>>(&self, gravity: T) {
+    pub fn set_gravity<T: Into<Vector3<f64>>>(&mut self, gravity: T) {
         let gravity: BulletVector3 = gravity.into().into();
         unsafe {
-            sys::btRigidBody_setGravity(self.as_ptr() as *mut _, gravity.0.as_ptr() as *const _);
+            self.rigid_body.setGravity(gravity.0.as_ptr() as *const _);
+        }
+    }
+
+    pub fn set_angular_factor<T: Into<Vector3<f64>>>(&mut self, angular_factor: T) {
+        let angular_factor: BulletVector3 = angular_factor.into().into();
+        unsafe {
+            self.rigid_body.setAngularFactor(angular_factor.0.as_ptr() as *const _);
         }
     }
 

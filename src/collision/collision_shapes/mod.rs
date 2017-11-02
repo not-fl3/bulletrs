@@ -6,6 +6,7 @@ use mint::{Vector3, Vector4};
 pub enum Shape {
     Sphere(sys::btSphereShape),
     Plane(sys::btStaticPlaneShape),
+    Capsule(sys::btCapsuleShape),
     ConvexHull(sys::btConvexHullShape),
     Compound {
         shape: sys::btCompoundShape,
@@ -23,6 +24,10 @@ impl Shape {
         Shape::Plane(unsafe {
             sys::btStaticPlaneShape::new(up.0.as_ptr() as *const _, plane_const)
         })
+    }
+
+    pub fn new_capsule(radius: f64, height : f64) -> Shape {
+        Shape::Capsule(unsafe { sys::btCapsuleShape::new1(radius, height) })
     }
 
     pub fn new_convex_hull<T : Into<Vector3<f64>> + Clone>(vertices: &[T]) -> Shape {
@@ -65,8 +70,9 @@ impl Shape {
 
     pub(crate) fn as_ptr(&self) -> *mut sys::btCollisionShape {
         match self {
-            &Shape::Sphere(ref sphere) => sphere as *const _ as *mut _,
-            &Shape::Plane(ref plane) => plane as *const _ as *mut _,
+            &Shape::Sphere(ref shape) => shape as *const _ as *mut _,
+            &Shape::Plane(ref shape) => shape as *const _ as *mut _,
+            &Shape::Capsule(ref shape) => shape as *const _ as *mut _,
             &Shape::ConvexHull(ref shape) => shape as *const _ as *mut _,
             &Shape::Compound { ref shape, .. } => shape as *const _ as *mut _,
         }
@@ -83,7 +89,6 @@ impl Shape {
                         inertia.as_mut_ptr() as *mut _,
                     );
                 }
-                Vector3::from_slice(&inertia[0..3])
             }
             &Shape::Plane(ref sphere) => {
                 unsafe {
@@ -93,8 +98,17 @@ impl Shape {
                         inertia.as_mut_ptr() as *mut _,
                     );
                 }
-                Vector3::from_slice(&inertia[0..3])
             }
+            &Shape::Capsule(ref shape) => {
+                unsafe {
+                    sys::btCapsuleShape_calculateLocalInertia(
+                        shape as *const _ as *mut _,
+                        mass,
+                        inertia.as_mut_ptr() as *mut _,
+                    );
+                }
+            }
+
             &Shape::ConvexHull(ref shape) => {
                 unsafe {
                     sys::btPolyhedralConvexShape_calculateLocalInertia(
@@ -103,7 +117,6 @@ impl Shape {
                         inertia.as_mut_ptr() as *mut _,
                     );
                 }
-                Vector3::from_slice(&inertia[0..3])
             }
             &Shape::Compound { ref shape, .. } => {
                 unsafe {
@@ -113,8 +126,8 @@ impl Shape {
                         inertia.as_mut_ptr() as *mut _,
                     );
                 }
-                Vector3::from_slice(&inertia[0..3])
             }
         }
+        Vector3::from_slice(&inertia[0..3])
     }
 }
