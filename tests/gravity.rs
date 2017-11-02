@@ -31,7 +31,7 @@ fn set_gravity() {
 
     let shape2 = Shape::new_sphere(2.0);
     let mass = 0.1;
-    let body2 = RigidBody::new(
+    let mut body2 = RigidBody::new(
         mass,
         shape2.calculate_local_inertia(mass),
         shape2,
