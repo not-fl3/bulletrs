@@ -16,4 +16,4 @@ pub use collision::collision_shapes::Shape;
 pub use dynamics::constraint_solver::ConstraintSolver;
 pub use dynamics::dynamics_world::{AllRayResultCallback, ClosestRayResultCallback, DynamicsWorld,
                                    RayResultCallback};
-pub use dynamics::rigid_body::RigidBody;
+pub use dynamics::rigid_body::{RigidBody, RigidBodyHandle};

@@ -67,10 +67,7 @@ pub struct RigidBodyHandle {
 }
 
 impl RigidBodyHandle {
-    pub fn new(
-        ptr: *mut sys::btRigidBody,
-        motion_state: *mut sys::btDefaultMotionState
-    ) -> Self {
+    pub fn new(ptr: *mut sys::btRigidBody, motion_state: *mut sys::btDefaultMotionState) -> Self {
         let temp_transform = unsafe { sys::btTransform::new() };
 
         RigidBodyHandle {
@@ -97,6 +94,39 @@ impl RigidBodyHandle {
         unsafe {
             sys::btRigidBody_setAngularFactor(self.ptr, angular_factor.0.as_ptr() as *const _);
         }
+    }
+
+    pub fn apply_central_impulse<T: Into<Vector3<f64>>>(&mut self, impulse: T) {
+        let impulse: BulletVector3 = impulse.into().into();
+        unsafe {
+            sys::btRigidBody_applyCentralImpulse(self.ptr, impulse.0.as_ptr() as *const _);
+        }
+    }
+
+    pub fn get_linear_velocity(&self) -> Vector3<f64> {
+        let velocity = unsafe { sys::btRigidBody_getLinearVelocity(self.ptr) };
+
+        Vector3::from_slice(unsafe {
+            ::std::slice::from_raw_parts(velocity as *const _, 4)
+        })
+    }
+
+    /// Override position vector and rotation quaternion.
+    pub fn reset_position_and_orientation<T, T1>(&self, position: T, orientation: T1)
+    where
+        T: Into<Vector3<f64>>,
+        T1: Into<Vector4<f64>>,
+    {
+        let orientation: [f64; 4] = orientation.into().into();
+        let position: BulletVector3 = position.into().into();
+        let transform = unsafe {
+            sys::btTransform::new1(
+                &orientation as *const _ as *const _,
+                &position as *const _ as *const _,
+            )
+        };
+
+        unsafe { (*self.ptr)._base.m_worldTransform = transform };
     }
 
     /// Get position in world space and orientation quaternion
@@ -135,6 +165,17 @@ impl RigidBodyHandle {
         let pointer = sys::btCollisionObject_getUserPointer(self.ptr as *mut _);
         let pointer: *const T = ::std::mem::transmute(pointer);
         return pointer.as_ref();
+    }
+
+    /// Set user index. This will not be used in bullet and this is not related to user_data.
+    pub fn set_user_index(&self, index: i32) {
+        unsafe { sys::btCollisionObject_setUserIndex(self.ptr as *mut _, index) };
+    }
+
+    /// Get previously setted user index
+    /// If index was not set - will return "-1"
+    pub fn get_user_index(&self) -> i32 {
+        unsafe { sys::btCollisionObject_getUserIndex(self.ptr as *mut _) }
     }
 
     /// Was that rigid_body removed with DynamicsWorld::remove_body()

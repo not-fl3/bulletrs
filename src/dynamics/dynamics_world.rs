@@ -107,7 +107,7 @@ impl DynamicsWorld {
         }
     }
 
-    pub fn step(&self, time_step: f64, max_sub_steps: i32, fixed_time_step: f64) {
+    pub fn step_simulation(&self, time_step: f64, max_sub_steps: i32, fixed_time_step: f64) {
         match &self.implementation {
             &WorldImplementation::Discrete { ref world, .. } => unsafe {
                 sys::btDiscreteDynamicsWorld_stepSimulation(

@@ -39,7 +39,7 @@ fn main() {
     fall_rigid_body.set_restitution(0.9);
 
     for _ in 0..100 {
-        dynamics_world.step(0.1, 0, 0.0);
+        dynamics_world.step_simulation(0.1, 0, 0.0);
         println!("{:?}", fall_rigid_body.get_world_position_and_orientation());
     }
 }

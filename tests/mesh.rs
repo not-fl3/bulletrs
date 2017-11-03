@@ -41,7 +41,7 @@ fn compound_mesh() {
     ));
 
     for _ in 0..10 {
-        dynamics_world.step(0.1, 0, 0.0);
+        dynamics_world.step_simulation(0.1, 0, 0.0);
     }
 }
 
