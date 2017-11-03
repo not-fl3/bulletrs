@@ -61,7 +61,7 @@ impl RigidBody {
 
 #[derive(Clone)]
 pub struct RigidBodyHandle {
-    ptr: *mut sys::btRigidBody,
+    pub(in dynamics) ptr: *mut sys::btRigidBody,
     motion_state: *mut sys::btDefaultMotionState,
     temp_transform: sys::btTransform,
 }
@@ -135,5 +135,11 @@ impl RigidBodyHandle {
         let pointer = sys::btCollisionObject_getUserPointer(self.ptr as *mut _);
         let pointer: *const T = ::std::mem::transmute(pointer);
         return pointer.as_ref();
+    }
+
+    /// Was that rigid_body removed with DynamicsWorld::remove_body()
+    /// Probably may return true also for any not-added bodys
+    pub fn removed(&self) -> bool {
+        unsafe { (*self.ptr)._base.m_worldArrayIndex == -1 }
     }
 }

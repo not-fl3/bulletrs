@@ -52,5 +52,11 @@ fn ray_test() {
     ));
 
     assert_eq!(result.intersections().len(), 2);
+
+    for result in result.intersections() {
+        assert_eq!(result.rigidbody().as_ref().unwrap().removed(), false);
+        dynamics_world.remove_body(result.rigidbody().as_ref().unwrap());
+        assert_eq!(result.rigidbody().as_ref().unwrap().removed(), true);
+    }
 }
 
