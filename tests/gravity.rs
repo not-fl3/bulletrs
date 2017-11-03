@@ -9,7 +9,7 @@ use bulletrs::*;
 fn set_gravity() {
     let configuration = CollisionConfiguration::new_default();
 
-    let dynamics_world = DynamicsWorld::new_discrete_world(
+    let mut dynamics_world = DynamicsWorld::new_discrete_world(
         CollisionDispatcher::new(&configuration),
         Broadphase::new(BroadphaseInterface::DbvtBroadphase),
         ConstraintSolver::new(),
@@ -20,25 +20,23 @@ fn set_gravity() {
 
     let shape = Shape::new_sphere(2.0);
     let mass = 0.1;
-    let body1 = RigidBody::new(
+    let body1 = dynamics_world.add_rigid_body(RigidBody::new(
         mass,
         shape.calculate_local_inertia(mass),
         shape,
         Vector3::new(4.0, 2.0, 0.0),
         Vector4::new(0.0, 0.0, 0.0, 1.0),
-    );
-    dynamics_world.add_rigid_body(&body1);
+    ));
 
     let shape2 = Shape::new_sphere(2.0);
     let mass = 0.1;
-    let mut body2 = RigidBody::new(
+    let mut body2 = dynamics_world.add_rigid_body(RigidBody::new(
         mass,
         shape2.calculate_local_inertia(mass),
         shape2,
         Vector3::new(0.0, 2.0, 0.0),
         Vector4::new(0.0, 0.0, 0.0, 1.0),
-    );
-    dynamics_world.add_rigid_body(&body2);
+    ));
     body2.set_gravity(Vector3::new(0.0, 0.0, 0.0));
 
     for _ in 0 .. 10 {
