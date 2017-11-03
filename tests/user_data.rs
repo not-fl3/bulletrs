@@ -6,6 +6,32 @@ use cgmath::{Vector3, Vector4};
 use bulletrs::*;
 
 #[test()]
+fn set_get_user_index() {
+    let configuration = CollisionConfiguration::new_default();
+
+    let mut dynamics_world = DynamicsWorld::new_discrete_world(
+        CollisionDispatcher::new(&configuration),
+        Broadphase::new(BroadphaseInterface::DbvtBroadphase),
+        ConstraintSolver::new(),
+        configuration,
+    );
+
+    let shape = Shape::new_sphere(1.0);
+    let mass = 0.1;
+    let body1 = dynamics_world.add_rigid_body(RigidBody::new(
+        mass,
+        shape.calculate_local_inertia(mass),
+        shape,
+        Vector3::new(-4.0, 0.0, 0.0),
+        Vector4::new(0.0, 0.0, 0.0, 1.0),
+    ));
+    assert_eq!(body1.get_user_index(), -1);
+    body1.set_user_index(5);
+    assert_eq!(body1.get_user_index(), 5);
+
+}
+
+#[test()]
 fn set_get_user_data() {
     let configuration = CollisionConfiguration::new_default();
 

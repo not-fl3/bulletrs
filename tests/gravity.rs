@@ -40,7 +40,7 @@ fn set_gravity() {
     body2.set_gravity(Vector3::new(0.0, 0.0, 0.0));
 
     for _ in 0 .. 10 {
-        dynamics_world.step(0.1, 0, 0.0);
+        dynamics_world.step_simulation(0.1, 0, 0.0);
     }
 
     let (position, _) = body1.get_world_position_and_orientation();

@@ -16,7 +16,7 @@ fn set_gravity() {
         configuration,
     );
 
-    dynamics_world.set_gravity(Vector3::new(0.0, -10.0, 1.0));
+    dynamics_world.set_gravity(Vector3::new(0.0f64, -10.0f64, 1.0f64));
 
     let ground_shape = Shape::new_plane(Vector3::new(0.0, 1.0, 0.0), -2.0);
 
@@ -40,7 +40,7 @@ fn set_gravity() {
     ));
     capsule.set_angular_factor(Vector3::new(0.0, 0.0, 0.0));
     for _ in 0 .. 10 {
-        dynamics_world.step(0.1, 0, 0.0);
+        dynamics_world.step_simulation(0.1, 0, 0.0);
     }
 
     let (_, orientation) = capsule.get_world_position_and_orientation();
