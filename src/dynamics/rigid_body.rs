@@ -8,7 +8,6 @@ pub struct RigidBody {
     shape: Box<Shape>,
     motion_state: Box<sys::btDefaultMotionState>,
     construction_info: Box<sys::btRigidBody_btRigidBodyConstructionInfo>,
-    temp_transform: sys::btTransform,
 }
 
 impl RigidBody {
@@ -48,34 +47,59 @@ impl RigidBody {
             shape: shape_box,
             motion_state: motion_state_box,
             construction_info: construction_info_box,
-            temp_transform: unsafe { sys::btTransform::new() },
         }
+    }
+
+    pub(crate) unsafe fn motion_state_ptr(&self) -> *mut sys::btDefaultMotionState {
+        &*self.motion_state as *const _ as *mut _
     }
 
     pub(crate) unsafe fn as_ptr(&self) -> *mut sys::btRigidBody {
         &*self.rigid_body as *const _ as *mut _
     }
+}
 
+#[derive(Clone)]
+pub struct RigidBodyHandle {
+    ptr: *mut sys::btRigidBody,
+    motion_state: *mut sys::btDefaultMotionState,
+    temp_transform: sys::btTransform,
+}
+
+impl RigidBodyHandle {
+    pub fn new(
+        ptr: *mut sys::btRigidBody,
+        motion_state: *mut sys::btDefaultMotionState
+    ) -> Self {
+        let temp_transform = unsafe { sys::btTransform::new() };
+
+        RigidBodyHandle {
+            ptr,
+            motion_state,
+            temp_transform,
+        }
+    }
     pub fn set_restitution(&self, restitution: f64) {
         unsafe {
-            sys::btCollisionObject_setRestitution(self.as_ptr() as *mut _, restitution);
+            sys::btCollisionObject_setRestitution(self.ptr as *mut _, restitution);
         }
     }
 
     pub fn set_gravity<T: Into<Vector3<f64>>>(&mut self, gravity: T) {
         let gravity: BulletVector3 = gravity.into().into();
         unsafe {
-            self.rigid_body.setGravity(gravity.0.as_ptr() as *const _);
+            sys::btRigidBody_setGravity(self.ptr, gravity.0.as_ptr() as *const _);
         }
     }
 
     pub fn set_angular_factor<T: Into<Vector3<f64>>>(&mut self, angular_factor: T) {
         let angular_factor: BulletVector3 = angular_factor.into().into();
         unsafe {
-            self.rigid_body.setAngularFactor(angular_factor.0.as_ptr() as *const _);
+            sys::btRigidBody_setAngularFactor(self.ptr, angular_factor.0.as_ptr() as *const _);
         }
     }
 
+    /// Get position in world space and orientation quaternion
     pub fn get_world_position_and_orientation(&self) -> (Vector3<f64>, Vector4<f64>) {
         unsafe {
             sys::btDefaultMotionState_getWorldTransform(
@@ -91,5 +115,25 @@ impl RigidBody {
             Vector3::from_slice(&origin.m_floats[0..3]),
             Vector4::from_slice(&rotation._base.m_floats),
         )
+    }
+
+    /// Place data on heap as a box and set to rigid body as user pointer
+    pub fn set_user_data<T: 'static>(&self, data: T) {
+        let data_box = Box::new(data);
+        unsafe {
+            sys::btCollisionObject_setUserPointer(
+                self.ptr as *mut _,
+                Box::into_raw(data_box) as *mut _,
+            )
+        };
+    }
+
+    /// Get data from rigidbody's user pointer
+    /// Getting data from body without previously setted data is fine.
+    /// Getting wrong typed data is unsafe and will cause mem::transmute to wrong pointer type.
+    pub unsafe fn get_user_data<T: 'static>(&self) -> Option<&T> {
+        let pointer = sys::btCollisionObject_getUserPointer(self.ptr as *mut _);
+        let pointer: *const T = ::std::mem::transmute(pointer);
+        return pointer.as_ref();
     }
 }

@@ -9,7 +9,7 @@ use bulletrs::*;
 fn compound_mesh() {
     let configuration = CollisionConfiguration::new_default();
 
-    let dynamics_world = DynamicsWorld::new_discrete_world(
+    let mut dynamics_world = DynamicsWorld::new_discrete_world(
         CollisionDispatcher::new(&configuration),
         Broadphase::new(BroadphaseInterface::DbvtBroadphase),
         ConstraintSolver::new(),
@@ -31,14 +31,14 @@ fn compound_mesh() {
         ),
     ]);
     let mass = 0.1;
-    let body1 = RigidBody::new(
+
+    dynamics_world.add_rigid_body(RigidBody::new(
         mass,
         shape.calculate_local_inertia(mass),
         shape,
         Vector3::new(4.0, 2.0, 0.0),
         Vector4::new(0.0, 0.0, 0.0, 1.0),
-    );
-    dynamics_world.add_rigid_body(&body1);
+    ));
 
     for _ in 0..10 {
         dynamics_world.step(0.1, 0, 0.0);
