@@ -106,7 +106,7 @@ impl RigidBodyHandle {
     pub fn get_linear_velocity(&self) -> Vector3<f64> {
         let velocity = unsafe { sys::btRigidBody_getLinearVelocity(self.ptr) };
 
-        Vector3::from_slice(unsafe {
+        ::bullet_vector3::vector_from_slice(unsafe {
             ::std::slice::from_raw_parts(velocity as *const _, 4)
         })
     }
@@ -142,8 +142,8 @@ impl RigidBodyHandle {
         let rotation = unsafe { self.temp_transform.getRotation() };
 
         (
-            Vector3::from_slice(&origin.m_floats[0..3]),
-            Vector4::from_slice(&rotation._base.m_floats),
+            ::bullet_vector3::vector_from_slice(&origin.m_floats[0..3]),
+            ::bullet_vector3::vector4_from_slice(&rotation._base.m_floats),
         )
     }
 
