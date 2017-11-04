@@ -242,8 +242,8 @@ impl RayResultCallback for AllRayResultCallback {
             intersections.push(RayIntersection {
                 collision_object: objects[i],
                 fraction: fractions[i],
-                normal: Vector3::from_slice(&normals[i].m_floats[0..3]),
-                point: Vector3::from_slice(&points[i].m_floats[0..3]),
+                normal: ::bullet_vector3::vector_from_slice(&normals[i].m_floats[0..3]),
+                point: ::bullet_vector3::vector_from_slice(&points[i].m_floats[0..3]),
             });
         }
         intersections
@@ -297,8 +297,8 @@ impl RayResultCallback for ClosestRayResultCallback {
             RayIntersection {
                 collision_object: self.callback._base.m_collisionObject,
                 fraction: self.callback._base.m_closestHitFraction,
-                point: Vector3::from_slice(&self.callback.m_hitPointWorld.m_floats[0..3]),
-                normal: Vector3::from_slice(&self.callback.m_hitNormalWorld.m_floats[0..3]),
+                point: ::bullet_vector3::vector_from_slice(&self.callback.m_hitPointWorld.m_floats[0..3]),
+                normal: ::bullet_vector3::vector_from_slice(&self.callback.m_hitNormalWorld.m_floats[0..3]),
             },
         ]
     }

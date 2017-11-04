@@ -8,6 +8,3 @@ mint = "0.4.2"
 
 [dev-dependencies]
 cgmath = { version = "0.15.0", features = ["mint"] }
-
-[patch.crates-io]
-"mint" = { git = "https://github.com/not-fl3/mint.git", branch = "fake_0.4.2" }

@@ -128,6 +128,6 @@ impl Shape {
                 }
             }
         }
-        Vector3::from_slice(&inertia[0..3])
+        ::bullet_vector3::vector_from_slice(&inertia[0..3])
     }
 }
