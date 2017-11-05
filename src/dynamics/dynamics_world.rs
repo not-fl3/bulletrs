@@ -107,6 +107,19 @@ impl DynamicsWorld {
         }
     }
 
+    /// Only update AABBs of objects, without physics calculations.
+    /// Usefull for collision only world.
+    pub fn update_aabbs(&self) {
+        match &self.implementation {
+            &WorldImplementation::Discrete { ref world, .. } => unsafe {
+                sys::btCollisionWorld_updateAabbs(world as *const _ as *mut _);
+            }
+        }
+    }
+
+    /// Tick physics world.
+    /// if max_sub_steps > 0, it will interpolate motion between fixed_time_step's to entire time_step
+    /// if max_sub_steps == 0, it will use time_step as the only step
     pub fn step_simulation(&self, time_step: f64, max_sub_steps: i32, fixed_time_step: f64) {
         match &self.implementation {
             &WorldImplementation::Discrete { ref world, .. } => unsafe {

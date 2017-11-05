@@ -96,6 +96,10 @@ impl RigidBodyHandle {
         }
     }
 
+    pub fn set_sleeping_thresholds(&mut self, linear: f64, angular: f64) {
+        unsafe { sys::btRigidBody_setSleepingThresholds(self.ptr, linear, angular) }
+    }
+
     pub fn apply_central_impulse<T: Into<Vector3<f64>>>(&mut self, impulse: T) {
         let impulse: BulletVector3 = impulse.into().into();
         unsafe {
