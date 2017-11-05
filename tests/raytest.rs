@@ -15,6 +15,7 @@ fn ray_test() {
         ConstraintSolver::new(),
         configuration,
     );
+    dynamics_world.set_gravity(Vector3::new(0.0, 0.0, 0.0));
 
     let shape = Shape::new_sphere(1.0);
     let mass = 0.1;
@@ -27,7 +28,7 @@ fn ray_test() {
     );
     dynamics_world.add_rigid_body(body1);
 
-    let shape2 = Shape::new_sphere(2.0);
+    let shape2 = Shape::new_sphere(1.0);
     let mass = 0.1;
     let body2 = RigidBody::new(
         mass,
@@ -37,6 +38,10 @@ fn ray_test() {
         Vector4::new(0.0, 0.0, 0.0, 1.0),
     );
     dynamics_world.add_rigid_body(body2);
+
+    for _ in 0 .. 500 {
+        dynamics_world.step_simulation(0.1, 5, 1.0 / 60.0);
+    }
 
     let result = dynamics_world.raytest(ClosestRayResultCallback::new(
         Vector3::new(-10.0, 0.0, 0.0),
