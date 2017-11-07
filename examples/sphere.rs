@@ -18,7 +18,7 @@ fn main() {
     dynamics_world.set_gravity(Vector3::new(0.0, -10.0, 0.0));
 
     let ground_shape = Shape::new_plane(Vector3::new(0.0, 1.0, 0.0), -2.0);
-    let ground_rigid_body = dynamics_world.add_rigid_body(RigidBody::new(
+    let mut ground_rigid_body = dynamics_world.add_rigid_body(RigidBody::new(
         0.0,
         Vector3::new(0.0, 0.0, 0.0),
         ground_shape,
@@ -29,7 +29,7 @@ fn main() {
 
     let fall_shape = Shape::new_sphere(2.0);
     let mass = 0.1;
-    let fall_rigid_body = dynamics_world.add_rigid_body(RigidBody::new(
+    let mut fall_rigid_body = dynamics_world.add_rigid_body(RigidBody::new(
         mass,
         fall_shape.calculate_local_inertia(mass),
         fall_shape,
