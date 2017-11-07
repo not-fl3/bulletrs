@@ -81,7 +81,11 @@ impl RigidBodyHandle {
             sys::btCollisionObject_setRestitution(self.ptr as *mut _, restitution);
         }
     }
-
+    pub fn set_friction(&mut self, friction: f64) {
+        unsafe {
+            sys::btCollisionObject_setFriction(self.ptr as *mut _, friction);
+        }
+    }
     pub fn set_gravity<T: Into<Vector3<f64>>>(&mut self, gravity: T) {
         let gravity: BulletVector3 = gravity.into().into();
         unsafe {
