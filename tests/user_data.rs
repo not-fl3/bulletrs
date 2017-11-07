@@ -18,7 +18,7 @@ fn set_get_user_index() {
 
     let shape = Shape::new_sphere(1.0);
     let mass = 0.1;
-    let body1 = dynamics_world.add_rigid_body(RigidBody::new(
+    let mut body1 = dynamics_world.add_rigid_body(RigidBody::new(
         mass,
         shape.calculate_local_inertia(mass),
         shape,
@@ -44,7 +44,7 @@ fn set_get_user_data() {
 
     let shape = Shape::new_sphere(1.0);
     let mass = 0.1;
-    let body1 = dynamics_world.add_rigid_body(RigidBody::new(
+    let mut body1 = dynamics_world.add_rigid_body(RigidBody::new(
         mass,
         shape.calculate_local_inertia(mass),
         shape,
@@ -68,7 +68,7 @@ fn ray_test_user_data() {
 
     let shape = Shape::new_sphere(1.0);
     let mass = 0.1;
-    let body1 = dynamics_world.add_rigid_body(RigidBody::new(
+    let mut body1 = dynamics_world.add_rigid_body(RigidBody::new(
         mass,
         shape.calculate_local_inertia(mass),
         shape,
@@ -79,7 +79,7 @@ fn ray_test_user_data() {
 
     let shape2 = Shape::new_sphere(2.0);
     let mass = 0.1;
-    let body2 = dynamics_world.add_rigid_body(RigidBody::new(
+    let mut body2 = dynamics_world.add_rigid_body(RigidBody::new(
         mass,
         shape2.calculate_local_inertia(mass),
         shape2,
