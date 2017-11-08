@@ -120,13 +120,12 @@ impl RigidBodyHandle {
     }
 
     /// Override velocity vector.
-    pub fn reset_linear_velocity<T>(&mut self, vel: T)
+    pub fn reset_linear_velocity<T>(&mut self, velocity: T)
     where
         T: Into<Vector3<f64>>,
     {
-        let v = vel.into();
-
-        unsafe { (*self.ptr).m_linearVelocity = sys::btVector3::new1(&v.x,&v.y,&v.z); };
+        let velocity: BulletVector3 = velocity.into().into();
+        unsafe {sys::btRigidBody_setLinearVelocity(self.ptr, velocity.0.as_ptr() as *const _);}
     }
 
     /// Override position vector and rotation quaternion.
