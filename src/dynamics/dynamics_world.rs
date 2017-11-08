@@ -68,7 +68,7 @@ impl DynamicsWorld {
         }
     }
 
-    pub fn set_gravity<T: Into<Vector3<f64>>>(&self, gravity: T) {
+    pub fn set_gravity<T: Into<Vector3<f64>>>(&mut self, gravity: T) {
         let gravity: BulletVector3 = gravity.into().into();
         match &self.implementation {
             &WorldImplementation::Discrete { ref world, .. } => unsafe {

@@ -6,6 +6,7 @@ use mint::{Vector3, Vector4};
 pub enum Shape {
     Sphere(sys::btSphereShape),
     Plane(sys::btStaticPlaneShape),
+    Box(sys::btBoxShape),
     Capsule(CapsuleShape),
     ConvexHull(sys::btConvexHullShape),
     Compound {
@@ -38,6 +39,11 @@ pub enum CapsuleAxis {
 impl Shape {
     pub fn new_sphere(radius: f64) -> Shape {
         Shape::Sphere(unsafe { sys::btSphereShape::new(radius) })
+    }
+
+    pub fn new_box<T: Into<Vector3<f64>>>(half_extent: T) -> Shape {
+        let half_extent: BulletVector3 = half_extent.into().into();
+        Shape::Box(unsafe { sys::btBoxShape::new(half_extent.0.as_ptr() as *const _,) })
     }
 
     pub fn new_plane<T: Into<Vector3<f64>>>(normal: T, plane_const: f64) -> Shape {
@@ -105,6 +111,7 @@ impl Shape {
         match self {
             &Shape::Sphere(ref shape) => shape as *const _ as *mut _,
             &Shape::Plane(ref shape) => shape as *const _ as *mut _,
+            &Shape::Box(ref shape) => shape as *const _ as *mut _,
             &Shape::Capsule(ref shape) => shape.as_ptr(),
             &Shape::ConvexHull(ref shape) => shape as *const _ as *mut _,
             &Shape::Compound { ref shape, .. } => shape as *const _ as *mut _,
@@ -124,6 +131,13 @@ impl Shape {
             &Shape::Plane(ref sphere) => unsafe {
                 sys::btStaticPlaneShape_calculateLocalInertia(
                     sphere as *const _ as *mut _,
+                    mass,
+                    inertia.as_mut_ptr() as *mut _,
+                );
+            },
+            &Shape::Box(ref shape) => unsafe {
+                sys::btBoxShape_calculateLocalInertia(
+                    shape as *const _ as *mut _,
                     mass,
                     inertia.as_mut_ptr() as *mut _,
                 );

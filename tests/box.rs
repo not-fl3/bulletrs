@@ -29,7 +29,7 @@ fn set_gravity() {
     ));
     ground_rigid_body.set_restitution(0.95);
 
-    let shape = Shape::new_capsule(0.05, 0.1, CapsuleAxis::X);
+    let shape = Shape::new_box(Vector3::new(1.0,2.0,0.5));
     let mass = 0.1;
     let mut capsule = dynamics_world.add_rigid_body(RigidBody::new(
         mass,

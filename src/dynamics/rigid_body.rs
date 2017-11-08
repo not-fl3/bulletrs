@@ -76,12 +76,16 @@ impl RigidBodyHandle {
             temp_transform,
         }
     }
-    pub fn set_restitution(&self, restitution: f64) {
+    pub fn set_restitution(&mut self, restitution: f64) {
         unsafe {
             sys::btCollisionObject_setRestitution(self.ptr as *mut _, restitution);
         }
     }
-
+    pub fn set_friction(&mut self, friction: f64) {
+        unsafe {
+            sys::btCollisionObject_setFriction(self.ptr as *mut _, friction);
+        }
+    }
     pub fn set_gravity<T: Into<Vector3<f64>>>(&mut self, gravity: T) {
         let gravity: BulletVector3 = gravity.into().into();
         unsafe {
@@ -115,8 +119,17 @@ impl RigidBodyHandle {
         })
     }
 
+    /// Override velocity vector.
+    pub fn reset_linear_velocity<T>(&mut self, velocity: T)
+    where
+        T: Into<Vector3<f64>>,
+    {
+        let velocity: BulletVector3 = velocity.into().into();
+        unsafe {sys::btRigidBody_setLinearVelocity(self.ptr, velocity.0.as_ptr() as *const _);}
+    }
+
     /// Override position vector and rotation quaternion.
-    pub fn reset_position_and_orientation<T, T1>(&self, position: T, orientation: T1)
+    pub fn reset_position_and_orientation<T, T1>(&mut self, position: T, orientation: T1)
     where
         T: Into<Vector3<f64>>,
         T1: Into<Vector4<f64>>,
@@ -152,7 +165,7 @@ impl RigidBodyHandle {
     }
 
     /// Place data on heap as a box and set to rigid body as user pointer
-    pub fn set_user_data<T: 'static>(&self, data: T) {
+    pub fn set_user_data<T: 'static>(&mut self, data: T) {
         let data_box = Box::new(data);
         unsafe {
             sys::btCollisionObject_setUserPointer(
@@ -172,7 +185,7 @@ impl RigidBodyHandle {
     }
 
     /// Set user index. This will not be used in bullet and this is not related to user_data.
-    pub fn set_user_index(&self, index: i32) {
+    pub fn set_user_index(&mut self, index: i32) {
         unsafe { sys::btCollisionObject_setUserIndex(self.ptr as *mut _, index) };
     }
 
