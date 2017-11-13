@@ -2,19 +2,21 @@ use sys;
 
 use collision::broadphase_collision::Broadphase;
 use collision::collision_dispatch::{CollisionConfiguration, CollisionDispatcher};
-use dynamics::constraint_solver::ConstraintSolver;
+use dynamics::constraint_solver::{ConstraintSolver, TypedConstraint};
 use dynamics::rigid_body::{RigidBody, RigidBodyHandle};
 use bullet_vector3::BulletVector3;
 use mint::Vector3;
 
-/// Internal data storage, owning all rigidbodys of the world
-pub struct InternalWorldData {
+/// Owner of all rigidbodys of the world
+struct InternalWorldData {
     rigid_bodys: Vec<RigidBody>,
+    constraints: Vec<Box<TypedConstraint>>
 }
 impl InternalWorldData {
     pub fn new() -> Self {
         InternalWorldData {
             rigid_bodys: vec![],
+            constraints: vec![]
         }
     }
 }
@@ -89,10 +91,7 @@ impl DynamicsWorld {
                     world as *const _ as *mut _,
                     added_element.as_ptr(),
                 );
-                RigidBodyHandle::new(
-                    added_element.as_ptr(),
-                    added_element.motion_state_ptr()
-                )
+                RigidBodyHandle::new(added_element.as_ptr(), added_element.motion_state_ptr())
             },
         }
     }
@@ -100,10 +99,11 @@ impl DynamicsWorld {
     pub fn remove_body(&mut self, rigid_body: &RigidBodyHandle) {
         match &self.implementation {
             &WorldImplementation::Discrete { ref world, .. } => unsafe {
-
-                sys::btDiscreteDynamicsWorld_removeRigidBody(world as *const _ as *mut _,
-                                                             rigid_body.ptr)
-            }
+                sys::btDiscreteDynamicsWorld_removeRigidBody(
+                    world as *const _ as *mut _,
+                    rigid_body.ptr,
+                )
+            },
         }
     }
 
@@ -113,7 +113,7 @@ impl DynamicsWorld {
         match &self.implementation {
             &WorldImplementation::Discrete { ref world, .. } => unsafe {
                 sys::btCollisionWorld_updateAabbs(world as *const _ as *mut _);
-            }
+            },
         }
     }
 
@@ -151,6 +151,26 @@ impl DynamicsWorld {
         }
         callback
     }
+
+
+    pub fn add_constraint<T: TypedConstraint + 'static>(
+        &mut self,
+        constraint: T,
+        disable_collision_between_linked_bodies: bool,
+    ) {
+        let constraint_box = Box::new(constraint);
+        self.world_data.constraints.push(constraint_box);
+        let added_element = self.world_data.constraints.last().unwrap();
+        match &self.implementation {
+            &WorldImplementation::Discrete { ref world, .. } => unsafe {
+                sys::btDiscreteDynamicsWorld_addConstraint(
+                    world as *const _ as *mut _,
+                    added_element.as_ptr(),
+                    disable_collision_between_linked_bodies,
+                )
+            },
+        }
+    }
 }
 
 pub struct RayIntersection {
@@ -167,9 +187,9 @@ impl RayIntersection {
             return None;
         } else {
             let rigid_body = self.collision_object as *mut sys::btRigidBody;
-            let motion_state = unsafe { &(*rigid_body).m_optionalMotionState as *const _ as *mut _};
-            Some(RigidBodyHandle::new(rigid_body, motion_state, ))
-
+            let motion_state =
+                unsafe { &(*rigid_body).m_optionalMotionState as *const _ as *mut _ };
+            Some(RigidBodyHandle::new(rigid_body, motion_state))
         }
     }
 }
@@ -310,8 +330,12 @@ impl RayResultCallback for ClosestRayResultCallback {
             RayIntersection {
                 collision_object: self.callback._base.m_collisionObject,
                 fraction: self.callback._base.m_closestHitFraction,
-                point: ::bullet_vector3::vector_from_slice(&self.callback.m_hitPointWorld.m_floats[0..3]),
-                normal: ::bullet_vector3::vector_from_slice(&self.callback.m_hitNormalWorld.m_floats[0..3]),
+                point: ::bullet_vector3::vector_from_slice(
+                    &self.callback.m_hitPointWorld.m_floats[0..3],
+                ),
+                normal: ::bullet_vector3::vector_from_slice(
+                    &self.callback.m_hitNormalWorld.m_floats[0..3],
+                ),
             },
         ]
     }

@@ -59,6 +59,20 @@ impl RigidBody {
     }
 }
 
+impl Drop for RigidBody {
+    fn drop(&mut self) {
+        unsafe {
+            ::sys::btMotionState_btMotionState_destructor(
+                &mut *self.motion_state as *mut _ as * mut _
+            );
+            ::sys::btRigidBody_btRigidBody_destructor(
+                &mut *self.rigid_body as *mut _,
+            );
+        }
+
+    }
+}
+
 #[derive(Clone)]
 pub struct RigidBodyHandle {
     pub(in dynamics) ptr: *mut sys::btRigidBody,

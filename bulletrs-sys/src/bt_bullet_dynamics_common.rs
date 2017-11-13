@@ -10300,7 +10300,7 @@ fn bindgen_test_layout_btMotionState() {
     );
 }
 extern "C" {
-    #[link_name = "\u{1}_ZN13btMotionStateD0Ev"]
+    #[link_name = "\u{1}_ZN13btMotionStateD1Ev"]
     pub fn btMotionState_btMotionState_destructor(this: *mut btMotionState);
 }
 extern "C" {
