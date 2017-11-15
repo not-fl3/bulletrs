@@ -183,6 +183,13 @@ impl RigidBodyHandle {
             )
         };
 
+        unsafe {
+            sys::btDefaultMotionState_setWorldTransform(
+                &*self.motion_state as *const _ as *mut _,
+                &transform as *const _ as *const _,
+            );
+        }
+
         unsafe { (*self.ptr)._base.m_worldTransform = transform };
     }
 
