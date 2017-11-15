@@ -3,6 +3,27 @@ use bullet_vector3::BulletVector3;
 use collision::collision_shapes::Shape;
 use mint::{Vector3, Vector4};
 
+#[repr(u8)]
+pub enum ActivationState {
+    /// Means active so that the object having the state could be moved in a step simulation.
+    /// This is the "normal" state for an object to be in.
+    /// Use btCollisionObject::activate() to activate an object,
+    /// not btCollisionObject::setActivationState(ACTIVATE_TAG),
+    /// or it may get disabled again right away, as the deactivation timer has not been reset.
+    ActiveTag = 1,
+    /// Makes a body active forever, used for something like a player-controlled object.
+    DisableDeactivation = 4,
+    /// Making a body deactivated forever.
+    DisableSimulation = 5,
+    /// Means the body, and it's island, are asleep, since Bullet sleeps objects per-island. You probably don't want or need to set this one manually.
+    IslandSleeping = 2,
+    /// Means that it's an active object trying to fall asleep,
+    /// and Bullet is keeping an eye on its velocity for the next few frames
+    /// to see if it's a good candidate.
+    /// You probably don't want or need to set this one manually.
+    WantsDeactivation = 3,
+}
+
 pub struct RigidBody {
     rigid_body: Box<sys::btRigidBody>,
     shape: Box<Shape>,
@@ -63,13 +84,10 @@ impl Drop for RigidBody {
     fn drop(&mut self) {
         unsafe {
             ::sys::btMotionState_btMotionState_destructor(
-                &mut *self.motion_state as *mut _ as * mut _
+                &mut *self.motion_state as *mut _ as *mut _,
             );
-            ::sys::btRigidBody_btRigidBody_destructor(
-                &mut *self.rigid_body as *mut _,
-            );
+            ::sys::btRigidBody_btRigidBody_destructor(&mut *self.rigid_body as *mut _);
         }
-
     }
 }
 
@@ -118,6 +136,12 @@ impl RigidBodyHandle {
         unsafe { sys::btRigidBody_setSleepingThresholds(self.ptr, linear, angular) }
     }
 
+    pub fn set_activation_state(&mut self, activation_state: ActivationState) {
+        unsafe {
+            sys::btCollisionObject_setActivationState(self.ptr as *mut _, activation_state as i32)
+        }
+    }
+
     pub fn apply_central_impulse<T: Into<Vector3<f64>>>(&mut self, impulse: T) {
         let impulse: BulletVector3 = impulse.into().into();
         unsafe {
@@ -139,7 +163,9 @@ impl RigidBodyHandle {
         T: Into<Vector3<f64>>,
     {
         let velocity: BulletVector3 = velocity.into().into();
-        unsafe {sys::btRigidBody_setLinearVelocity(self.ptr, velocity.0.as_ptr() as *const _);}
+        unsafe {
+            sys::btRigidBody_setLinearVelocity(self.ptr, velocity.0.as_ptr() as *const _);
+        }
     }
 
     /// Override position vector and rotation quaternion.

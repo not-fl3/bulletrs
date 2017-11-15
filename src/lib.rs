@@ -16,6 +16,6 @@ pub use collision::collision_shapes::{CapsuleAxis, Shape};
 pub use dynamics::constraint_solver::{ConstraintSolver, HingeConstraint};
 pub use dynamics::dynamics_world::{AllRayResultCallback, ClosestRayResultCallback, DynamicsWorld,
                                    RayResultCallback};
-pub use dynamics::rigid_body::{RigidBody, RigidBodyHandle};
+pub use dynamics::rigid_body::{ActivationState, RigidBody, RigidBodyHandle};
 
 pub(crate) use bullet_vector3::BulletVector3;
