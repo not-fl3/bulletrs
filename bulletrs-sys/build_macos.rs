@@ -8,7 +8,7 @@ pub fn build_macos() {
         .define("NDEBUG", None)
         .opt_level(3) // ignoring OPT_LEVEL from the crate
         .cpp(true)
-        .flag("-fkeep-inline-functions")
+        .flag("-fno-inline")
         .warnings(false)
 
         .file("bullet3/src/LinearMath/btAlignedAllocator.cpp")
@@ -30,7 +30,7 @@ pub fn build_macos() {
         .define("NDEBUG", None)
         .opt_level(3)
         .cpp(true)
-        .flag("-fkeep-inline-functions")
+        .flag("-fno-inline")
         .warnings(false)
 
         .file("bullet3/src/BulletCollision/BroadphaseCollision/btAxisSweep3.cpp")
@@ -139,7 +139,7 @@ pub fn build_macos() {
         .define("NDEBUG", None)
         .opt_level(3)
         .cpp(true)
-        .flag("-fkeep-inline-functions")
+        .flag("-fno-inline")
         .warnings(false)
 
         .file("bullet3/src/BulletDynamics/Character/btKinematicCharacterController.cpp")
@@ -188,7 +188,7 @@ pub fn build_macos() {
         .define("BT_USE_DOUBLE_PRECISION", None)
         .opt_level(3)
         .cpp(true)
-        .flag("-fkeep-inline-functions")
+        .flag("-fno-inline")
         .warnings(false)
 
         .file("bullet3/src/Bullet3Common/b3AlignedAllocator.cpp")
@@ -203,7 +203,7 @@ pub fn build_macos() {
         .define("BT_USE_DOUBLE_PRECISION", None)
         .opt_level(3)
         .cpp(true)
-        .flag("-fkeep-inline-functions")
+        .flag("-fno-inline")
         .warnings(false)
 
         .file("bullet3/examples/ThirdPartyLibs/BussIK/Jacobian.cpp")
@@ -224,7 +224,7 @@ pub fn build_macos() {
         .define("NDEBUG", None)
         .opt_level(3)
         .cpp(true)
-        .flag("-fkeep-inline-functions")
+        .flag("-fno-inline")
         .warnings(false)
 
         .file("bullet3/src/BulletInverseDynamics/IDMath.cpp")
@@ -240,7 +240,7 @@ pub fn build_macos() {
         .define("NDEBUG", None)
         .opt_level(3)
         .cpp(true)
-        .flag("-fkeep-inline-functions")
+        .flag("-fno-inline")
         .warnings(false)
 
         .file("bullet3/Extras/InverseDynamics/CloneTreeCreator.cpp")
@@ -264,7 +264,7 @@ pub fn build_macos() {
         .define("NDEBUG", None)
         .opt_level(3)
         .cpp(true)
-        .flag("-fkeep-inline-functions")
+        .flag("-fno-inline")
         .warnings(false)
 
         .file("bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp")
@@ -280,7 +280,7 @@ pub fn build_macos() {
         .define("NDEBUG", None)
         .opt_level(3)
         .cpp(true)
-        .flag("-fkeep-inline-functions")
+        .flag("-fno-inline")
         .warnings(false)
 
         .file("bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp")
@@ -296,7 +296,7 @@ pub fn build_macos() {
         .define("NO_VISUALISER", None)
         .opt_level(3)
         .cpp(true)
-        .flag("-fkeep-inline-functions")
+        .flag("-fno-inline")
         .warnings(false)
 
         .file("bullet3/examples/Utils/b3Clock.cpp")
