@@ -31,10 +31,30 @@ impl HingeConstraint {
                 Box::new(sys::btHingeConstraint::new(
                     rb_a.ptr,
                     rb_b.ptr,
-                    pivot_in_a.0.as_ptr() as * const _,
-                    pivot_in_b.0.as_ptr() as * const _,
-                    axis_in_a.0.as_ptr() as * const _,
-                    axis_in_b.0.as_ptr() as * const _,
+                    pivot_in_a.0.as_ptr() as *const _,
+                    pivot_in_b.0.as_ptr() as *const _,
+                    axis_in_a.0.as_ptr() as *const _,
+                    axis_in_b.0.as_ptr() as *const _,
+                    use_reference_frame_a,
+                ))
+            },
+        }
+    }
+
+    pub fn new1(
+        rb_a: &RigidBodyHandle,
+        rb_b: &RigidBodyHandle,
+        rb_a_frame: &sys::btTransform,
+        rb_b_frame: &sys::btTransform,
+        use_reference_frame_a: bool,
+    ) -> HingeConstraint {
+        HingeConstraint {
+            constraint: unsafe {
+                Box::new(sys::btHingeConstraint::new2(
+                    rb_a.ptr,
+                    rb_b.ptr,
+                    rb_a_frame as *const _,
+                    rb_b_frame as *const _,
                     use_reference_frame_a,
                 ))
             },
