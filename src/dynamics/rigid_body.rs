@@ -247,4 +247,8 @@ impl RigidBodyHandle {
     pub fn removed(&self) -> bool {
         unsafe { (*self.ptr)._base.m_worldArrayIndex == -1 }
     }
+
+    pub unsafe fn ptr(&mut self) -> *mut sys::btRigidBody {
+        self.ptr
+    }
 }
