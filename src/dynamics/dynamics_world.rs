@@ -10,13 +10,13 @@ use mint::Vector3;
 /// Owner of all rigidbodys of the world
 struct InternalWorldData {
     rigid_bodys: Vec<RigidBody>,
-    constraints: Vec<Box<TypedConstraint>>
+    constraints: Vec<Box<TypedConstraint>>,
 }
 impl InternalWorldData {
     pub fn new() -> Self {
         InternalWorldData {
             rigid_bodys: vec![],
-            constraints: vec![]
+            constraints: vec![],
         }
     }
 }
@@ -96,6 +96,17 @@ impl DynamicsWorld {
         }
     }
 
+    pub fn add_rigid_body_handle(&mut self, rigid_body: &RigidBodyHandle) {
+        match &self.implementation {
+            &WorldImplementation::Discrete { ref world, .. } => unsafe {
+                sys::btDiscreteDynamicsWorld_addRigidBody(
+                    world as *const _ as *mut _,
+                    rigid_body.ptr,
+                );
+            },
+        }
+    }
+
     pub fn remove_body(&mut self, rigid_body: &RigidBodyHandle) {
         match &self.implementation {
             &WorldImplementation::Discrete { ref world, .. } => unsafe {
@@ -151,7 +162,6 @@ impl DynamicsWorld {
         }
         callback
     }
-
 
     pub fn add_constraint<T: TypedConstraint + 'static>(
         &mut self,
@@ -286,7 +296,6 @@ impl RayResultCallback for AllRayResultCallback {
 pub struct ClosestRayResultCallback {
     callback: sys::btCollisionWorld_ClosestRayResultCallback,
 }
-
 
 impl ClosestRayResultCallback {
     pub fn new<T, T1>(from: T, to: T1) -> Self

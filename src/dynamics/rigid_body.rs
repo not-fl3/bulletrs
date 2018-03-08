@@ -113,11 +113,67 @@ impl RigidBodyHandle {
             sys::btCollisionObject_setRestitution(self.ptr as *mut _, restitution);
         }
     }
+
+    pub fn set_mass(&mut self, mass: f64) {
+        unsafe {
+            let shape = sys::btRigidBody_getCollisionShape(self.ptr);
+            let mut inertia: [f64; 4] = ::std::mem::uninitialized();
+            let shape_type = sys::btCollisionShape_getShapeType(shape as * mut _) as u32;
+
+            match shape_type {
+                sys::BroadphaseNativeTypes_STATIC_PLANE_PROXYTYPE => {
+                    sys::btStaticPlaneShape_calculateLocalInertia(
+                        shape as *mut _,
+                        mass,
+                        inertia.as_mut_ptr() as *mut _,
+                    );
+                },
+                sys::BroadphaseNativeTypes_BOX_SHAPE_PROXYTYPE => {
+
+                    sys::btBoxShape_calculateLocalInertia(
+                        shape as *mut _,
+                        mass,
+                        inertia.as_mut_ptr() as *mut _,
+                    );
+                },
+                sys::BroadphaseNativeTypes_CAPSULE_SHAPE_PROXYTYPE => {
+
+                    sys::btCapsuleShape_calculateLocalInertia(
+                        shape as *mut _,
+                        mass,
+                        inertia.as_mut_ptr() as *mut _,
+                    );
+                },
+                sys::BroadphaseNativeTypes_CONVEX_HULL_SHAPE_PROXYTYPE => {
+                    sys::btPolyhedralConvexShape_calculateLocalInertia(
+                        shape as *mut _,
+                        mass,
+                        inertia.as_mut_ptr() as *mut _,
+                    );
+                },
+                sys::BroadphaseNativeTypes_COMPOUND_SHAPE_PROXYTYPE => {
+                    sys::btCompoundShape_calculateLocalInertia(
+                        shape as *mut _,
+                        mass,
+                        inertia.as_mut_ptr() as *mut _,
+                    );
+                },
+                _ => {
+                    unimplemented!()
+                }
+            }
+
+            sys::btRigidBody_setMassProps(self.ptr as *mut _, mass, inertia.as_ptr() as *const _);
+            sys::btRigidBody_updateInertiaTensor(self.ptr as *mut _);
+        }
+    }
+
     pub fn set_friction(&mut self, friction: f64) {
         unsafe {
             sys::btCollisionObject_setFriction(self.ptr as *mut _, friction);
         }
     }
+
     pub fn set_gravity<T: Into<Vector3<f64>>>(&mut self, gravity: T) {
         let gravity: BulletVector3 = gravity.into().into();
         unsafe {
